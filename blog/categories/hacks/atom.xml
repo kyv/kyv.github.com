@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[kiai]]></title>
-  <link href="http://kyv.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: hacks | kiai]]></title>
+  <link href="http://kyv.github.com/blog/categories/hacks/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
   <updated>2012-10-28T13:47:48-06:00</updated>
   <id>http://kyv.github.com/</id>
@@ -22,75 +22,44 @@
 
 <p>Primero sintetizamos un ruido de fondo y la pasamos por un Resonant Low Pass Filter (RLPF).</p>
 
-<figure class='code'><figcaption><span>ruido  </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ruido  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">lfn</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">LFNoise2</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10000</span>)<span class="nf">,</span><span class="m">440</span><span class="nf">,</span><span class="m">0.1</span>)<span class="nf">*</span><span class="m">0.03</span>}
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>En seguida sintetizamos un especia de ritmo atreves de un seria de ruidos de igual manera filtros por un RLPF.</p>
 
-<figure class='code'><figcaption><span>tracktor  </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>tracktor  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tractor</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">BrownNoise</span><span class="p">.</span><span class="nv">ar</span><span class="nf">*</span><span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">10</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">*</span><span class="nc">WhiteNoise</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10</span>))}<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tractor</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">BrownNoise</span><span class="p">.</span><span class="nv">ar</span><span class="nf">&lt;</span><span class="nv">em</span><span class="nf">&gt;</span><span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">10</span>)<span class="nf">&lt;/</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">1</span><span class="nf">*</span><span class="nc">WhiteNoise</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10</span>))}<span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Luego sintetizamos un bombo.</p>
 
-<figure class='code'><figcaption><span>bombo  </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bombo  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">kick</span><span class="nf">=</span>{<span class="nc">Ringz</span><span class="p">.</span><span class="nv">ar</span>( <span class="nc">Impulse</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">2</span>)<span class="nf">,</span> <span class="m">60</span><span class="nf">,</span> <span class="m">0.5</span> )<span class="nf">*</span><span class="m">0.3</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Un acorde hecho de tres tonos elejido de forma aleatorio.</p>
 
-<figure class='code'><figcaption><span>acorde  </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>acorde  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tono</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono0</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono1</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tono</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">&lt;</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">400</span>)<span class="nf">&lt;/</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
+</span><span class='line'><span class="nf">~</span><span class="nv">tono0</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">&lt;</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">400</span>)<span class="nf">&lt;/</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
+</span><span class='line'><span class="nf">~</span><span class="nv">tono1</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">&lt;</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">400</span>)<span class="nf">&lt;/</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Y finalmente dos melodias reproducidas en sequencia aleatorio.</p>
 
-<figure class='code'><figcaption><span>melodia  </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>melodia  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">demand</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
 </span><span class='line'><span class="nf">~</span><span class="nv">dmel0</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">reverse</span><span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ciertas_Letras]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/26/ciertas-letras/"/>
-    <updated>2012-10-26T16:14:00-05:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/26/ciertas-letras</id>
-    <content type="html"><![CDATA[<p>Damos a conocer Ciertas Letras que habiamos encontrados y luego los perdimos y apenas los encontremos de nuevo.</p>
-
-<p><a href="http://kyv.github.com/letras" title="Ciertas Letras Sigue a Otros como es la Zeta prinipalmente pero hasta el B sigue el A y el A a B si vas de reversa">Ciertas Letras</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[hackmitin_2012]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/26/hackmitin-2012/"/>
-    <updated>2012-10-26T16:03:00-05:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/26/hackmitin-2012</id>
-    <content type="html"><![CDATA[<p><img class="[right]" src="http://punksmedia.org/archivos/hackmitin2012.png" title="[hackmitin 2012 [hackmitin]]" ></p>
-
-<p>Inaguramos nuestro blog con una invitacion al Hackmitin 2012. Váyanse preparando. Es el 9, 10 y 11 de Noviembre en el espacio comunitario ADA ubicado en la Ciudad de Puebla, México.</p>
-
-<p><a href="http://hackmitin.espora.org/" title="Visita la pagina del hackmitin 2012">http://hackmitin.espora.org</a></p>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
