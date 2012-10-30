@@ -4,7 +4,7 @@
   <title><![CDATA[kiai]]></title>
   <link href="http://kyv.github.com/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-10-29T22:24:32-06:00</updated>
+  <updated>2012-10-29T22:31:57-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -516,6 +516,8 @@ Bien apaga las luces cuando terminas. Espero poder dormir con este olor.</p>
     <updated>2012-10-28T11:58:00-06:00</updated>
     <id>http://kyv.github.com/blog/2012/10/28/ambient-atonalidad</id>
     <content type="html"><![CDATA[<p>Presentamos el codigo de nuestra participacion en el concerto de musica electronica que dio conclusion al taller <a href="http://casanagustin.org.mx/actividades-en-curso/888-laboratorio-de-arte-y-nuevos-medios.html" title="Laboratorio de arte y nuevos medios">Música por computadora con código, primer parte del serie Laboratorio de arte y nuevos medios, impartido en CASA de los artes San Augustin Etla</a>.</p>
+
+<p>El codigo es el linguaje <a href="http://supercollider.sourceforge.net/" title="SuperCollider">SuperCollider</a>, que es lo que en concreto aprendimos en el taller.</p>
 
 <p>Primero sintetizamos un ruido de fondo y la pasamos por un Resonant Low Pass Filter (RLPF).</p>
 
