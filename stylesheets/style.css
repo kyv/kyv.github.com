@@ -20,3 +20,7 @@ pre {
     clear:both;
 
 }
+
+#header {
+    background-image: url(http://flujos.org/media/ki-ai.png)!important;
+}
