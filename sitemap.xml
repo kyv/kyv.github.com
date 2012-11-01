@@ -2,7 +2,7 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://kyv.github.com/blog/2012/10/26/hackmitin-2012/</loc>
-        <lastmod>2012-10-30T14:13:13-06:00</lastmod>
+        <lastmod>2012-10-31T21:47:52-06:00</lastmod>
     </url>
     <url>
         <loc>http://kyv.github.com/blog/2012/10/26/ciertas-letras/</loc>
@@ -26,11 +26,15 @@
     </url>
     <url>
         <loc>http://kyv.github.com/blog/2012/10/30/intro-fit-the-second/</loc>
-        <lastmod>2012-10-30T23:40:57-06:00</lastmod>
+        <lastmod>2012-10-31T21:18:18-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kyv.github.com/blog/2012/10/31/vortice-de-perspectivo-absoluto/</loc>
+        <lastmod>2012-10-31T21:23:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://kyv.github.com/letras/</loc>
-        <lastmod>2012-10-31T13:09:13-06:00</lastmod>
+        <lastmod>2012-10-31T21:47:52-06:00</lastmod>
     </url>
     <url>
         <loc>http://kyv.github.com/contacto/</loc>
@@ -38,7 +42,7 @@
     </url>
     <url>
         <loc>http://kyv.github.com/blog/archives/</loc>
-        <lastmod>2012-10-31T13:09:13-06:00</lastmod>
+        <lastmod>2012-10-31T21:47:52-06:00</lastmod>
     </url>
     <url>
         <loc>http://kyv.github.com/servicios/</loc>
@@ -46,6 +50,6 @@
     </url>
     <url>
         <loc>http://kyv.github.com/</loc>
-        <lastmod>2012-10-31T13:09:13-06:00</lastmod>
+        <lastmod>2012-10-31T21:47:52-06:00</lastmod>
     </url>
 </urlset>
