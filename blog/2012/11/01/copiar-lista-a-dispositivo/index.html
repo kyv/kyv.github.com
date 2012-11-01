@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Copiar .m3u a dispositivo - kiai</title>
+  <meta name="author" content="Kevin Brown">
+
+  
+  <meta name="description" content="Como ya habrán notado, as veces es difícil pensar en un titulo adecuado para lo que uno quisiera expresar. A lo que referimos es si tienes una lista &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="kiai" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header id="header" role="banner"><hgroup>
+  <h1><a href="/">kiai</a></h1>
+  
+    <h2>Letras, Codigo, Imagen y Audio</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kyv.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/contacto">Contacto</a></li>
+  <li><a href="/servicios">Servicios</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Copiar .m3u a Dispositivo</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-01T12:35:00-06:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Como ya habrán notado, as veces es difícil pensar en un titulo adecuado para lo que uno quisiera expresar.</p>
+
+<p>A lo que referimos es si tienes una lista de reproducción de formato sencillo .m3u, este <em>script</em> copiar los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el <em>script</em> los convertirá a <strong>mp3</strong>. Obviamente prefería tener un teléfono que reproduciera <strong>ogg-vorbis</strong>, pero la triste verdad es que no tengo. <strong>Ojo</strong>: <em>para que funciona la conversión de formatos es necesario que mplayer esta instalado</em>.</p>
+
+<h3>Si ejecute así</h3>
+
+<figure class='code'><figcaption><span>como  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cpm3u.pl /ruta/a/lista.m3u /ruta/a/destinto/
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Codigo</h3>
+
+<figure class='code'><figcaption><span>cpm3u.pl  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="c1">#!/usr/bin/perl</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#Copyright 2012, kev@flujos.org</span>
+</span><span class='line'><span class="c1"># * Licensed under the GPL Version 2 license.</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">use</span> <span class="nn">File::</span><span class="n">Copy</span><span class="p">;</span>
+</span><span class='line'><span class="k">use</span> <span class="nn">File::</span><span class="n">Basename</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">my</span> <span class="nv">$PLS</span><span class="o">=</span><span class="s">&quot;$ARGV[0]&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$DEST</span><span class="o">=</span><span class="s">&quot;$ARGV[1]&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$tmp</span><span class="o">=</span><span class="s">&#39;/tmp/out.wav&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">@exts</span><span class="o">=</span><span class="sx">qw(.ogg .oga .wma .m4a)</span><span class="p">;</span>
+</span><span class='line'><span class="nb">open</span><span class="p">(</span><span class="nv">$p</span><span class="p">,</span> <span class="nv">$PLS</span><span class="p">);</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="sr">&lt;$p&gt;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nb">chomp</span><span class="p">;</span>
+</span><span class='line'>   <span class="k">my</span> <span class="nv">$orig</span> <span class="o">=</span> <span class="nv">$ENV</span><span class="p">{</span><span class="n">HOME</span><span class="p">}</span><span class="o">.</span> <span class="s">&quot;/&quot;</span><span class="o">.</span> <span class="nv">$_</span><span class="p">;</span>
+</span><span class='line'>   <span class="k">if</span> <span class="p">(</span><span class="nv">$orig</span> <span class="o">=~</span><span class="sr"> /.mp3$/i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>       <span class="n">copy</span><span class="p">(</span><span class="s">&quot;$orig&quot;</span><span class="p">,</span> <span class="s">&quot;$DEST&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Copy Failed $!&quot;</span><span class="p">;</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'>   <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>       <span class="nv">$out_file</span><span class="o">=</span><span class="nv">$DEST</span><span class="o">.</span> <span class="n">basename</span><span class="p">(</span><span class="nv">$_</span><span class="p">,</span> <span class="nv">@exts</span><span class="p">)</span> <span class="o">.</span> <span class="s">&#39;.mp3&#39;</span><span class="p">;</span>
+</span><span class='line'>       <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/mplayer&#39;</span><span class="p">,</span> <span class="s">&#39;-ao&#39;</span><span class="p">,</span> <span class="s">&quot;pcm:file=$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$orig&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>       <span class="c1"># Use lame to make an mp3</span>
+</span><span class='line'>       <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/lame&#39;</span><span class="p">,</span> <span class="s">&quot;$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$out_file&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>       <span class="k">if</span> <span class="p">(</span><span class="nb">unlink</span><span class="p">(</span><span class="nv">$tmp</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">print</span> <span class="s">&quot;$tmp deleted successfully.\n&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">print</span> <span class="s">&quot;$tmp was not deleted.\n&quot;</span><span class="p">;</span>
+</span><span class='line'>       <span class="p">}</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Kevin Brown</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-01T12:35:00-06:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/hacks/'>hacks</a>, <a class='category' href='/blog/categories/perl/'>perl</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/" data-via="kyv_b" data-counturl="http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/31/vortice-de-perspectivo-absoluto/" title="Previous Post: Vórtice de Perspectivo Absoluto">&laquo; Vórtice de Perspectivo Absoluto</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Hackmitin 2012</h1>
+  <p >9, 10 y 11 de Noviembre, Puebla, Mexico</p>
+  <a href="http://hackmitin.espora.org"><img style="display:block;margin-left:auto;margin-right:auto" src="http://hackmitin.espora.org/im%C3%A1genes/popo_HM12_animado.gif"></a>
+  
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/01/copiar-lista-a-dispositivo/">Copiar .m3u a dispositivo</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/31/vortice-de-perspectivo-absoluto/">Vórtice de Perspectivo Absoluto</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/30/intro-fit-the-second/">Introducción Guía de la Galaxia Episodio Dos</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/guia-de-la-galaxia-para-mochileros/">Guía de la Galaxia para Mochileros, Edición Pirateada</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/fotos-flujos-fest/">Fotos Flujos Fest</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/kyv">@kyv</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'kyv',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kyv_b", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/kyv_b" class="twitter-follow-button" data-show-count="false">Follow @kyv_b</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Kevin Brown -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'kiai';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/';
+        var disqus_url = 'http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

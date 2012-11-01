@@ -4,7 +4,7 @@
   <title><![CDATA[kiai]]></title>
   <link href="http://kyv.github.com/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-10-31T22:31:52-06:00</updated>
+  <updated>2012-11-01T13:21:11-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Copiar .m3u a dispositivo]]></title>
+    <link href="http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/"/>
+    <updated>2012-11-01T12:35:00-06:00</updated>
+    <id>http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo</id>
+    <content type="html"><![CDATA[<p>Como ya habrán notado, as veces es difícil pensar en un titulo adecuado para lo que uno quisiera expresar.</p>
+
+<p>A lo que referimos es si tienes una lista de reproducción de formato sencillo .m3u, este <em>script</em> copiar los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el <em>script</em> los convertirá a <strong>mp3</strong>. Obviamente prefería tener un teléfono que reproduciera <strong>ogg-vorbis</strong>, pero la triste verdad es que no tengo. <strong>Ojo</strong>: <em>para que funciona la conversión de formatos es necesario que mplayer esta instalado</em>.</p>
+
+<h3>Si ejecute así</h3>
+
+<figure class='code'><figcaption><span>como  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cpm3u.pl /ruta/a/lista.m3u /ruta/a/destinto/
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Codigo</h3>
+
+<figure class='code'><figcaption><span>cpm3u.pl  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="c1">#!/usr/bin/perl</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#Copyright 2012, kev@flujos.org</span>
+</span><span class='line'><span class="c1"># * Licensed under the GPL Version 2 license.</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">use</span> <span class="nn">File::</span><span class="n">Copy</span><span class="p">;</span>
+</span><span class='line'><span class="k">use</span> <span class="nn">File::</span><span class="n">Basename</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">my</span> <span class="nv">$PLS</span><span class="o">=</span><span class="s">&quot;$ARGV[0]&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$DEST</span><span class="o">=</span><span class="s">&quot;$ARGV[1]&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$tmp</span><span class="o">=</span><span class="s">&#39;/tmp/out.wav&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">@exts</span><span class="o">=</span><span class="sx">qw(.ogg .oga .wma .m4a)</span><span class="p">;</span>
+</span><span class='line'><span class="nb">open</span><span class="p">(</span><span class="nv">$p</span><span class="p">,</span> <span class="nv">$PLS</span><span class="p">);</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="sr">&lt;$p&gt;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nb">chomp</span><span class="p">;</span>
+</span><span class='line'>   <span class="k">my</span> <span class="nv">$orig</span> <span class="o">=</span> <span class="nv">$ENV</span><span class="p">{</span><span class="n">HOME</span><span class="p">}</span><span class="o">.</span> <span class="s">&quot;/&quot;</span><span class="o">.</span> <span class="nv">$_</span><span class="p">;</span>
+</span><span class='line'>   <span class="k">if</span> <span class="p">(</span><span class="nv">$orig</span> <span class="o">=~</span><span class="sr"> /.mp3$/i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>       <span class="n">copy</span><span class="p">(</span><span class="s">&quot;$orig&quot;</span><span class="p">,</span> <span class="s">&quot;$DEST&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Copy Failed $!&quot;</span><span class="p">;</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'>   <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>       <span class="nv">$out_file</span><span class="o">=</span><span class="nv">$DEST</span><span class="o">.</span> <span class="n">basename</span><span class="p">(</span><span class="nv">$_</span><span class="p">,</span> <span class="nv">@exts</span><span class="p">)</span> <span class="o">.</span> <span class="s">&#39;.mp3&#39;</span><span class="p">;</span>
+</span><span class='line'>       <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/mplayer&#39;</span><span class="p">,</span> <span class="s">&#39;-ao&#39;</span><span class="p">,</span> <span class="s">&quot;pcm:file=$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$orig&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>       <span class="c1"># Use lame to make an mp3</span>
+</span><span class='line'>       <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/lame&#39;</span><span class="p">,</span> <span class="s">&quot;$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$out_file&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>       <span class="k">if</span> <span class="p">(</span><span class="nb">unlink</span><span class="p">(</span><span class="nv">$tmp</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">print</span> <span class="s">&quot;$tmp deleted successfully.\n&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">print</span> <span class="s">&quot;$tmp was not deleted.\n&quot;</span><span class="p">;</span>
+</span><span class='line'>       <span class="p">}</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Vórtice de Perspectivo Absoluto]]></title>
