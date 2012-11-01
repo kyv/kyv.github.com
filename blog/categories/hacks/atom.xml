@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacks | kiai]]></title>
   <link href="http://kyv.github.com/blog/categories/hacks/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-11-01T13:21:11-06:00</updated>
+  <updated>2012-11-01T13:43:14-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -18,9 +18,7 @@
     <link href="http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/"/>
     <updated>2012-11-01T12:35:00-06:00</updated>
     <id>http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo</id>
-    <content type="html"><![CDATA[<p>Como ya habrán notado, as veces es difícil pensar en un titulo adecuado para lo que uno quisiera expresar.</p>
-
-<p>A lo que referimos es si tienes una lista de reproducción de formato sencillo .m3u, este <em>script</em> copiar los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el <em>script</em> los convertirá a <strong>mp3</strong>. Obviamente prefería tener un teléfono que reproduciera <strong>ogg-vorbis</strong>, pero la triste verdad es que no tengo. <strong>Ojo</strong>: <em>para que funciona la conversión de formatos es necesario que mplayer esta instalado</em>.</p>
+    <content type="html"><![CDATA[<p>A lo que referimos es si tienes una lista de reproducción de formato sencillo .m3u, este <em>script</em> copiar los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el <em>script</em> los convertirá a <strong>mp3</strong>. Obviamente prefería tener un teléfono que reproduciera <strong>ogg-vorbis</strong>, pero la triste verdad es que no tengo. <strong>Ojo</strong>: <em>para que funciona la conversión de formatos es necesario que mplayer esta instalado</em>.</p>
 
 <h3>Si ejecute así</h3>
 
@@ -72,16 +70,13 @@
 <span class='line-number'>38</span>
 <span class='line-number'>39</span>
 <span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
 </pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="sr">&lt;/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;h1&gt;</span><span class="o">!</span><span class="sr">/usr/</span><span class="n">bin</span><span class="sr">/perl&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;h1&gt;</span><span class="n">Copyright</span> <span class="mi">2012</span><span class="p">,</span> <span class="n">kev</span><span class="nv">@flujos</span><span class="o">.</span><span class="n">org</span><span class="sr">&lt;/h1&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;</span><span class="o">*</span> <span class="n">Licensed</span> <span class="n">under</span> <span class="n">the</span> <span class="n">GPL</span> <span class="n">Version</span> <span class="mi">2</span> <span class="n">license</span><span class="o">.</span><span class="sr">&lt;/h1&gt;</span>
+</span><span class='line'><span class="sr">&lt;h1&gt;</span><span class="n">Licensed</span> <span class="n">under</span> <span class="n">the</span> <span class="n">GPL</span> <span class="n">Version</span> <span class="mi">2</span> <span class="n">license</span><span class="o">.</span><span class="sr">&lt;/h1&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">use</span> <span class="nn">File::</span><span class="n">Copy</span><span class="p">;</span>
 </span><span class='line'><span class="k">use</span> <span class="nn">File::</span><span class="n">Basename</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
@@ -91,19 +86,16 @@
 </span><span class='line'><span class="k">my</span> <span class="nv">$tmp</span><span class="o">=</span><span class="s">&#39;/tmp/out.wav&#39;</span><span class="p">;</span>
 </span><span class='line'><span class="k">my</span> <span class="nv">@exts</span><span class="o">=</span><span class="sx">qw(.ogg .oga .wma .m4a)</span><span class="p">;</span>
 </span><span class='line'><span class="nb">open</span><span class="p">(</span><span class="nv">$p</span><span class="p">,</span> <span class="nv">$PLS</span><span class="p">);</span>
-</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="nv">$p</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>   <span class="nb">chomp</span><span class="p">;</span>
-</span><span class='line'>   <span class="k">my</span> <span class="nv">$orig</span> <span class="o">=</span> <span class="nv">$ENV</span><span class="p">{</span><span class="n">HOME</span><span class="p">}</span><span class="o">.</span> <span class="s">&quot;/&quot;</span><span class="o">.</span> <span class="nv">$_</span><span class="p">;</span>
-</span><span class='line'>   <span class="k">if</span> <span class="p">(</span><span class="nv">$orig</span> <span class="o">=~</span><span class="sr"> /.mp3$/i</span><span class="p">)</span> <span class="p">{</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="nv">$p</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span><span class="sr">&lt;/p&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span>   <span class="n">copy</span><span class="p">(</span><span class="s">&quot;$orig&quot;</span><span class="p">,</span> <span class="s">&quot;$DEST&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Copy Failed $!&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;</span>   <span class="p">}</span>
-</span><span class='line'>   <span class="k">else</span> <span class="p">{</span><span class="sr">&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span>   <span class="nv">$out_file</span><span class="o">=</span><span class="nv">$DEST</span><span class="o">.</span> <span class="n">basename</span><span class="p">(</span><span class="nv">$_</span><span class="p">,</span> <span class="nv">@exts</span><span class="p">)</span> <span class="o">.</span> <span class="s">&#39;.mp3&#39;</span><span class="p">;</span>
-</span><span class='line'>   <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/mplayer&#39;</span><span class="p">,</span> <span class="s">&#39;-ao&#39;</span><span class="p">,</span> <span class="s">&quot;pcm:file=$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$orig&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="nb">chomp</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$orig</span> <span class="o">=</span> <span class="nv">$ENV</span><span class="p">{</span><span class="n">HOME</span><span class="p">}</span><span class="o">.</span> <span class="s">&quot;/&quot;</span><span class="o">.</span> <span class="nv">$_</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$orig</span> <span class="o">=~</span><span class="sr"> /.mp3$/i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">copy</span><span class="p">(</span><span class="s">&quot;$orig&quot;</span><span class="p">,</span> <span class="s">&quot;$DEST&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Copy Failed $!&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$out_file</span><span class="o">=</span><span class="nv">$DEST</span><span class="o">.</span> <span class="n">basename</span><span class="p">(</span><span class="nv">$_</span><span class="p">,</span> <span class="nv">@exts</span><span class="p">)</span> <span class="o">.</span> <span class="s">&#39;.mp3&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/mplayer&#39;</span><span class="p">,</span> <span class="s">&#39;-ao&#39;</span><span class="p">,</span> <span class="s">&quot;pcm:file=$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$orig&quot;</span><span class="p">);</span>
 </span><span class='line'>
 </span><span class='line'>   <span class="c1"># Use lame to make an mp3</span>
 </span><span class='line'>   <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/lame&#39;</span><span class="p">,</span> <span class="s">&quot;$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$out_file&quot;</span><span class="p">);</span>
