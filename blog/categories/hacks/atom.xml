@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacks | kiai]]></title>
   <link href="http://kyv.github.com/blog/categories/hacks/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-11-03T19:13:53-06:00</updated>
+  <updated>2012-11-05T12:00:00-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -18,7 +18,7 @@
     <link href="http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/"/>
     <updated>2012-11-01T12:35:00-06:00</updated>
     <id>http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo</id>
-    <content type="html"><![CDATA[<p>Si tienes una lista de reproducción de formato sencillo .m3u, este <em>script</em> copiar los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el <em>script</em> los convertirá a <strong>mp3</strong>. Obviamente prefería tener un teléfono que reproduciera <strong>ogg-vorbis</strong>, pero la triste verdad es que no tengo. <strong>Ojo</strong>: <em>para que funciona la conversión de formatos es necesario que mplayer esta instalado</em>.</p>
+    <content type="html"><![CDATA[<p>Si tienes una lista de reproducción de formato sencillo .m3u, este <em>script</em> copia los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el <em>script</em> los convertirá a <strong>mp3</strong>. Obviamente prefería tener un teléfono que reproduciera <strong>ogg-vorbis</strong>, pero la triste verdad es que no tengo. <strong>Ojo</strong>: <em>para que funciona la conversión de formatos es necesario que mplayer esta instalado</em>.</p>
 
 <h3>Si ejecute así</h3>
 
