@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacks | kiai]]></title>
   <link href="http://kyv.github.com/blog/categories/hacks/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-11-07T19:26:50-06:00</updated>
+  <updated>2012-11-07T19:32:00-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -19,6 +19,8 @@
     <updated>2012-11-07T12:51:00-06:00</updated>
     <id>http://kyv.github.com/blog/2012/11/07/archlinux-en-macbook</id>
     <content type="html"><![CDATA[<p>Anotamos aquí lo que aprendimos al instalar <a href="https://www.archlinux.org" title="Archlinux">archlinux</a> en un <strong>macbook</strong>. Aun que en realidad no es cosa de otro mundo, la documentación es un poco ambiguo y muchas de las recomendaciones que si encuentran en el Internet resuelvan la problema de alguna manera. Pero para resolver el problema de la mejor manera posible, tuvimos que tejer la tapete de parches cortados de varias fuentes.</p>
+
+<p><img class="right" src="http://www.rodsbooks.com/refind/refind.png" width="600" title="Menú de Arranque" ></p>
 
 <p>Para quienes no quieren leer hasta en final, terminamos con un <em>dualboot</em> <strong>osx</strong> y <a href="https://www.archlinux.org" title="Archlinux">archlinux</a>, y, gracias a <a href="http://www.rodsbooks.com/refind/" title="rEFInd">rEFInd</a>, arrancamos a linux sin necesidad ni de emulación del <em>BIOS</em> ni de <em>GRUB</em>.</p>
 
