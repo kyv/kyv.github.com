@@ -4,7 +4,7 @@
   <title><![CDATA[kiai]]></title>
   <link href="http://kyv.github.com/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-11-07T19:46:02-06:00</updated>
+  <updated>2012-11-07T21:02:52-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -57,41 +57,38 @@ Llegando al final, en el seccion <a href="https://wiki.archlinux.org/index.php/I
 
 <p>Ahora si podría encontrar una carpeta <em>EFI</em> bajo <strong>/mnt/boot/efi</strong> y profundizando un nivel mas veremos la carpeta <em>APPLE</em> (<strong>/mnt/boot/efi/EFI/APPLE</strong>). Para que el macbook detecta de forma automática nuestra linux, vamos a crear la carpeta <strong>EFI/BOOT</strong> y dentro de ello vamos a copiar rEFInd.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># mkdir /mnt/boot/efi/EFI/BOOT</span>
-</span><span class='line'><span class="c"># cd /ruta/a/refind-bin-${numero_de_version}</span>
-</span><span class='line'><span class="c"># cp -r refind/* /mnt/boot/efi/EFI/BOOT/</span>
-</span><span class='line'><span class="c"># cd /mnt/boot/efi/EFI/BOOT/</span>
-</span><span class='line'><span class="c"># mv refind.conf-sample refind.conf</span>
-</span><span class='line'><span class="c"># mv refind_x64.efi BOOTX64.efi</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'># mkdir /mnt/boot/efi/EFI/BOOT
+</span><span class='line'># cd /ruta/a/refind-bin-${numero_de_version}
+</span><span class='line'># cp -r refind/* /mnt/boot/efi/EFI/BOOT/
+</span><span class='line'># cd /mnt/boot/efi/EFI/BOOT/
+</span><span class='line'># mv refind.conf-sample refind.conf
+</span><span class='line'># mv refind_x64.efi BOOTX64.efi</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Abrimos refind.conf y quitamos el gato (<em>#</em>) del opción &#8221;<em>scan_all_linux_kernels</em>&#8221;. Y al final podemos limpiar la carpeta <em>BOOT</em>. Si nuestra mac es 64 bit podemos borrar los ficheros con <em>ia32</em> en el nombre.</p>
 
 <p>Finalmente creamos el fichero <strong>/boot/refind_linux.conf</strong> con los variables de arranque, por ejemplo:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># echo &#39;&quot;Defualt&quot; &quot;root=UUID=54b939d6-b59d-4dcb-8311-4b612d2c26dd ro&quot;&#39; &gt; /boot/refind_linux.conf</span>
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># echo '"Defualt" "root=UUID=54b939d6-b59d-4dcb-8311-4b612d2c26dd ro"' > /boot/refind_linux.conf</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Ahora si puede volver al instalación oficial de archlinux, empezando con la <a href="https://wiki.archlinux.org/index.php/Installation_Guide_(Espa%C3%B1ol)#Configuraci.C3.B3n_del_sistema" title="Volver a Instalación de Arch">configuración del sitema</a> y seguir lo hasta el final.</p>
 
 <p>Al momento de reiniciar la sistema, si arrancaría en el os de mac. Y, tomando los ejemplos de los indicaciones de instalación de rEFInd, primer montamos el ESP y después lo <em>bendecimos</em>.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo mkdir /efi
-</span><span class='line'><span class="nv">$ </span>sudo mount -t msdos /dev/disk0s1 /efi
-</span><span class='line'><span class="nv">$ </span>sudo bless --mount /efi --setBoot --file /efi/EFI/BOOT/refind_x64.efi
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo mkdir /efi
+</span><span class='line'>$ sudo mount -t msdos /dev/disk0s1 /efi
+</span><span class='line'>$ sudo bless --mount /efi --setBoot --file /efi/EFI/BOOT/refind_x64.efi</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Ahora reiniciamos de nuevo, y debemos ver un pantalla donde elegimos entre la manzanita o el pinguinito. A veces hay que reiniciar un par de veces para que agarra.</p>
