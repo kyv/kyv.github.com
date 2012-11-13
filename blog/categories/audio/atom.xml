@@ -4,7 +4,7 @@
   <title><![CDATA[Category: audio | kiai]]></title>
   <link href="http://kyv.github.com/blog/categories/audio/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-11-13T14:40:09-06:00</updated>
+  <updated>2012-11-13T15:23:07-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -19,9 +19,9 @@
     <updated>2012-11-13T13:59:00-06:00</updated>
     <id>http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki</id>
     <content type="html"><![CDATA[<p><img class="right" src="http://flujos.org/media/360player.png" title="Foto de Ejemplo" >
-Hace poco tiempo hicimos un plugin de audio para ikiwiki. Esto si puede encontrar en <a href="https://github.com/kyv/ikiwiki">nuestra bifuricacion de ikiwiki</a>. El plugin vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende tambien de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un underlay en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
+Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto si puede encontrar en <a href="https://github.com/kyv/ikiwiki">nuestra bifurcación de ikiwiki</a>. El <em>plugin</em> vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende también de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un <em>underlay</em> en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
 
-<p>Si puede ver el plugin en accion en la portada de <a href="http://flujos.org">flujos.org</a>.</p>
+<p>Si puede ver el <em>plugin</em> en acción en la portada de <a href="http://flujos.org">flujos.org</a>.</p>
 
 <p>Unos ejemplos de sintaxis:
 <div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -29,9 +29,9 @@ Hace poco tiempo hicimos un plugin de audio para ikiwiki. Esto si puede encontra
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 o para un fichero hospedado en la sistema de ficheros:
 <div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio http://radio.flujos.org:8000/rockola.oga <span class="nv">text</span><span class="o">=</span><span class="err">&quot;</span>La Rockola<span class="o">]]</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio /ruta/a/audio.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;Mi audio&quot;</span><span class="o">]]</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
-Aparte tenemos una plantilla para hacer un listado automatico de audios <em>inline</em>. Hay un <a href="http://yaxhil.flujos.org/audio/biz_band/" title="Biz Band">ejemplo de su funcionamiento en la pagina de radio yaxhil</a> y la utilizamos conjuntamente con el <a href="http://ikiwiki.info/plugins/inline/" title="Inline Plugin">plugin <em>inline</em> de ikiwiki</a>:
+Aparte tenemos una plantilla para hacer un listado automático de audios <em>inline</em>. Hay un <a href="http://yaxhil.flujos.org/audio/biz_band/" title="Biz Band">ejemplo de su funcionamiento en la pagina de radio yaxhil</a> y la utilizamos conjuntamente con el <a href="http://ikiwiki.info/plugins/inline/" title="Inline Plugin">plugin <em>inline</em> de ikiwiki</a>:
 <div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!inline  <span class="nv">template</span><span class="o">=</span><span class="s2">&quot;inlineaudio&quot;</span> <span class="nv">pages</span><span class="o">=</span><span class="s2">&quot;audio/biz_band/&lt;em&gt; and !&lt;/em&gt;/Discussion&quot;</span> <span class="nv">show</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="o">]]</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
@@ -39,7 +39,7 @@ Aparte tenemos una plantilla para hacer un listado automatico de audios <em>inli
 <!-- more -->
 
 
-<p>Para su instalacion copia estos ficheros de nuestro repo a sus equivalentes carpetas en su instalacion de ikiwiki. O, alternativamente, a su codigo fuente de ikiwiki y recompila.</p>
+<p>Para su instalación copia estos ficheros de nuestro repo a sus equivalentes carpetas en su instalación de ikiwiki. O, alternativamente, a su código fuente de ikiwiki y recompila.</p>
 ]]></content>
   </entry>
   
