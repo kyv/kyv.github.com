@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>kiai</title>
+  <title>Plugin Audio Ikiwiki - kiai</title>
   <meta name="author" content="Kevin Brown">
 
   
-  <meta name="description" content="Damos a conocer Ciertas Letras que habiamos encontrados y luego los perdimos y apenas los encontremos de nuevo. Ciertas Letras
-">
+  <meta name="description" content="Hace poco tiempo hicimos un plugin de audio para ikiwiki. Esto si puede encontrar en nuestra bifuricacion de ikiwiki. El plugin vive en la carpeta &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kyv.github.com/blog/page/2/">
+  <link rel="canonical" href="http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,15 +64,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/10/26/ciertas-letras/">Ciertas Letras</a></h1>
+      <h1 class="entry-title">Plugin Audio Ikiwiki</h1>
     
     
       <p class="meta">
@@ -89,33 +85,56 @@
   
 
 
-<time datetime="2012-10-26T16:14:00-05:00" pubdate data-updated="true">Oct 26<span>th</span>, 2012</time>
+<time datetime="2012-11-13T13:59:00-06:00" pubdate data-updated="true">Nov 13<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Damos a conocer Ciertas Letras que habiamos encontrados y luego los perdimos y apenas los encontremos de nuevo.</p>
+<div class="entry-content"><p><img class="right" src="http://flujos.org/media/360player.png" title="Foto de Ejemplo" >
+Hace poco tiempo hicimos un plugin de audio para ikiwiki. Esto si puede encontrar en <a href="https://github.com/kyv/ikiwiki">nuestra bifuricacion de ikiwiki</a>. El plugin vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende tambien de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un underlay en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
 
-<p><a href="/letras" title="Ciertas Letras Sigue a Otros como es la Zeta prinipalmente pero hasta el B sigue el A y el A a B si vas de reversa">Ciertas Letras</a></p>
+<p>Si puede ver el plugin en accion en la portada de <a href="http://flujos.org">flujos.org</a>.</p>
+
+<p>Unos ejemplos de sintaxis:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio http://radio.flujos.org:8000/rockola.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;La Rockola&quot;</span><span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>o para un fichero hospedado en la sistema de ficheros:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio http://radio.flujos.org:8000/rockola.oga <span class="nv">text</span><span class="o">=</span><span class="err">&quot;</span>La Rockola<span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Aparte tenemos una plantilla para hacer un listado automatico de audios <em>inline</em>. Hay un <a href="http://yaxhil.flujos.org/audio/biz_band/" title="Biz Band">ejemplo de su funcionamiento en la pagina de radio yaxhil</a> y la utilizamos conjuntamente con el <a href="http://ikiwiki.info/plugins/inline/" title="Inline Plugin">plugin <em>inline</em> de ikiwiki</a>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!inline  <span class="nv">template</span><span class="o">=</span><span class="s2">&quot;inlineaudio&quot;</span> <span class="nv">pages</span><span class="o">=</span><span class="s2">&quot;audio/biz_band/* and !*/Discussion&quot;</span> <span class="nv">show</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+<p>Para su instalacion copia estos ficheros de nuestro repo a sus equivalentes carpetas en su instalacion de ikiwiki. O, alternativamente, a su codigo fuente de ikiwiki y recompila.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/26/hackmitin-2012/">Hackmitin_2012</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Kevin Brown</span></span>
+
+      
 
 
 
@@ -127,33 +146,46 @@
   
 
 
-<time datetime="2012-10-26T16:03:00-05:00" pubdate data-updated="true">Oct 26<span>th</span>, 2012</time>
-        
-      </p>
+<time datetime="2012-11-13T13:59:00-06:00" pubdate data-updated="true">Nov 13<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/audio/'>audio</a>, <a class='category' href='/blog/categories/hacks/'>hacks</a>, <a class='category' href='/blog/categories/perl/'>perl</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p><img class="left" src="http://hackmitin.espora.org/im%C3%A1genes/hackmitin2012_web.png" title="&#34;hackmitin 2012&#34;" alt="&#34;hackmitin 2012&#34;"></p>
-
-<p>Inaguramos nuestro blog con una invitacion al Hackmitin 2012. Váyanse preparando. Es el 9, 10 y 11 de Noviembre en el espacio comunitario ADA ubicado en la Ciudad de Puebla, México.</p>
-
-<p><a href="http://hackmitin.espora.org/" title="Visita la pagina del hackmitin 2012">http://hackmitin.espora.org</a></p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki/" data-via="kyv_b" data-counturl="http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/11/08/radio-jatarishun/" title="Previous Post: Radio Jatarishun">&laquo; Radio Jatarishun</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-    <a class="next" href="/">Newer &rarr;</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -186,7 +218,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/kyv">@kyv</a> on GitHub
@@ -216,7 +248,7 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -236,6 +268,7 @@
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -250,7 +283,10 @@
       var disqus_shortname = 'kiai';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki/';
+        var disqus_url = 'http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
