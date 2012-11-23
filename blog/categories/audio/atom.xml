@@ -4,7 +4,7 @@
   <title><![CDATA[Category: audio | kiai]]></title>
   <link href="http://kyv.github.com/blog/categories/audio/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-11-15T21:16:59-06:00</updated>
+  <updated>2012-11-23T13:06:44-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -19,9 +19,9 @@
     <updated>2012-11-13T13:59:00-06:00</updated>
     <id>http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki</id>
     <content type="html"><![CDATA[<p><img class="right" src="http://flujos.org/media/360player.png" title="Foto de Ejemplo" >
-Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto si puede encontrar en <a href="https://github.com/kyv/ikiwiki">nuestra bifurcación de ikiwiki</a>. El <em>plugin</em> vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende también de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un <em>underlay</em> en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
+Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encuentra en <a href="https://github.com/kyv/ikiwiki">nuestra bifurcación de ikiwiki</a>. El <em>plugin</em> vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende también de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un <em>underlay</em> en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
 
-<p>Si puede ver el <em>plugin</em> en acción en la portada de <a href="http://flujos.org">flujos.org</a>.</p>
+<p>Para ver el <em>plugin</em> en acción visita <a href="http://flujos.org">flujos.org</a>.</p>
 
 <p>Unos ejemplos de sintaxis:
 <div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -50,7 +50,7 @@ Aparte tenemos una plantilla para hacer un listado automático de audios <em>inl
     <id>http://kyv.github.com/blog/2012/11/08/radio-jatarishun</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" ></p>
 
-<p>En Julio de 2004 tuvo lugar en la ciudad de Quito, Ecuador el primer Foro Social de Las Américas. Aparte de ello, y como moscas a la carne, una seria de otras foros brotaron a su alrededor, como era la Foro Indígena, Foro de Diversidad Sexual, en fin. Algunos de las moscas atrevieron montar una cabina de radio en un salón de escuela que transmitía por Internet mientras el Foro Social. Si llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a> (<em>levantamiento</em> en Quechua ). Una de las moscas, a volver a su casa, rescató lo que si pudo de lo que si grabó, lo mezclaba con un poco de la música que ambientaba a Quito por aquellas fechas, y el resultado era un disco que también si llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a>. Para no largar mucho el cuento, aquella mosca perdió el disco, y el lugar donde estaba hospedado en el Internet también desaprecio, pero otra mosca, o mas bien tenia que haber sido una ratóncita, que siempre guardaba todo de por si un día hacia falta, ahí la tenia cerrado en una caja.</p>
+<p>En Julio de 2004 tuvo lugar en la ciudad de Quito, Ecuador el primer Foro Social de Las Américas. Aparte de ello, y como moscas a la carne, una seria de otras foros brotaron a su alrededor, como era la Foro Indígena, Foro de Diversidad Sexual, en fin. Algunos de las moscas atrevieron montar una cabina de radio en un salón de escuela que transmitía por Internet mientras el Foro Social. Se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a> (<em>levantamiento</em> en Quechua ). Una de las moscas, a volver a su casa, rescató lo que se pudo de lo que se grabó, lo mezclaba con un poco de la música que ambientaba a Quito por aquellas fechas, y el resultado era un disco que también se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a>. Para no largar mucho el cuento, aquella mosca perdió el disco, y el lugar donde estaba hospedado en el Internet también desaprecio, pero otra mosca, o mas bien tenia que haber sido una ratóncita, que siempre guardaba todo de por si un día hacia falta, ahí la tenia cerrado en una caja.</p>
 
 <p>Para acceder a los audios, <em>Read on</em>.</p>
 
@@ -59,7 +59,7 @@ Aparte tenemos una plantilla para hacer un listado automático de audios <em>inl
 
 <h2>Escucha</h2>
 
-<p><strong>Ojo</strong>: tarda un poco para cargar los audio, los que si ponen blancitos el control de volumen ya si puede escuchar. <strong>Ojo2</strong>: estan en formato ogg-vorbis, deben de reproducirse en firefox o chromimun sin problemas.</p>
+<p><strong>Ojo</strong>: tarda un poco para cargar los audio, los que se ponen blancitos el control de volumen ya se puede escuchar. <strong>Ojo2</strong>: estan en formato ogg-vorbis, deben de reproducirse en firefox o chromimun sin problemas.</p>
 
 <h4>01 Democracia</h4>
 
