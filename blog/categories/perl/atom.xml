@@ -4,7 +4,7 @@
   <title><![CDATA[Category: perl | kiai]]></title>
   <link href="http://kyv.github.com/blog/categories/perl/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-11-25T20:34:51-06:00</updated>
+  <updated>2012-11-25T20:44:01-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -18,12 +18,15 @@
     <link href="http://kyv.github.com/blog/2012/11/25/audio-cat/"/>
     <updated>2012-11-25T19:41:00-06:00</updated>
     <id>http://kyv.github.com/blog/2012/11/25/audio-cat</id>
-    <content type="html"><![CDATA[<p>Para aquellas momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code>. Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.</p>
+    <content type="html"><![CDATA[<p><img class="left" src="http://www.flujos.org/images/ncmpc-hora.png" title="&#34;La hora en la lista&#34;" alt="&#34;La hora en la lista&#34;">
+Para aquellos momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria con <strong>cat</strong>: <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code></p>
 
-<p>Si puede utilizarlo en conjunto con un reproductor, por <a href="http://www.flujos.org/blog/Locucion_de_hora-mpdcron/" title="Con MPD">ejemplo con mpd</a>, para <em>automatizar</em> reproducción de la hora actual.</p>
+<p>Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.</p>
 
 <!-- more -->
 
+
+<p>Se puede utilizarlo en conjunto con un reproductor, por <a href="http://www.flujos.org/blog/Locucion_de_hora-mpdcron/" title="Con MPD">ejemplo con mpd</a>, para <em>automatizar</em> reproducción de la hora actual.</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>audiocat.pl </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
