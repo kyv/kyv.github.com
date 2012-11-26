@@ -4,7 +4,7 @@
   <title><![CDATA[Category: perl | kiai]]></title>
   <link href="http://kyv.github.com/blog/categories/perl/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-11-23T13:06:44-06:00</updated>
+  <updated>2012-11-25T20:34:51-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -12,6 +12,309 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[audio cat]]></title>
+    <link href="http://kyv.github.com/blog/2012/11/25/audio-cat/"/>
+    <updated>2012-11-25T19:41:00-06:00</updated>
+    <id>http://kyv.github.com/blog/2012/11/25/audio-cat</id>
+    <content type="html"><![CDATA[<p>Para aquellas momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code>. Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.</p>
+
+<p>Si puede utilizarlo en conjunto con un reproductor, por <a href="http://www.flujos.org/blog/Locucion_de_hora-mpdcron/" title="Con MPD">ejemplo con mpd</a>, para <em>automatizar</em> reproducción de la hora actual.</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>audiocat.pl </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+</span><span class='line'><span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+</span><span class='line'><span class="nb">die</span> <span class="s">&quot;Not Enough arguments\n&quot;</span> <span class="k">if</span> <span class="nv">$#ARGV</span><span class="o">+</span><span class="mi">1</span> <span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span> <span class="mi">1</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">my</span> <span class="nv">$horalib</span><span class="o">=</span><span class="s">&quot;/usr/share/spxcat/audio&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$fmt</span><span class="o">=</span><span class="s">&quot;ogg&quot;</span><span class="p">;</span> <span class="c1"># &quot;spx&quot; for speex</span>
+</span><span class='line'><span class="k">my</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">get_time</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">my</span> <span class="p">(</span><span class="nv">$outfile</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@ARGV</span><span class="p">;</span> <span class="c1">#get outfile from cmd line</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$cmdstr</span> <span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$cmdopts</span> <span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$hour_file</span> <span class="o">=</span> <span class="s">&quot;$horalib/HRS$hour.$fmt&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$min_file</span> <span class="o">=</span> <span class="s">&quot;$horalib/MIN$min.$fmt&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="s">&quot;[$hour_file:$min_file]\n&quot;</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&quot;ogg&quot;</span><span class="p">)</span> <span class="p">{</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="nv">$cmdstr</span> <span class="o">=</span> <span class="s">&quot;ogg&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&quot;spx&quot;</span><span class="p">)</span> <span class="p">{</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="nv">$cmdstr</span> <span class="o">=</span> <span class="s">&quot;speex&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">ne</span> <span class="s">&quot; &quot;</span><span class="p">)</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="p">{</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">oggcat</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">#hora en punto</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;/bin/cp&quot;</span><span class="p">,</span> <span class="nv">$hour_file</span><span class="p">,</span> <span class="nv">$outfile</span><span class="p">));</span>
+</span><span class='line'>    <span class="nb">system</span> <span class="p">(</span><span class="s">&quot;$cmd&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd ($?): $!&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">oggcat</span> <span class="p">{</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="k">my</span> <span class="nv">$out_size</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$hour_file</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$min_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">my</span> <span class="nv">@tmps</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;/tmp/oggout0.wav&quot;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nv">@tmps</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="nv">$out_size</span> <span class="o">+=</span> <span class="o">-</span><span class="n">s</span> <span class="nv">$_</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;cant get out_size: $!\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nb">open</span> <span class="n">IN1</span><span class="p">,</span> <span class="s">&#39;&amp;lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nb">open</span> <span class="n">IN2</span><span class="p">,</span> <span class="s">&#39;&amp;lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout0.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nb">open</span> <span class="n">OUT</span><span class="p">,</span> <span class="s">&#39;&amp;gt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file $outfile\n&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># important info for headers</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$data_size</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">88</span><span class="p">;</span> <span class="c1"># 44 bits * 2 files </span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$fs_8</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">16</span><span class="p">;</span> <span class="c1"># 8 bits * 2 files</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># step through header</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class='line'><span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span> <span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class='line'><span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$fs_8</span><span class="p">);</span>
+</span><span class='line'><span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">32</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$data_size</span><span class="p">);</span>
+</span><span class='line'><span class="c1"># write out the rest</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="n">IN1</span><span class="o">&amp;</span><span class="ow">gt</span><span class="p">;;</span>
+</span><span class='line'><span class="nb">seek</span> <span class="n">IN2</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="n">IN2</span><span class="o">&amp;</span><span class="ow">gt</span><span class="p">;;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">close</span> <span class="n">IN1</span><span class="p">;</span>
+</span><span class='line'><span class="nb">close</span> <span class="n">IN2</span><span class="p">;</span>
+</span><span class='line'><span class="nb">close</span> <span class="n">OUT</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">ogg_enc</span><span class="p">(</span><span class="nv">$outfile</span><span class="p">);</span>
+</span><span class='line'><span class="nb">unlink</span> <span class="nb">glob</span> <span class="s">&quot;/tmp/oggout*&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="p">}</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">ogg_dec</span> <span class="p">{</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$i</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$out</span> <span class="o">=</span> <span class="s">&quot;/tmp/oggout&quot;</span> <span class="o">.</span> <span class="nv">$i</span> <span class="o">.</span> <span class="s">&quot;.wav&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&#39;ogg&#39;</span><span class="p">){</span><span class="nv">$out</span> <span class="o">=</span> <span class="s">&quot;-o&quot;</span><span class="o">.</span> <span class="nv">$out</span><span class="p">}</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="s">&quot;dec&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="nv">$file</span><span class="p">,</span> <span class="nv">$out</span><span class="p">));</span>
+</span><span class='line'><span class="k">print</span> <span class="s">&quot;cmd: $string\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="s">&quot;-|&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nb">die</span> <span class="s">&quot;Cannot fork $!&quot;</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
+</span><span class='line'><span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nb">exec</span> <span class="s">&quot;$string&quot;</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd: $!&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="n">PIPE</span><span class="o">&amp;</span><span class="ow">gt</span><span class="p">;){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="p">}</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">ogg_enc</span> <span class="p">{</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&#39;ogg&#39;</span><span class="p">){</span><span class="nv">$file</span> <span class="o">=</span> <span class="s">&quot;-o&quot;</span><span class="o">.</span> <span class="nv">$file</span><span class="p">}</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="s">&quot;enc&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout.wav&quot;</span><span class="p">,</span> <span class="nv">$file</span><span class="p">));</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="s">&quot;-|&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nb">die</span> <span class="s">&quot;Cannot fork $!&quot;</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
+</span><span class='line'><span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nb">exec</span> <span class="s">&quot;$string&quot;</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd: $!&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="n">PIPE</span><span class="o">&amp;</span><span class="ow">gt</span><span class="p">;){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="p">}</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">get_time</span>
+</span><span class='line'><span class="p">{</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="k">my</span> <span class="nv">@timeData</span> <span class="o">=</span> <span class="nb">localtime</span><span class="p">(</span><span class="nb">time</span><span class="p">);</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$min</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</span><span class='line'><span class="k">if</span><span class="p">(</span><span class="nv">$hour</span> <span class="ow">eq</span> <span class="s">&quot;0&quot;</span><span class="p">)</span> <span class="p">{</span><span class="nv">$hour</span> <span class="o">=</span> <span class="s">&quot;12&quot;</span><span class="p">};</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="k">if</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="nv">$_</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span><span class="nv">$_</span> <span class="o">=</span> <span class="s">&quot;0&quot;</span> <span class="o">.</span> <span class="nv">$_</span><span class="p">};</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">eq</span> <span class="s">&quot;00&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$hour</span> <span class="o">.</span> <span class="s">&quot;_0&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="nv">$min</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">);</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Plugin Audio Ikiwiki]]></title>

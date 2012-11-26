@@ -9,7 +9,7 @@
   <meta name="author" content="Kevin Brown">
 
   
-  <meta name="description" content="Hace poco tiempo hicimos un plugin de audio para ikiwiki. Esto se encuentra en nuestra bifurcación de ikiwiki. El plugin vive en la carpeta Ikiwiki/ &hellip;">
+  <meta name="description" content="Para aquellas momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria cat hora.ogg minuto.ogg &gt; horayminuto. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +91,49 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/25/audio-cat/">Audio Cat</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-25T19:41:00-06:00" pubdate data-updated="true">Nov 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Para aquellas momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code>. Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.</p>
+
+<p>Si puede utilizarlo en conjunto con un reproductor, por <a href="http://www.flujos.org/blog/Locucion_de_hora-mpdcron/" title="Con MPD">ejemplo con mpd</a>, para <em>automatizar</em> reproducción de la hora actual.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/11/25/audio-cat/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -635,92 +678,6 @@ Aaa.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/28/ambient-atonalidad/">Ambient_Atonalidad</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-28T11:58:00-06:00" pubdate data-updated="true">Oct 28<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Presentamos el codigo de nuestra participacion en el concerto de musica electronica que dio conclusion al taller <a href="http://casanagustin.org.mx/actividades-en-curso/888-laboratorio-de-arte-y-nuevos-medios.html" title="Laboratorio de arte y nuevos medios">Música por computadora con código, primer parte del serie Laboratorio de arte y nuevos medios, impartido en CASA de los artes San Augustin Etla</a>.</p>
-
-<p>El codigo es el linguaje <a href="http://supercollider.sourceforge.net/" title="SuperCollider">SuperCollider</a>, que es lo que en concreto aprendimos en el taller.</p>
-
-<p>Primero sintetizamos un ruido de fondo y la pasamos por un Resonant Low Pass Filter (RLPF).</p>
-
-<figure class='code'><figcaption><span>ruido  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">lfn</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">LFNoise2</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10000</span>)<span class="nf">,</span><span class="m">440</span><span class="nf">,</span><span class="m">0.1</span>)<span class="nf">*</span><span class="m">0.03</span>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>En seguida sintetizamos un especia de ritmo atreves de un seria de ruidos de igual manera filtros por un RLPF.</p>
-
-<figure class='code'><figcaption><span>tracktor  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tractor</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">BrownNoise</span><span class="p">.</span><span class="nv">ar</span><span class="nf">*</span><span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">10</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">*</span><span class="nc">WhiteNoise</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10</span>))}<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Luego sintetizamos un bombo.</p>
-
-<figure class='code'><figcaption><span>bombo  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">kick</span><span class="nf">=</span>{<span class="nc">Ringz</span><span class="p">.</span><span class="nv">ar</span>( <span class="nc">Impulse</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">2</span>)<span class="nf">,</span> <span class="m">60</span><span class="nf">,</span> <span class="m">0.5</span> )<span class="nf">*</span><span class="m">0.3</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Un acorde hecho de tres tonos elejido de forma aleatorio.</p>
-
-<figure class='code'><figcaption><span>acorde  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tono</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono0</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono1</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Y finalmente dos melodias reproducidas en sequencia aleatorio.</p>
-
-<figure class='code'><figcaption><span>melodia  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">demand</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">dmel0</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">reverse</span><span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -764,8 +721,15 @@ TranslateThis({
   
 </section>
 <section>
+<h1>QR-Code<abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr></h1>
+<a href="http://kyv.github.com/index.html"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://kyv.github.com/index.html" alt="post-qrcode"></a></section>
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/25/audio-cat/">audio cat</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/11/13/plugin-audio-ikiwiki/">Plugin Audio Ikiwiki</a>
@@ -783,13 +747,10 @@ TranslateThis({
         <a href="/blog/2012/11/01/copiar-lista-a-dispositivo/">Copiar .m3u a dispositivo</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2012/10/31/vortice-de-perspectivo-absoluto/">Vórtice de Perspectivo Absoluto</a>
-      </li>
-    
   </ul>
 </section>
 
+<div id="Flatter" style="float:left">
 <a class="FlattrButton" style="display:none;"
     title="kyv.github.com"
     data-flattr-uid="flujos"
@@ -804,9 +765,14 @@ TranslateThis({
     <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
   </a>
 </noscript>
+</div>
 
 
+<div id="bitcoin" style="float:right;margin-left:10px">
+ 	
+    <a style="margin:0;padding:0;" href="http://bitcoin.org" target="_blank"><img src="https://en.bitcoin.it/w/images/en/7/77/WeAcceptBitcoin.png" alt="Aceptamos Bitcoin" title="Aceptamos Bitcoin" style="width:100px;" border="0" /></a>
 
+</div>
 
 <section>
   <h1>GitHub Repos</h1>
