@@ -4,7 +4,7 @@
   <title><![CDATA[Category: supercollider | kiai]]></title>
   <link href="http://kyv.github.com/blog/categories/supercollider/atom.xml" rel="self"/>
   <link href="http://kyv.github.com/"/>
-  <updated>2012-11-25T20:44:01-06:00</updated>
+  <updated>2012-11-27T22:04:45-06:00</updated>
   <id>http://kyv.github.com/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[supercollider, gedit, window$]]></title>
+    <link href="http://kyv.github.com/blog/2012/11/27/supercollider/"/>
+    <updated>2012-11-27T21:39:00-06:00</updated>
+    <id>http://kyv.github.com/blog/2012/11/27/supercollider</id>
+    <content type="html"><![CDATA[<p><img class="right" src="http://farm6.staticflickr.com/5462/7000684506_50873d6bfe.jpg" width="300">SuperCollider, en window$, viene con un interfaz de control aparentemente hecho en java.  Como nos parece  bastante limitado el interfaz, recomendamos el uso de superCollider atreves de el plugin <strong>sced</strong> para <a href="http://projects.gnome.org/gedit/">Gedit</a>. Primero <a href="http://projects.gnome.org/gedit/" title="Gedit">instalamos gedit</a>. <a href="http://supercollider.sourceforge.net">Instalamos superCollider</a> en el segundo paso, porque el instalador reconoce un instalación de gedit y como resultado instala el plugin de superCollider para gedit. El instalador levanta una ventana como la a la derecha, donde uno tiene que indicar que se instala <strong>Sced</strong>.</p>
+
+<!--more-->
+
+
+<p>Ahora que todo finaliza, se puede abrir gedit (reinicia gedit si ya estaba abierta). Para empezar ocupar superCollider, habilitamos el plugin <strong>Sced</strong> en <em>Editar->Preferencias</em> en el panel de Gedit, y después podemos seleccionar <em>SuperCollider Mode</em> bajo <em>Herramientas</em> para empezar de mandar comandos a superCollider.</p>
+
+<p><strong>Ojo</strong>: versión 3.5.x de SuperCollider no tiene paginas de ayuda. Pero al parecer, el instalador de version 4.5.x no detecta la a Gedit. Pero se puede probar instalando primero 3.5.x, para que se instala el plugin de Gedit, y después versión 3.4.x, ya con el plugin de gedit instalado, utilizar un versión con ayuda.</p>
+
+<p><a href="http://sonidiario.tumblr.com/post/22488835468">más de lo mismo</a> | <a href="http://supercollider.sourceforge.net/">SuperCollider</a> | <a href="http://projects.gnome.org/gedit/">Gedit</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ambient_Atonalidad]]></title>
