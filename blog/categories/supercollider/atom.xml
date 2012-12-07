@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: supercollider | kiai.org]]></title>
-  <link href="http://kyv.github.com/blog/categories/supercollider/atom.xml" rel="self"/>
-  <link href="http://kyv.github.com/"/>
-  <updated>2012-12-06T23:15:04-06:00</updated>
-  <id>http://kyv.github.com/</id>
+  <link href="http://ki-ai.org/blog/categories/supercollider/atom.xml" rel="self"/>
+  <link href="http://ki-ai.org/"/>
+  <updated>2012-12-07T00:43:05-06:00</updated>
+  <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[supercollider, gedit, window$]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/27/supercollider/"/>
+    <link href="http://ki-ai.org/blog/2012/11/27/supercollider/"/>
     <updated>2012-11-27T21:39:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/27/supercollider</id>
+    <id>http://ki-ai.org/blog/2012/11/27/supercollider</id>
     <content type="html"><![CDATA[<p><img class="right" src="http://farm6.staticflickr.com/5462/7000684506_50873d6bfe.jpg" width="300">SuperCollider, en window$, viene con un interfaz de control aparentemente hecho en java.  Como nos parece  bastante limitado el interfaz, recomendamos el uso de superCollider via de el plugin <strong>sced</strong> de <a href="http://projects.gnome.org/gedit/">Gedit</a>. Primero <a href="http://projects.gnome.org/gedit/" title="Gedit">instalamos gedit</a>. <a href="http://supercollider.sourceforge.net">Instalamos superCollider</a> ahora con Gedit instalado podemos instalar SuperCollider. Su instalador encuentra a gedit y levanta una ventana como la a la derecha, donde uno tiene que indicar que se instala <strong>Sced</strong>.</p>
 
 <!--more-->
@@ -33,9 +33,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ambient_Atonalidad]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/28/ambient-atonalidad/"/>
+    <link href="http://ki-ai.org/blog/2012/10/28/ambient-atonalidad/"/>
     <updated>2012-10-28T11:58:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/28/ambient-atonalidad</id>
+    <id>http://ki-ai.org/blog/2012/10/28/ambient-atonalidad</id>
     <content type="html"><![CDATA[<p>Presentamos el codigo de nuestra participacion en el concerto de musica electronica que dio conclusion al taller <a href="http://casanagustin.org.mx/actividades-en-curso/888-laboratorio-de-arte-y-nuevos-medios.html" title="Laboratorio de arte y nuevos medios">Música por computadora con código, primer parte del serie Laboratorio de arte y nuevos medios, impartido en CASA de los artes San Augustin Etla</a>.</p>
 
 <p>El codigo es el linguaje <a href="http://supercollider.sourceforge.net/" title="SuperCollider">SuperCollider</a>, que es lo que en concreto aprendimos en el taller.</p>

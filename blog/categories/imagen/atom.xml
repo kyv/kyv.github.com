@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: imagen | kiai.org]]></title>
-  <link href="http://kyv.github.com/blog/categories/imagen/atom.xml" rel="self"/>
-  <link href="http://kyv.github.com/"/>
-  <updated>2012-12-06T23:15:04-06:00</updated>
-  <id>http://kyv.github.com/</id>
+  <link href="http://ki-ai.org/blog/categories/imagen/atom.xml" rel="self"/>
+  <link href="http://ki-ai.org/"/>
+  <updated>2012-12-07T00:43:05-06:00</updated>
+  <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Cinelerra Gamma y Brillo]]></title>
-    <link href="http://kyv.github.com/blog/2012/12/06/cinelerra-gamma-y-brillo/"/>
+    <link href="http://ki-ai.org/blog/2012/12/06/cinelerra-gamma-y-brillo/"/>
     <updated>2012-12-06T21:47:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/12/06/cinelerra-gamma-y-brillo</id>
+    <id>http://ki-ai.org/blog/2012/12/06/cinelerra-gamma-y-brillo</id>
     <content type="html"><![CDATA[<p>Dos descubrimentos del día de hoy. Primero, <a href="https://www.archlinux.org/packages/community/i686/cinelerra-cv/">Cinelerra esta en archlinux</a>. Entonces se puede instalar con un sencillo <code>pacman -Sy cinelerra-cv</code>. Segundo, es fácil ajustar Gama, Brillo y Contraste del imagen del Video.</p>
 
 <p><img class="left" src="http://flujos.org/media/cinelerra-gama.png" title="Cinelerra" ></p>
@@ -26,9 +26,9 @@
   
   <entry>
     <title type="html"><![CDATA[Fotos Flujos Fest]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest/"/>
+    <link href="http://ki-ai.org/blog/2012/10/29/fotos-flujos-fest/"/>
     <updated>2012-10-29T12:51:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest</id>
+    <id>http://ki-ai.org/blog/2012/10/29/fotos-flujos-fest</id>
     <content type="html"><![CDATA[<p>Fotos para comemorar la gala flujos fest, cosecha de la palabra y otros antojos. Hubo musica, proyeccion, chupe, baile, amor. ¿Que mas quieres?</p>
 
 <p><img src="http://flujos.org/media/Cosecha_palabra%20176.png" title="fusion" ></p>

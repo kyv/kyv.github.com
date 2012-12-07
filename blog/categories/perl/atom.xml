@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: perl | kiai.org]]></title>
-  <link href="http://kyv.github.com/blog/categories/perl/atom.xml" rel="self"/>
-  <link href="http://kyv.github.com/"/>
-  <updated>2012-12-06T23:15:04-06:00</updated>
-  <id>http://kyv.github.com/</id>
+  <link href="http://ki-ai.org/blog/categories/perl/atom.xml" rel="self"/>
+  <link href="http://ki-ai.org/"/>
+  <updated>2012-12-07T00:43:05-06:00</updated>
+  <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[audio cat]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/25/audio-cat/"/>
+    <link href="http://ki-ai.org/blog/2012/11/25/audio-cat/"/>
     <updated>2012-11-25T19:41:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/25/audio-cat</id>
+    <id>http://ki-ai.org/blog/2012/11/25/audio-cat</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://www.flujos.org/images/ncmpc-hora.png" title="&#34;La hora en la lista&#34;" alt="&#34;La hora en la lista&#34;">
 Para aquellos momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria con <strong>cat</strong>: <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code></p>
 
@@ -321,9 +321,9 @@ Para aquellos momentos cuando es necesario generar un audio en base de dos otros
   
   <entry>
     <title type="html"><![CDATA[Plugin Audio Ikiwiki]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki/"/>
+    <link href="http://ki-ai.org/blog/2012/11/13/plugin-audio-ikiwiki/"/>
     <updated>2012-11-13T13:59:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki</id>
+    <id>http://ki-ai.org/blog/2012/11/13/plugin-audio-ikiwiki</id>
     <content type="html"><![CDATA[<p><img class="right" src="http://flujos.org/media/360player.png" title="Foto de Ejemplo" >
 Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encuentra en <a href="https://github.com/kyv/ikiwiki">nuestra bifurcación de ikiwiki</a>. El <em>plugin</em> vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende también de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un <em>underlay</em> en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
 
@@ -351,9 +351,9 @@ Aparte tenemos una plantilla para hacer un listado automático de audios <em>inl
   
   <entry>
     <title type="html"><![CDATA[Copiar .m3u a dispositivo]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/"/>
+    <link href="http://ki-ai.org/blog/2012/11/01/copiar-lista-a-dispositivo/"/>
     <updated>2012-11-01T12:35:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo</id>
+    <id>http://ki-ai.org/blog/2012/11/01/copiar-lista-a-dispositivo</id>
     <content type="html"><![CDATA[<p>Si tienes una lista de reproducción de formato sencillo .m3u, este <em>script</em> copia los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el <em>script</em> los convertirá a <strong>mp3</strong>. Obviamente prefería tener un teléfono que reproduciera <strong>ogg-vorbis</strong>, pero la triste verdad es que no tengo. <strong>Ojo</strong>: <em>para que funciona la conversión de formatos es necesario que mplayer y lame estan instalados</em>.</p>
 
 <h3>Si ejecute así</h3>

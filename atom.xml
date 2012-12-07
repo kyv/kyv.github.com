@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[kiai.org]]></title>
-  <link href="http://kyv.github.com/atom.xml" rel="self"/>
-  <link href="http://kyv.github.com/"/>
-  <updated>2012-12-06T23:15:04-06:00</updated>
-  <id>http://kyv.github.com/</id>
+  <link href="http://ki-ai.org/atom.xml" rel="self"/>
+  <link href="http://ki-ai.org/"/>
+  <updated>2012-12-07T00:43:05-06:00</updated>
+  <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Cinelerra Gamma y Brillo]]></title>
-    <link href="http://kyv.github.com/blog/2012/12/06/cinelerra-gamma-y-brillo/"/>
+    <link href="http://ki-ai.org/blog/2012/12/06/cinelerra-gamma-y-brillo/"/>
     <updated>2012-12-06T21:47:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/12/06/cinelerra-gamma-y-brillo</id>
+    <id>http://ki-ai.org/blog/2012/12/06/cinelerra-gamma-y-brillo</id>
     <content type="html"><![CDATA[<p>Dos descubrimentos del día de hoy. Primero, <a href="https://www.archlinux.org/packages/community/i686/cinelerra-cv/">Cinelerra esta en archlinux</a>. Entonces se puede instalar con un sencillo <code>pacman -Sy cinelerra-cv</code>. Segundo, es fácil ajustar Gama, Brillo y Contraste del imagen del Video.</p>
 
 <p><img class="left" src="http://flujos.org/media/cinelerra-gama.png" title="Cinelerra" ></p>
@@ -26,10 +26,10 @@
   
   <entry>
     <title type="html"><![CDATA[Guía de la Galaxia Episodio Seis]]></title>
-    <link href="http://kyv.github.com/blog/2012/12/04/guia-de-la-galaxia-episodio-seis/"/>
+    <link href="http://ki-ai.org/blog/2012/12/04/guia-de-la-galaxia-episodio-seis/"/>
     <updated>2012-12-04T18:17:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/12/04/guia-de-la-galaxia-episodio-seis</id>
-    <content type="html"><![CDATA[<p>Casi completa traducción de la sexta episodio de la radio novela <a href="http://kyv.github.com/blog/categories/hhgg">Guía de la Galaxia para Mochileros</a> y final de la primera temporada. Falta el principio que funja como transicion de episodio cinco.</p>
+    <id>http://ki-ai.org/blog/2012/12/04/guia-de-la-galaxia-episodio-seis</id>
+    <content type="html"><![CDATA[<p>Casi completa traducción de la sexta episodio de la radio novela <a href="http://ki-ai.org/blog/categories/hhgg">Guía de la Galaxia para Mochileros</a> y final de la primera temporada. Falta el principio que funja como transicion de episodio cinco.</p>
 
 <h2>Guion Radiofónica</h2>
 
@@ -776,9 +776,9 @@ Ugg, aquella cosa.</p>
   
   <entry>
     <title type="html"><![CDATA[supercollider, gedit, window$]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/27/supercollider/"/>
+    <link href="http://ki-ai.org/blog/2012/11/27/supercollider/"/>
     <updated>2012-11-27T21:39:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/27/supercollider</id>
+    <id>http://ki-ai.org/blog/2012/11/27/supercollider</id>
     <content type="html"><![CDATA[<p><img class="right" src="http://farm6.staticflickr.com/5462/7000684506_50873d6bfe.jpg" width="300">SuperCollider, en window$, viene con un interfaz de control aparentemente hecho en java.  Como nos parece  bastante limitado el interfaz, recomendamos el uso de superCollider via de el plugin <strong>sced</strong> de <a href="http://projects.gnome.org/gedit/">Gedit</a>. Primero <a href="http://projects.gnome.org/gedit/" title="Gedit">instalamos gedit</a>. <a href="http://supercollider.sourceforge.net">Instalamos superCollider</a> ahora con Gedit instalado podemos instalar SuperCollider. Su instalador encuentra a gedit y levanta una ventana como la a la derecha, donde uno tiene que indicar que se instala <strong>Sced</strong>.</p>
 
 <!--more-->
@@ -794,9 +794,9 @@ Ugg, aquella cosa.</p>
   
   <entry>
     <title type="html"><![CDATA[audio cat]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/25/audio-cat/"/>
+    <link href="http://ki-ai.org/blog/2012/11/25/audio-cat/"/>
     <updated>2012-11-25T19:41:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/25/audio-cat</id>
+    <id>http://ki-ai.org/blog/2012/11/25/audio-cat</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://www.flujos.org/images/ncmpc-hora.png" title="&#34;La hora en la lista&#34;" alt="&#34;La hora en la lista&#34;">
 Para aquellos momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria con <strong>cat</strong>: <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code></p>
 
@@ -1059,9 +1059,9 @@ Para aquellos momentos cuando es necesario generar un audio en base de dos otros
   
   <entry>
     <title type="html"><![CDATA[Plugin Audio Ikiwiki]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki/"/>
+    <link href="http://ki-ai.org/blog/2012/11/13/plugin-audio-ikiwiki/"/>
     <updated>2012-11-13T13:59:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/13/plugin-audio-ikiwiki</id>
+    <id>http://ki-ai.org/blog/2012/11/13/plugin-audio-ikiwiki</id>
     <content type="html"><![CDATA[<p><img class="right" src="http://flujos.org/media/360player.png" title="Foto de Ejemplo" >
 Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encuentra en <a href="https://github.com/kyv/ikiwiki">nuestra bifurcación de ikiwiki</a>. El <em>plugin</em> vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende también de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un <em>underlay</em> en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
 
@@ -1099,9 +1099,9 @@ Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encue
   
   <entry>
     <title type="html"><![CDATA[Radio Jatarishun]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/08/radio-jatarishun/"/>
+    <link href="http://ki-ai.org/blog/2012/11/08/radio-jatarishun/"/>
     <updated>2012-11-08T15:21:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/08/radio-jatarishun</id>
+    <id>http://ki-ai.org/blog/2012/11/08/radio-jatarishun</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" ></p>
 
 <p>En Julio de 2004 tuvo lugar en la ciudad de Quito, Ecuador el primer Foro Social de Las Américas. Aparte de ello, y como moscas a la carne, una seria de otras foros brotaron a su alrededor, como era la Foro Indígena, Foro de Diversidad Sexual, en fin. Algunos de las moscas atrevieron montar una cabina de radio en un salón de escuela que transmitía por Internet mientras el Foro Social. Se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a> (<em>levantamiento</em> en Quechua ). Una de las moscas, a volver a su casa, rescató lo que se pudo de lo que se grabó, lo mezclaba con un poco de la música que ambientaba a Quito por aquellas fechas, y el resultado era un disco que también se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a>. Para no largar mucho el cuento, aquella mosca perdió el disco, y el lugar donde estaba hospedado en el Internet también desaprecio, pero otra mosca, o mas bien tenia que haber sido una ratóncita, que siempre guardaba todo de por si un día hacia falta, ahí la tenia cerrado en una caja.</p>
@@ -1209,9 +1209,9 @@ Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encue
   
   <entry>
     <title type="html"><![CDATA[Archlinux en MacBook]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/07/archlinux-en-macbook/"/>
+    <link href="http://ki-ai.org/blog/2012/11/07/archlinux-en-macbook/"/>
     <updated>2012-11-07T12:51:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/07/archlinux-en-macbook</id>
+    <id>http://ki-ai.org/blog/2012/11/07/archlinux-en-macbook</id>
     <content type="html"><![CDATA[<p>Anotamos aquí lo que aprendimos al instalar <a href="https://www.archlinux.org" title="Archlinux">archlinux</a> en un <strong>macbook</strong>. Aun que en realidad no es cosa de otro mundo, la documentación es un poco ambiguo y muchas de las recomendaciones que se encuentran en el Internet resuelvan la problema de alguna manera. Pero para resolver el problema de la mejor manera posible, tuvimos que tejer la tapete de parches cortados de varias fuentes.</p>
 
 <p><img class="right" src="http://www.rodsbooks.com/refind/refind.png" width="600" title="Menú de Arranque" ></p>
@@ -1297,9 +1297,9 @@ Llegando al final, en el seccion <a href="https://wiki.archlinux.org/index.php/I
   
   <entry>
     <title type="html"><![CDATA[Copiar .m3u a dispositivo]]></title>
-    <link href="http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo/"/>
+    <link href="http://ki-ai.org/blog/2012/11/01/copiar-lista-a-dispositivo/"/>
     <updated>2012-11-01T12:35:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/11/01/copiar-lista-a-dispositivo</id>
+    <id>http://ki-ai.org/blog/2012/11/01/copiar-lista-a-dispositivo</id>
     <content type="html"><![CDATA[<p>Si tienes una lista de reproducción de formato sencillo .m3u, este <em>script</em> copia los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el <em>script</em> los convertirá a <strong>mp3</strong>. Obviamente prefería tener un teléfono que reproduciera <strong>ogg-vorbis</strong>, pero la triste verdad es que no tengo. <strong>Ojo</strong>: <em>para que funciona la conversión de formatos es necesario que mplayer y lame estan instalados</em>.</p>
 
 <h3>Si ejecute así</h3>
@@ -1390,10 +1390,10 @@ Llegando al final, en el seccion <a href="https://wiki.archlinux.org/index.php/I
   
   <entry>
     <title type="html"><![CDATA[Vórtice de Perspectivo Absoluto]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/31/vortice-de-perspectivo-absoluto/"/>
+    <link href="http://ki-ai.org/blog/2012/10/31/vortice-de-perspectivo-absoluto/"/>
     <updated>2012-10-31T20:48:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/31/vortice-de-perspectivo-absoluto</id>
-    <content type="html"><![CDATA[<p>Hemos <a href="http://kyv.github.com/blog/categories/traduccion" title="Traducciones">traducido</a> un pasaje del segunda temporada del a Radio Novela de Douglas Adams, <a href="http://kyv.github.com/blog/categories/hhgg/" title="Guía de la Galaxia Para Mochileros">La Guía de la Galaxia para Mochileros</a>, que trata el tema del Vórtice de Perspectivo Absoluto. Por que? Obviamente para el beneficio de la humanidad :) O al menos unos risas, que, al fin de cuentas, resulta ser lo mismo.</p>
+    <id>http://ki-ai.org/blog/2012/10/31/vortice-de-perspectivo-absoluto</id>
+    <content type="html"><![CDATA[<p>Hemos <a href="http://ki-ai.org/blog/categories/traduccion" title="Traducciones">traducido</a> un pasaje del segunda temporada del a Radio Novela de Douglas Adams, <a href="http://ki-ai.org/blog/categories/hhgg/" title="Guía de la Galaxia Para Mochileros">La Guía de la Galaxia para Mochileros</a>, que trata el tema del Vórtice de Perspectivo Absoluto. Por que? Obviamente para el beneficio de la humanidad :) O al menos unos risas, que, al fin de cuentas, resulta ser lo mismo.</p>
 
 <p><img class="left" src="http://www.flujos.org/media/You_Are_Here.png" width="500" title="Usted Esta Aquí" ></p>
 
@@ -1540,10 +1540,10 @@ Mi dijo básicamente lo que yo mismo vengo diciendo. Soy un chingón. No te dije
   
   <entry>
     <title type="html"><![CDATA[Introducción Guía de la Galaxia Episodio Dos]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/30/intro-fit-the-second/"/>
+    <link href="http://ki-ai.org/blog/2012/10/30/intro-fit-the-second/"/>
     <updated>2012-10-30T11:36:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/30/intro-fit-the-second</id>
-    <content type="html"><![CDATA[<p>Para la presentación de la <a href="http://rockola.flujos.org" title="Rockolateka Radiofónica">La Rockolateka Radiofónica Virtualizada</a> en <a href="http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest/" title="Fotos Flujos Fest">Flujos Fest</a> 2012 traducimos a la introducción de la segundo episodio de la <a href="http://kyv.github.com/blog/categories/hhgg/" title="Guía de la Galaxia Para Mochileros">Guía de la Galaxia para Mochileros</a> por Douglass Adams. Por fallas organizativas no la dimos lectura, pero lo dejamos aquí para lo que sirve.</p>
+    <id>http://ki-ai.org/blog/2012/10/30/intro-fit-the-second</id>
+    <content type="html"><![CDATA[<p>Para la presentación de la <a href="http://rockola.flujos.org" title="Rockolateka Radiofónica">La Rockolateka Radiofónica Virtualizada</a> en <a href="http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest/" title="Fotos Flujos Fest">Flujos Fest</a> 2012 traducimos a la introducción de la segundo episodio de la <a href="http://ki-ai.org/blog/categories/hhgg/" title="Guía de la Galaxia Para Mochileros">Guía de la Galaxia para Mochileros</a> por Douglass Adams. Por fallas organizativas no la dimos lectura, pero lo dejamos aquí para lo que sirve.</p>
 
 <p><img class="right" src="http://www.flujos.org/fv/images/00-navegacion_cango_en_playa.png" width="400" title="Monito Travieso Siente Nostalgia por Sus Orígenes" ></p>
 
@@ -1564,9 +1564,9 @@ Profundamente lejos en los remansos inexplorados del brazo espiral Oeste y pasad
   
   <entry>
     <title type="html"><![CDATA[Guía de la Galaxia para Mochileros, Edición Pirateada]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/29/guia-de-la-galaxia-para-mochileros/"/>
+    <link href="http://ki-ai.org/blog/2012/10/29/guia-de-la-galaxia-para-mochileros/"/>
     <updated>2012-10-29T21:24:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/29/guia-de-la-galaxia-para-mochileros</id>
+    <id>http://ki-ai.org/blog/2012/10/29/guia-de-la-galaxia-para-mochileros</id>
     <content type="html"><![CDATA[<p>Damos a conocer a un fragmento del Guía de la Galaxia Para Mochileros, Edición Pirateada. Esto fragmento fue escrito por nosotros pero basamos en el concepto y personajes desarrollados por Douglass Adams para radio BBC en las setentas. Ademas del fragmento estamos trabajando en la traducción del seria original al español. Aun que no están terminados, esperemos que alguien encuentra algún diversión en ello. Eso por que últimamente no hemos tenidos tiempo de trabajar en ello, y mucho menos fondos para producir lo.</p>
 
 <h2>Guía de la Galaxia para Mochileros, Edición Pirateada</h2>
@@ -2023,9 +2023,9 @@ Bien apaga las luces cuando terminas. Espero poder dormir con este olor.</p>
   
   <entry>
     <title type="html"><![CDATA[Fotos Flujos Fest]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest/"/>
+    <link href="http://ki-ai.org/blog/2012/10/29/fotos-flujos-fest/"/>
     <updated>2012-10-29T12:51:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest</id>
+    <id>http://ki-ai.org/blog/2012/10/29/fotos-flujos-fest</id>
     <content type="html"><![CDATA[<p>Fotos para comemorar la gala flujos fest, cosecha de la palabra y otros antojos. Hubo musica, proyeccion, chupe, baile, amor. ¿Que mas quieres?</p>
 
 <p><img src="http://flujos.org/media/Cosecha_palabra%20176.png" title="fusion" ></p>
@@ -2051,9 +2051,9 @@ Bien apaga las luces cuando terminas. Espero poder dormir con este olor.</p>
   
   <entry>
     <title type="html"><![CDATA[Los_Rincones_en_FlujosFest]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/28/los-rincones-en-flujosfest/"/>
+    <link href="http://ki-ai.org/blog/2012/10/28/los-rincones-en-flujosfest/"/>
     <updated>2012-10-28T22:28:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/28/los-rincones-en-flujosfest</id>
+    <id>http://ki-ai.org/blog/2012/10/28/los-rincones-en-flujosfest</id>
     <content type="html"><![CDATA[<p>Los Rincones Del Sur, invitados de honor de <a href="http://www.flujos.org/blog/Flujos_Fest_2012/" title="Flujos Fest 2012">Flujos Fest 2012</a> miran hacia el horizonte. Agradecemos su presencia y a todos que asistieron. Pronto subiremos mas fotos para que si ponen invidiosos los que perdieron a la fiesta.</p>
 
 <p> <img class="right" src="http://flujos.org/media/flujosfestrinconesdelaur.png" title="Los Rincones Del Sur" ></p>
@@ -2064,9 +2064,9 @@ Bien apaga las luces cuando terminas. Espero poder dormir con este olor.</p>
   
   <entry>
     <title type="html"><![CDATA[Ambient_Atonalidad]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/28/ambient-atonalidad/"/>
+    <link href="http://ki-ai.org/blog/2012/10/28/ambient-atonalidad/"/>
     <updated>2012-10-28T11:58:00-06:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/28/ambient-atonalidad</id>
+    <id>http://ki-ai.org/blog/2012/10/28/ambient-atonalidad</id>
     <content type="html"><![CDATA[<p>Presentamos el codigo de nuestra participacion en el concerto de musica electronica que dio conclusion al taller <a href="http://casanagustin.org.mx/actividades-en-curso/888-laboratorio-de-arte-y-nuevos-medios.html" title="Laboratorio de arte y nuevos medios">Música por computadora con código, primer parte del serie Laboratorio de arte y nuevos medios, impartido en CASA de los artes San Augustin Etla</a>.</p>
 
 <p>El codigo es el linguaje <a href="http://supercollider.sourceforge.net/" title="SuperCollider">SuperCollider</a>, que es lo que en concreto aprendimos en el taller.</p>
@@ -2123,20 +2123,20 @@ Bien apaga las luces cuando terminas. Espero poder dormir con este olor.</p>
   
   <entry>
     <title type="html"><![CDATA[Ciertas Letras]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/26/ciertas-letras/"/>
+    <link href="http://ki-ai.org/blog/2012/10/26/ciertas-letras/"/>
     <updated>2012-10-26T16:14:00-05:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/26/ciertas-letras</id>
+    <id>http://ki-ai.org/blog/2012/10/26/ciertas-letras</id>
     <content type="html"><![CDATA[<p>Damos a conocer Ciertas Letras que habiamos encontrados y luego los perdimos y apenas los encontremos de nuevo.</p>
 
-<p><a href="http://kyv.github.com/letras" title="Ciertas Letras Sigue a Otros como es la Zeta prinipalmente pero hasta el B sigue el A y el A a B si vas de reversa">Ciertas Letras</a></p>
+<p><a href="http://ki-ai.org/letras" title="Ciertas Letras Sigue a Otros como es la Zeta prinipalmente pero hasta el B sigue el A y el A a B si vas de reversa">Ciertas Letras</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[hackmitin_2012]]></title>
-    <link href="http://kyv.github.com/blog/2012/10/26/hackmitin-2012/"/>
+    <link href="http://ki-ai.org/blog/2012/10/26/hackmitin-2012/"/>
     <updated>2012-10-26T16:03:00-05:00</updated>
-    <id>http://kyv.github.com/blog/2012/10/26/hackmitin-2012</id>
+    <id>http://ki-ai.org/blog/2012/10/26/hackmitin-2012</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hackmitin.espora.org/im%C3%A1genes/hackmitin2012_web.png" title="&#34;hackmitin 2012&#34;" alt="&#34;hackmitin 2012&#34;"></p>
 
 <p>Inaguramos nuestro blog con una invitacion al Hackmitin 2012. Váyanse preparando. Es el 9, 10 y 11 de Noviembre en el espacio comunitario ADA ubicado en la Ciudad de Puebla, México.</p>
