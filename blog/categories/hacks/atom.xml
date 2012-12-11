@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacks | ki-ai.org]]></title>
   <link href="http://ki-ai.org/blog/categories/hacks/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2012-12-09T15:39:32-06:00</updated>
+  <updated>2012-12-11T14:45:23-06:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[Kevin Brown]]></name>
@@ -12,6 +12,88 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ArchCom: Archlinux para Comunicantes]]></title>
+    <link href="http://ki-ai.org/blog/2012/12/11/archlinux-para-comunicantes/"/>
+    <updated>2012-12-11T13:42:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2012/12/11/archlinux-para-comunicantes</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://flujos.org/media/screen-qterm-audacity.png" width="400" title="Pantallazo Audacity y Quick Terminal" ></p>
+
+<p>Sistema ligera en base de <a href="http://archlinux.org">archlinux</a> con aplicaciones de creación multi-media disponible vía bitorrent.</p>
+
+<p>Grábalo a DVD o USB para hacer disco de arranque o arrancarlo por red para materializar un laboratorio de medios espontáneamente. Es para procesadores de 64 bits PC y MAC (la mayoría de los nuevos). Probablemente aparecerá muy pronto una versión para i686 (PCs mas antiguas).</p>
+
+<p><strong>Mas medios, menos basura</strong>.</p>
+
+<p>Descargas vía <a href="http://linuxtracker.org/download.php?id=4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;f=archcom-2012.12.10-x86_64.iso.torrent&amp;key=0%20Fichero%20.torrent">torrent tradicional</a> o <a href="magnet:?xt=urn:btih:4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;dn=archcom-2012.12.10-x86%5F64.iso&amp;tr=http%3A%2F%2Flinuxtracker.org%3A2710%2Fbcc9d2323826745794be0d57f9e5cf1d%2Fannounce">enlace iman</a>. Detalles al final u <a href="http://linuxtracker.org/index.php?page=torrent-details&amp;id=4853d82ad0291a0f3823cbc8d9f0813c18711815">linuxtracker.org</a>.</p>
+
+<!-- more -->
+
+
+<h2>Configuración de Sistema</h2>
+
+<p><img class="right" src="http://flujos.org/media/screen-cinelerra.png" title="Pantallazo Cinelerra" ></p>
+
+<h3>Gráfica</h3>
+
+<ul>
+<li><strong>gimp</strong> (manipulación de imagen)</li>
+<li><strong>inkscape</strong> (dibujo vectorial)</li>
+<li><strong>blender</strong> (modelaje 3D / animación)</li>
+</ul>
+
+
+<h3>Video</h3>
+
+<ul>
+<li><strong>cinelerra</strong> (edición)</li>
+<li><strong>totem</strong> (reproducción)</li>
+<li><strong>devede</strong> (dvd)</li>
+</ul>
+
+
+<h3>Audio</h3>
+
+<ul>
+<li><strong>mixxx</strong> (consola DJ / radio por Internet)</li>
+<li><strong>audacity</strong> (edición)</li>
+<li><strong>ardour</strong> (DAW)</li>
+<li><strong>Qtractor</strong> – (DAW)</li>
+<li><strong>Hydrogen</strong> – (Drum machine / Sequencer)</li>
+<li><strong>Supercolider</strong> (Síntesis / Programación)</li>
+</ul>
+
+
+<h3>Oficina</h3>
+
+<ul>
+<li><strong>libreoffice</strong></li>
+</ul>
+
+
+<h3>Red</h3>
+
+<ul>
+<li><strong>chromium</strong> (Navigador)</li>
+<li><strong>transmission</strong> (bitorrent)</li>
+<li><strong>claws-mail</strong> (correo)</li>
+<li><strong>tor</strong> (anonimidad)</li>
+</ul>
+
+
+<h3>Sistema</h3>
+
+<ul>
+<li><strong>archlinux</strong></li>
+<li><strong>slim</strong> session manager</li>
+<li><strong>openbox</strong> wm</li>
+<li><strong>adeskbar</strong> barra de aplicaciones</li>
+<li><strong>tint2</strong> panel</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[audio cat]]></title>
@@ -564,58 +646,6 @@ Ahora se puede volver al instalación oficial de archlinux, empezando con la <a 
 </span><span class='line'><span class="sr">&lt;p&gt;</span>   <span class="p">}</span><span class="sr">&lt;/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;p&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ambient_Atonalidad]]></title>
-    <link href="http://ki-ai.org/blog/2012/10/28/ambient-atonalidad/"/>
-    <updated>2012-10-28T11:58:00-06:00</updated>
-    <id>http://ki-ai.org/blog/2012/10/28/ambient-atonalidad</id>
-    <content type="html"><![CDATA[<p>Presentamos el codigo de nuestra participacion en el concerto de musica electronica que dio conclusion al taller <a href="http://casanagustin.org.mx/actividades-en-curso/888-laboratorio-de-arte-y-nuevos-medios.html" title="Laboratorio de arte y nuevos medios">Música por computadora con código, primer parte del serie Laboratorio de arte y nuevos medios, impartido en CASA de los artes San Augustin Etla</a>.</p>
-
-<p>El codigo es el linguaje <a href="http://supercollider.sourceforge.net/" title="SuperCollider">SuperCollider</a>, que es lo que en concreto aprendimos en el taller.</p>
-
-<p>Primero sintetizamos un ruido de fondo y la pasamos por un Resonant Low Pass Filter (RLPF).</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ruido  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">lfn</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">LFNoise2</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10000</span>)<span class="nf">,</span><span class="m">440</span><span class="nf">,</span><span class="m">0.1</span>)<span class="nf">*</span><span class="m">0.03</span>}
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>En seguida sintetizamos un especia de ritmo atreves de un seria de ruidos de igual manera filtros por un RLPF.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>tracktor  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tractor</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">BrownNoise</span><span class="p">.</span><span class="nv">ar</span><span class="nf">&lt;</span><span class="nv">em</span><span class="nf">&gt;</span><span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">10</span>)<span class="nf">&lt;/</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">1</span><span class="nf">*</span><span class="nc">WhiteNoise</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10</span>))}<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Luego sintetizamos un bombo.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bombo  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">kick</span><span class="nf">=</span>{<span class="nc">Ringz</span><span class="p">.</span><span class="nv">ar</span>( <span class="nc">Impulse</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">2</span>)<span class="nf">,</span> <span class="m">60</span><span class="nf">,</span> <span class="m">0.5</span> )<span class="nf">*</span><span class="m">0.3</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Un acorde hecho de tres tonos elejido de forma aleatorio.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>acorde  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tono</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">&lt;</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">400</span>)<span class="nf">&lt;/</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono0</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">&lt;</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">400</span>)<span class="nf">&lt;/</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono1</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">&lt;</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">400</span>)<span class="nf">&lt;/</span><span class="nv">em</span><span class="nf">&gt;</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Y finalmente dos melodias reproducidas en sequencia aleatorio.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>melodia  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">demand</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">dmel0</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">reverse</span><span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
