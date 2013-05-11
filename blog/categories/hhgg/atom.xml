@@ -4,10 +4,10 @@
   <title><![CDATA[Category: hhgg | ki-ai.org]]></title>
   <link href="http://ki-ai.org/blog/categories/hhgg/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2012-12-21T17:39:38-06:00</updated>
+  <updated>2013-05-11T12:33:31-05:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
-    <name><![CDATA[Kevin Brown]]></name>
+    <name><![CDATA[ki-ai.org]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -22,40 +22,45 @@
 
 <h2>Guion Radiofónica</h2>
 
-<p><strong>NARRARADOR</strong>
-Y eso es lo que paso con Arturo Dante y Ford Prefect.</p>
+<dl>
+<dt>NARRARADOR</dt>
+<dd>Y eso es lo que paso con Arturo Dante y Ford Prefect.</dd>
 
-<p><strong>F/X</strong>
-INVERSO DE EFECTO HYPERESPACIO. UN COLLISION FUERTE</p>
+<dt>F/X</dt>
+<dd>INVERSO DE EFECTO HYPERESPACIO. UN COLLISION FUERTE</dd>
 
-<p><strong>ARTURO</strong>
-Ya estamos en espacio normal?</p>
+<dt>ARTURO</dt>
+<dd>Ya estamos en espacio normal?<dd>
 
-<p><strong>FORD</strong>
-No. Creo que de hecho hemos materializado a dentro de otro nave.</p>
+<dt>FORD</dt>
+<dd>No. Creo que de hecho hemos materializado a dentro de otro nave. </dd>
 
-<p><strong>ARTURO</strong>
-Mas problemas.</p>
+<dt>ARTURO</dt>
+<dd>Mas problemas. </dd>
 
-<p><strong>FORD</strong>
-Vamos a ver. Pruebas... atmósfera OK, vamos a salir a echar un vistazo...</p>
+<dt>FORD</dt>
+<dd>Vamos a ver. Pruebas... atmósfera OK, vamos a salir a echar un vistazo...</dd>
 
-<p><strong>F/X</strong> ABRIENDO LA CAPSULA: SALEN</p>
+<dt>F/X</dt> <dd>ABRIENDO LA CAPSULA: SALEN</dd>
 
-<p><strong>ARTURO</strong>
-Ford</p>
+<dt>ARTURO</dt>
+<dd>Ford</dd>
 
-<p><strong>FORD</strong>
-Kiubo</p>
+<dt>FORD</dt>
+<dd>Kiubo</dd>
+<dt>ARTURO</dt>
+<dd>Creo que hay algo muy extraño con el Universo sabes. </dd>
 
-<p><strong>ARTURO</strong>
-Creo que hay algo muy extraño con el Universo sabes.</p>
 
-<p><strong>FORD</strong>
-Creo que hay algo muy extraño con este nave.</p>
+<dt>FORD</dt>
+<dd>Creo que hay algo muy extraño con este nave. </dd>
 
-<p><strong>ARTURO</strong>
-Si. Se ve como un mausoleo.</p>
+<dt>ARTURO</dt>
+<dd>Si. Se ve como un mausoleo.</dd>
+</dl>
+
+
+
 
 <!-- more -->
 
