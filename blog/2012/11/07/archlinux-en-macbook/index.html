@@ -97,23 +97,25 @@
 
       <div class="nav-collapse">
         <ul class="nav">
-  <li><a href="/contacto">Contacto</a></li>
-  <li><a href="/servicios">Servicios</a></li>
-  <li><a href="/blog/archives">Archivo</a></li>
+  <li><a href="/contacto"><i class="icon-envelope"></i> Contacto</a></li>
+  <li><a href="/servicios"><i class="icon-cogs"></i> Servicios</a></li>
+  <li><a href="/blog/archives"><i class="icon-folder-open-alt"></i> Archivo</a></li>
 </ul>
 
 
         <ul class="nav pull-right" data-subscription="rss">
-          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><i class="icon-rss icon-large"></i></a></li>
           
         </ul>
 
         
-          <form class="pull-right navbar-search" action="http://google.com/search" method="get">
-            <fieldset role="search">
+          <form class="pull-right navbar-search form-search" role="search" action="http://google.com/search" method="get">
               <input type="hidden" name="q" value="site:ki-ai.org" />
-              <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
-            </fieldset>
+              <div class="input-prepend">
+                <button type="submit" class="btn btn-inverse"><i class="icon-search"></i></button>
+                <input class="search-query" type="text" name="q" results="0" placeholder="Buscar"/>
+              </div>
+
           </form>
         
       </div>
@@ -397,15 +399,7 @@ TranslateThis({
 </section>
 
 
-
-
-<section class="well">
-<h4>QR-Code
-  <abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr>
-</h4>
-<a href="http://ki-ai.org/blog/2012/11/07/archlinux-en-macbook/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://ki-ai.org/blog/2012/11/07/archlinux-en-macbook/" alt="post-qrcode"></a>
-</section>
-
+Include file 'asides/googleplus.html,custom/asides/qrcode.html' contains invalid characters or sequencesIncluded file 'asides/googleplus.html,custom/asides/qrcode.html' not found in _includes directory
 <div id="Flatter" class="box-margin">
 <a class="FlattrButton" style="display:none;"
     title="kyv.github.com"
