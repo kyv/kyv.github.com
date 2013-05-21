@@ -1,0 +1,63 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+.left
+{
+  float: left;
+}
+.right
+{
+  float: right;
+}
+img
+{
+  margin:10px;
+  max-width: 100%;
+}
+article
+{
+  clear: both;
+  padding: 2em 0.25em;
+  overflow: auto;
+}
+article p
+{
+  text-align: justify;
+}
+.box-margin
+{
+  min-height: 10px;
+  padding: 9px;
+  margin-bottom: 10px;
+}
+.sidebar-nav
+{
+  overflow: hidden;
+}
+.hero-unit
+{
+  background: transparent url('/images/banner.png') no-repeat right 25%;
+  position: relative;
+  overflow: visible;
+  height: 150px;
+
+}
+
+.hero-unit img
+{
+  position: absolute;
+  right: 0;
+  bottom: 5%;
+}
+p.meta {
+  font-size: 85%;
+  margin: 	0 0 10px;
+}
+.navbar .brand, h1 i
+{
+  color: #c72536;
+}
+.form-search .icon-search
+{
+  color: #fff;
+}
+

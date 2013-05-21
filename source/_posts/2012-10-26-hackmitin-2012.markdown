@@ -1,0 +1,14 @@
+---
+layout: post
+title: "hackmitin_2012"
+date: 2012-10-26 16:03
+comments: true
+categories: eventos
+---
+{% img left http://hackmitin.espora.org/im%C3%A1genes/hackmitin2012_web.png "hackmitin 2012" %}
+
+Inaguramos nuestro blog con una invitacion al Hackmitin 2012. Váyanse preparando. Es el 9, 10 y 11 de Noviembre en el espacio comunitario ADA ubicado en la Ciudad de Puebla, México.
+
+
+[http://hackmitin.espora.org](http://hackmitin.espora.org/ "Visita la pagina del hackmitin 2012")
+

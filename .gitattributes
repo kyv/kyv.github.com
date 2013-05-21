@@ -1,0 +1,9 @@
+*.ogg filter=media -crlf
+*.mov filter=media -crlf
+*.oga filter=media -crlf
+*.ogv filter=media -crlf
+*.png filter=media -crlf
+*.jpg filter=media -crlf
+*.JPG filter=media -crlf
+*.PNG filter=media -crlf
+*.mp3 filter=media -crlf
