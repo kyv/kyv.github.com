@@ -52,12 +52,31 @@ p.meta {
   font-size: 85%;
   margin: 	0 0 10px;
 }
-.navbar .brand, h1 i
+.navbar .brand
+{
+  color: #fff;
+}
+.navbar .brand i:hover
+{
+  font-size: 32px;
+  margin-top: -8px;
+  margin-left: -5px;
+  margin-right: -6px;
+  display: inline-block;
+}
+h1 i
 {
   color: #c72536;
 }
 .form-search .icon-search
 {
-  color: #fff;
+  color: rgb(153, 153, 153);
 }
-
+.navbar-inner
+{
+  max-height: 40px;
+}
+.entry-content #main_area .row
+{
+  margin-left: 0px;
+}
