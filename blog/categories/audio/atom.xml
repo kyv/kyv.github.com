@@ -4,7 +4,7 @@
   <title><![CDATA[Category: audio | ki-ai.org]]></title>
   <link href="http://ki-ai.org/blog/categories/audio/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2013-05-28T23:56:29-05:00</updated>
+  <updated>2013-05-29T00:17:27-05:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -29,7 +29,7 @@
     <link href="http://ki-ai.org/blog/2012/12/11/archlinux-para-comunicantes/"/>
     <updated>2012-12-11T13:42:00-06:00</updated>
     <id>http://ki-ai.org/blog/2012/12/11/archlinux-para-comunicantes</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://flujos.org/media/screen-qterm-audacity.png" width="400" title="Pantallazo Audacity y Quick Terminal" ></p>
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://flujos.org/media/screen-qterm-audacity.png" width="400" title="Pantallazo Audacity y Quick Terminal" ></p>
 
 <p>Sistema ligera en base de <a href="http://archlinux.org">archlinux</a> con aplicaciones de creación multi-media disponible vía bitorrent.</p>
 
@@ -111,7 +111,7 @@
     <link href="http://ki-ai.org/blog/2012/11/25/audio-cat/"/>
     <updated>2012-11-25T19:41:00-06:00</updated>
     <id>http://ki-ai.org/blog/2012/11/25/audio-cat</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://www.flujos.org/images/ncmpc-hora.png" title="&#34;La hora en la lista&#34;" alt="&#34;La hora en la lista&#34;">
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://www.flujos.org/images/ncmpc-hora.png" title="&#34;La hora en la lista&#34;" alt="&#34;La hora en la lista&#34;">
 Para aquellos momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria con <strong>cat</strong>: <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code></p>
 
 <p>Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.</p>
@@ -447,7 +447,7 @@ Aparte tenemos una plantilla para hacer un listado automático de audios <em>inl
     <link href="http://ki-ai.org/blog/2012/11/08/radio-jatarishun/"/>
     <updated>2012-11-08T15:21:00-06:00</updated>
     <id>http://ki-ai.org/blog/2012/11/08/radio-jatarishun</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" ></p>
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" ></p>
 
 <p>En Julio de 2004 tuvo lugar en la ciudad de Quito, Ecuador el primer Foro Social de Las Américas. Aparte de ello, y como moscas a la carne, una seria de otras foros brotaron a su alrededor, como era la Foro Indígena, Foro de Diversidad Sexual, en fin. Algunos de las moscas atrevieron montar una cabina de radio en un salón de escuela que transmitía por Internet mientras el Foro Social. Se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a> (<em>levantamiento</em> en Quechua ). Una de las moscas, a volver a su casa, rescató lo que se pudo de lo que se grabó, lo mezclaba con un poco de la música que ambientaba a Quito por aquellas fechas, y el resultado era un disco que también se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a>. Para no largar mucho el cuento, aquella mosca perdió el disco, y el lugar donde estaba hospedado en el Internet también desaprecio, pero otra mosca, o mas bien tenia que haber sido una ratóncita, que siempre guardaba todo de por si un día hacia falta, ahí la tenia cerrado en una caja.</p>
 
