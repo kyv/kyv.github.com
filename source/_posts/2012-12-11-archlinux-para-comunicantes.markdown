@@ -5,7 +5,7 @@ date: 2012-12-11 13:42
 comments: true
 categories: hacks archlinux audio
 ---
-{% img left http://flujos.org/media/screen-qterm-audacity.png 400 Pantallazo Audacity y Quick Terminal %}
+{% img pull-left http://flujos.org/media/screen-qterm-audacity.png 400 Pantallazo Audacity y Quick Terminal %}
 
 Sistema ligera en base de [archlinux](http://archlinux.org) con aplicaciones de creación multi-media disponible vía bitorrent. 
 

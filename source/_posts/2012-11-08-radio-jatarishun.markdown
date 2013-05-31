@@ -5,7 +5,7 @@ date: 2012-11-08 15:21
 comments: true
 categories: audio
 ---
-{% img left http://ecuador.indymedia.org/images/2004/08/6562.jpg Menú Portada Radio Jatarishun %}
+{% img pull-left http://ecuador.indymedia.org/images/2004/08/6562.jpg Menú Portada Radio Jatarishun %}
 
 En Julio de 2004 tuvo lugar en la ciudad de Quito, Ecuador el primer Foro Social de Las Américas. Aparte de ello, y como moscas a la carne, una seria de otras foros brotaron a su alrededor, como era la Foro Indígena, Foro de Diversidad Sexual, en fin. Algunos de las moscas atrevieron montar una cabina de radio en un salón de escuela que transmitía por Internet mientras el Foro Social. Se llamaba [Radio Jatarishun](http://ecuador.indymedia.org/es/2004/08/6563.shtml "Radio Jatarishun") (*levantamiento* en Quechua ). Una de las moscas, a volver a su casa, rescató lo que se pudo de lo que se grabó, lo mezclaba con un poco de la música que ambientaba a Quito por aquellas fechas, y el resultado era un disco que también se llamaba [Radio Jatarishun](http://ecuador.indymedia.org/es/2004/08/6563.shtml "Radio Jatarishun"). Para no largar mucho el cuento, aquella mosca perdió el disco, y el lugar donde estaba hospedado en el Internet también desaprecio, pero otra mosca, o mas bien tenia que haber sido una ratóncita, que siempre guardaba todo de por si un día hacia falta, ahí la tenia cerrado en una caja.
 

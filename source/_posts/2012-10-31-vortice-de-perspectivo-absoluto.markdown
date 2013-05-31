@@ -8,7 +8,7 @@ categories: hhgg traduccion guion
 
 Hemos [traducido](/blog/categories/traduccion "Traducciones") un pasaje del segunda temporada del a Radio Novela de Douglas Adams, [La Guía de la Galaxia para Mochileros](/blog/categories/hhgg/ "Guía de la Galaxia Para Mochileros"), que trata el tema del Vórtice de Perspectivo Absoluto. Por que? Obviamente para el beneficio de la humanidad :) O al menos unos risas, que, al fin de cuentas, resulta ser lo mismo.
 
-{% img left http://www.flujos.org/media/You_Are_Here.png 500 Usted Esta Aquí %}
+{% img pull-left http://www.flujos.org/media/You_Are_Here.png 500 Usted Esta Aquí %}
 
 ##Vórtice de perspectivo Absoluto
 

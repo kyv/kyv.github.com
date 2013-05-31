@@ -6,7 +6,7 @@ comments: true
 categories: audio perl hacks
 ---
 
-{% img left http://www.flujos.org/images/ncmpc-hora.png "La hora en la lista" %}
+{% img pull-left http://www.flujos.org/images/ncmpc-hora.png "La hora en la lista" %}
 Para aquellos momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria con **cat**: ```cat hora.ogg minuto.ogg > horayminuto.ogg```
 
 Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio. 
