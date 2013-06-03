@@ -136,6 +136,55 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/12/11/archlinux-para-comunicantes/">ArchCom: Archlinux Para Comunicantes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-11T13:42:00-06:00" pubdate data-updated="true">Dec 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img class="pull-left" src="http://flujos.org/media/screen-qterm-audacity.png" width="400" title="Pantallazo Audacity y Quick Terminal" ></p>
+
+<p>Sistema ligera en base de <a href="http://archlinux.org">archlinux</a> con aplicaciones de creación multi-media disponible vía bitorrent.</p>
+
+<p>Grábalo a DVD o USB para hacer disco de arranque o arrancarlo por red para materializar un laboratorio de medios espontáneamente. Es para procesadores de 64 bits PC y MAC (la mayoría de los nuevos). Probablemente aparecerá muy pronto una versión para i686 (PCs mas antiguas).</p>
+
+<p><strong>Mas medios, menos basura</strong>.</p>
+
+<p>Descargas vía <a href="http://linuxtracker.org/download.php?id=4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;f=archcom-2012.12.10-x86_64.iso.torrent&amp;key=0%20Fichero%20.torrent">torrent tradicional</a> o <a href="magnet:?xt=urn:btih:4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;dn=archcom-2012.12.10-x86%5F64.iso&amp;tr=http%3A%2F%2Flinuxtracker.org%3A2710%2Fbcc9d2323826745794be0d57f9e5cf1d%2Fannounce">enlace iman</a>. Detalles al final u <a href="http://linuxtracker.org/index.php?page=torrent-details&amp;id=4853d82ad0291a0f3823cbc8d9f0813c18711815">linuxtracker.org</a>.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/12/11/archlinux-para-comunicantes/">Sigue leyendo &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article class="well">
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/12/06/cinelerra-gamma-y-brillo/">Cinelerra Gamma Y Brillo</a></h1>
     
     
@@ -336,73 +385,6 @@ Para aquellos momentos cuando es necesario generar un audio en base de dos otros
 
     </article>
   
-  
-    <article class="well">
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/13/plugin-audio-ikiwiki/">Plugin Audio Ikiwiki</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-13T13:59:00-06:00" pubdate data-updated="true">Nov 13<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img class="right" src="http://flujos.org/media/360player.png" title="Foto de Ejemplo" >
-Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encuentra en <a href="https://github.com/kyv/ikiwiki">nuestra bifurcación de ikiwiki</a>. El <em>plugin</em> vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende también de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un <em>underlay</em> en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
-
-<p>Para ver el <em>plugin</em> en acción visita <a href="http://flujos.org">flujos.org</a>.</p>
-
-<p>Unos ejemplos de sintaxis:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio http://radio.flujos.org:8000/rockola.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;La Rockola&quot;</span><span class="o">]]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>o para un fichero hospedado en la sistema de ficheros:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio /ruta/a/audio.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;Mi audio&quot;</span><span class="o">]]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Aparte tenemos una plantilla para hacer un listado automático de audios <em>inline</em>. Hay un <a href="http://yaxhil.flujos.org/audio/biz_band/" title="Biz Band">ejemplo de su funcionamiento en la pagina de radio yaxhil</a> y la utilizamos conjuntamente con el <a href="http://ikiwiki.info/plugins/inline/" title="Inline Plugin">plugin <em>inline</em> de ikiwiki</a>:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!inline  <span class="nv">template</span><span class="o">=</span><span class="s2">&quot;inlineaudio&quot;</span> <span class="nv">pages</span><span class="o">=</span><span class="s2">&quot;audio/biz_band/* and !*/Discussion&quot;</span> <span class="nv">show</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="o">]]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/11/13/plugin-audio-ikiwiki/">Sigue leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/3/">&larr; Older</a></li>
@@ -452,6 +434,10 @@ TranslateThis({
     <li class="nav-header">Entradas Recientes</li>
     
       <li class="post">
+        <a href="/blog/2013/06/02/automatizar-generos-de-musica-por-horario-en-menos-de-25-lineas-de-codigo/">Automatizar Géneros de Música por Horario en Menos de 25 Lineas de Codigo</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/24/una-tarde-en-maldonado/">Punto Maldonado y la Plaza de Cuaji</a>
       </li>
     
@@ -465,10 +451,6 @@ TranslateThis({
     
       <li class="post">
         <a href="/blog/2012/12/21/sin-luz-de-luna/">Sin Luz de Luna</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/11/archlinux-para-comunicantes/">ArchCom: Archlinux para Comunicantes</a>
       </li>
     
   </ul>

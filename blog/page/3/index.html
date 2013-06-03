@@ -136,6 +136,73 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/11/13/plugin-audio-ikiwiki/">Plugin Audio Ikiwiki</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-13T13:59:00-06:00" pubdate data-updated="true">Nov 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img class="right" src="http://flujos.org/media/360player.png" title="Foto de Ejemplo" >
+Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encuentra en <a href="https://github.com/kyv/ikiwiki">nuestra bifurcación de ikiwiki</a>. El <em>plugin</em> vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende también de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un <em>underlay</em> en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
+
+<p>Para ver el <em>plugin</em> en acción visita <a href="http://flujos.org">flujos.org</a>.</p>
+
+<p>Unos ejemplos de sintaxis:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio http://radio.flujos.org:8000/rockola.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;La Rockola&quot;</span><span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>o para un fichero hospedado en la sistema de ficheros:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio /ruta/a/audio.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;Mi audio&quot;</span><span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Aparte tenemos una plantilla para hacer un listado automático de audios <em>inline</em>. Hay un <a href="http://yaxhil.flujos.org/audio/biz_band/" title="Biz Band">ejemplo de su funcionamiento en la pagina de radio yaxhil</a> y la utilizamos conjuntamente con el <a href="http://ikiwiki.info/plugins/inline/" title="Inline Plugin">plugin <em>inline</em> de ikiwiki</a>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!inline  <span class="nv">template</span><span class="o">=</span><span class="s2">&quot;inlineaudio&quot;</span> <span class="nv">pages</span><span class="o">=</span><span class="s2">&quot;audio/biz_band/* and !*/Discussion&quot;</span> <span class="nv">show</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/11/13/plugin-audio-ikiwiki/">Sigue leyendo &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article class="well">
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/11/08/radio-jatarishun/">Radio Jatarishun</a></h1>
     
     
@@ -409,57 +476,6 @@ Por todo que yo sepa mas seguro es que estoy en una. Mi cuerpo digo. Va a muchas
 
     </article>
   
-  
-    <article class="well">
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/30/intro-fit-the-second/">Introducción Guía De La Galaxia Episodio Dos</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-30T11:36:00-06:00" pubdate data-updated="true">Oct 30<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Para la presentación de la <a href="http://rockola.flujos.org" title="Rockolateka Radiofónica">La Rockolateka Radiofónica Virtualizada</a> en <a href="http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest/" title="Fotos Flujos Fest">Flujos Fest</a> 2012 traducimos a la introducción de la segundo episodio de la <a href="/blog/categories/hhgg/" title="Guía de la Galaxia Para Mochileros">Guía de la Galaxia para Mochileros</a> por Douglass Adams. Por fallas organizativas no la dimos lectura, pero lo dejamos aquí para lo que sirve.</p>
-
-<p><img class="right" src="http://www.flujos.org/fv/images/00-navegacion_cango_en_playa.png" width="400" title="Monito Travieso Siente Nostalgia por Sus Orígenes" ></p>
-
-<h2>Guion</h2>
-
-<p><strong>F/X</strong> FONDO DE NARRARRADOR</p>
-
-<p><strong>NARRARADOR</strong>
-Profundamente lejos en los remansos inexplorados del brazo espiral Oeste y pasado del moda de la Galaxia esta un desatendido sol amarillo. Orbitando a ello a una distancia de mas o menos  cincuenta millones de kilómetros es un pequeño y completamente insignificante planeta de azul-verde cuyos simio-descendiente formas de vida son tan increíblemente primitivos que aun piensan que relojes digitales son una idea genial.</p>
-
-<p>Este planeta tiene, o tenia, un problema - lo cual era lo siguiente: la mayoría de las personas viviendo en ello estaban infelices el mayor parte  del tiempo. Muchos soluciones fueran surgidos para resolver la problema, pero la mayoría de ellos preocupaban principalmente por el movimiento de pequeños verdes piezas de papel, lo cual es un poco extraño debido al hecho que por lo general no eran los pequeños verdes piezas de papel que estaban infelices.</p>
-
-<p>Entonces la problema continuaba; y muchos personas eran muy bajos, y la mayoría eran miserables, inclusive los con relojes digitales. Muchos estaban cada vez mas inclinados pensar que habían equivocados en primer lugar bajarse de los arboles. Y algunos dijeron que hasta los arboles era un error, y que nadie debería haber salido del los océanos.</p>
-
-<p>Hasta un día, casi dos mil años después de que un hombre había sido clavado en un árbol por decir que podríamos ser amables uno con el otro, una chica sentada sola en un comedor en la desviación a Talea de repente dio cuenta: que era lo que siempre había salido mal, y por fin supo como el mundo podría ser convertido en un lugar bueno y alegre. Esta ves estaba cierto, funcionaria, y no habrá que clavar nadie a nada. Desafortunadamente, antes que podría llegar a una cabina telefónica o un sitio con Internet para decirlo a alguien, inesperadamente el planeta tierra fue demolido para hacer espacio para un nuevo libramiento hyperespacial. Y entonces la idea si perdió para siempre.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/4/">&larr; Older</a></li>
@@ -509,6 +525,10 @@ TranslateThis({
     <li class="nav-header">Entradas Recientes</li>
     
       <li class="post">
+        <a href="/blog/2013/06/02/automatizar-generos-de-musica-por-horario-en-menos-de-25-lineas-de-codigo/">Automatizar Géneros de Música por Horario en Menos de 25 Lineas de Codigo</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/24/una-tarde-en-maldonado/">Punto Maldonado y la Plaza de Cuaji</a>
       </li>
     
@@ -522,10 +542,6 @@ TranslateThis({
     
       <li class="post">
         <a href="/blog/2012/12/21/sin-luz-de-luna/">Sin Luz de Luna</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/11/archlinux-para-comunicantes/">ArchCom: Archlinux para Comunicantes</a>
       </li>
     
   </ul>
