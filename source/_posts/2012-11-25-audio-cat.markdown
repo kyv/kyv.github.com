@@ -3,7 +3,7 @@ layout: post
 title: "audio cat"
 date: 2012-11-25 19:41
 comments: true
-categories: audio perl hacks
+categories: audio perl hacks mpd automatización
 ---
 
 {% img pull-left http://www.flujos.org/images/ncmpc-hora.png "La hora en la lista" %}
@@ -13,7 +13,6 @@ Pero, por el cuestión de las cabeceras, algunas reproductores de audio no repro
 <!-- more -->
 
 Se puede utilizarlo en conjunto con un reproductor, por [ejemplo con mpd](http://www.flujos.org/blog/Locucion_de_hora-mpdcron/ "Con MPD"), para *automatizar* reproducción de la hora actual.
-
 
 
 {% codeblock audiocat.pl %}
