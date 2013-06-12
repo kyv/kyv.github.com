@@ -4,7 +4,7 @@
   <title><![CDATA[Category: audio | ki-ai.org]]></title>
   <link href="http://ki-ai.org/blog/categories/audio/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2013-06-02T20:24:20-05:00</updated>
+  <updated>2013-06-12T11:50:29-05:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Compresor de Sonido para Pulseaudio]]></title>
+    <link href="http://ki-ai.org/blog/2013/06/12/compresor-de-sonido-para-pulseaudio/"/>
+    <updated>2013-06-12T10:19:00-05:00</updated>
+    <id>http://ki-ai.org/blog/2013/06/12/compresor-de-sonido-para-pulseaudio</id>
+    <content type="html"><![CDATA[<p>Del <a href="https://es.wikipedia.org/wiki/Compresor_%28sonido%29">wikipedia</a>, <em>En el campo del sonido profesional, un compresor es un procesador electrónico de sonido destinado a reducir el margen dinámico de la señal sin que se note demasiado su presencia. Esta tarea, se realiza reduciendo la ganancia del sistema, cuando la señal supera un determinado umbral.</em></p>
+
+<p><a href="http://es.wikipedia.org/wiki/PulseAudio">Pulseaudio</a> es la capa de audio a lo cual conecta los varios applicaciones que reproducen sonido en la mayoria de los *nix contemporaneos. Porque permite el uso de los procesadores y filtros <a href="http://www.ladspa.org/">ladspa</a>, con un pequeño configución podemos aplicar cualcuiera de ellos. Uno de los usos más utiles podria ser el compresor de rango dinamico, para mantener toda la musica y video que reproducimos a un amplitud constante. Hemos de agregar estas lineas al configuracion de pulseaudio, en nuestro caso <strong>~/.pulse/default.pa</strong></p>
+
+<p><code>bash sc4 plugin para pulseaudio
+load-module module-ladspa-sink sink_name=compressor master=alsa_output.pci-0000_00_1e.2.analog-stereo plugin=sc4_1882 label=sc4 control=1,1.5,401,-30,20,5,12
+set-default-sink compressor
+</code></p>
+
+<p>El primer linea carga el sc4, un compresor estereo ladspa. <strong>Control=</strong> son los parámetros del efecto. Detalles al respecto se encuetra en <a href="http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.91">la documentación del plugin</a>.</p>
+
+<!-- more -->
+
+
+<p>Vale mencionar que es possible encadenar estos plugins. En nuestro caso, primer pasamos el audio por un equalizador de 15 canales, para quitar algunas frequencias que causan vibraciones no-deseables en las bocinitas del lap. El señal equalizado entonces pasa al compresor. Agregamos otra sección al config despues del anterior.</p>
+
+<p><code>bash equalizador para pulseaudio
+load-module module-ladspa-sink sink_name=ladspa_output.mbeq_1197.mbeq master=compressor plugin=mbeq_1197 label=mbeq control=-30.0,-19.7,-15.6,-12.0,-3.9,-1.3,0.0,0.0,0.0,0.0,0.0,0.0,-1.3,-4.6,-5.7
+</code></p>
+
+<p>De hecho este seccion del equalizador se agrega automaticamente al instalar el paquete <a href="https://aur.archlinux.org/packages/pulseaudio-equalizer/">pulseaudio-equalizer</a>, que tiene un bonito interfaz grafica. Pero es necesario su modificación si vamos a acompañarlo con compression.</p>
+
+<p>Este información originalmente encontramos en <a href="http://askubuntu.com/questions/31580/is-there-a-way-of-leveling-compressing-the-sound-system-wide">las ayudas de ubuntu</a>.</p>
+
+<p>Punto y aparte, el <a href="http://www.freedesktop.org/wiki/Software/PulseAudio/Notes/4.0/">version más recien de pulseaudio</a> tiene un modulo de <a href="http://en.wikipedia.org/wiki/Ducking">ducking</a> ( bajar un fuente de audio cuando entra otro). Seria intersante para unos experimientos más adelante.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sin Luz de Luna]]></title>
@@ -439,116 +472,6 @@ Aparte tenemos una plantilla para hacer un listado automático de audios <em>inl
 
 
 <p>Para su instalación copia estos ficheros de nuestro repo a sus equivalentes carpetas en su instalación de ikiwiki. O, alternativamente, a su código fuente de ikiwiki y recompila.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Radio Jatarishun]]></title>
-    <link href="http://ki-ai.org/blog/2012/11/08/radio-jatarishun/"/>
-    <updated>2012-11-08T15:21:00-06:00</updated>
-    <id>http://ki-ai.org/blog/2012/11/08/radio-jatarishun</id>
-    <content type="html"><![CDATA[<p><img class="pull-left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" ></p>
-
-<p>En Julio de 2004 tuvo lugar en la ciudad de Quito, Ecuador el primer Foro Social de Las Américas. Aparte de ello, y como moscas a la carne, una seria de otras foros brotaron a su alrededor, como era la Foro Indígena, Foro de Diversidad Sexual, en fin. Algunos de las moscas atrevieron montar una cabina de radio en un salón de escuela que transmitía por Internet mientras el Foro Social. Se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a> (<em>levantamiento</em> en Quechua ). Una de las moscas, a volver a su casa, rescató lo que se pudo de lo que se grabó, lo mezclaba con un poco de la música que ambientaba a Quito por aquellas fechas, y el resultado era un disco que también se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a>. Para no largar mucho el cuento, aquella mosca perdió el disco, y el lugar donde estaba hospedado en el Internet también desaprecio, pero otra mosca, o mas bien tenia que haber sido una ratóncita, que siempre guardaba todo de por si un día hacia falta, ahí la tenia cerrado en una caja.</p>
-
-<p>Para acceder a los audios, <em>Read on</em>.</p>
-
-<!-- more -->
-
-
-<h2>Escucha</h2>
-
-<p><strong>Ojo</strong>: tarda un poco para cargar los audio, los que se ponen blancitos el control de volumen ya se puede escuchar. <strong>Ojo2</strong>: estan en formato ogg-vorbis, deben de reproducirse en firefox o chromimun sin problemas.</p>
-
-<h4>01 Democracia</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/01_Democracia.oga'></audio></p>
-
-<h4>02 Bienvenidos</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/02_Bienvenidos.oga'></audio></p>
-
-<h4>03 Referéndum del Gas</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/03_Referéndum_del_Gas.oga'></audio></p>
-
-<h4>04 Educación Neoliberal</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/04_Educación_Neoliberal.oga'><source src=''></audio></p>
-
-<h4>05 Y Que del Foro</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/05_Y_Que_del_Foro.oga'><source src=''></audio></p>
-
-<h4>06 Estudiantes de las América</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/06_Estudiantes_de_las_Américas.oga'><source src=''></audio></p>
-
-<h4>07 Ciencia y Tecnología</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/07_Ciencia_y_Tecnología.oga'></audio></p>
-
-<h4>08 Modelo Económico</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/08_Modelo_Económico.oga'><source src=''></audio></p>
-
-<h4>09 Unidad Americana</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/09_Unidad_Americana.oga'><source src=''></audio></p>
-
-<h4>10 Centro de Medios</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/10_Centro_de_Medios.oga'><source src=''></audio></p>
-
-<h4>11 Plan Patriota</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/11_Plan_Patriota.oga'><source src=''></audio></p>
-
-<h4>12 Plan Colombia</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/12_Plan_Colombia.oga'><source src=''></audio></p>
-
-<h4>13 Hoja de Coca</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/13_Hoja_de_Coca.oga'><source src=''></audio></p>
-
-<h4>14 Movimiento de Mujeres</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/14_Movimiento_de_Mujeres.oga'></audio></p>
-
-<h4>15 Género y Participación</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/15_Género_y_Participación.oga'><source src=''></audio></p>
-
-<h4>16 Chile</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/16_Chile.oga'></audio></p>
-
-<h4>17 Bendición</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/17_Bendición.oga'><source src=''></audio></p>
-
-<h4>18 LGBT</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/18_LGBT.oga'><source src=''></audio></p>
-
-<h4>19 Cumbia Quechua</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/19_Cumbia_Quechua.oga'><source src=''></audio></p>
-
-<h4>20 Radio Jatarishun</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/20_Radio_Jatarishun.oga'><source src=''></audio></p>
-
-<h4>21 No Tengas Mas Temor</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/21_No_Tengas_Mas_Temor.oga'><source src=''></audio></p>
-
-<h4>22 Así Es América</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/22_Así_Es_América.oga'><source src=''></audio></p>
-
-<p><strong>pd</strong>, La fecha en la portada del disco, en lugar de decir <em>26-30 de august</em> debe de ser <em>26-30 de julio</em>. Digamos que es doble error histórico, tanto temporal como lingüística.</p>
 ]]></content>
   </entry>
   

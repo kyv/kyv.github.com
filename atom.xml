@@ -4,7 +4,7 @@
   <title><![CDATA[ki-ai.org]]></title>
   <link href="http://ki-ai.org/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2013-06-02T20:24:20-05:00</updated>
+  <updated>2013-06-12T11:50:29-05:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Compresor de Sonido para Pulseaudio]]></title>
+    <link href="http://ki-ai.org/blog/2013/06/12/compresor-de-sonido-para-pulseaudio/"/>
+    <updated>2013-06-12T10:19:00-05:00</updated>
+    <id>http://ki-ai.org/blog/2013/06/12/compresor-de-sonido-para-pulseaudio</id>
+    <content type="html"><![CDATA[<p>Del <a href="https://es.wikipedia.org/wiki/Compresor_%28sonido%29">wikipedia</a>, <em>En el campo del sonido profesional, un compresor es un procesador electrónico de sonido destinado a reducir el margen dinámico de la señal sin que se note demasiado su presencia. Esta tarea, se realiza reduciendo la ganancia del sistema, cuando la señal supera un determinado umbral.</em></p>
+
+<p><a href="http://es.wikipedia.org/wiki/PulseAudio">Pulseaudio</a> es la capa de audio a lo cual conecta los varios applicaciones que reproducen sonido en la mayoria de los *nix contemporaneos. Porque permite el uso de los procesadores y filtros <a href="http://www.ladspa.org/">ladspa</a>, con un pequeño configución podemos aplicar cualcuiera de ellos. Uno de los usos más utiles podria ser el compresor de rango dinamico, para mantener toda la musica y video que reproducimos a un amplitud constante. Hemos de agregar estas lineas al configuracion de pulseaudio, en nuestro caso <strong>~/.pulse/default.pa</strong></p>
+
+<figure class='code'><figcaption><span>sc4 plugin para pulseaudio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>load-module module-ladspa-sink <span class="nv">sink_name</span><span class="o">=</span>compressor <span class="nv">master</span><span class="o">=</span>alsa_output.pci-0000_00_1e.2.analog-stereo <span class="nv">plugin</span><span class="o">=</span>sc4_1882 <span class="nv">label</span><span class="o">=</span>sc4 <span class="nv">control</span><span class="o">=</span>1,1.5,401,-30,20,5,12
+</span><span class='line'><span class="nb">set</span>-default-sink compressor
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El primer linea carga el sc4, un compresor estereo ladspa. <strong>Control=</strong> son los parámetros del efecto. Detalles al respecto se encuetra en <a href="http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.91">la documentación del plugin</a>.</p>
+
+<!-- more -->
+
+
+<p>Vale mencionar que es possible encadenar estos plugins. En nuestro caso, primer pasamos el audio por un equalizador de 15 canales, para quitar algunas frequencias que causan vibraciones no-deseables en las bocinitas del lap. El señal equalizado entonces pasa al compresor. Agregamos otra sección al config despues del anterior.</p>
+
+<figure class='code'><figcaption><span>equalizador para pulseaudio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>load-module module-ladspa-sink <span class="nv">sink_name</span><span class="o">=</span>ladspa_output.mbeq_1197.mbeq <span class="nv">master</span><span class="o">=</span>compressor <span class="nv">plugin</span><span class="o">=</span>mbeq_1197 <span class="nv">label</span><span class="o">=</span>mbeq <span class="nv">control</span><span class="o">=</span>-30.0,-19.7,-15.6,-12.0,-3.9,-1.3,0.0,0.0,0.0,0.0,0.0,0.0,-1.3,-4.6,-5.7
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>De hecho este seccion del equalizador se agrega automaticamente al instalar el paquete <a href="https://aur.archlinux.org/packages/pulseaudio-equalizer/">pulseaudio-equalizer</a>, que tiene un bonito interfaz grafica. Pero es necesario su modificación si vamos a acompañarlo con compression.</p>
+
+<p>Este información originalmente encontramos en <a href="http://askubuntu.com/questions/31580/is-there-a-way-of-leveling-compressing-the-sound-system-wide">las ayudas de ubuntu</a>.</p>
+
+<p>Punto y aparte, el <a href="http://www.freedesktop.org/wiki/Software/PulseAudio/Notes/4.0/">version más recien de pulseaudio</a> tiene un modulo de <a href="http://en.wikipedia.org/wiki/Ducking">ducking</a> ( bajar un fuente de audio cuando entra otro). Seria intersante para unos experimientos más adelante.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Automatizar Géneros de Música por Horario en Menos de 25 Lineas de Codigo]]></title>
@@ -2247,65 +2283,6 @@ Bien apaga las luces cuando terminas. Espero poder dormir con este olor.</p>
 <p> <img class="right" src="http://flujos.org/media/flujosfestrinconesdelaur.png" title="Los Rincones Del Sur" ></p>
 
 <p>Escucha la musica de los Rincones del Sur en <a href="http://rockola.flujos.org" title="Rockolateka Radiofónica">La Rockolateka Radiofónica Virtualizada</a> y queda que ver que mas hay para escuchar en ella.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ambient_Atonalidad]]></title>
-    <link href="http://ki-ai.org/blog/2012/10/28/ambient-atonalidad/"/>
-    <updated>2012-10-28T11:58:00-06:00</updated>
-    <id>http://ki-ai.org/blog/2012/10/28/ambient-atonalidad</id>
-    <content type="html"><![CDATA[<p>Presentamos el codigo de nuestra participacion en el concerto de musica electronica que dio conclusion al taller <a href="http://casanagustin.org.mx/actividades-en-curso/888-laboratorio-de-arte-y-nuevos-medios.html" title="Laboratorio de arte y nuevos medios">Música por computadora con código, primer parte del serie Laboratorio de arte y nuevos medios, impartido en CASA de los artes San Augustin Etla</a>.</p>
-
-<p>El codigo es el linguaje <a href="http://supercollider.sourceforge.net/" title="SuperCollider">SuperCollider</a>, que es lo que en concreto aprendimos en el taller.</p>
-
-<p>Primero sintetizamos un ruido de fondo y la pasamos por un Resonant Low Pass Filter (RLPF).</p>
-
-<figure class='code'><figcaption><span>ruido  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">lfn</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">LFNoise2</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10000</span>)<span class="nf">,</span><span class="m">440</span><span class="nf">,</span><span class="m">0.1</span>)<span class="nf">*</span><span class="m">0.03</span>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>En seguida sintetizamos un especia de ritmo atreves de un seria de ruidos de igual manera filtros por un RLPF.</p>
-
-<figure class='code'><figcaption><span>tracktor  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tractor</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">BrownNoise</span><span class="p">.</span><span class="nv">ar</span><span class="nf">*</span><span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">10</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">*</span><span class="nc">WhiteNoise</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10</span>))}<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Luego sintetizamos un bombo.</p>
-
-<figure class='code'><figcaption><span>bombo  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">kick</span><span class="nf">=</span>{<span class="nc">Ringz</span><span class="p">.</span><span class="nv">ar</span>( <span class="nc">Impulse</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">2</span>)<span class="nf">,</span> <span class="m">60</span><span class="nf">,</span> <span class="m">0.5</span> )<span class="nf">*</span><span class="m">0.3</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Un acorde hecho de tres tonos elejido de forma aleatorio.</p>
-
-<figure class='code'><figcaption><span>acorde  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tono</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono0</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono1</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Y finalmente dos melodias reproducidas en sequencia aleatorio.</p>
-
-<figure class='code'><figcaption><span>melodia  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">demand</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">dmel0</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">reverse</span><span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   
