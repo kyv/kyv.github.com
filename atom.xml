@@ -4,7 +4,7 @@
   <title><![CDATA[ki-ai.org]]></title>
   <link href="http://ki-ai.org/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2013-06-12T11:50:29-05:00</updated>
+  <updated>2013-06-13T12:56:43-05:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Editor de guion Trelby]]></title>
+    <link href="http://ki-ai.org/blog/2013/06/13/editor-de-guion-trelby/"/>
+    <updated>2013-06-13T12:45:00-05:00</updated>
+    <id>http://ki-ai.org/blog/2013/06/13/editor-de-guion-trelby</id>
+    <content type="html"><![CDATA[<p>Al empezar a elaborar un nuevo guion radiofónica, nos preguntabamos se no habia una buena herramienta disponible para la tarea. Estaba perdiendo bastante tiempo en formatar manualmente el guion. Despues de probar algunas que, como los vendedores de las <a href="http://es.wikipedia.org/wiki/Aceite_de_serpiente">acietes-cura-todo</a> en los terminales de camiones, en lugar de resolver algun problema prometan arreglar la vida, y que son, en pocos palabras, mucho mas de lo que uno necesita, encontramos uno muy secillo, elegante y util que se llama <a href="http://www.trelby.org/">Trelby</a>. Quedamos con ello, y nos esta serviendo muy bien.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Compresor de Sonido para Pulseaudio]]></title>
@@ -2270,19 +2279,6 @@ Bien apaga las luces cuando terminas. Espero poder dormir con este olor.</p>
 <p><img src="http://flujos.org/media/Cosecha_palabra%20152.png" title="Cotorreo" ></p>
 
 <p>Fotos por la Nancy.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Los_Rincones_en_FlujosFest]]></title>
-    <link href="http://ki-ai.org/blog/2012/10/28/los-rincones-en-flujosfest/"/>
-    <updated>2012-10-28T22:28:00-06:00</updated>
-    <id>http://ki-ai.org/blog/2012/10/28/los-rincones-en-flujosfest</id>
-    <content type="html"><![CDATA[<p>Los Rincones Del Sur, invitados de honor de <a href="http://www.flujos.org/blog/Flujos_Fest_2012/" title="Flujos Fest 2012">Flujos Fest 2012</a> miran hacia el horizonte. Agradecemos su presencia y a todos que asistieron. Pronto subiremos mas fotos para que si ponen invidiosos los que perdieron a la fiesta.</p>
-
-<p> <img class="right" src="http://flujos.org/media/flujosfestrinconesdelaur.png" title="Los Rincones Del Sur" ></p>
-
-<p>Escucha la musica de los Rincones del Sur en <a href="http://rockola.flujos.org" title="Rockolateka Radiofónica">La Rockolateka Radiofónica Virtualizada</a> y queda que ver que mas hay para escuchar en ella.</p>
 ]]></content>
   </entry>
   
