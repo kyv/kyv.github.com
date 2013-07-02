@@ -35,8 +35,8 @@ function flashVideoFallback(){
       flashplayerskin = "/assets/jwplayer/glow/glow.xml";
   $('video').each(function(index, video){
     video = $(video);
-    if (!Modernizr.video.h264 && swfobject.getFlashPlayerVersion() || window.location.hash.indexOf("flash-test") !== -1){
-      video.children('source[src$=mp4]').first().map(function(source){
+    if (!Modernizr.video.webm && swfobject.getFlashPlayerVersion() || window.location.hash.indexOf("flash-test") !== -1){
+      video.children('source[src$=webm]').first().map(function(source){
         var src = $(source).attr('src'),
             id = 'video_'+Math.round(1 + Math.random()*(100000)),
             width = video.attr('width'),
