@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: jazz | ki-ai.org]]></title>
+  <link href="http://ki-ai.org/blog/categories/jazz/atom.xml" rel="self"/>
+  <link href="http://ki-ai.org/"/>
+  <updated>2013-11-26T22:15:29-06:00</updated>
+  <id>http://ki-ai.org/</id>
+  <author>
+    <name><![CDATA[ki-ai.org]]></name>
+    <email><![CDATA[contact@ki-ai.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Habia Una Vez Un Hack]]></title>
+    <link href="http://ki-ai.org/blog/2013/11/26/habia-una-vez-un-hack/"/>
+    <updated>2013-11-26T20:57:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2013/11/26/habia-una-vez-un-hack</id>
+    <content type="html"><![CDATA[<p>Habia una vez un hack en oaxaca patronizado por el jazz de
+Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
+
+<p><video width='480' height='270' preload='none' controls poster=' http://flujos.org/media/jazzardour.png'><source src='http://flujos.org/media/jazzhmardour.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
+]]></content>
+  </entry>
+  
+</feed>
