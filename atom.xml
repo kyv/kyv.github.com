@@ -4,7 +4,7 @@
   <title><![CDATA[ki-ai.org]]></title>
   <link href="http://ki-ai.org/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2014-01-04T19:43:12-06:00</updated>
+  <updated>2014-01-05T13:32:10-06:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -31,62 +31,6 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
     <updated>2013-07-02T00:28:00-05:00</updated>
     <id>http://ki-ai.org/blog/2013/07/02/tarde-lluvioso</id>
     <content type="html"><![CDATA[<p><video width='480' height='270' preload='none' controls poster=' http://flujos.org/media/kiai/kiai480x270.png'><source src='http://flujos.org/media/kiai/xochis.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Comparación‎ de Duración de Audios]]></title>
-    <link href="http://ki-ai.org/blog/2013/06/19/compare-lengths-of-wav-files/"/>
-    <updated>2013-06-19T09:38:00-05:00</updated>
-    <id>http://ki-ai.org/blog/2013/06/19/compare-lengths-of-wav-files</id>
-    <content type="html"><![CDATA[<p>Estaba editando video. Grabamos el audio aparte del imagen.
-Ahora al momento de editar, lo encontré algo tedioso buscar cual audio de todos
-combinaba con cada scena de video. Pensaba que deberia existir un utilidad que
-al menos compara el duracion de audios, pero no encontré. Entonces
-escribí uno en python que compara dos carpetas de ficheros .wav. Demuestra cuales
-ficheros entre las dos carpetas se aproximan más en terminos de duración en segundos.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>TASCAM_0011.wav: 12, CANON_1080.wav: 15
-</span><span class='line'>TASCAM_0013.wav: 13, CANON_1080.wav: 15
-</span><span class='line'>TASCAM_0004.wav: 25, CANON_1069.wav: 27
-</span><span class='line'>TASCAM_0006.wav: 34, CANON_1095.wav: 38
-</span><span class='line'>TASCAM_0007.wav: 38, CANON_1095.wav: 38
-</span><span class='line'>TASCAM_0012.wav: 40, CANON_1095.wav: 38
-</span><span class='line'>TASCAM_0009.wav: 48, CANON_1121.wav: 56
-</span><span class='line'>TASCAM_0005.wav: 63, CANON_1071.wav: 62
-</span><span class='line'>TASCAM_0003.wav: 64, CANON_1071.wav: 62
-</span><span class='line'>TASCAM_0015.wav: 65, CANON_1071.wav: 62
-</span><span class='line'>TASCAM_0008.wav: 129, CANON_1068.wav: 151
-</span><span class='line'>TASCAM_0014.wav: 409, CANON_1068.wav: 151
-</span><span class='line'>TASCAM_0016.wav: 948, CANON_1068.wav: 151</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<!-- more -->
-
-
-<p>Es unicamente un punto de partida. Pero así podemos ver cuales audio tienen
-mayor probabilidad de coresponder a un video. Se ejecuta así: <code>python2 wavecmp carpeta1 carpeta2</code>.</p>
-
-<div><script src='https://gist.github.com/5814824.js?file='></script>
-<noscript><pre><code></code></pre></noscript></div>
-
-
-
 ]]></content>
   </entry>
   
@@ -1845,6 +1789,30 @@ Y que experimentaste?</p>
 Mi dijo básicamente lo que yo mismo vengo diciendo. Soy un chingón. No te dije? Soy Zaphod Beeblebrox.</p>
 
 <p><strong>GRAMS</strong> JOUREY OF THE SOURCERER</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introducción Guía de la Galaxia Episodio Dos]]></title>
+    <link href="http://ki-ai.org/blog/2012/10/30/intro-fit-the-second/"/>
+    <updated>2012-10-30T11:36:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2012/10/30/intro-fit-the-second</id>
+    <content type="html"><![CDATA[<p>Para la presentación de la <a href="http://rockola.flujos.org" title="Rockolateka Radiofónica">La Rockolateka Radiofónica Virtualizada</a> en <a href="http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest/" title="Fotos Flujos Fest">Flujos Fest</a> 2012 traducimos a la introducción de la segundo episodio de la <a href="http://ki-ai.org/blog/categories/hhgg/" title="Guía de la Galaxia Para Mochileros">Guía de la Galaxia para Mochileros</a> por Douglass Adams. Por fallas organizativas no la dimos lectura, pero lo dejamos aquí para lo que sirve.</p>
+
+<p><img class="right" src="http://www.flujos.org/fv/images/00-navegacion_cango_en_playa.png" width="400" title="Monito Travieso Siente Nostalgia por Sus Orígenes" ></p>
+
+<h2>Guion</h2>
+
+<p><strong>F/X</strong> FONDO DE NARRARRADOR</p>
+
+<p><strong>NARRARADOR</strong>
+Profundamente lejos en los remansos inexplorados del brazo espiral Oeste y pasado del moda de la Galaxia esta un desatendido sol amarillo. Orbitando a ello a una distancia de mas o menos  cincuenta millones de kilómetros es un pequeño y completamente insignificante planeta de azul-verde cuyos simio-descendiente formas de vida son tan increíblemente primitivos que aun piensan que relojes digitales son una idea genial.</p>
+
+<p>Este planeta tiene, o tenia, un problema - lo cual era lo siguiente: la mayoría de las personas viviendo en ello estaban infelices el mayor parte  del tiempo. Muchos soluciones fueran surgidos para resolver la problema, pero la mayoría de ellos preocupaban principalmente por el movimiento de pequeños verdes piezas de papel, lo cual es un poco extraño debido al hecho que por lo general no eran los pequeños verdes piezas de papel que estaban infelices.</p>
+
+<p>Entonces la problema continuaba; y muchos personas eran muy bajos, y la mayoría eran miserables, inclusive los con relojes digitales. Muchos estaban cada vez mas inclinados pensar que habían equivocados en primer lugar bajarse de los arboles. Y algunos dijeron que hasta los arboles era un error, y que nadie debería haber salido del los océanos.</p>
+
+<p>Hasta un día, casi dos mil años después de que un hombre había sido clavado en un árbol por decir que podríamos ser amables uno con el otro, una chica sentada sola en un comedor en la desviación a Talea de repente dio cuenta: que era lo que siempre había salido mal, y por fin supo como el mundo podría ser convertido en un lugar bueno y alegre. Esta ves estaba cierto, funcionaria, y no habrá que clavar nadie a nada. Desafortunadamente, antes que podría llegar a una cabina telefónica o un sitio con Internet para decirlo a alguien, inesperadamente el planeta tierra fue demolido para hacer espacio para un nuevo libramiento hyperespacial. Y entonces la idea si perdió para siempre.</p>
 ]]></content>
   </entry>
   
