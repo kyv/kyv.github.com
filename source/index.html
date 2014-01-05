@@ -2,26 +2,16 @@
 layout: default
 ---
 
-<div class="offset1 span8">
-	  <div class="hero-unit">
+<div class="span8">
+      <div class="hero-unit">
         <img src='/images/logo.png'/>
       </div>
-  {% assign index = true %}
-  {% for post in paginator.posts %}
-  {% assign content = post.content %}
-    <article class="well">
-      {% include article.html %}
-    </article>
-  {% endfor %}
-  <ul class="pager">
-    {% if paginator.next_page %}
-    <li class="previous"><a href="{{paginator.next_page}}">&larr; Older</a></li>
-    {% endif %}
-    <li><a href="/blog/archives">Blog Archives</a></li>
-    {% if paginator.previous_page %}
-    <li class="next"><a href="{{paginator.previous_page}}">Newer &rarr;</a></li>
-    {% endif %}
-  </ul>
+
+      <article class="latest_post well">
+        {% assign post = site.posts.first %}
+        {% assign content = post.content %}
+         {% include post_detail.html %}
+      </article>
 </div>
 <aside class="sidebar-nav span3">
   {% if site.blog_index_asides.size %}

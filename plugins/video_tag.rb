@@ -35,7 +35,11 @@ module Jekyll
       output = super
       if @video
         video =  "<video width='#{@width}' height='#{@height}' preload='none' controls poster='#{@poster}'>"
-        video += "<source src='#{@video}' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'/></video>"
+        if @video.include? 'webm'
+          video += "<source src='#{@video}' type='video/webm; codecs=\"vp8.0, vorbis\"'/></video>"
+        else
+          video += "<source src='#{@video}' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'/></video>"
+        end
       else
         "Error processing input, expected syntax: {% video url/to/video [width height] [url/to/poster] %}"
       end

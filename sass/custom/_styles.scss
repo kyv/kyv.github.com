@@ -1,13 +1,35 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+html
+{
+  background: url("http://flujos.org/media/kiai/backgrounds/sunset.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body
+{
+  background-color: transparent;
+}
 img
 {
   margin:10px;
   max-width: 100%;
 }
+body > .container a, body > .container nav-header
+{
+  font-weight: bold;
+  color: #333;
+}
 .carousel-inner img
 {
   margin:0;
+}
+.well {
+    background-color: rgba(#F5F5F5, .6);
+    border: 1px solid #E3E3E3;
 }
 article
 {
@@ -31,14 +53,12 @@ article p
 }
 .hero-unit
 {
-  background: transparent url('/images/banner.png') no-repeat right 25%;
+  background-color: transparent;
   position: relative;
   overflow: visible;
   height: 150px;
   z-index: -99;
-
 }
-
 .hero-unit img
 {
   position: absolute;
@@ -74,6 +94,8 @@ h1 i
 {
   color: #c72536;
 }
+a:hover i {text-decoration:none}
+
 .form-search .icon-search
 {
   color: rgb(153, 153, 153);
@@ -82,6 +104,7 @@ h1 i
 {
   max-height: 40px;
 }
+
 .entry-content .slider_area .row
 {
   margin-left: 0px;
@@ -91,4 +114,27 @@ h1 i
   position: relative;
   top: -5px;
   font-size: 50%;
+}
+.plink {display:none}
+a.noprint.pull-right
+{
+  margin-right: 1em;
+  font-size:400%;
+  color: #c72536;
+}
+a.noprint.pull-right:hover{text-decoration: none}
+a.noprint.pull-right i:hover
+{
+  font-size: 125%;
+}
+#qrcode
+{
+  margin: 0.5em;
+  padding: 0.5em;
+
+}
+.lastest_post
+{
+  margin-right: auto;
+  margin-left: auto;
 }

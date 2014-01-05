@@ -4,6 +4,7 @@ title: "Comparación‎ de Duración de Audios"
 date: 2013-06-19 09:38
 comments: true
 categories: hacks audio python
+published: false
 ---
 
 Estaba editando video. Grabamos el audio aparte del imagen.
