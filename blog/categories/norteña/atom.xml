@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: video | ki-ai.org]]></title>
-  <link href="http://ki-ai.org/blog/categories/video/atom.xml" rel="self"/>
+  <title><![CDATA[Category: norteña | ki-ai.org]]></title>
+  <link href="http://ki-ai.org/blog/categories/norteña/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
   <updated>2014-01-07T22:37:21-06:00</updated>
   <id>http://ki-ai.org/</id>
@@ -21,15 +21,6 @@
     <content type="html"><![CDATA[<p>Con dedicación a los amigos en df. Amenizado por los Tigres del Norte con su exito <em>Rock del Corazon</em>. Estreñando un nuevo special mix por el celebre DJ el Dr. no-invitado.</p>
 
 <p><video width='640' height='360' preload='none' controls poster=' http://flujos.org/media/kiai/distrito-portada.png'><source src='http://flujos.org/media/kiai/distrito.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tarde Lluvioso]]></title>
-    <link href="http://ki-ai.org/blog/2013/07/02/tarde-lluvioso/"/>
-    <updated>2013-07-02T00:28:00-05:00</updated>
-    <id>http://ki-ai.org/blog/2013/07/02/tarde-lluvioso</id>
-    <content type="html"><![CDATA[<p><video width='480' height='270' preload='none' controls poster=' http://flujos.org/media/kiai/kiai480x270.png'><source src='http://flujos.org/media/kiai/xochis.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
 ]]></content>
   </entry>
   
