@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="es"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Desarollo Web - ki-ai.org</title>
+  <meta name="author" content="ki-ai.org">
+
+  
+  <meta name="description" content="Hi-yah! Aiyah! Eeee-yah! Hyah!">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ki-ai.org/web">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      padding-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    .page-footer p {
+      text-align: center;
+    }
+  </style>
+  <script src="/javascripts/libs/jquery.js"></script>
+  <script src="/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]><script type="text/javascript" src="/javascripts/excanvas.js"></script><![endif]-->
+  <script src="/javascripts/jquery.tagcanvas.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#tag-canvas').tagcanvas({
+     textColour : '#ffff99',
+     outlineThickness : 1,
+     zoom : 1.0,
+     textHeight: 17,
+     weightMode: "both",
+     reverse: true,
+     depth: 1.0,
+   }, 'tags')) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
+  <link href="/atom.xml" rel="alternate" title="ki-ai.org" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- local styles -->
+<link href="/stylesheets/local.css" media="screen, projection" rel="stylesheet" type="text/css">
+<link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var s = document.createElement('script');
+    var t = document.getElementsByTagName('script')[0];
+
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//api.flattr.com/js/0.6/load.js?mode=auto';
+
+    t.parentNode.insertBefore(s, t);
+ })();
+/* ]]> */
+</script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36322003-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a class="brand" href="/"><i class="icon-home"></i></a>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+  <li><a href="/contacto"><i class="icon-envelope"></i> Contacto</a></li>
+  <li><a href="/servicios"><i class="icon-cogs"></i> Servicios</a></li>
+  <li><a href="/blog/archives"><i class="icon-folder-open-alt"></i> Archivo</a></li>
+</ul>
+
+
+        <ul class="nav pull-right" data-subscription="rss">
+          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><i class="icon-rss icon-large"></i></a></li>
+          
+        </ul>
+
+        
+          <form class="pull-right navbar-search form-search" role="search" action="http://google.com/search" method="get">
+              <input type="hidden" name="q" value="site:ki-ai.org" />
+              <div class="input-prepend">
+                <button type="submit" class="btn btn-inverse"><i class="icon-search"></i></button>
+                <input class="search-query" type="text" name="q" results="0" placeholder="Buscar"/>
+              </div>
+
+          </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
+  <div class="container">
+    <div class="row-fluid">
+      
+<article role="article" class="span8 offset1 well">
+
+  
+  <header class="page-header">
+    <h1 class="entry-title">Desarollo Web</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-03T11:33:00-06:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2014</time></p>
+  </header>
+  
+  <ul id="markdown-toc">
+  <li><a href="#sesin-html">1ª. Sesión: HTML</a>    <ul>
+      <li><a href="#primer-documento-htmlhttpwwwlibroswebesxhtmlcapitulo2elprimerdocumentohtmlhtml"><a href="http://www.librosweb.es/xhtml/capitulo_2/el_primer_documento_html.html">Primer Documento HTML</a></a></li>
+      <li><a href="#qu-es-htmlhttpwwwlibroswebesxhtmlcapitulo1html"><a href="http://www.librosweb.es/xhtml/capitulo_1.html">¿Qué es HTML?</a></a></li>
+    </ul>
+  </li>
+  <li><a href="#sesin-texto-y-tablas">2ª. Sesión: Texto y Tablas</a>    <ul>
+      <li><a href="#formatos-de-texto--caracteres-y-tipografas">Formatos de texto,  caracteres y tipografías</a></li>
+      <li><a href="#agrupacin-de-elementos-con-div-y-spanhttpeshtmlnettutorialscsslesson8php"><a href="http://es.html.net/tutorials/css/lesson8.php">Agrupación de Elementos con Div y Span</a></a></li>
+      <li><a href="#tablashttplibroswebesxhtmlcapitulo7html"><a href="http://librosweb.es/xhtml/capitulo_7.html">Tablas</a></a></li>
+    </ul>
+  </li>
+  <li><a href="#sesin-vinculos-imagenes-multimedia">3ª. Sesión: Vinculos, Imagenes, Multimedia</a>    <ul>
+      <li><a href="#imgeneshttplibroswebesxhtmlcapitulo6html"><a href="http://librosweb.es/xhtml/capitulo_6.html">Imágenes</a></a></li>
+      <li><a href="#hipervnculoshttplibroswebesxhtmlcapitulo4html"><a href="http://librosweb.es/xhtml/capitulo_4.html">Hipervínculos</a></a></li>
+      <li><a href="#multimediahttpeswikipediaorgwikihtml5video"><a href="http://es.wikipedia.org/wiki/HTML5_video">Multimedia</a></a></li>
+      <li><a href="#formularioshttplibroswebesxhtmlcapitulo8html"><a href="http://librosweb.es/xhtml/capitulo_8.html">Formularios</a></a></li>
+    </ul>
+  </li>
+  <li><a href="#sesin-css-y-javascript">4ª. Sesión: CSS y Javascript</a>    <ul>
+      <li><a href="#javascripthttplibroswebesjavascript"><a href="http://librosweb.es/javascript/]">Javascript</a></a></li>
+      <li><a href="#css-hojas-de-estilohttplibroswebescss"><a href="http://librosweb.es/css/">CSS (Hojas de Estilo)</a></a></li>
+    </ul>
+  </li>
+  <li><a href="#sesin-publicar-en-la-webhttpeshtmlnettutorialshtmllesson13php">5ª. Sesión: <a href="http://es.html.net/tutorials/html/lesson13.php">Publicar en la web</a>.</a>    <ul>
+      <li><a href="#servidores">Servidores</a></li>
+      <li><a href="#logica-del-lado-del-servidor">Logica del Lado del Servidor</a></li>
+      <li><a href="#publicacin-de-datos">Publicación de Datos</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><img style="height:350px;width:350px" src="http://openclipart.org/image/300px/svg_to_png/83005/1283239797.png" alt="Spider" title="Spider by russel (/user-detail/russel)" /></p>
+
+<h2 id="sesin-html">1ª. Sesión: HTML</h2>
+
+<h3 id="primer-documento-htmlhttpwwwlibroswebesxhtmlcapitulo2elprimerdocumentohtmlhtml"><a href="http://www.librosweb.es/xhtml/capitulo_2/el_primer_documento_html.html">Primer Documento HTML</a></h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">&lt;!doctype html&gt;
+</span><span class="line">&lt;html lang="es"&gt;
+</span><span class="line">  &lt;head&gt;
+</span><span class="line">    &lt;title&gt;El primer documento HTML&lt;/title&gt;
+</span><span class="line">  &lt;/head&gt;
+</span><span class="line">  &lt;body&gt;
+</span><span class="line">    &lt;p&gt;El lenguaje HTML es &lt;strong&gt;tan sencillo&lt;/strong&gt; que
+</span><span class="line">    prácticamente se entiende sin estudiar el significado de sus
+</span><span class="line">    etiquetas principales.&lt;/p&gt;
+</span><span class="line">  &lt;/body&gt;
+</span><span class="line">&lt;/html&gt;</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="qu-es-htmlhttpwwwlibroswebesxhtmlcapitulo1html"><a href="http://www.librosweb.es/xhtml/capitulo_1.html">¿Qué es HTML?</a></h3>
+
+<p>Definiéndolo de forma sencilla, <em>HTML es lo que se utiliza para crear todas las páginas web de Internet</em>. Más concretamente, HTML es el lenguaje con el que se <em>escriben</em> la mayoría de páginas web.</p>
+
+<p>Los diseñadores utilizan el lenguaje HTML para crear sus páginas web, los programas que utilizan los diseñadores generan páginas escritas en HTML y los navegadores que utilizamos los usuarios muestran las páginas web después de leer su contenido HTML.</p>
+
+<p>Aunque HTML es un lenguaje que utilizan los ordenadores y los programas de diseño, es muy fácil de aprender y escribir por parte de las personas. En realidad, HTML son las siglas de HyperText Markup Language y más adelante se verá el significado de cada una de estas palabras.</p>
+
+<p>El lenguaje HTML es un estándar reconocido en todo el mundo y cuyas normas define un organismo sin ánimo de lucro llamado World Wide Web Consortium, más conocido como W3C. Como se trata de un estándar reconocido por todas las empresas relacionadas con el mundo de Internet, una misma página HTML se visualiza de forma muy similar en cualquier navegador de cualquier sistema operativo.</p>
+
+<p>El propio W3C define el lenguaje HTML como <em>un lenguaje reconocido universalmente y que permite publicar información de forma global</em>. Desde su creación, el lenguaje HTML ha pasado de ser un lenguaje utilizado exclusivamente para crear documentos electrónicos a ser un lenguaje que se utiliza en muchas aplicaciones electrónicas como buscadores, tiendas online y banca electrónica.</p>
+
+<h4 id="ms">Más</h4>
+
+<ul>
+  <li><a href="http://platea.pntic.mec.es/~abercian/guiahtml/">Guía HTML</a></li>
+  <li><a href="http://theproc.es/files/5321">Manual de HTML5 en español</a></li>
+  <li><a href="http://librosweb.es/xhtml/">XHTML</a></li>
+</ul>
+
+<h5 id="for-print">for print</h5>
+<ul>
+  <li><a href="http://platea.pntic.mec.es/~abercian/guiahtml/">http://platea.pntic.mec.es/~abercian/guiahtml/</a></li>
+  <li><a href="http://theproc.es/files/5321">http://theproc.es/files/5321</a></li>
+  <li><a href="http://librosweb.es/xhtml/">http://librosweb.es/xhtml</a></li>
+</ul>
+
+<h2 id="sesin-texto-y-tablas">2ª. Sesión: Texto y Tablas</h2>
+
+<h3 id="formatos-de-texto--caracteres-y-tipografas">Formatos de texto,  caracteres y tipografías</h3>
+
+<p>La mayor parte del contenido de las páginas HTML habituales está formado por texto, llegando a ser más del 90% del código de la página. Por este motivo, es muy importante conocer los elementos y etiquetas que define HTML para el manejo del texto.</p>
+
+<p>El lenguaje HTML incorpora al tratamiento del texto muchas de las ideas y normas establecidas en otros entornos de publicación de contenidos. De esta forma, HTML define etiquetas para estructurar el contenido en secciones y párrafos y define otras etiquetas para marcar elementos importantes dentro del texto.</p>
+
+<p>La tarea inicial del editor de contenidos HTML consiste en estructurar el texto original definiendo sus párrafos, titulares y títulos de sección, como se muestra en la siguiente imagen:</p>
+
+<h4 id="el-espacio-la-ltima-frontera">El espacio: la última frontera</h4>
+
+<p>Una cuestión muy importante que queremos tratar antes de empezar a hablar sobre el texto es la del espacio, y concretamente la del espacio entre palabras. Cuando se escribe el HTML, el documento fuente contendrá lo que se conoce como <code>espacios en blanco</code>, que son los caracteres del archivo que sirven para separar el texto. El carácter de espacio más habitual es el que se obtiene al pulsar la barra espaciadora, pero hay otros, como el tabulador y la marca entre dos líneas independientes de un documento (conocido como retorno o línea nueva).</p>
+
+<p>En el HTML, cuando un carácter de éstos aparece varias veces seguidas, se considera (casi) siempre como un único carácter de espacio.</p>
+
+<p>Por ejemplo, un navegador interpretaría lo siguiente:</p>
+
+<p>como equivalente a:</p>
+
+<pre><code>En el principio
+</code></pre>
+
+<h4 id="ms-1">Más</h4>
+
+<p><a href="http://es.html.net/tutorials/css/lesson4.php">http://es.html.net/tutorials/css/lesson4.php</a></p>
+
+<h3 id="agrupacin-de-elementos-con-div-y-spanhttpeshtmlnettutorialscsslesson8php"><a href="http://es.html.net/tutorials/css/lesson8.php">Agrupación de Elementos con Div y Span</a></h3>
+
+<p>Los elementos <code>span</code> y <code>div</code> se usan para agrupar y estructurar un documento, y se usarán, a menudo, junto con los atributos class e id. Estos dos elementos de HTML son, precisamente, de importancia clave en lo que se refiere a CSS.</p>
+
+<h4 id="que-es-csshttpeshtmlnettutorialscsslesson8php"><a href="http://es.html.net/tutorials/css/lesson8.php">¿Que es CSS?</a></h4>
+
+<p>CSS se puede considerar la media naranja de HTML. Y a la hora de escribir código, no hay punto de comparación en cuanto a su situación: HTML se encarga del contenido en bruto de la página (la estructura), mientras que CSS le proporciona ese toque elegante (la presentación).</p>
+
+<p>Se pueden añadir estilos con CSS recurriendo al atributo style. Por ejemplo, por medio de dicho atributo se puede establecer el tamaño y tipo de fuente de un párrafo:</p>
+
+<p>Una de la características elegantes; de CSS es la posibilidad de gestionar la presentación de manera centralizada.. En vez de usar el atributo style en cada etiqueta de inicio, se puede indicar al navegador, de una sola vez, cómo tiene que presentar el texto en la página:</p>
+
+<p>Esta lección sólo prentede ser una breve introducción a CSS.</p>
+
+<h4 id="htmlnet">html.net</h4>
+<p><a href="http://es.html.net/tutorials/css/lesson8.php">http://es.html.net/tutorials/css/lesson8.php</a></p>
+
+<h3 id="tablashttplibroswebesxhtmlcapitulo7html"><a href="http://librosweb.es/xhtml/capitulo_7.html">Tablas</a></h3>
+
+<p><img src="http://librosweb.es/img/xhtml/f0701.gif" alt="" /></p>
+
+<p>Desde sus primeras versiones, HTML incluyó el soporte para crear tablas de datos en las páginas web. Además de ser sencillo, el modelo definido por HTML es muy flexible y bastante completo.</p>
+
+<p>Las tablas en HTML utilizan los mismos conceptos de filas, columnas, cabeceras y títulos que los que se utilizan en cualquier otro entorno de publicación de documentos:</p>
+
+<h2 id="sesin-vinculos-imagenes-multimedia">3ª. Sesión: Vinculos, Imagenes, Multimedia</h2>
+
+<h3 id="imgeneshttplibroswebesxhtmlcapitulo6html"><a href="http://librosweb.es/xhtml/capitulo_6.html">Imágenes</a></h3>
+
+<h3 id="hipervnculoshttplibroswebesxhtmlcapitulo4html"><a href="http://librosweb.es/xhtml/capitulo_4.html">Hipervínculos</a></h3>
+
+<h3 id="multimediahttpeswikipediaorgwikihtml5video"><a href="http://es.wikipedia.org/wiki/HTML5_video">Multimedia</a></h3>
+
+<p>HTML5 video es un elemento introducido en la nueva especificación HTML5 para el tratamiento y reproducción de vídeos o películas, este elemento, remplaza parcialmente al elemento objet. HTML5 Video es concebida por sus creadores para convertirse en la nueva forma estándar para mostrar vídeo en línea pero se ha visto obstaculizada por la falta de acuerdo en cuanto a que los formatos de vídeo debe ser compatible con el elemento de vídeo.</p>
+
+<ul>
+<li>[http://es.wikipedia.org/wiki/HTML5_video](http://es.wikipedia.org/wiki/HTML5_video)</li>
+<li>[http://diveintohtml5.info/video.html](http://diveintohtml5.info/video.html)</li>
+<li>[https://developer.mozilla.org/en-US/docs/Web/HTML/Using_HTML5_audio_and_video    ](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_HTML5_audio_and_video)</li>
+</ul>
+
+<h3 id="formularioshttplibroswebesxhtmlcapitulo8html"><a href="http://librosweb.es/xhtml/capitulo_8.html">Formularios</a></h3>
+
+<h4 id="ojo">Ojo</h4>
+
+<p><a href="http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28HTML5%29">No todo etiqueta funciona en todo navegador</a></p>
+
+<h4 id="ms-2">Más</h4>
+<p>[http://en.wikipedia.org/wiki/Comparison_of_layout_engines<em>%28HTML5%29](http://en.wikipedia.org/wiki/Comparison_of_layout_engines</em>%28HTML5%29)</p>
+
+<h2 id="sesin-css-y-javascript">4ª. Sesión: CSS y Javascript</h2>
+
+<h3 id="javascripthttplibroswebesjavascript"><a href="http://librosweb.es/javascript/]">Javascript</a></h3>
+
+<p>JavaScript es un lenguaje de programación que se utiliza principalmente para crear páginas web dinámicas.</p>
+
+<p>Una página web dinámica es aquella que incorpora efectos como texto que aparece y desaparece, animaciones, acciones que se activan al pulsar botones y ventanas con mensajes de aviso al usuario.</p>
+
+<p>Técnicamente, JavaScript es un lenguaje de programación interpretado, por lo que no es necesario compilar los programas para ejecutarlos. En otras palabras, los programas escritos con JavaScript se pueden probar directamente en cualquier navegador sin necesidad de procesos intermedios.</p>
+
+<p>A pesar de su nombre, JavaScript no guarda ninguna relación directa con el lenguaje de programación Java.</p>
+
+<h4 id="conceptos-bsicos-de-javascripthttplibrojquerycomconceptos-bc3a1sicos-de-javascript"><a href="http://librojquery.com/#conceptos-b%C3%A1sicos-de-javascript">Conceptos Básicos de JavaScript</a></h4>
+
+<p>El código JavaScript se encierra entre etiquetas <code>script</code> y se incluye en cualquier parte del documento. Aunque es correcto incluir cualquier bloque de código en cualquier zona de la página, se recomienda definir el código JavaScript dentro de la cabecera del documento (dentro de la etiqueta <code>head</code>.</p>
+
+<p>El método menos utilizado, es incluir trozos de JavaScript dentro del código HTML de la página:</p>
+
+<div class="plink">
+<ul>
+<li>[http://librosweb.es/javascript/utorial_hispano_jQuery](http://librosweb.es/javascript/)</li>
+<li>[http://librojquery.com/#conceptos-b%C3%A1sicos-de-javascript](http://librojquery.com/#conceptos-b%C3%A1sicos-de-javascript)</li>
+</ul></div>
+
+<h4 id="suma-de-columna-de-tabla">Suma de Columna de Tabla</h4>
+
+<h4 id="ms-3">Más</h4>
+<pre><code>[http://www.udel.edu/CIS/474/pconrad/06S/topics/javascript/examples/tables/sumOfAColumn.html](http://www.udel.edu/CIS/474/pconrad/06S/topics/javascript/examples/tables/sumOfAColumn.html)
+</code></pre>
+
+<h4 id="toggle-escondermostrar">Toggle (Esconder/Mostrar)</h4>
+
+<h4 id="jqueryhttplibrojquerycom"><a href="http://librojquery.com/">jQuery</a></h4>
+
+<p>Llamar.toggle() cuando se pinche otra elemento:</p>
+
+<h4 id="jquery-y-css">Jquery y CSS</h4>
+
+<p>Selección de elementos en base a su ID</p>
+
+<pre><code>$('#myId'); // notar que los IDs deben ser únicos por página
+</code></pre>
+
+<p>Selección de elementos en base al nombre de clase</p>
+
+<pre><code>$('div.myClass'); // si se especifica el tipo de elemento,
+                  // se mejora el rendimiento de la selección
+</code></pre>
+
+<h5 id="for-print-1">for print</h5>
+<ul>
+  <li><a href="http://mundosica.github.io/tutorial_hispano_jQuery">http://mundosica.github.io/tutorial_hispano_jQuery</a></li>
+  <li><a href="http://librojquery.com/">http://librojquery.com/</a></li>
+</ul>
+
+<h4 id="pre-cargar-imageneshttpstackoverflowcomquestions476679preloading-images-with-jquery"><a href="http://stackoverflow.com/questions/476679/preloading-images-with-jquery">Pre-cargar Imagenes</a></h4>
+
+<p>Mejor hecho con CSS</p>
+
+<h5 id="html">html</h5>
+
+<pre><code>img src="someimg.png" class="hide" alt=""/&gt;
+</code></pre>
+
+<h5 id="css">css</h5>
+
+<h5 id="jquery">jquery</h5>
+
+<div class="plink">
+#### Más
+[http://stackoverflow.com/questions/476679/preloading-images-with-jquery](http://stackoverflow.com/questions/476679/preloading-images-with-jquery)</div>
+
+<h3 id="css-hojas-de-estilohttplibroswebescss"><a href="http://librosweb.es/css/">CSS (Hojas de Estilo)</a></h3>
+
+<p>CSS es un lenguaje de hojas de estilos creado para controlar el aspecto o presentación de los documentos electrónicos definidos con HTML y XHTML. CSS es la mejor forma de separar los contenidos y su presentación y es imprescindible para crear páginas web complejas.</p>
+
+<p>Separar la definición de los contenidos y la definición de su aspecto presenta numerosas ventajas, ya que obliga a crear documentos HTML/XHTML bien definidos y con significado completo (también llamados <code>documentos semánticos</code>). Además, mejora la accesibilidad del documento, reduce la complejidad de su mantenimiento y permite visualizar el mismo documento en infinidad de dispositivos diferentes.</p>
+
+<p>Al crear una página web, se utiliza en primer lugar el lenguaje HTML/XHTML para marcar los contenidos, es decir, para designar la función de cada elemento dentro de la página: párrafo, titular, texto destacado, tabla, lista de elementos, etc.</p>
+
+<p>Una vez creados los contenidos, se utiliza el lenguaje CSS para definir el aspecto de cada elemento: color, tamaño y tipo de letra del texto, separación horizontal y vertical entre elementos, posición de cada elemento dentro de la página, etc.</p>
+
+<pre><code>&lt;link rel="stylesheet" type="text/css" href="/css/estilos.css" media="screen"&gt;
+</code></pre>
+
+<h4 id="selectoresservidores20dominios20administracic3b3n20de20un20sitio20web"><a href="Servidores%20Dominios%20Administraci%C3%B3n%20de%20un%20sitio%20web">Selectores</a></h4>
+
+<p>una regla de CSS está formada por una parte llamada <code>selector</code> y otra parte llamada <code>declaración</code>.</p>
+
+<p>La declaración indica <strong>qué hay que hacer</strong> y el selector indica <strong>a quién hay que hacérselo</strong>. Por lo tanto, los selectores son imprescindibles para aplicar de forma correcta los estilos CSS en una página.</p>
+
+<p>A un mismo elemento HTML se le pueden aplicar varias reglas CSS y cada regla CSS puede aplicarse a un número ilimitado de elementos. En otras palabras, una misma regla puede aplicarse sobre varios selectores y un mismo selector se puede utilizar en varias reglas.</p>
+
+<h2 id="sesin-publicar-en-la-webhttpeshtmlnettutorialshtmllesson13php">5ª. Sesión: <a href="http://es.html.net/tutorials/html/lesson13.php">Publicar en la web</a>.</h2>
+
+<h3 id="servidores">Servidores</h3>
+
+<p><a href="http://wiki.nginx.org/NginxEs">Nginx</a></p>
+
+<h3 id="logica-del-lado-del-servidor">Logica del Lado del Servidor</h3>
+<p>#### CGI
+Una forma sencilla de producir html dinamicamente en el servidor es con GGI, que son scripts comunalmente escritos en C, perl o php.</p>
+
+<h4 id="frameworks">Frameworks</h4>
+<p>Hoy en dia mas y mas personas dejan los CGI para utlizar un framework de orientacion a objetos.</p>
+
+<h5 id="cakephp-php">CakePhp (php)</h5>
+<p>##### Ruby on Rails (ruby)
+##### Django (python)</p>
+
+<h3 id="publicacin-de-datos">Publicación de Datos</h3>
+
+<h4 id="ftp">Ftp</h4>
+<p><a href="https://filezilla-project.org/">filezilla</a>
+#### Scp/Ssh
+<a href="https://wiki.archlinux.org/index.php/Secure_Shell_%28Espa%C3%B1ol%29">ssh</a>
+#### rsync
+<a href="http://es.wikipedia.org/wiki/Rsync">rsync</a>
+## Referencias</p>
+
+<p>aprender mas sobre html</p>
+<ul>
+  <li>http://www.mclibre.org</li>
+  <li>http://www.w3.org/standards/webdesign/</li>
+  <li>http://diveintohtml5.info/</li>
+  <li>http://www.webplatform.org/</li>
+  <li>http://reference.sitepoint.com</li>
+  <li>http://www.w3.org/community/webed/wiki/HTML/Training</li>
+  <li>https://developer.mozilla.org/en-US/docs</li>
+</ul>
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-03T11:33:00-06:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2014</time>
+        
+        
+
+<span class="tags">
+  
+    <a class='tag' href='/tags/css/'>css</a>, <a class='tag' href='/tags/design/'>design</a>, <a class='tag' href='/tags/html/'>html</a>, <a class='tag' href='/tags/javascript/'>javascript</a>, <a class='tag' href='/tags/web/'>web</a>
+  
+</span>
+
+
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ki-ai.org/web/index.html" data-via="kyv_b" data-counturl="http://ki-ai.org/web/index.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+      
+      <section>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
+      
+    </footer>
+  
+</article>
+
+<aside class="sidebar-nav span3">
+  
+    <section>
+  <div id='tag-canvas-container'>
+  <canvas width="300" height="300" id="tag-canvas">
+    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+  </canvas>
+  </div>
+
+<div id="tags">
+  <ul>
+    <li><a style="font-size: 116%" href="/tags/arch/">arch</a></li>
+<li><a style="font-size: 162%" href="/tags/audio/">audio</a></li>
+<li><a style="font-size: 99%" href="/tags/automatizacion/">automatización</a></li>
+<li><a style="font-size: 70%" href="/tags/bootstrap/">bootstrap</a></li>
+<li><a style="font-size: 70%" href="/tags/cine/">cine</a></li>
+<li><a style="font-size: 70%" href="/tags/cinelerra/">cinelerra</a></li>
+<li><a style="font-size: 70%" href="/tags/compresor/">compresor</a></li>
+<li><a style="font-size: 70%" href="/tags/corralero/">corralero</a></li>
+<li><a style="font-size: 99%" href="/tags/costa/">costa</a></li>
+<li><a style="font-size: 70%" href="/tags/df/">df</a></li>
+<li><a style="font-size: 70%" href="/tags/eq/">eq</a></li>
+<li><a style="font-size: 70%" href="/tags/faro/">faro</a></li>
+<li><a style="font-size: 99%" href="/tags/fiesta/">fiesta</a></li>
+<li><a style="font-size: 99%" href="/tags/flujos/">flujos</a></li>
+<li><a style="font-size: 128%" href="/tags/guion/">guion</a></li>
+<li><a style="font-size: 170%" href="/tags/hacks/">hacks</a></li>
+<li><a style="font-size: 128%" href="/tags/hhgg/">hhgg</a></li>
+<li><a style="font-size: 128%" href="/tags/imagen/">imagen</a></li>
+<li><a style="font-size: 70%" href="/tags/ladspa/">ladspa</a></li>
+<li><a style="font-size: 116%" href="/tags/letras/">letras</a></li>
+<li><a style="font-size: 99%" href="/tags/linux/">linux</a></li>
+<li><a style="font-size: 70%" href="/tags/live/">live</a></li>
+<li><a style="font-size: 70%" href="/tags/luna/">luna</a></li>
+<li><a style="font-size: 70%" href="/tags/mac/">mac</a></li>
+<li><a style="font-size: 70%" href="/tags/maldonado/">maldonado</a></li>
+<li><a style="font-size: 99%" href="/tags/mpd/">mpd</a></li>
+<li><a style="font-size: 70%" href="/tags/nortena/">norteña</a></li>
+<li><a style="font-size: 70%" href="/tags/octopress/">octopress</a></li>
+<li><a style="font-size: 116%" href="/tags/perl/">perl</a></li>
+<li><a style="font-size: 70%" href="/tags/pescado/">pescado</a></li>
+<li><a style="font-size: 99%" href="/tags/playa/">playa</a></li>
+<li><a style="font-size: 70%" href="/tags/pueblo/">pueblo</a></li>
+<li><a style="font-size: 70%" href="/tags/pulseaudio/">pulseaudio</a></li>
+<li><a style="font-size: 128%" href="/tags/radio/">radio</a></li>
+<li><a style="font-size: 70%" href="/tags/ruby/">ruby</a></li>
+<li><a style="font-size: 99%" href="/tags/sc3/">sc3</a></li>
+<li><a style="font-size: 70%" href="/tags/tigres/">tigres</a></li>
+<li><a style="font-size: 128%" href="/tags/traduccion/">traduccion</a></li>
+<li><a style="font-size: 99%" href="/tags/video/">video</a></li>
+<li><a style="font-size: 99%" href="/tags/web/">web</a></li>
+<li><a style="font-size: 70%" href="/tags/xochis/">xochis</a></li>
+
+  </ul>
+  </div>
+</section>
+
+<section class="recent">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">Relacionado</li>
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+      
+        <li class="post">
+          <a href="/web/amaya.html">Amaya</a>
+        </li>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</section>
+
+<section id="qrcode">
+<h4>QR-Code
+  <abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr>
+</h4>
+<a href="http://ki-ai.org/web/index.html"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://ki-ai.org/web/index.html" alt="post-qrcode"></a>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo" class="page-footer"><hr>
+<p>
+  Copyright &copy; 2014 - ki-ai.org -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+<script src="/javascripts/libs/bootstrap.min.js"></script>
+<script src="/javascripts/ki_carousel.js" type="text/javascript"></script>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'kiai';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://ki-ai.org/web/index.html';
+        var disqus_url = 'http://ki-ai.org/web/index.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: radio | ki-ai.org]]></title>
+  <link href="http://ki-ai.org/tags/radio/atom.xml" rel="self"/>
+  <link href="http://ki-ai.org/"/>
+  <updated>2014-02-03T19:38:20-06:00</updated>
+  <id>http://ki-ai.org/</id>
+  <author>
+    <name><![CDATA[ki-ai.org]]></name>
+    <email><![CDATA[contact@ki-ai.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Automatizar Géneros de Música por Horario en Menos de 25 Lineas de Codigo]]></title>
+    <link href="http://ki-ai.org/blog/2013/06/02/automatizar-generos-de-musica-por-horario-en-menos-de-25-lineas-de-codigo/"/>
+    <updated>2013-06-02T19:35:00-05:00</updated>
+    <id>http://ki-ai.org/blog/2013/06/02/automatizar-generos-de-musica-por-horario-en-menos-de-25-lineas-de-codigo</id>
+    <content type="html"><![CDATA[<p>Por un tiempo he automatizado mi collecion de musica con <a href="http://www.musicpd.org/">mpd</a> y <a href="http://alip.github.io/mpdcron/">mpdcron</a>, de tal forma que <a href="http://www.flujos.org/blog/mpd_la_lista_jamas/">jamás termina</a> la lista de reproduccion. Sencillamente cuando hay 3 o menos canciones en la cola, automaticamente se elija otro al alzar de la biblioteca y se agrega a la cola. Desde que elaborarmos esta forma de asegurar que jamás acaba la musica quedamos con la idea que hay bastante por mejorar. Pero hasta cierto cumbiabero de la costa chica, que aqui quedaria sin nombrarse, me empiezó gritar grosarias en relacion de una mama de carácter “muy buena” <em>y su hija tambien</em> a las <strong>7:30</strong> de una mañana domingera que decidí que ya era hora de enfrentar con esta problematica. “Estas temas mejor para despues del almuerzo”, pensé yo y pusé manos a la obra. Así es que nacio este mismo domingo una forma bastante sencilla, por no decir bruto, de automatizar generos de musica por horarios. Ahi les va:</p>
+
+<p><div><script src='https://gist.github.com/5695560.js?file='></script>
+<noscript><pre><code></code></pre></noscript></div>
+</p>
+
+<!-- more -->
+
+<p>Igual como la forma anterior y aun más brunto de vivir completamente encadenado, se puede decir, al alzar sino del destino entonces de los alogaritmos en existencia actualmente, utilizamos mpdcron para llamar este codigo cada vez que occure un acción en la lista de reproducción.</p>
+
+<p>Hay mucho por mejorar. Por ememplo le voy a hacer para que puedo asignar varios generos a la misma hora. Y seria mejor se fuera más preciso, es decir, se se podria asignar generos por periodos de 15 minutos. Ademas, es muy poco exacto en el sentido que no hay que esperar que cambia el genero precisamente cuando cabmia la hora. Pero, por lo pronto, y para nuestro la problema especifico, funciona bastante bien. Así tomamos un momento para disfruntar un trabajo bien hecho con un mescalito extraido de las mas sabrosos magueys del valle de oaxaca mientras que suena lo que se puede llamar el <em>soundrack de la vida</em>.</p>
+
+<p>Más en la misma vaina:
+<a href="http://www.flujos.org/blog/Locucion_de_hora-mpdcron/">Locución de la Hora con mpdcron</a>, <a href="http://ki-ai.org/blog/2012/11/25/audio-cat/">Concatenar Audios</a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[audio cat]]></title>
+    <link href="http://ki-ai.org/blog/2012/11/25/audio-cat/"/>
+    <updated>2012-11-25T19:41:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2012/11/25/audio-cat</id>
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://www.flujos.org/images/ncmpc-hora.png" title="“La hora en la lista”" >
+Para aquellos momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria con <strong>cat</strong>: <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code></p>
+
+<p>Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.
+<!-- more --></p>
+
+<p>Se puede utilizarlo en conjunto con un reproductor, por <a href="http://www.flujos.org/blog/Locucion_de_hora-mpdcron/" title="Con MPD">ejemplo con mpd</a>, para <em>automatizar</em> reproducción de la hora actual.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>audiocat.pl </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+</span><span class='line'><span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+</span><span class='line'><span class="nb">die</span> <span class="err">“</span><span class="n">Not</span> <span class="n">Enough</span> <span class="n">arguments</span><span class="o">\</span><span class="n">n</span><span class="err">”</span> <span class="k">if</span> <span class="nv">$#ARGV</span><span class="o">+</span><span class="mi">1</span> <span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span> <span class="mi">1</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">my</span> <span class="nv">$horalib</span><span class="o">=</span><span class="err">”</span><span class="sr">/usr/s</span><span class="n">hare</span><span class="sr">/spxcat/</span><span class="n">audio</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$fmt</span><span class="o">=</span><span class="err">”</span><span class="n">ogg</span><span class="err">”</span><span class="p">;</span> <span class="c1"># “spx” for speex</span>
+</span><span class='line'><span class="k">my</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">get_time</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">my</span> <span class="p">(</span><span class="nv">$outfile</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@ARGV</span><span class="p">;</span> <span class="c1">#get outfile from cmd line</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$cmdstr</span> <span class="o">=</span><span class="err">””</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$cmdopts</span> <span class="o">=</span><span class="err">””</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$hour_file</span> <span class="o">=</span> <span class="err">“</span><span class="nv">$horalib</span><span class="o">/</span><span class="n">HRS</span><span class="nv">$hour</span><span class="o">.</span><span class="nv">$fmt</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$min_file</span> <span class="o">=</span> <span class="err">“</span><span class="nv">$horalib</span><span class="o">/</span><span class="n">MIN</span><span class="nv">$min</span><span class="o">.</span><span class="nv">$fmt</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="err">“</span><span class="p">[</span><span class="nv">$hour_file:$min_file</span><span class="p">]</span><span class="o">\</span><span class="n">n</span><span class="err">”</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="err">“</span><span class="n">ogg</span><span class="err">”</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$cmdstr</span> <span class="o">=</span> <span class="err">“</span><span class="n">ogg</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="err">“</span><span class="n">spx</span><span class="err">”</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$cmdstr</span> <span class="o">=</span> <span class="err">“</span><span class="n">speex</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">ne</span> <span class="err">“</span> <span class="err">“</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">oggcat</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">#hora en punto&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;/bin/cp&quot;</span><span class="p">,</span> <span class="nv">$hour_file</span><span class="p">,</span> <span class="nv">$outfile</span><span class="p">));</span>
+</span><span class='line'>    <span class="nb">system</span> <span class="p">(</span><span class="s">&quot;$cmd&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd ($?): $!&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">oggcat</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$out_size</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$hour_file</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$min_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="k">my</span> <span class="nv">@tmps</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;/tmp/oggout0.wav&quot;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nv">@tmps</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="nv">$out_size</span> <span class="o">+=</span> <span class="o">-</span><span class="n">s</span> <span class="nv">$_</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;cant get out_size: $!\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nb">open</span> <span class="n">IN1</span><span class="p">,</span> <span class="s">&#39;&amp;lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nb">open</span> <span class="n">IN2</span><span class="p">,</span> <span class="s">&#39;&amp;lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout0.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nb">open</span> <span class="n">OUT</span><span class="p">,</span> <span class="s">&#39;&amp;gt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file $outfile\n&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># important info for headers</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$data_size</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">88</span><span class="p">;</span> <span class="c1"># 44 bits * 2 files</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$fs_8</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">16</span><span class="p">;</span> <span class="c1"># 8 bits * 2 files</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># step through header</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class='line'><span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span> <span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class='line'><span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$fs_8</span><span class="p">);</span>
+</span><span class='line'><span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">32</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$data_size</span><span class="p">);</span>
+</span><span class='line'><span class="c1"># write out the rest</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="n">IN1</span><span class="o">&amp;</span><span class="ow">gt</span><span class="p">;;</span>
+</span><span class='line'><span class="nb">seek</span> <span class="n">IN2</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="n">IN2</span><span class="o">&amp;</span><span class="ow">gt</span><span class="p">;;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">close</span> <span class="n">IN1</span><span class="p">;</span>
+</span><span class='line'><span class="nb">close</span> <span class="n">IN2</span><span class="p">;</span>
+</span><span class='line'><span class="nb">close</span> <span class="n">OUT</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">ogg_enc</span><span class="p">(</span><span class="nv">$outfile</span><span class="p">);</span>
+</span><span class='line'><span class="nb">unlink</span> <span class="nb">glob</span> <span class="s">&quot;/tmp/oggout*&quot;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">ogg_dec</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$i</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$out</span> <span class="o">=</span> <span class="err">“</span><span class="sr">/tmp/oggo</span><span class="n">ut</span><span class="err">”</span> <span class="o">.</span> <span class="nv">$i</span> <span class="o">.</span> <span class="err">“</span><span class="o">.</span><span class="n">wav</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="err">‘</span><span class="n">ogg</span><span class="err">’</span><span class="p">){</span><span class="nv">$out</span> <span class="o">=</span> <span class="err">“</span><span class="o">-</span><span class="n">o</span><span class="err">”</span><span class="o">.</span> <span class="nv">$out</span><span class="p">}</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="err">“</span><span class="n">dec</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="err">“</span> <span class="err">“</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="nv">$file</span><span class="p">,</span> <span class="nv">$out</span><span class="p">));</span>
+</span><span class='line'>    <span class="k">print</span> <span class="err">“</span><span class="n">cmd:</span> <span class="nv">$string</span><span class="o">\</span><span class="n">n</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="err">“</span><span class="o">-|</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="nb">die</span> <span class="err">“</span><span class="n">Cannot</span> <span class="nb">fork</span> <span class="vg">$!</span><span class="err">”</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nb">exec</span> <span class="err">“</span><span class="nv">$string</span><span class="err">”</span> <span class="ow">or</span> <span class="nb">die</span> <span class="err">“</span><span class="n">Cannot</span> <span class="nb">open</span> <span class="nb">pipe</span> <span class="n">to</span> <span class="nv">$cmd:</span> <span class="vg">$!</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="sr">&lt;pipe&gt;</span><span class="p">){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="sr">&lt;/pipe&gt;&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">ogg_enc</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="err">‘</span><span class="n">ogg</span><span class="err">’</span><span class="p">){</span><span class="nv">$file</span> <span class="o">=</span> <span class="err">“</span><span class="o">-</span><span class="n">o</span><span class="err">”</span><span class="o">.</span> <span class="nv">$file</span><span class="p">}</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="err">“</span><span class="n">enc</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="err">“</span> <span class="err">“</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="err">“</span><span class="sr">/tmp/oggo</span><span class="n">ut</span><span class="o">.</span><span class="n">wav</span><span class="err">”</span><span class="p">,</span> <span class="nv">$file</span><span class="p">));</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="err">“</span><span class="o">-|</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="nb">die</span> <span class="err">“</span><span class="n">Cannot</span> <span class="nb">fork</span> <span class="vg">$!</span><span class="err">”</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nb">exec</span> <span class="err">“</span><span class="nv">$string</span><span class="err">”</span> <span class="ow">or</span> <span class="nb">die</span> <span class="err">“</span><span class="n">Cannot</span> <span class="nb">open</span> <span class="nb">pipe</span> <span class="n">to</span> <span class="nv">$cmd:</span> <span class="vg">$!</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="sr">&lt;pipe&gt;</span><span class="p">){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="sr">&lt;/pipe&gt;&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">get_time</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">@timeData</span> <span class="o">=</span> <span class="nb">localtime</span><span class="p">(</span><span class="nb">time</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$min</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nv">$hour</span> <span class="ow">eq</span> <span class="err">“</span><span class="mi">0</span><span class="err">”</span><span class="p">)</span> <span class="p">{</span><span class="nv">$hour</span> <span class="o">=</span> <span class="err">“</span><span class="mi">12</span><span class="err">”</span><span class="p">};</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>       <span class="k">if</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="nv">$</span><span class="err">&lt;</span><span class="nv">em</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span><span class="vg">$&lt;</span><span class="o">/</span><span class="n">em</span><span class="o">&gt;</span> <span class="o">=</span> <span class="err">“</span><span class="mi">0</span><span class="err">”</span> <span class="o">.</span> <span class="nv">$</span><span class="err">&lt;</span><span class="nv">em</span><span class="o">&gt;</span><span class="p">};</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">eq</span> <span class="err">“</span><span class="mo">00</span><span class="err">”</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$hour</span> <span class="o">.</span> <span class="err">“</span><span class="sr">&lt;/em&gt;</span><span class="mi">0</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$min</span> <span class="o">=</span> <span class="err">“</span> <span class="err">“</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Radio Jatarishun]]></title>
+    <link href="http://ki-ai.org/blog/2012/11/08/radio-jatarishun/"/>
+    <updated>2012-11-08T15:21:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2012/11/08/radio-jatarishun</id>
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" ></p>
+
+<p>En Julio de 2004 tuvo lugar en la ciudad de Quito, Ecuador el primer Foro Social de Las Américas. Aparte de ello, y como moscas a la carne, una seria de otras foros brotaron a su alrededor, como era la Foro Indígena, Foro de Diversidad Sexual, en fin. Algunos de las moscas atrevieron montar una cabina de radio en un salón de escuela que transmitía por Internet mientras el Foro Social. Se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a> (<em>levantamiento</em> en Quechua ). Una de las moscas, a volver a su casa, rescató lo que se pudo de lo que se grabó, lo mezclaba con un poco de la música que ambientaba a Quito por aquellas fechas, y el resultado era un disco que también se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a>. Para no largar mucho el cuento, aquella mosca perdió el disco, y el lugar donde estaba hospedado en el Internet también desaprecio, pero otra mosca, o mas bien tenia que haber sido una ratóncita, que siempre guardaba todo de por si un día hacia falta, ahí la tenia cerrado en una caja.</p>
+
+<p>Para acceder a los audios, <em>Read on</em>.</p>
+
+<!-- more -->
+
+<h2 id="escucha">Escucha</h2>
+
+<p><strong>Ojo</strong>: tarda un poco para cargar los audio, los que se ponen blancitos el control de volumen ya se puede escuchar. <strong>Ojo2</strong>: estan en formato ogg-vorbis, deben de reproducirse en firefox o chromimun sin problemas.</p>
+
+<h4 id="democracia">01 Democracia</h4>
+<p><audio controls><source src='http://flujos.org/media/jatarishun/01_Democracia.oga'></audio></p>
+
+<h4 id="bienvenidos">02 Bienvenidos</h4>
+<p><audio controls><source src='http://flujos.org/media/jatarishun/02_Bienvenidos.oga'></audio></p>
+
+<h4 id="referndum-del-gas">03 Referéndum del Gas</h4>
+<p><audio controls><source src='http://flujos.org/media/jatarishun/03_Referéndum_del_Gas.oga'></audio></p>
+
+<h4 id="educacin-neoliberal">04 Educación Neoliberal</h4>
+<p><audio controls><source src='http://flujos.org/media/jatarishun/04_Educación_Neoliberal.oga'><source src=''></audio></p>
+
+<h4 id="y-que-del-foro">05 Y Que del Foro</h4>
+<p><audio controls><source src='http://flujos.org/media/jatarishun/05_Y_Que_del_Foro.oga'><source src=''></audio></p>
+
+<h4 id="estudiantes-de-las-amrica">06 Estudiantes de las América</h4>
+<p><audio controls><source src='http://flujos.org/media/jatarishun/06_Estudiantes_de_las_Américas.oga'><source src=''></audio>
+#### 07 Ciencia y Tecnología
+<audio controls><source src='http://flujos.org/media/jatarishun/07_Ciencia_y_Tecnología.oga'></audio>
+#### 08 Modelo Económico
+<audio controls><source src='http://flujos.org/media/jatarishun/08_Modelo_Económico.oga'><source src=''></audio>
+#### 09 Unidad Americana
+<audio controls><source src='http://flujos.org/media/jatarishun/09_Unidad_Americana.oga'><source src=''></audio>
+#### 10 Centro de Medios
+<audio controls><source src='http://flujos.org/media/jatarishun/10_Centro_de_Medios.oga'><source src=''></audio>
+#### 11 Plan Patriota
+<audio controls><source src='http://flujos.org/media/jatarishun/11_Plan_Patriota.oga'><source src=''></audio>
+#### 12 Plan Colombia
+<audio controls><source src='http://flujos.org/media/jatarishun/12_Plan_Colombia.oga'><source src=''></audio>
+#### 13 Hoja de Coca
+<audio controls><source src='http://flujos.org/media/jatarishun/13_Hoja_de_Coca.oga'><source src=''></audio>
+#### 14 Movimiento de Mujeres
+<audio controls><source src='http://flujos.org/media/jatarishun/14_Movimiento_de_Mujeres.oga'></audio>
+#### 15 Género y Participación
+<audio controls><source src='http://flujos.org/media/jatarishun/15_Género_y_Participación.oga'><source src=''></audio>
+#### 16 Chile
+<audio controls><source src='http://flujos.org/media/jatarishun/16_Chile.oga'></audio>
+#### 17 Bendición
+<audio controls><source src='http://flujos.org/media/jatarishun/17_Bendición.oga'><source src=''></audio>
+#### 18 LGBT
+<audio controls><source src='http://flujos.org/media/jatarishun/18_LGBT.oga'><source src=''></audio>
+#### 19 Cumbia Quechua
+<audio controls><source src='http://flujos.org/media/jatarishun/19_Cumbia_Quechua.oga'><source src=''></audio>
+#### 20 Radio Jatarishun
+<audio controls><source src='http://flujos.org/media/jatarishun/20_Radio_Jatarishun.oga'><source src=''></audio>
+#### 21 No Tengas Mas Temor
+<audio controls><source src='http://flujos.org/media/jatarishun/21_No_Tengas_Mas_Temor.oga'><source src=''></audio>
+#### 22 Así Es América
+<audio controls><source src='http://flujos.org/media/jatarishun/22_Así_Es_América.oga'><source src=''></audio></p>
+
+<p><strong>pd</strong>, La fecha en la portada del disco, en lugar de decir <em>26-30 de august</em> debe de ser <em>26-30 de julio</em>. Digamos que es doble error histórico, tanto temporal como lingüística.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Guía de la Galaxia para Mochileros, Edición Pirateada]]></title>
+    <link href="http://ki-ai.org/blog/2012/10/29/guia-de-la-galaxia-para-mochileros/"/>
+    <updated>2012-10-29T21:24:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2012/10/29/guia-de-la-galaxia-para-mochileros</id>
+    <content type="html"><![CDATA[<p>Damos a conocer a un fragmento del Guía de la Galaxia Para Mochileros, Edición Pirateada. Esto fragmento fue escrito por nosotros pero basamos en el concepto y personajes desarrollados por Douglass Adams para radio BBC en las setentas. Ademas del fragmento estamos trabajando en la traducción del seria original al español. Aun que no están terminados, esperemos que alguien encuentra algún diversión en ello. Eso por que últimamente no hemos tenidos tiempo de trabajar en ello, y mucho menos fondos para producir lo.</p>
+
+<h2 id="gua-de-la-galaxia-para-mochileros-edicin-pirateada">Guía de la Galaxia para Mochileros, Edición Pirateada</h2>
+
+<p><strong>F/X</strong>
+Estación espacial, después si abre una ventana o una puerta. música de fondo (rockola).</p>
+
+<p><strong>FORD PREFECT</strong>
+(yawn..) Buen día Arturo.</p>
+
+<p><strong>ARTURO DANTE</strong>
+Buen… (dudando) es día?</p>
+
+<p><strong>FORD PREFECT</strong>
+No se. Café?</p>
+
+<p><strong>ARTURO DANTE</strong>
+Hay Café?</p>
+
+<p><strong>FORD PREFECT</strong>
+No creo.</p>
+
+<p><strong>ARTURO DANTE</strong>
+Aaa.</p>
+
+<!-- more -->
+
+<p><strong>NARRARADOR</strong>
+Muy difícilmente Arturo Dante encontrará una tasa de café a flota en el espacio en un capsulo el tamaño de un Bocho. Pero como si antojaba después de un millón de años de sueño criogenético.</p>
+
+<p>Después de un casi infinidad de tiempo en búsqueda del ultima pregunta a la vida, el universo y todo, a lo cual la respuesta es 42, al final viajaron al principio del tiempo donde encontraron un tal Dios quien decidió no compartir el misterio del universo, de por algún criatura no fuera hacer uso irresponsable de ello,  y escribió un algoritmo para cifrar el “significado de la vida”. Era un algoritmo tan enredado que la computadora mas inteligente del universo llevaría hasta el fin del tiempo para calcular lo, y, siendo que era el principio del tiempo, y la computador mas inteligente el universo aun no había sido inventado, Dios tomó lo que estaba a la mano y, con un diapasón, sintonizó los cerebros del simio-descendiente Arturo Dante y su Amigo, Ford Prefect, de un pequeño planeta en la vecindad de Beatljuce, y utilizó su largo sueño REM criogenético como calculadora. Un método teóricamente mas rápido que la del computadora mas inteligente del universo, pero, como veremos, dado a un tipo de error que los simio-descendientes clasifican como “humano”.</p>
+
+<p><strong>F/X</strong>
+bing! (alarma de tostadora)</p>
+
+<p><strong>FORD PREFECT</strong>
+(emocionado) La alarma!</p>
+
+<p><strong>ARTURO DANTE</strong>
+Pan tostada?</p>
+
+<p><strong>FORD PREFECT</strong>
+No. es la alarma de cifracion. Hemos pasado ya los millón de años. Debe de haber pasado suficientemente tiempo para generar los bits aleatorios para poder generar la llave de cifracion de la “significado de la vida”.</p>
+
+<p><strong>ARTURO DANTE</strong>
+Como quedó?</p>
+
+<p><strong>FORD PREFECT</strong>
+Uuu. No quedó. La alarma sonó, pero no si hizo nada. Ah si, mi parece que pusiste la alarma pero no diste el orden para si genera la llave.</p>
+
+<p><strong>ARTURO DANTE</strong>
+Aaa. Debe de haber sido el ultimo gallo antes de subir a la capsula criogenético.</p>
+
+<p><strong>FORD PREFECT</strong>
+Debe de haber sido. Pero ahora tenemos que esperar ahora otro millón de años.</p>
+
+<p><strong>ARTURO</strong>
+Dios</p>
+
+<p><strong>FORD PREFECT</strong>
+No Arturo. Tuuuuu. Tu y tus viajes. No debes de fumar.</p>
+
+<p><strong>ARTURO</strong>
+Pero si eres tu quien siempre trae.</p>
+
+<p><strong>FORD</strong>
+No mi escuchas Arturo. No debes de fumar, TU.</p>
+
+<p><strong>ARTURO</strong>
+Si voy a tener que esperar otro millón de años voy a necesitar un toque. Como vamos mejor vamos hasta el fin del tiempo.</p>
+
+<p><strong>FORD</strong>
+No es mala la idea e. De esta forma podemos aprovechar la contra corriente, y agarramos una olla que nos lleva de regreso al principio para poder entregar la llave.</p>
+
+<p><strong>ARTURO</strong>
+Ah si no había pensado en eso.</p>
+
+<p><strong>FORD</strong>
+No. Ni mucho menos Dios. Admito que es ingenio, sintonizar nuestros cerebros con un diapasón, original y efectivo, pero le falla en la área de planeación. No es así?</p>
+
+<p><strong>F/X</strong>
+inhalación</p>
+
+<p><strong>ARTURO</strong>
+Saca.</p>
+
+<p><strong>FORD</strong>
+Sube a la rockola.</p>
+
+<p><strong>ARTURO</strong>
+Oye</p>
+
+<p><strong>FORD</strong>
+Ahora?</p>
+
+<p><strong>ARTURO</strong>
+Nada</p>
+
+<p><strong>FORD</strong>
+Que?</p>
+
+<p><strong>ARTURO</strong>
+Solo que alla en la distancia, parece ser la tierra.</p>
+
+<p><strong>FORD</strong>
+ES el planeta tierra. Sientes nostalgia?</p>
+
+<p><strong>ARTURO</strong>
+Pues si, es mi planeta al fin de cuentas…</p>
+
+<p><strong>FORD</strong>
+Claro. pero en la realidad aun no has nacido, asi que tecnicamente no es tu planeta.</p>
+
+<p><strong>ARTURO</strong>
+Urggg pues no veo que tiene que ver</p>
+
+<p><strong>FORD</strong>
+(interrumpiendo) música… por favor…</p>
+
+<p><strong>ARTURO</strong>
+Urggg</p>
+
+<p><strong>F/X</strong>
+subir música</p>
+
+<p><strong>F/X</strong> MUSICA DE FONDO DE NARRACION</p>
+
+<p><strong>NARRARADOR</strong>
+Según La Enciclopedia Galáctica, edición extendido para incluir hasta los detalles menos interesantes del universo, y de los regiones mas pasados de modo de la Galaxia, relata que los primeros intentos de los simio-descendientes terrestres explorar el espacio fueran resultados de un particularmente brutal guerra de aspecto fría de extenso Planetaria del siglo 20, tiempo terrestre, de primariamente, y torpemente, pisar la insignificante roca desértica y muy aburrido de su luna. La Guía de la Galaxia para Mochileros por su lado afirma que el primer terrestre salir de su atmósfera ganó a los grandes imperios por unos cuantos años como resultado de lo que, si no fuera la mayor peda de todo tiempo, lo cual lo mas probablemente seguramente era, medida por cantidad de chingre consumido per capita y por intensidad y longevidad de la cruda que la seguía, al menos era la mas impresionante. Y al menos según el tiempo como medido por los quienes lo experimentó en el pequeño pueblo bosquera y prácticamente inaccesible al menos por los vías mas inclinados hacia el horizonte.</p>
+
+<p>Esta borrachera era especialmente impresionante por que era la primera vez en la memoria, no que el equipo local había ganado el torneo de su proprio fiesta, por que no lo ocurrió, sino porque infortunadamente cada vez que Honorio, quien todos opinaron que traía el mejor juego del equipo sino del torneo, acercaba a el momento de meter la pelota lo tiraba en cualquier dirección menos la de la canasta, por fin este noche la metió. Y ademas ocurrieron una serie de otros incidentes extraordinarias.</p>
+
+<p><strong>F/X</strong> FONDO DE AUDENCIA. CANCHA DE BASKET. PELOTA REBOTANDO. AIRE ABIERTA. CHIFLA DEL ARBITRO.</p>
+
+<p><strong>LOCUTOR</strong>
+Tiempo.</p>
+
+<p><strong>AUDIENCIA</strong>
+(todos juntos) Booo (chiflan)</p>
+
+<p><strong>FAN UNO</strong>
+(gritando) Oye estas loco? Estas tirando por todos lados. Rompiste mis lentes!</p>
+
+<p><strong>FAN DOS</strong>
+Hasta que metiste 3 puntos para el otro equipo!</p>
+
+<p><strong>COMPAÑERO DE EQUIPO</strong>
+No los escuchas. Tranquilizate. En las practicas todo salio bien.</p>
+
+<p><strong>HONORIO</strong>
+No se que mi pasa siento que todos mi están viendo.</p>
+
+<p><strong>COMPAÑERO DE EQUIPO</strong>
+Eso si. Hasta que te están chiflando</p>
+
+<p><strong>HONORIO</strong>
+argg</p>
+
+<p><strong>COMPAÑERO DE EQUIPO</strong>
+Pero no los haces caso.</p>
+
+<p><strong>COMPAÑERO DE EQUIPO DOS</strong>
+Toma un chingre pa que relaje.</p>
+
+<p><strong>HONORIO</strong>
+No sé… um … bueno.</p>
+
+<p><strong>COMPAÑERO DE EQUIPO DOS</strong>
+Mira, alla arriba.</p>
+
+<p><strong>COMPAÑERO DE EQUIPO UNO</strong>
+En el cielo. Que es?</p>
+
+<p><strong>HONORIO</strong>
+Una estrella fugaz?</p>
+
+<p><strong>F/X</strong>
+CHIFLADO DEL ARBITRO. BOOS DEL AUDIENCIA. EMPIENZAN A JUGAR. SONIDO DE VARIOS JUGADOS LA MAYORIA ACOMPAÑADOS POR BOOS.</p>
+
+<p><strong>LOCUTOR</strong>
+Pase a numero cinco. pasa a numero tres. lo tiene Honorio. acerca a la canasta ahora si parece que si y nooooo pega a un bebe</p>
+
+<p><strong>F/X</strong> BEBE GRITA Y LLORA. BOOS</p>
+
+<p><strong>FAN NUMERO DOS</strong>
+Mira.</p>
+
+<p><strong>FAN NUMERO UNO</strong>
+No es estrella fugaz.</p>
+
+<p><strong>FAN NUMERO DOS</strong>
+No se que sea.</p>
+
+<p><strong>ANUNCIADOR</strong>
+Pase a numero 8. Pasa a numero 12. Lo tiene Honorio.</p>
+
+<p><strong>FAN NUMERO UNO</strong>
+No se que es.</p>
+
+<p><strong>FAN NUMEROS UNO/DOS</strong> (juntos)
+Pero parece que si va a meter 3 puntos.</p>
+
+<p><strong>LOCUTOR</strong>
+Lo tira Honorio. Dios mio lo tiró en la dirección general de la canasta. Pero no pero parece que no pero Siiiiii un pedazo de algo hay caído del cielo rebotando sobre la pelota forzando la pelota en la canasta! 2 puntos los — —</p>
+
+<p><strong>AUDIENCIA</strong>
+Hooray!!!</p>
+
+<p><strong>COMPAÑERO DE EQUIPO UNO</strong>
+Que era.</p>
+
+<p><strong>HONORIO</strong>
+No sé. Quien es aquella allá?</p>
+
+<p><strong>COMPAÑERO DE EQUIPO UNO</strong>
+Como pedazos de barro. Pero casi desintegrado. Supongo por la colisión. No sé quien será. No la había visto.</p>
+
+<p><strong>HONORIO</strong>
+Y mira una nota.</p>
+
+<p><strong>COMPAÑERO DE EQUIPO UNO</strong>
+Que dice?</p>
+
+<p><strong>HONORIO</strong>
+«Te espero en Millyways, el comedor al Final del universo.
+Favor de Traer chingre»</p>
+
+<p><strong>COMPAÑERO DE EQUIPO DOS</strong>
+Huh?</p>
+
+<p><strong>HONORIO</strong>
+Ummmm.</p>
+
+<p><strong>COMPAÑERO DE EQUIPO DOS</strong>
+Quien sabe.</p>
+
+<p><strong>HONORIO</strong>
+Ummmm. Quien sabe, ahorita vengo.</p>
+
+<p><strong>HONORIO</strong>
+Amiga (fuerte y luego menos fuerte en que si acerca). Amiga</p>
+
+<p><strong>ANALLELI</strong>
+Hola.</p>
+
+<p><strong>HONORIO</strong>
+Hola. Tienes la mirada mas hermosa.</p>
+
+<p><strong>ANALLELI</strong>
+Gracias.</p>
+
+<p><strong>HONORIO</strong>
+Creo que hasta que por eso pude meter la pelota.</p>
+
+<p><strong>ANALLELI</strong>
+JaJa. No creo.</p>
+
+<p><strong>HONORIO</strong>
+O digo, no completamente, pero al menos acerca, claro que quien terminó en realidad era un especia de carta que cayó del cielo.</p>
+
+<p><strong>ANALLELI</strong>
+Una carta?</p>
+
+<p><strong>HONORIO</strong>
+Si. Quieres un chingre?</p>
+
+<p><strong>ANALLELI</strong>
+Ay no no mi gusta.</p>
+
+<p><strong>HONORIO</strong>
+Uno nada mas para celebrar y luego vamos a bailar.</p>
+
+<p><strong>ANALLELI</strong>
+Bueno. Nada mas una prueba.</p>
+
+<p><strong>F/X</strong> BING, ALGO QUE SEÑALA DESAPARENCIA</p>
+
+<p><strong>COMPAÑERO DE EQUIPO UNO</strong>
+Ay honorio por fin metiste uno. No has visto a mi prima</p>
+
+<p><strong>HONORIO</strong>
+Tu prima?</p>
+
+<p><strong>COMPAÑERO DE EQUIPO UNO</strong>
+Analleli.</p>
+
+<p><strong>HORORIO</strong>
+Analleli? Analleli… ummm… desapareció.</p>
+
+<p><strong>NARRARADOR</strong></p>
+
+<p>Acerca de la tema de desaparências inducidos por alcohol, la Guía de la Galaxia para mochileros conseja en su contra. Es todo bien y parece muy fácil pero la problema es volverse a aparecer después, sobre todo en el caso que te toca ley seca en el limbo o donde sea que decides pasar el tiempo de tu desaparencia. Ademas, explica, no todos las bebidas alcohólicas inducen desaparencia, al menos no desaparencia instantánea, aun que la mayoría tiene los propriedades necesarias para que uno si pierde en el bosque, en el monte, una cantina o inclusive en el patio de su proprio casa.</p>
+
+<p>Honorio por su parte sufrió otro tipo de de desaparencia permanente en lo cual no pudo tratar con el ocurrido, y si inundo hasta el fondo de un litro de chingre y luego dos y luego los que seguían de ahí en adelante. Quedaba en las calles espantando a los demás con extraños cuentos, gritando como un cavernicolo y luego repetía frases poco inteligibles sobre si existía algo mas allá del cielo. Hasta que finalmente un día la gente decía: si el universo es tan pinche grande por que no la vayas a explorar, y lo enceraron en una olla de barro, y fijaron otro que apuntaba de abajo, lo metieron en la de arriba y lo taparon. Lo dieron un un litro de chingre para el viaje y otros tres ocuparon como combustible junto con una copa de concentrado de ocote, lo encendieron y lloraron con alegría cuando vieron desaparecer el cohete como un punto negro atrás de los nubes.</p>
+
+<p><strong>F/X</strong> CAPUSLO DE FORD Y ARTURO. ROCKOLA. SEGUIDO POR UN CHOQUE. SEGUIDO POR ALARMA DE CHOQUE. ALARMA SIGUE COMO FONDO</p>
+
+<p><strong>FORD</strong>
+(voz con sueño) Ahora que.</p>
+
+<p><strong>ARTURO</strong>
+(tambien con sueño) Yawn. Es la alarma de cifracion?</p>
+
+<p><strong>FORD</strong>
+No, Arturo! Es la alarma general del algo horrenda esta pasando al nave. Estamos bajo ataque. Nos están disparando!</p>
+
+<p><strong>ARTURO</strong>
+Nos están disparando?!</p>
+
+<p><strong>FORD</strong>
+Si cubre tu cabeza?</p>
+
+<p><strong>ARTURO</strong>
+Pero quien nos esta disparando?</p>
+
+<p><strong>FORD</strong>
+No sé. O hemos choqado con algo?</p>
+
+<p><strong>ARTURO</strong>
+Mira es una olla de barro.</p>
+
+<p><strong>FORD</strong>
+No Arturo son dos ollas de barro.</p>
+
+<p><strong>ARTURO</strong>
+Dos ollas de barro?</p>
+
+<p><strong>FORD</strong>
+Dos ollas de barro fijado juntos para hacer como una coete.</p>
+
+<p><strong>ARTURO</strong>
+Un coete? Como puede ser un coete de ollas de varo a flota en el espacio. Esto es locura.</p>
+
+<p><strong>FORD</strong>
+Arturo, como pode ser un bochito a flota en el espacio, eso también es locura. Si no estuvieramos de acuerdo con la locura no podemos haber llegado hasta aquí.</p>
+
+<p><strong>ARTURO</strong>
+Cierto. Abre la cajuela.</p>
+
+<p><strong>FORD</strong>
+Vamos a ver que trae este coete.</p>
+
+<p><strong>F/X</strong> ABRA LA CAJUELA. ACOMODA EL COHETE DENTRO DEL BOCHITO.</p>
+
+<p><strong>ARTURO</strong>
+Tenias razón Ford, es barro.</p>
+
+<p><strong>FORD</strong>
+Arturo ayuda me quitar la tapa.</p>
+
+<p><strong>F/X</strong> QUITAR LA TAPA. ALGO QUE CAE COMO UN PEZ EN EL SUELO.</p>
+
+<p><strong>ARTURO/FORD</strong>
+Arggggg que olor.</p>
+
+<p><strong>FORD</strong>
+Pero mira Arturo parece como otro criatura terrestre como tu.</p>
+
+<p><strong>ARTURO</strong>
+Arggg pero que olor.</p>
+
+<p><strong>FORD</strong>
+Bueno entonces es un persona apestoso, lo de volvemos en el espacio?</p>
+
+<p><strong>ARTURO</strong>
+Morirá Ford.</p>
+
+<p><strong>FORD</strong>
+Temo si sino nosotros moriremos por el olor.</p>
+
+<p><strong>F/X</strong> ESCANEO, ANALIZADOR DE TOXICOS EN EL AIRE</p>
+
+<p><strong>FORD</strong>
+Justo como imaginaba, metano. Ese hombre sobrevivió en el espacio porque sus pedos crearon su proprio atmósfera densa dentro de la olla. Por eso no si desintegro dentro del vacuo de espacio.</p>
+
+<p><strong>ARTURO</strong>
+Sobrevivió por pedorro.</p>
+
+<p><strong>FORD</strong>
+Es lo que parece.</p>
+
+<p><strong>HONORIO</strong>
+Grrra arrr erhh arrgh.</p>
+
+<p><strong>FORD</strong>
+Mira esta despertando el hombre-mono</p>
+
+<p><strong>ARTURO</strong>
+Oye!</p>
+
+<p><strong>FORD</strong>
+Disculpe, simio-descendiente. Hola hombre-mono como sientes?</p>
+
+<p><strong>HONORIO</strong>
+Grrra arrr erhh arrgh.</p>
+
+<p><strong>ARTURO</strong>
+Creo que no muy bien Ford.</p>
+
+<p><strong>HONORIO</strong>
+El comedor… Al fin .. del … universo</p>
+
+<p><strong>ARTURO</strong>
+El comedor al fin del universo.</p>
+
+<p><strong>FORD</strong>
+El comedor al fin del universo.</p>
+
+<p><strong>FORD/ARTURO</strong>
+Millyways?!?!</p>
+
+<p><strong>ARTURO</strong>
+Mira Ford, hay una nota.</p>
+
+<p><strong>FORD</strong>
+Mira Arturo, hay una botella.</p>
+
+<p><strong>F/X</strong> DESTAPA BOTELLA.</p>
+
+<p><strong>FORD</strong>
+Es alcohol, por su olor yo diria de caña.</p>
+
+<p><strong>ARTURO</strong>
+La nota dice «Te espero en el Comedor al final del universo. Favor de traer chingre.» Debe de ser chingre este bebida.</p>
+
+<p><strong>FORD</strong>
+Debe de ser. Vamos a ver que tal pone.</p>
+
+<p><strong>ARTURO</strong>
+Pero podría ser venenoso o contaminado o algo.</p>
+
+<p><strong>FORD</strong>
+Oooooo ouch, esta potente. Quieres probar.</p>
+
+<p><strong>ARTURO</strong>
+Ahh otro día.</p>
+
+<p><strong>FORD</strong>
+Bueno nos queda de paso Millyways, lo podemos dejar.</p>
+
+<p><strong>ARTURO</strong>
+Bien, voy a volver a dormir.</p>
+
+<p><strong>FORD</strong>
+Voy a tomar chingre.</p>
+
+<p><strong>ARTURO</strong>
+Bien apaga las luces cuando terminas. Espero poder dormir con este olor.</p>
+
+<p>**F/X ** FADE MUSICA</p>
+]]></content>
+  </entry>
+  
+</feed>

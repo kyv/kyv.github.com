@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: audio | ki-ai.org]]></title>
+  <link href="http://ki-ai.org/tags/audio/atom.xml" rel="self"/>
+  <link href="http://ki-ai.org/"/>
+  <updated>2014-02-03T19:38:20-06:00</updated>
+  <id>http://ki-ai.org/</id>
+  <author>
+    <name><![CDATA[ki-ai.org]]></name>
+    <email><![CDATA[contact@ki-ai.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Distrito Efe]]></title>
+    <link href="http://ki-ai.org/blog/2014/01/07/distrito-efe/"/>
+    <updated>2014-01-07T22:24:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2014/01/07/distrito-efe</id>
+    <content type="html"><![CDATA[<p>Con dedicación a los amigos en df. Amenizado por los Tigres del Norte con su exito <em>Rock del Corazon</em>. Estreñando un nuevo special mix por el celebre DJ el Dr. no-invitado.</p>
+
+<p><video width='640' height='360' preload='none' controls poster=' http://flujos.org/media/kiai/distrito-portada.png'><source src='http://flujos.org/media/kiai/distrito.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Compresor de Sonido para Pulseaudio]]></title>
+    <link href="http://ki-ai.org/blog/2013/06/12/compresor-de-sonido-para-pulseaudio/"/>
+    <updated>2013-06-12T10:19:00-05:00</updated>
+    <id>http://ki-ai.org/blog/2013/06/12/compresor-de-sonido-para-pulseaudio</id>
+    <content type="html"><![CDATA[<p>Del <a href="https://es.wikipedia.org/wiki/Compresor_%28sonido%29">wikipedia</a>, <em>En el campo del sonido profesional, un compresor es un procesador electrónico de sonido destinado a reducir el margen dinámico de la señal sin que se note demasiado su presencia. Esta tarea, se realiza reduciendo la ganancia del sistema, cuando la señal supera un determinado umbral.</em></p>
+
+<p><a href="http://es.wikipedia.org/wiki/PulseAudio">Pulseaudio</a> es la capa de audio a lo cual conecta los varios applicaciones que reproducen sonido en la mayoria de los *nix contemporaneos. Porque permite el uso de los procesadores y filtros <a href="http://www.ladspa.org/">ladspa</a>, con un pequeño configución podemos aplicar cualcuiera de ellos. Uno de los usos más utiles podria ser el compresor de rango dinamico, para mantener toda la musica y video que reproducimos a un amplitud constante. Hemos de agregar estas lineas al configuracion de pulseaudio, en nuestro caso <strong>~/.pulse/default.pa</strong></p>
+
+<p><code>bash sc4 plugin para pulseaudio
+load-module module-ladspa-sink sink_name=compressor master=alsa_output.pci-0000_00_1e.2.analog-stereo plugin=sc4_1882 label=sc4 control=1,1.5,401,-30,20,5,12
+set-default-sink compressor
+</code></p>
+
+<p>El primer linea carga el sc4, un compresor estereo ladspa. <strong>Control=</strong> son los parámetros del efecto. Detalles al respecto se encuetra en <a href="http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.91">la documentación del plugin</a>.</p>
+
+<!-- more -->
+
+<p>Vale mencionar que es possible encadenar estos plugins. En nuestro caso, primer pasamos el audio por un equalizador de 15 canales, para quitar algunas frequencias que causan vibraciones no-deseables en las bocinitas del lap. El señal equalizado entonces pasa al compresor. Agregamos otra sección al config despues del anterior.</p>
+
+<p><code>bash equalizador para pulseaudio
+load-module module-ladspa-sink sink_name=ladspa_output.mbeq_1197.mbeq master=compressor plugin=mbeq_1197 label=mbeq control=-30.0,-19.7,-15.6,-12.0,-3.9,-1.3,0.0,0.0,0.0,0.0,0.0,0.0,-1.3,-4.6,-5.7
+</code></p>
+
+<p>De hecho este seccion del equalizador se agrega automaticamente al instalar el paquete <a href="https://aur.archlinux.org/packages/pulseaudio-equalizer/">pulseaudio-equalizer</a>, que tiene un bonito interfaz grafica. Pero es necesario su modificación si vamos a acompañarlo con compression.</p>
+
+<p>Este información originalmente encontramos en <a href="http://askubuntu.com/questions/31580/is-there-a-way-of-leveling-compressing-the-sound-system-wide">las ayudas de ubuntu</a>.</p>
+
+<p>Punto y aparte, el <a href="http://www.freedesktop.org/wiki/Software/PulseAudio/Notes/4.0/">version más recien de pulseaudio</a> tiene un modulo de <a href="http://en.wikipedia.org/wiki/Ducking">ducking</a> ( bajar un fuente de audio cuando entra otro). Seria intersante para unos experimientos más adelante.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sin Luz de Luna]]></title>
+    <link href="http://ki-ai.org/blog/2012/12/21/sin-luz-de-luna/"/>
+    <updated>2012-12-21T16:41:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2012/12/21/sin-luz-de-luna</id>
+    <content type="html"><![CDATA[<p>Sino es apocalipsis mínimamente un eclipse, sino de la tierra, entonces de la corazón. Las letras de Sin Luz de Luna por Romelia Ibarra introduzcan a las de Álvaro Carrillo como interpretado por Blanco y Negro.</p>
+
+<p><audio controls><source src='http://flujos.org/media/Romelia%20Ibarra%20-%20Sin%20luz%20de%20luna.oga'><source src=''></audio></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ArchCom: Archlinux para Comunicantes]]></title>
+    <link href="http://ki-ai.org/blog/2012/12/11/archlinux-para-comunicantes/"/>
+    <updated>2012-12-11T13:42:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2012/12/11/archlinux-para-comunicantes</id>
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://flujos.org/media/screen-qterm-audacity.png" width="400" title="Pantallazo Audacity y Quick Terminal" ></p>
+
+<p>Sistema ligera en base de <a href="http://archlinux.org">archlinux</a> con aplicaciones de creación multi-media disponible vía bitorrent.</p>
+
+<p>Grábalo a DVD o USB para hacer disco de arranque o arrancarlo por red para materializar un laboratorio de medios espontáneamente. Es para procesadores de 64 bits PC y MAC (la mayoría de los nuevos). Probablemente aparecerá muy pronto una versión para i686 (PCs mas antiguas).</p>
+
+<p><strong>Mas medios, menos basura</strong>.</p>
+
+<p>Descargas vía <a href="http://linuxtracker.org/download.php?id=4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;f=archcom-2012.12.10-x86_64.iso.torrent&amp;key=0 Fichero .torrent">torrent tradicional</a> o <a href="magnet:?xt=urn:btih:4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;dn=archcom-2012.12.10-x86%5F64.iso&amp;tr=http%3A%2F%2Flinuxtracker.org%3A2710%2Fbcc9d2323826745794be0d57f9e5cf1d%2Fannounce">enlace iman</a>. Detalles al final u <a href="http://linuxtracker.org/index.php?page=torrent-details&amp;id=4853d82ad0291a0f3823cbc8d9f0813c18711815">linuxtracker.org</a>.</p>
+
+<!-- more -->
+<p>## Configuración de Sistema</p>
+
+<p><img class="right" src="http://flujos.org/media/screen-cinelerra.png" title="Pantallazo Cinelerra" ></p>
+
+<h3 id="grfica">Gráfica</h3>
+<ul>
+  <li><strong>gimp</strong> (manipulación de imagen)</li>
+  <li><strong>inkscape</strong> (dibujo vectorial)</li>
+  <li><strong>blender</strong> (modelaje 3D / animación)</li>
+</ul>
+
+<h3 id="video">Video</h3>
+<ul>
+  <li><strong>cinelerra</strong> (edición)</li>
+  <li><strong>totem</strong> (reproducción)</li>
+  <li><strong>devede</strong> (dvd)</li>
+</ul>
+
+<h3 id="audio">Audio</h3>
+<ul>
+  <li><strong>mixxx</strong> (consola DJ / radio por Internet)</li>
+  <li><strong>audacity</strong> (edición)</li>
+  <li><strong>ardour</strong> (DAW)</li>
+  <li><strong>Qtractor</strong> – (DAW)</li>
+  <li><strong>Hydrogen</strong> – (Drum machine / Sequencer)</li>
+  <li><strong>Supercolider</strong> (Síntesis / Programación)</li>
+</ul>
+
+<h3 id="oficina">Oficina</h3>
+<ul>
+  <li><strong>libreoffice</strong></li>
+</ul>
+
+<h3 id="red">Red</h3>
+<ul>
+  <li><strong>chromium</strong> (Navigador)</li>
+  <li><strong>transmission</strong> (bitorrent)</li>
+  <li><strong>claws-mail</strong> (correo)</li>
+  <li><strong>tor</strong> (anonimidad)</li>
+</ul>
+
+<h3 id="sistema">Sistema</h3>
+<ul>
+  <li><strong>archlinux</strong></li>
+  <li><strong>slim</strong> session manager</li>
+  <li><strong>openbox</strong> wm</li>
+  <li><strong>adeskbar</strong> barra de aplicaciones</li>
+  <li><strong>tint2</strong> panel</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[audio cat]]></title>
+    <link href="http://ki-ai.org/blog/2012/11/25/audio-cat/"/>
+    <updated>2012-11-25T19:41:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2012/11/25/audio-cat</id>
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://www.flujos.org/images/ncmpc-hora.png" title="“La hora en la lista”" >
+Para aquellos momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria con <strong>cat</strong>: <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code></p>
+
+<p>Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.
+<!-- more --></p>
+
+<p>Se puede utilizarlo en conjunto con un reproductor, por <a href="http://www.flujos.org/blog/Locucion_de_hora-mpdcron/" title="Con MPD">ejemplo con mpd</a>, para <em>automatizar</em> reproducción de la hora actual.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>audiocat.pl </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+</span><span class='line'><span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+</span><span class='line'><span class="nb">die</span> <span class="err">“</span><span class="n">Not</span> <span class="n">Enough</span> <span class="n">arguments</span><span class="o">\</span><span class="n">n</span><span class="err">”</span> <span class="k">if</span> <span class="nv">$#ARGV</span><span class="o">+</span><span class="mi">1</span> <span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span> <span class="mi">1</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">my</span> <span class="nv">$horalib</span><span class="o">=</span><span class="err">”</span><span class="sr">/usr/s</span><span class="n">hare</span><span class="sr">/spxcat/</span><span class="n">audio</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$fmt</span><span class="o">=</span><span class="err">”</span><span class="n">ogg</span><span class="err">”</span><span class="p">;</span> <span class="c1"># “spx” for speex</span>
+</span><span class='line'><span class="k">my</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">get_time</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">my</span> <span class="p">(</span><span class="nv">$outfile</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@ARGV</span><span class="p">;</span> <span class="c1">#get outfile from cmd line</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$cmdstr</span> <span class="o">=</span><span class="err">””</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$cmdopts</span> <span class="o">=</span><span class="err">””</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$hour_file</span> <span class="o">=</span> <span class="err">“</span><span class="nv">$horalib</span><span class="o">/</span><span class="n">HRS</span><span class="nv">$hour</span><span class="o">.</span><span class="nv">$fmt</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$min_file</span> <span class="o">=</span> <span class="err">“</span><span class="nv">$horalib</span><span class="o">/</span><span class="n">MIN</span><span class="nv">$min</span><span class="o">.</span><span class="nv">$fmt</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="err">“</span><span class="p">[</span><span class="nv">$hour_file:$min_file</span><span class="p">]</span><span class="o">\</span><span class="n">n</span><span class="err">”</span><span class="p">;</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="err">“</span><span class="n">ogg</span><span class="err">”</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$cmdstr</span> <span class="o">=</span> <span class="err">“</span><span class="n">ogg</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="err">“</span><span class="n">spx</span><span class="err">”</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$cmdstr</span> <span class="o">=</span> <span class="err">“</span><span class="n">speex</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">ne</span> <span class="err">“</span> <span class="err">“</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">oggcat</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">#hora en punto&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;/bin/cp&quot;</span><span class="p">,</span> <span class="nv">$hour_file</span><span class="p">,</span> <span class="nv">$outfile</span><span class="p">));</span>
+</span><span class='line'>    <span class="nb">system</span> <span class="p">(</span><span class="s">&quot;$cmd&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd ($?): $!&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">oggcat</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$out_size</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$hour_file</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$min_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span><span class="sr">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;</span><span class="k">my</span> <span class="nv">@tmps</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;/tmp/oggout0.wav&quot;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nv">@tmps</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="nv">$out_size</span> <span class="o">+=</span> <span class="o">-</span><span class="n">s</span> <span class="nv">$_</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;cant get out_size: $!\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nb">open</span> <span class="n">IN1</span><span class="p">,</span> <span class="s">&#39;&amp;lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nb">open</span> <span class="n">IN2</span><span class="p">,</span> <span class="s">&#39;&amp;lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout0.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nb">open</span> <span class="n">OUT</span><span class="p">,</span> <span class="s">&#39;&amp;gt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file $outfile\n&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># important info for headers</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$data_size</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">88</span><span class="p">;</span> <span class="c1"># 44 bits * 2 files</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$fs_8</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">16</span><span class="p">;</span> <span class="c1"># 8 bits * 2 files</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># step through header</span>
+</span><span class='line'><span class="k">my</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class='line'><span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span> <span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class='line'><span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$fs_8</span><span class="p">);</span>
+</span><span class='line'><span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">32</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$data_size</span><span class="p">);</span>
+</span><span class='line'><span class="c1"># write out the rest</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="n">IN1</span><span class="o">&amp;</span><span class="ow">gt</span><span class="p">;;</span>
+</span><span class='line'><span class="nb">seek</span> <span class="n">IN2</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="o">&amp;</span><span class="ow">lt</span><span class="p">;</span><span class="n">IN2</span><span class="o">&amp;</span><span class="ow">gt</span><span class="p">;;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">close</span> <span class="n">IN1</span><span class="p">;</span>
+</span><span class='line'><span class="nb">close</span> <span class="n">IN2</span><span class="p">;</span>
+</span><span class='line'><span class="nb">close</span> <span class="n">OUT</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">ogg_enc</span><span class="p">(</span><span class="nv">$outfile</span><span class="p">);</span>
+</span><span class='line'><span class="nb">unlink</span> <span class="nb">glob</span> <span class="s">&quot;/tmp/oggout*&quot;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="sr">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">ogg_dec</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$i</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$out</span> <span class="o">=</span> <span class="err">“</span><span class="sr">/tmp/oggo</span><span class="n">ut</span><span class="err">”</span> <span class="o">.</span> <span class="nv">$i</span> <span class="o">.</span> <span class="err">“</span><span class="o">.</span><span class="n">wav</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="err">‘</span><span class="n">ogg</span><span class="err">’</span><span class="p">){</span><span class="nv">$out</span> <span class="o">=</span> <span class="err">“</span><span class="o">-</span><span class="n">o</span><span class="err">”</span><span class="o">.</span> <span class="nv">$out</span><span class="p">}</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="err">“</span><span class="n">dec</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="err">“</span> <span class="err">“</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="nv">$file</span><span class="p">,</span> <span class="nv">$out</span><span class="p">));</span>
+</span><span class='line'>    <span class="k">print</span> <span class="err">“</span><span class="n">cmd:</span> <span class="nv">$string</span><span class="o">\</span><span class="n">n</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="err">“</span><span class="o">-|</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="nb">die</span> <span class="err">“</span><span class="n">Cannot</span> <span class="nb">fork</span> <span class="vg">$!</span><span class="err">”</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nb">exec</span> <span class="err">“</span><span class="nv">$string</span><span class="err">”</span> <span class="ow">or</span> <span class="nb">die</span> <span class="err">“</span><span class="n">Cannot</span> <span class="nb">open</span> <span class="nb">pipe</span> <span class="n">to</span> <span class="nv">$cmd:</span> <span class="vg">$!</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="sr">&lt;pipe&gt;</span><span class="p">){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="sr">&lt;/pipe&gt;&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">ogg_enc</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="err">‘</span><span class="n">ogg</span><span class="err">’</span><span class="p">){</span><span class="nv">$file</span> <span class="o">=</span> <span class="err">“</span><span class="o">-</span><span class="n">o</span><span class="err">”</span><span class="o">.</span> <span class="nv">$file</span><span class="p">}</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="err">“</span><span class="n">enc</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="err">“</span> <span class="err">“</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="err">“</span><span class="sr">/tmp/oggo</span><span class="n">ut</span><span class="o">.</span><span class="n">wav</span><span class="err">”</span><span class="p">,</span> <span class="nv">$file</span><span class="p">));</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="err">“</span><span class="o">-|</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="nb">die</span> <span class="err">“</span><span class="n">Cannot</span> <span class="nb">fork</span> <span class="vg">$!</span><span class="err">”</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nb">exec</span> <span class="err">“</span><span class="nv">$string</span><span class="err">”</span> <span class="ow">or</span> <span class="nb">die</span> <span class="err">“</span><span class="n">Cannot</span> <span class="nb">open</span> <span class="nb">pipe</span> <span class="n">to</span> <span class="nv">$cmd:</span> <span class="vg">$!</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="sr">&lt;pipe&gt;</span><span class="p">){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="sr">&lt;/pipe&gt;&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span><span class="k">sub </span><span class="nf">get_time</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">@timeData</span> <span class="o">=</span> <span class="nb">localtime</span><span class="p">(</span><span class="nb">time</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$min</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nv">$hour</span> <span class="ow">eq</span> <span class="err">“</span><span class="mi">0</span><span class="err">”</span><span class="p">)</span> <span class="p">{</span><span class="nv">$hour</span> <span class="o">=</span> <span class="err">“</span><span class="mi">12</span><span class="err">”</span><span class="p">};</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>       <span class="k">if</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="nv">$</span><span class="err">&lt;</span><span class="nv">em</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span><span class="vg">$&lt;</span><span class="o">/</span><span class="n">em</span><span class="o">&gt;</span> <span class="o">=</span> <span class="err">“</span><span class="mi">0</span><span class="err">”</span> <span class="o">.</span> <span class="nv">$</span><span class="err">&lt;</span><span class="nv">em</span><span class="o">&gt;</span><span class="p">};</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">eq</span> <span class="err">“</span><span class="mo">00</span><span class="err">”</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$hour</span> <span class="o">.</span> <span class="err">“</span><span class="sr">&lt;/em&gt;</span><span class="mi">0</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$min</span> <span class="o">=</span> <span class="err">“</span> <span class="err">“</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>

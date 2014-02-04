@@ -43,6 +43,25 @@
   <script src="/javascripts/libs/jquery.js"></script>
   <script src="/javascripts/libs/modernizr-2.0.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]><script type="text/javascript" src="/javascripts/excanvas.js"></script><![endif]-->
+  <script src="/javascripts/jquery.tagcanvas.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#tag-canvas').tagcanvas({
+     textColour : '#ffff99',
+     outlineThickness : 1,
+     zoom : 1.0,
+     textHeight: 17,
+     weightMode: "both",
+     reverse: true,
+     depth: 1.0,
+   }, 'tags')) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
   <link href="/atom.xml" rel="alternate" title="ki-ai.org" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -81,10 +100,7 @@
   </script>
 
 
-  <script type="text/javascript" src="http://x.translateth.is/translate-this.js"></script>
-  <script type="text/javascript">
-    TranslateThis();
-  </script>
+
 </head>
 
 <body   >
@@ -145,16 +161,24 @@
   </header>
 
 
-<div class="entry-content"><p><img class="right" src="http://farm6.staticflickr.com/5462/7000684506_50873d6bfe.jpg" width="300">SuperCollider, en window$, viene con un interfaz de control aparentemente hecho en java.  Como nos parece  bastante limitado el interfaz, recomendamos el uso de superCollider via de el plugin <strong>sced</strong> de <a href="http://projects.gnome.org/gedit/">Gedit</a>. Primero <a href="http://projects.gnome.org/gedit/" title="Gedit">instalamos gedit</a>. <a href="http://supercollider.sourceforge.net">Instalamos superCollider</a> ahora con Gedit instalado podemos instalar SuperCollider. Su instalador encuentra a gedit y levanta una ventana como la a la derecha, donde uno tiene que indicar que se instala <strong>Sced</strong>.</p>
+<div class="entry-content"><p><img class="right" src="http://farm6.staticflickr.com/5462/7000684506_50873d6bfe.jpg" width="300" />SuperCollider, en window$, viene con un interfaz de control aparentemente hecho en java.  Como nos parece  bastante limitado el interfaz, recomendamos el uso de superCollider via de el plugin <strong>sced</strong> de <a href="http://projects.gnome.org/gedit/">Gedit</a>. Primero <a href="http://projects.gnome.org/gedit/" title="Gedit">instalamos gedit</a>. <a href="http://supercollider.sourceforge.net">Instalamos superCollider</a> ahora con Gedit instalado podemos instalar SuperCollider. Su instalador encuentra a gedit y levanta una ventana como la a la derecha, donde uno tiene que indicar que se instala <strong>Sced</strong>.</p>
 
 <!--more-->
 
-
-<p>Ahora que todo finaliza, se puede abrir gedit (reinicia gedit si ya estaba abierta). Para empezar ocupar superCollider, habilitamos el plugin <strong>Sced</strong> en <em>Editar->Preferencias</em> en el panel de Gedit, y después podemos seleccionar <em>SuperCollider Mode</em> bajo <em>Herramientas</em> para empezar de mandar comandos a superCollider.</p>
+<p>Ahora que todo finaliza, se puede abrir gedit (reinicia gedit si ya estaba abierta). Para empezar ocupar superCollider, habilitamos el plugin <strong>Sced</strong> en <em>Editar-&gt;Preferencias</em> en el panel de Gedit, y después podemos seleccionar <em>SuperCollider Mode</em> bajo <em>Herramientas</em> para empezar de mandar comandos a superCollider.</p>
 
 <p><strong>Ojo</strong>: versión 3.5.x de SuperCollider no tiene paginas de ayuda. Pero al parecer, el instalador de version 4.5.x no detecta la a Gedit. Pero se puede probar instalando primero 3.5.x, para que se instala el plugin de Gedit, y después versión 3.4.x, ya con el plugin de gedit instalado, utilizar un versión con ayuda.</p>
 
-<p><a href="http://sonidiario.tumblr.com/post/22488835468">más de lo mismo</a> | <a href="http://supercollider.sourceforge.net/">SuperCollider</a> | <a href="http://projects.gnome.org/gedit/">Gedit</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="http://sonidiario.tumblr.com/post/22488835468">más de lo mismo</a></td>
+      <td><a href="http://supercollider.sourceforge.net/">SuperCollider</a></td>
+      <td><a href="http://projects.gnome.org/gedit/">Gedit</a></td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
 
 
@@ -178,6 +202,15 @@
 <span class="categories">
   
     <a class='category' href='/blog/categories/supercollider/'>supercollider</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    <a class='tag' href='/tags/hacks/'>hacks</a>, <a class='tag' href='/tags/sc3/'>sc3</a>
   
 </span>
 
@@ -256,6 +289,60 @@
   <abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr>
 </h4>
 <a href="http://ki-ai.org/blog/2012/11/27/supercollider/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://ki-ai.org/blog/2012/11/27/supercollider/" alt="post-qrcode"></a>
+</section>
+<section>
+  <div id='tag-canvas-container'>
+  <canvas width="300" height="300" id="tag-canvas">
+    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+  </canvas>
+  </div>
+
+<div id="tags">
+  <ul>
+    <li><a style="font-size: 116%" href="/tags/arch/">arch</a></li>
+<li><a style="font-size: 162%" href="/tags/audio/">audio</a></li>
+<li><a style="font-size: 99%" href="/tags/automatizacion/">automatización</a></li>
+<li><a style="font-size: 70%" href="/tags/bootstrap/">bootstrap</a></li>
+<li><a style="font-size: 70%" href="/tags/cine/">cine</a></li>
+<li><a style="font-size: 70%" href="/tags/cinelerra/">cinelerra</a></li>
+<li><a style="font-size: 70%" href="/tags/compresor/">compresor</a></li>
+<li><a style="font-size: 70%" href="/tags/corralero/">corralero</a></li>
+<li><a style="font-size: 99%" href="/tags/costa/">costa</a></li>
+<li><a style="font-size: 70%" href="/tags/df/">df</a></li>
+<li><a style="font-size: 70%" href="/tags/eq/">eq</a></li>
+<li><a style="font-size: 70%" href="/tags/faro/">faro</a></li>
+<li><a style="font-size: 99%" href="/tags/fiesta/">fiesta</a></li>
+<li><a style="font-size: 99%" href="/tags/flujos/">flujos</a></li>
+<li><a style="font-size: 128%" href="/tags/guion/">guion</a></li>
+<li><a style="font-size: 170%" href="/tags/hacks/">hacks</a></li>
+<li><a style="font-size: 128%" href="/tags/hhgg/">hhgg</a></li>
+<li><a style="font-size: 128%" href="/tags/imagen/">imagen</a></li>
+<li><a style="font-size: 70%" href="/tags/ladspa/">ladspa</a></li>
+<li><a style="font-size: 116%" href="/tags/letras/">letras</a></li>
+<li><a style="font-size: 99%" href="/tags/linux/">linux</a></li>
+<li><a style="font-size: 70%" href="/tags/live/">live</a></li>
+<li><a style="font-size: 70%" href="/tags/luna/">luna</a></li>
+<li><a style="font-size: 70%" href="/tags/mac/">mac</a></li>
+<li><a style="font-size: 70%" href="/tags/maldonado/">maldonado</a></li>
+<li><a style="font-size: 99%" href="/tags/mpd/">mpd</a></li>
+<li><a style="font-size: 70%" href="/tags/nortena/">norteña</a></li>
+<li><a style="font-size: 70%" href="/tags/octopress/">octopress</a></li>
+<li><a style="font-size: 116%" href="/tags/perl/">perl</a></li>
+<li><a style="font-size: 70%" href="/tags/pescado/">pescado</a></li>
+<li><a style="font-size: 99%" href="/tags/playa/">playa</a></li>
+<li><a style="font-size: 70%" href="/tags/pueblo/">pueblo</a></li>
+<li><a style="font-size: 70%" href="/tags/pulseaudio/">pulseaudio</a></li>
+<li><a style="font-size: 128%" href="/tags/radio/">radio</a></li>
+<li><a style="font-size: 70%" href="/tags/ruby/">ruby</a></li>
+<li><a style="font-size: 99%" href="/tags/sc3/">sc3</a></li>
+<li><a style="font-size: 70%" href="/tags/tigres/">tigres</a></li>
+<li><a style="font-size: 128%" href="/tags/traduccion/">traduccion</a></li>
+<li><a style="font-size: 99%" href="/tags/video/">video</a></li>
+<li><a style="font-size: 99%" href="/tags/web/">web</a></li>
+<li><a style="font-size: 70%" href="/tags/xochis/">xochis</a></li>
+
+  </ul>
+  </div>
 </section>
 
   

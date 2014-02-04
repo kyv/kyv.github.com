@@ -4,7 +4,7 @@
   <title><![CDATA[Category: audio | ki-ai.org]]></title>
   <link href="http://ki-ai.org/blog/categories/audio/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2014-01-07T22:37:21-06:00</updated>
+  <updated>2014-02-03T19:38:20-06:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -54,7 +54,6 @@ set-default-sink compressor
 
 <!-- more -->
 
-
 <p>Vale mencionar que es possible encadenar estos plugins. En nuestro caso, primer pasamos el audio por un equalizador de 15 canales, para quitar algunas frequencias que causan vibraciones no-deseables en las bocinitas del lap. El señal equalizado entonces pasa al compresor. Agregamos otra sección al config despues del anterior.</p>
 
 <p><code>bash equalizador para pulseaudio
@@ -93,72 +92,58 @@ load-module module-ladspa-sink sink_name=ladspa_output.mbeq_1197.mbeq master=com
 
 <p><strong>Mas medios, menos basura</strong>.</p>
 
-<p>Descargas vía <a href="http://linuxtracker.org/download.php?id=4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;f=archcom-2012.12.10-x86_64.iso.torrent&amp;key=0%20Fichero%20.torrent">torrent tradicional</a> o <a href="magnet:?xt=urn:btih:4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;dn=archcom-2012.12.10-x86%5F64.iso&amp;tr=http%3A%2F%2Flinuxtracker.org%3A2710%2Fbcc9d2323826745794be0d57f9e5cf1d%2Fannounce">enlace iman</a>. Detalles al final u <a href="http://linuxtracker.org/index.php?page=torrent-details&amp;id=4853d82ad0291a0f3823cbc8d9f0813c18711815">linuxtracker.org</a>.</p>
+<p>Descargas vía <a href="http://linuxtracker.org/download.php?id=4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;f=archcom-2012.12.10-x86_64.iso.torrent&amp;key=0 Fichero .torrent">torrent tradicional</a> o <a href="magnet:?xt=urn:btih:4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;dn=archcom-2012.12.10-x86%5F64.iso&amp;tr=http%3A%2F%2Flinuxtracker.org%3A2710%2Fbcc9d2323826745794be0d57f9e5cf1d%2Fannounce">enlace iman</a>. Detalles al final u <a href="http://linuxtracker.org/index.php?page=torrent-details&amp;id=4853d82ad0291a0f3823cbc8d9f0813c18711815">linuxtracker.org</a>.</p>
 
 <!-- more -->
-
-
-<h2>Configuración de Sistema</h2>
+<p>## Configuración de Sistema</p>
 
 <p><img class="right" src="http://flujos.org/media/screen-cinelerra.png" title="Pantallazo Cinelerra" ></p>
 
-<h3>Gráfica</h3>
-
+<h3 id="grfica">Gráfica</h3>
 <ul>
-<li><strong>gimp</strong> (manipulación de imagen)</li>
-<li><strong>inkscape</strong> (dibujo vectorial)</li>
-<li><strong>blender</strong> (modelaje 3D / animación)</li>
+  <li><strong>gimp</strong> (manipulación de imagen)</li>
+  <li><strong>inkscape</strong> (dibujo vectorial)</li>
+  <li><strong>blender</strong> (modelaje 3D / animación)</li>
 </ul>
 
-
-<h3>Video</h3>
-
+<h3 id="video">Video</h3>
 <ul>
-<li><strong>cinelerra</strong> (edición)</li>
-<li><strong>totem</strong> (reproducción)</li>
-<li><strong>devede</strong> (dvd)</li>
+  <li><strong>cinelerra</strong> (edición)</li>
+  <li><strong>totem</strong> (reproducción)</li>
+  <li><strong>devede</strong> (dvd)</li>
 </ul>
 
-
-<h3>Audio</h3>
-
+<h3 id="audio">Audio</h3>
 <ul>
-<li><strong>mixxx</strong> (consola DJ / radio por Internet)</li>
-<li><strong>audacity</strong> (edición)</li>
-<li><strong>ardour</strong> (DAW)</li>
-<li><strong>Qtractor</strong> – (DAW)</li>
-<li><strong>Hydrogen</strong> – (Drum machine / Sequencer)</li>
-<li><strong>Supercolider</strong> (Síntesis / Programación)</li>
+  <li><strong>mixxx</strong> (consola DJ / radio por Internet)</li>
+  <li><strong>audacity</strong> (edición)</li>
+  <li><strong>ardour</strong> (DAW)</li>
+  <li><strong>Qtractor</strong> – (DAW)</li>
+  <li><strong>Hydrogen</strong> – (Drum machine / Sequencer)</li>
+  <li><strong>Supercolider</strong> (Síntesis / Programación)</li>
 </ul>
 
-
-<h3>Oficina</h3>
-
+<h3 id="oficina">Oficina</h3>
 <ul>
-<li><strong>libreoffice</strong></li>
+  <li><strong>libreoffice</strong></li>
 </ul>
 
-
-<h3>Red</h3>
-
+<h3 id="red">Red</h3>
 <ul>
-<li><strong>chromium</strong> (Navigador)</li>
-<li><strong>transmission</strong> (bitorrent)</li>
-<li><strong>claws-mail</strong> (correo)</li>
-<li><strong>tor</strong> (anonimidad)</li>
+  <li><strong>chromium</strong> (Navigador)</li>
+  <li><strong>transmission</strong> (bitorrent)</li>
+  <li><strong>claws-mail</strong> (correo)</li>
+  <li><strong>tor</strong> (anonimidad)</li>
 </ul>
 
-
-<h3>Sistema</h3>
-
+<h3 id="sistema">Sistema</h3>
 <ul>
-<li><strong>archlinux</strong></li>
-<li><strong>slim</strong> session manager</li>
-<li><strong>openbox</strong> wm</li>
-<li><strong>adeskbar</strong> barra de aplicaciones</li>
-<li><strong>tint2</strong> panel</li>
+  <li><strong>archlinux</strong></li>
+  <li><strong>slim</strong> session manager</li>
+  <li><strong>openbox</strong> wm</li>
+  <li><strong>adeskbar</strong> barra de aplicaciones</li>
+  <li><strong>tint2</strong> panel</li>
 </ul>
-
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: supercollider | ki-ai.org]]></title>
   <link href="http://ki-ai.org/blog/categories/supercollider/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2014-01-07T22:37:21-06:00</updated>
+  <updated>2014-02-03T19:38:20-06:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -22,12 +22,20 @@
 
 <!--more-->
 
-
-<p>Ahora que todo finaliza, se puede abrir gedit (reinicia gedit si ya estaba abierta). Para empezar ocupar superCollider, habilitamos el plugin <strong>Sced</strong> en <em>Editar->Preferencias</em> en el panel de Gedit, y después podemos seleccionar <em>SuperCollider Mode</em> bajo <em>Herramientas</em> para empezar de mandar comandos a superCollider.</p>
+<p>Ahora que todo finaliza, se puede abrir gedit (reinicia gedit si ya estaba abierta). Para empezar ocupar superCollider, habilitamos el plugin <strong>Sced</strong> en <em>Editar-&gt;Preferencias</em> en el panel de Gedit, y después podemos seleccionar <em>SuperCollider Mode</em> bajo <em>Herramientas</em> para empezar de mandar comandos a superCollider.</p>
 
 <p><strong>Ojo</strong>: versión 3.5.x de SuperCollider no tiene paginas de ayuda. Pero al parecer, el instalador de version 4.5.x no detecta la a Gedit. Pero se puede probar instalando primero 3.5.x, para que se instala el plugin de Gedit, y después versión 3.4.x, ya con el plugin de gedit instalado, utilizar un versión con ayuda.</p>
 
-<p><a href="http://sonidiario.tumblr.com/post/22488835468">más de lo mismo</a> | <a href="http://supercollider.sourceforge.net/">SuperCollider</a> | <a href="http://projects.gnome.org/gedit/">Gedit</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="http://sonidiario.tumblr.com/post/22488835468">más de lo mismo</a></td>
+      <td><a href="http://supercollider.sourceforge.net/">SuperCollider</a></td>
+      <td><a href="http://projects.gnome.org/gedit/">Gedit</a></td>
+    </tr>
+  </tbody>
+</table>
+
 ]]></content>
   </entry>
   
@@ -80,6 +88,7 @@
 </pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">demand</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
 </span><span class='line'><span class="nf">~</span><span class="nv">dmel0</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">reverse</span><span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
 ]]></content>
   </entry>
   

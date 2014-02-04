@@ -43,6 +43,25 @@
   <script src="/javascripts/libs/jquery.js"></script>
   <script src="/javascripts/libs/modernizr-2.0.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]><script type="text/javascript" src="/javascripts/excanvas.js"></script><![endif]-->
+  <script src="/javascripts/jquery.tagcanvas.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#tag-canvas').tagcanvas({
+     textColour : '#ffff99',
+     outlineThickness : 1,
+     zoom : 1.0,
+     textHeight: 17,
+     weightMode: "both",
+     reverse: true,
+     depth: 1.0,
+   }, 'tags')) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
   <link href="/atom.xml" rel="alternate" title="ki-ai.org" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -81,10 +100,7 @@
   </script>
 
 
-  <script type="text/javascript" src="http://x.translateth.is/translate-this.js"></script>
-  <script type="text/javascript">
-    TranslateThis();
-  </script>
+
 </head>
 
 <body   >
@@ -152,17 +168,17 @@
   
   <p>Ofrecemos capacitación practica en las siguientes áreas.</p>
 
-<h2>Taller Internet</h2>
+<h2 id="taller-internet">Taller Internet</h2>
 
 <p>El Internet ha logrado juntar a personas de forma desconocido en el pasado. Aun que muchos reconocemos su enorme potencial, sigue siendo desaprovechado por muchos sino la mayoría. Desafortunadamente los que tienen mas de obtener en ello son los quienes menos aprovechan. Este taller nos introduce al Internet, no como medio de difusión, sino como red. A decir, lugar de encuentro y ínter-conexión y tanto como medio de educación como de difusión. Al final del taller los participantes tendrán un concepto tanto de como obtener del Internet los que necesitan como de alimentar el Internet con los datos que le hace falta a ello.</p>
 
 <p>En especifico hablaremos del Internet como una Red y lo que la diferencia de los demas Redes. De lo que son proveedores de Internet y como estructuran al Internet. De posibilidades de censura. De nuestra privacidad y seguridad dentro de ello. De distintos protocolos de comunicación. conocidos y conoceremos algunos nuevos a que podemos empezar a aprovechar. Como utilizar al Internet para educarnos, para encontrar datos para llevar acabo nuestros proyectos. Y como empezamos a alimentar el Internet con datos de importancia a nosotros.</p>
 
-<h2>Radio por Internet</h2>
+<h2 id="radio-por-internet">Radio por Internet</h2>
 
 <p>El transmisión de audio por Internet tiene muchos usos. Puede conectar nuestro radio con radioescuchas en otros partes del mundo. O enlazar contenidos en vivo desde otros lados con nuestro radio. Hay muchos aplicaciones para lograrlo. Daremos unos recomendaciones de aplicaciones libres para lograr su transmisión y hablaremos de los elementos técnicos que todos aplicaciones de radio por Internet comparten. Conoceremos diferencias entre formatos de audio, consideraciones de banda ancha, tiempos de de espera vs. <em>tiempo real</em> y opciones de donde si puede hospedar su radio en el Internet.</p>
 
-<h2>Elaboración de Paginas de Internet</h2>
+<h2 id="elaboracin-de-paginas-de-internet">Elaboración de Paginas de Internet</h2>
 
 <p>Este curso pretende nos introduce a los tecnologías primordiales de la comunicación en Internet. Sobre su duración se conocerá como paginas de Internet están estructurados y como dar diseño a ello. Cada participante elaborará una pagina utilizando puro <a href="http://es.wikipedia.org/wiki/Html" title="HTML">HTML</a> y <a href="http://es.wikipedia.org/wiki/Css" title="CSS">CSS</a>.</p>
 
@@ -170,17 +186,17 @@
 
 <p>Como curso introductorio, impartiremos los básicos de desarrollo con HTML y CSS. Cada participante implementará esos dos tecnológicas relacionados en la elaboración de su propio pagina sencillo hospedado en el Internet. Se dará los primeros pasos a la comprehensivo de HTML y CSS, pero ademas se conocerá opciones de donde se puede hospedar su pagina, y se reflexionaría sobre los Pros y Contras de una pagina de puro HTML y CSS en comparación del uso de algún motor de contenidos.</p>
 
-<h2>Audacity</h2>
+<h2 id="audacity">Audacity</h2>
 
 <p>Taller <a href="http://audacity.sourceforge.net" title="audacity.sourceforge.net">Audacity</a> es un breve practica en la producción radiofónica. De duración de 2 días, su objetivo es la producción radiofónica y aprendizaje sobre producción de material radiofónica. Se recibe su nombre por la herramienta de grabación y edición que empleamos en el curso. Sencillo, invita a la comprensión rápida. Libre, es multi-plataforma, y no restringe su usuario a el uso de una Sistema Operativa, sino que si puede ocupar en cualquiera. Extensiva, suporte una variedad de plugins (o extensiones) que proporcionan una variedad enorme de filtros y efectos.</p>
 
 <p>En especifico, trabajaremos las temas de Elaboración de <a href="/blog/categories/guion/" title="Guiones">guion</a>, Grabación y Edición. Debido a limite de tiempo, el trato de cada tema no puede ser muy infinitamente profundo. Al fin de cuentas, la dominación de cada tema depende del aplicación de la practica de cada productor. Este taller pretende tanto orientar vía la practica. Es abierto tanto al principiante como al veterano. Y aun que obviamente no presumimos prohibir el uso de otras herramientas de edición y grabación, invitamos a los veteranos radialistas conocer a el Software Libre vía Audacity.</p>
 
-<h2>Introducción a la Sistema Operativo Libre</h2>
+<h2 id="introduccin-a-la-sistema-operativo-libre">Introducción a la Sistema Operativo Libre</h2>
 
 <p>En los sesiones introductorios a la <a href="es.wikipedia.org/wiki/Sistema_operativo" title="Sistema Operativo">Sistema Operativo</a> Libre damos a conocer a un sistema operativo gratuito y libre. Conoceremos como obtener y instalar dicho sistema y como encontrar y instalar nuevas aplicaciones. Platicaremos de el multitud de usos que si puede dar a la sistema operativo libre, desde edición de audio y video hasta repetidor de redes inalámbricas, desde procesador de texto hasta servidor de paginas web.</p>
 
-<p>Para tener un base comun sobre lo cual trabajar y permitir todos trabajar sobre una sistema operativo libre para el duración del curso, utilizaremos como base <a href="/blog/2012/12/11/archlinux-para-comunicantes/">archcom</a>. Los participantes podrán arrancarlo por la red, usb o por cdrom.</p>
+<p>Para tener un base comun sobre lo cual trabajar y permitir todos trabajar sobre una sistema operativo libre para el duración del curso, utilizaremos como base <a href="/blog/2012/12/11/archlinux-para-comunicantes/">archcom</a>. Los participantes podrán arrancarlo por la red, usb o por cdrom. </p>
 
   
     <footer>
@@ -199,6 +215,7 @@
 
 
 <time datetime="2012-12-19T15:07:00-06:00" pubdate data-updated="true">Dec 19<span>th</span>, 2012</time>
+        
         
       </p>
       
@@ -227,34 +244,60 @@
 
 <aside class="sidebar-nav span3">
   
-    <section class="well">
-  <ul id="recent_posts" class="nav nav-list">
-    <li class="nav-header">Entradas Recientes</li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/07/distrito-efe/">Distrito Efe</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/26/habia-una-vez-un-hack/">Habia Una Vez Un Hack</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/02/tarde-lluvioso/">Tarde Lluvioso</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/13/editor-de-guion-trelby/">Editor de guion Trelby</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/12/compresor-de-sonido-para-pulseaudio/">Compresor de Sonido para Pulseaudio</a>
-      </li>
-    
+    <section>
+  <div id='tag-canvas-container'>
+  <canvas width="300" height="300" id="tag-canvas">
+    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+  </canvas>
+  </div>
+
+<div id="tags">
+  <ul>
+    <li><a style="font-size: 116%" href="/tags/arch/">arch</a></li>
+<li><a style="font-size: 162%" href="/tags/audio/">audio</a></li>
+<li><a style="font-size: 99%" href="/tags/automatizacion/">automatización</a></li>
+<li><a style="font-size: 70%" href="/tags/bootstrap/">bootstrap</a></li>
+<li><a style="font-size: 70%" href="/tags/cine/">cine</a></li>
+<li><a style="font-size: 70%" href="/tags/cinelerra/">cinelerra</a></li>
+<li><a style="font-size: 70%" href="/tags/compresor/">compresor</a></li>
+<li><a style="font-size: 70%" href="/tags/corralero/">corralero</a></li>
+<li><a style="font-size: 99%" href="/tags/costa/">costa</a></li>
+<li><a style="font-size: 70%" href="/tags/df/">df</a></li>
+<li><a style="font-size: 70%" href="/tags/eq/">eq</a></li>
+<li><a style="font-size: 70%" href="/tags/faro/">faro</a></li>
+<li><a style="font-size: 99%" href="/tags/fiesta/">fiesta</a></li>
+<li><a style="font-size: 99%" href="/tags/flujos/">flujos</a></li>
+<li><a style="font-size: 128%" href="/tags/guion/">guion</a></li>
+<li><a style="font-size: 170%" href="/tags/hacks/">hacks</a></li>
+<li><a style="font-size: 128%" href="/tags/hhgg/">hhgg</a></li>
+<li><a style="font-size: 128%" href="/tags/imagen/">imagen</a></li>
+<li><a style="font-size: 70%" href="/tags/ladspa/">ladspa</a></li>
+<li><a style="font-size: 116%" href="/tags/letras/">letras</a></li>
+<li><a style="font-size: 99%" href="/tags/linux/">linux</a></li>
+<li><a style="font-size: 70%" href="/tags/live/">live</a></li>
+<li><a style="font-size: 70%" href="/tags/luna/">luna</a></li>
+<li><a style="font-size: 70%" href="/tags/mac/">mac</a></li>
+<li><a style="font-size: 70%" href="/tags/maldonado/">maldonado</a></li>
+<li><a style="font-size: 99%" href="/tags/mpd/">mpd</a></li>
+<li><a style="font-size: 70%" href="/tags/nortena/">norteña</a></li>
+<li><a style="font-size: 70%" href="/tags/octopress/">octopress</a></li>
+<li><a style="font-size: 116%" href="/tags/perl/">perl</a></li>
+<li><a style="font-size: 70%" href="/tags/pescado/">pescado</a></li>
+<li><a style="font-size: 99%" href="/tags/playa/">playa</a></li>
+<li><a style="font-size: 70%" href="/tags/pueblo/">pueblo</a></li>
+<li><a style="font-size: 70%" href="/tags/pulseaudio/">pulseaudio</a></li>
+<li><a style="font-size: 128%" href="/tags/radio/">radio</a></li>
+<li><a style="font-size: 70%" href="/tags/ruby/">ruby</a></li>
+<li><a style="font-size: 99%" href="/tags/sc3/">sc3</a></li>
+<li><a style="font-size: 70%" href="/tags/tigres/">tigres</a></li>
+<li><a style="font-size: 128%" href="/tags/traduccion/">traduccion</a></li>
+<li><a style="font-size: 99%" href="/tags/video/">video</a></li>
+<li><a style="font-size: 99%" href="/tags/web/">web</a></li>
+<li><a style="font-size: 70%" href="/tags/xochis/">xochis</a></li>
+
   </ul>
+  </div>
 </section>
-
-
 
 <section id="qrcode">
 <h4>QR-Code

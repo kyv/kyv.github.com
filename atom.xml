@@ -4,7 +4,7 @@
   <title><![CDATA[ki-ai.org]]></title>
   <link href="http://ki-ai.org/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2014-01-07T22:37:21-06:00</updated>
+  <updated>2014-02-03T19:38:20-06:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -20,7 +20,7 @@
     <id>http://ki-ai.org/blog/2014/01/07/distrito-efe</id>
     <content type="html"><![CDATA[<p>Con dedicación a los amigos en df. Amenizado por los Tigres del Norte con su exito <em>Rock del Corazon</em>. Estreñando un nuevo special mix por el celebre DJ el Dr. no-invitado.</p>
 
-<p><video width='640' height='360' preload='none' controls poster=' http://flujos.org/media/kiai/distrito-portada.png'><source src='http://flujos.org/media/kiai/distrito.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
+<video width="640" height="360" preload="none" controls="" poster=" http://flujos.org/media/kiai/distrito-portada.png"><source src="http://flujos.org/media/kiai/distrito.webm" type="video/webm; codecs=&quot;vp8.0, vorbis&quot;" /></video>
 ]]></content>
   </entry>
   
@@ -32,7 +32,7 @@
     <content type="html"><![CDATA[<p>Habia una vez un hack en oaxaca amenizado por el jazz de
 Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
 
-<p><video width='480' height='270' preload='none' controls poster=' http://flujos.org/media/jazzardour.png'><source src='http://flujos.org/media/jazzhmardour.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
+<video width="480" height="270" preload="none" controls="" poster=" http://flujos.org/media/jazzardour.png"><source src="http://flujos.org/media/jazzhmardour.webm" type="video/webm; codecs=&quot;vp8.0, vorbis&quot;" /></video>
 ]]></content>
   </entry>
   
@@ -41,7 +41,7 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
     <link href="http://ki-ai.org/blog/2013/07/02/tarde-lluvioso/"/>
     <updated>2013-07-02T00:28:00-05:00</updated>
     <id>http://ki-ai.org/blog/2013/07/02/tarde-lluvioso</id>
-    <content type="html"><![CDATA[<p><video width='480' height='270' preload='none' controls poster=' http://flujos.org/media/kiai/kiai480x270.png'><source src='http://flujos.org/media/kiai/xochis.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
+    <content type="html"><![CDATA[<video width="480" height="270" preload="none" controls="" poster=" http://flujos.org/media/kiai/kiai480x270.png"><source src="http://flujos.org/media/kiai/xochis.webm" type="video/webm; codecs=&quot;vp8.0, vorbis&quot;" /></video>
 ]]></content>
   </entry>
   
@@ -63,24 +63,21 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
 
 <p><a href="http://es.wikipedia.org/wiki/PulseAudio">Pulseaudio</a> es la capa de audio a lo cual conecta los varios applicaciones que reproducen sonido en la mayoria de los *nix contemporaneos. Porque permite el uso de los procesadores y filtros <a href="http://www.ladspa.org/">ladspa</a>, con un pequeño configución podemos aplicar cualcuiera de ellos. Uno de los usos más utiles podria ser el compresor de rango dinamico, para mantener toda la musica y video que reproducimos a un amplitud constante. Hemos de agregar estas lineas al configuracion de pulseaudio, en nuestro caso <strong>~/.pulse/default.pa</strong></p>
 
-<figure class='code'><figcaption><span>sc4 plugin para pulseaudio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>load-module module-ladspa-sink <span class="nv">sink_name</span><span class="o">=</span>compressor <span class="nv">master</span><span class="o">=</span>alsa_output.pci-0000_00_1e.2.analog-stereo <span class="nv">plugin</span><span class="o">=</span>sc4_1882 <span class="nv">label</span><span class="o">=</span>sc4 <span class="nv">control</span><span class="o">=</span>1,1.5,401,-30,20,5,12
-</span><span class='line'><span class="nb">set</span>-default-sink compressor
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>sc4 plugin para pulseaudio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">load-module module-ladspa-sink <span class="nv">sink_name</span><span class="o">=</span>compressor <span class="nv">master</span><span class="o">=</span>alsa_output.pci-0000_00_1e.2.analog-stereo <span class="nv">plugin</span><span class="o">=</span>sc4_1882 <span class="nv">label</span><span class="o">=</span>sc4 <span class="nv">control</span><span class="o">=</span>1,1.5,401,-30,20,5,12
+</span><span class="line"><span class="nb">set</span>-default-sink compressor
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>El primer linea carga el sc4, un compresor estereo ladspa. <strong>Control=</strong> son los parámetros del efecto. Detalles al respecto se encuetra en <a href="http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.91">la documentación del plugin</a>.</p>
 
 <!-- more -->
 
-
 <p>Vale mencionar que es possible encadenar estos plugins. En nuestro caso, primer pasamos el audio por un equalizador de 15 canales, para quitar algunas frequencias que causan vibraciones no-deseables en las bocinitas del lap. El señal equalizado entonces pasa al compresor. Agregamos otra sección al config despues del anterior.</p>
 
-<figure class='code'><figcaption><span>equalizador para pulseaudio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>load-module module-ladspa-sink <span class="nv">sink_name</span><span class="o">=</span>ladspa_output.mbeq_1197.mbeq <span class="nv">master</span><span class="o">=</span>compressor <span class="nv">plugin</span><span class="o">=</span>mbeq_1197 <span class="nv">label</span><span class="o">=</span>mbeq <span class="nv">control</span><span class="o">=</span>-30.0,-19.7,-15.6,-12.0,-3.9,-1.3,0.0,0.0,0.0,0.0,0.0,0.0,-1.3,-4.6,-5.7
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>equalizador para pulseaudio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">load-module module-ladspa-sink <span class="nv">sink_name</span><span class="o">=</span>ladspa_output.mbeq_1197.mbeq <span class="nv">master</span><span class="o">=</span>compressor <span class="nv">plugin</span><span class="o">=</span>mbeq_1197 <span class="nv">label</span><span class="o">=</span>mbeq <span class="nv">control</span><span class="o">=</span>-30.0,-19.7,-15.6,-12.0,-3.9,-1.3,0.0,0.0,0.0,0.0,0.0,0.0,-1.3,-4.6,-5.7
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>De hecho este seccion del equalizador se agrega automaticamente al instalar el paquete <a href="https://aur.archlinux.org/packages/pulseaudio-equalizer/">pulseaudio-equalizer</a>, que tiene un bonito interfaz grafica. Pero es necesario su modificación si vamos a acompañarlo con compression.</p>
 
@@ -95,16 +92,12 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
     <link href="http://ki-ai.org/blog/2013/06/02/automatizar-generos-de-musica-por-horario-en-menos-de-25-lineas-de-codigo/"/>
     <updated>2013-06-02T19:35:00-05:00</updated>
     <id>http://ki-ai.org/blog/2013/06/02/automatizar-generos-de-musica-por-horario-en-menos-de-25-lineas-de-codigo</id>
-    <content type="html"><![CDATA[<p>Por un tiempo he automatizado mi collecion de musica con <a href="http://www.musicpd.org/">mpd</a> y <a href="http://alip.github.io/mpdcron/">mpdcron</a>, de tal forma que <a href="http://www.flujos.org/blog/mpd_la_lista_jamas/">jamás termina</a> la lista de reproduccion. Sencillamente cuando hay 3 o menos canciones en la cola, automaticamente se elija otro al alzar de la biblioteca y se agrega a la cola. Desde que elaborarmos esta forma de asegurar que jamás acaba la musica quedamos con la idea que hay bastante por mejorar. Pero hasta cierto cumbiabero de la costa chica, que aqui quedaria sin nombrarse, me empiezó gritar grosarias en relacion de una mama de carácter &#8220;muy buena&#8221; <em>y su hija tambien</em> a las <strong>7:30</strong> de una mañana domingera que decidí que ya era hora de enfrentar con esta problematica. &#8220;Estas temas mejor para despues del almuerzo&#8221;, pensé yo y pusé manos a la obra. Así es que nacio este mismo domingo una forma bastante sencilla, por no decir bruto, de automatizar generos de musica por horarios. Ahi les va:</p>
+    <content type="html"><![CDATA[<p>Por un tiempo he automatizado mi collecion de musica con <a href="http://www.musicpd.org/">mpd</a> y <a href="http://alip.github.io/mpdcron/">mpdcron</a>, de tal forma que <a href="http://www.flujos.org/blog/mpd_la_lista_jamas/">jamás termina</a> la lista de reproduccion. Sencillamente cuando hay 3 o menos canciones en la cola, automaticamente se elija otro al alzar de la biblioteca y se agrega a la cola. Desde que elaborarmos esta forma de asegurar que jamás acaba la musica quedamos con la idea que hay bastante por mejorar. Pero hasta cierto cumbiabero de la costa chica, que aqui quedaria sin nombrarse, me empiezó gritar grosarias en relacion de una mama de carácter “muy buena” <em>y su hija tambien</em> a las <strong>7:30</strong> de una mañana domingera que decidí que ya era hora de enfrentar con esta problematica. “Estas temas mejor para despues del almuerzo”, pensé yo y pusé manos a la obra. Así es que nacio este mismo domingo una forma bastante sencilla, por no decir bruto, de automatizar generos de musica por horarios. Ahi les va:</p>
 
-<div><script src='https://gist.github.com/5695560.js?file='></script>
+<div><script src="https://gist.github.com/5695560.js?file="></script>
 <noscript><pre><code></code></pre></noscript></div>
 
-
-
-
 <!-- more -->
-
 
 <p>Igual como la forma anterior y aun más brunto de vivir completamente encadenado, se puede decir, al alzar sino del destino entonces de los alogaritmos en existencia actualmente, utilizamos mpdcron para llamar este codigo cada vez que occure un acción en la lista de reproducción.</p>
 
@@ -112,6 +105,7 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
 
 <p>Más en la misma vaina:
 <a href="http://www.flujos.org/blog/Locucion_de_hora-mpdcron/">Locución de la Hora con mpdcron</a>, <a href="http://ki-ai.org/blog/2012/11/25/audio-cat/">Concatenar Audios</a></p>
+
 ]]></content>
   </entry>
   
@@ -126,9 +120,8 @@ o un pescado fresca acompañado por salsa de molcajete y tortilla echo de mano.<
 
 <div class="slider_area"><div class="row"><div class="span12" id="slider_6aeaa9f5"><div id="carousel_6aeaa9f5" class="carousel slide"><div class="carousel-inner"><div class="item active" data-slide-number="1"><img src="http://flujos.org/media/kiai/IMG_0857.JPG" /></div><div class="item" data-slide-number="2"><img src="http://flujos.org/media/kiai/IMG_0890.JPG" /></div><div class="item" data-slide-number="3"><img src="http://flujos.org/media/kiai/IMG_0867.JPG" /></div><div class="item" data-slide-number="4"><img src="http://flujos.org/media/kiai/IMG_0873.JPG" /></div><div class="item" data-slide-number="5"><img src="http://flujos.org/media/kiai/IMG_0878.JPG" /></div><div class="item" data-slide-number="6"><img src="http://flujos.org/media/kiai/IMG_0866.JPG" /></div><div class="item" data-slide-number="7"><img src="http://flujos.org/media/kiai/IMG_0894.JPG" /></div>
 </div><a class="carousel-control left" href="#carousel_6aeaa9f5" data-slide="prev"><i class="icon-caret-left"></i></a><a class="carousel-control right" href="#carousel_6aeaa9f5" data-slide="next"><i class="icon-caret-right"></i></a></div></div><div class="row hidden-phone span12" id="slider-thumbs"><ul class="gallery thumbnails">
-<li class="span2"><a class="thumbnail" id="carousel-selector-6aeaa9f5-1"rel="gallery-6aeaa9f5263efdee88fa5c8600587fdc" title="baila morena"><img src="http://flujos.org/media/kiai/IMG_0857.JPG" alt="baila morena" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-6aeaa9f5-2"rel="gallery-6aeaa9f5263efdee88fa5c8600587fdc" title="carolina"><img src="http://flujos.org/media/kiai/IMG_0890.JPG" alt="carolina" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-6aeaa9f5-3"rel="gallery-6aeaa9f5263efdee88fa5c8600587fdc" title="playa"><img src="http://flujos.org/media/kiai/IMG_0867.JPG" alt="playa" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-6aeaa9f5-4"rel="gallery-6aeaa9f5263efdee88fa5c8600587fdc" title="celebran dia del los maestros"><img src="http://flujos.org/media/kiai/IMG_0873.JPG" alt="celebran dia del los maestros" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-6aeaa9f5-5"rel="gallery-6aeaa9f5263efdee88fa5c8600587fdc" title="echele andar"><img src="http://flujos.org/media/kiai/IMG_0878.JPG" alt="echele andar" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-6aeaa9f5-6"rel="gallery-6aeaa9f5263efdee88fa5c8600587fdc" title="foot"><img src="http://flujos.org/media/kiai/IMG_0866.JPG" alt="foot" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-6aeaa9f5-7"rel="gallery-6aeaa9f5263efdee88fa5c8600587fdc" title="muchachas alegres"><img src="http://flujos.org/media/kiai/IMG_0894.JPG" alt="muchachas alegres" /></a></li>
+<li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-6aeaa9f5-1&#8221;rel=&#8221;gallery-6aeaa9f5263efdee88fa5c8600587fdc&#8221; title=&#8221;baila morena&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0857.JPG" alt="baila morena" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-6aeaa9f5-2&#8221;rel=&#8221;gallery-6aeaa9f5263efdee88fa5c8600587fdc&#8221; title=&#8221;carolina&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0890.JPG" alt="carolina" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-6aeaa9f5-3&#8221;rel=&#8221;gallery-6aeaa9f5263efdee88fa5c8600587fdc&#8221; title=&#8221;playa&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0867.JPG" alt="playa" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-6aeaa9f5-4&#8221;rel=&#8221;gallery-6aeaa9f5263efdee88fa5c8600587fdc&#8221; title=&#8221;celebran dia del los maestros&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0873.JPG" alt="celebran dia del los maestros" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-6aeaa9f5-5&#8221;rel=&#8221;gallery-6aeaa9f5263efdee88fa5c8600587fdc&#8221; title=&#8221;echele andar&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0878.JPG" alt="echele andar" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-6aeaa9f5-6&#8221;rel=&#8221;gallery-6aeaa9f5263efdee88fa5c8600587fdc&#8221; title=&#8221;foot&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0866.JPG" alt="foot" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-6aeaa9f5-7&#8221;rel=&#8221;gallery-6aeaa9f5263efdee88fa5c8600587fdc&#8221; title=&#8221;muchachas alegres&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0894.JPG" alt="muchachas alegres" /></li>
 </ul></div></div></div>
-
 
 <p>Mientras tanto, en la plaza de cuajinicualapa, una joven madre espera su carro despues de haber llevado su niña al doctor.
 Familias juntan con sus compras para ir juntitos a echer unas frias en la playa. Estudiantes platican acerca de su tareas.
@@ -136,9 +129,8 @@ Niños juegan en los arboles. Y borrachos amenazan a fotografos novatos y foreñ
 
 <div class="slider_area"><div class="row"><div class="span12" id="slider_123cb796"><div id="carousel_123cb796" class="carousel slide"><div class="carousel-inner"><div class="item active" data-slide-number="1"><img src="http://flujos.org/media/kiai/IMG_0824.JPG" /></div><div class="item" data-slide-number="2"><img src="http://flujos.org/media/kiai/IMG_0821.JPG" /></div><div class="item" data-slide-number="3"><img src="http://flujos.org/media/kiai/IMG_0817.JPG" /></div><div class="item" data-slide-number="4"><img src="http://flujos.org/media/kiai/IMG_0825.JPG" /></div><div class="item" data-slide-number="5"><img src="http://flujos.org/media/kiai/IMG_0827.JPG" /></div>
 </div><a class="carousel-control left" href="#carousel_123cb796" data-slide="prev"><i class="icon-caret-left"></i></a><a class="carousel-control right" href="#carousel_123cb796" data-slide="next"><i class="icon-caret-right"></i></a></div></div><div class="row hidden-phone span12" id="slider-thumbs"><ul class="gallery thumbnails">
-<li class="span2"><a class="thumbnail" id="carousel-selector-123cb796-1"rel="gallery-123cb7969cbb8494d283a5c6ee593298" title="rosalba"><img src="http://flujos.org/media/kiai/IMG_0824.JPG" alt="rosalba" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-123cb796-2"rel="gallery-123cb7969cbb8494d283a5c6ee593298" title="morena linda"><img src="http://flujos.org/media/kiai/IMG_0821.JPG" alt="morena linda" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-123cb796-3"rel="gallery-123cb7969cbb8494d283a5c6ee593298" title="chulas"><img src="http://flujos.org/media/kiai/IMG_0817.JPG" alt="chulas" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-123cb796-4"rel="gallery-123cb7969cbb8494d283a5c6ee593298" title="wey"><img src="http://flujos.org/media/kiai/IMG_0825.JPG" alt="wey" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-123cb796-5"rel="gallery-123cb7969cbb8494d283a5c6ee593298" title="arbol de niños"><img src="http://flujos.org/media/kiai/IMG_0827.JPG" alt="arbol de niños" /></a></li>
+<li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-123cb796-1&#8221;rel=&#8221;gallery-123cb7969cbb8494d283a5c6ee593298&#8221; title=&#8221;rosalba&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0824.JPG" alt="rosalba" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-123cb796-2&#8221;rel=&#8221;gallery-123cb7969cbb8494d283a5c6ee593298&#8221; title=&#8221;morena linda&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0821.JPG" alt="morena linda" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-123cb796-3&#8221;rel=&#8221;gallery-123cb7969cbb8494d283a5c6ee593298&#8221; title=&#8221;chulas&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0817.JPG" alt="chulas" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-123cb796-4&#8221;rel=&#8221;gallery-123cb7969cbb8494d283a5c6ee593298&#8221; title=&#8221;wey&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0825.JPG" alt="wey" /></li><li class="span2">&lt;a class=&#8221;thumbnail&#8221; id=&#8221;carousel-selector-123cb796-5&#8221;rel=&#8221;gallery-123cb7969cbb8494d283a5c6ee593298&#8221; title=&#8221;arbol de niños&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0827.JPG" alt="arbol de niños" /></li>
 </ul></div></div></div>
-
 ]]></content>
   </entry>
   
@@ -154,13 +146,8 @@ siguiente enlace:</p>
 
 <!-- more -->
 
-
-
-
-<div><script src='https://gist.github.com/5667902.js?file='></script>
+<div><script src="https://gist.github.com/5667902.js?file="></script>
 <noscript><pre><code></code></pre></noscript></div>
-
-
 
 ]]></content>
   </entry>
@@ -171,13 +158,11 @@ siguiente enlace:</p>
     <updated>2013-05-21T00:52:00-05:00</updated>
     <id>http://ki-ai.org/blog/2013/05/21/rostros-de-corralero</id>
     <content type="html"><![CDATA[<p>Algunos imagenes que pudimos capturar en Corralero, pueblo playera de la cercania a pinotepa. Aun que no llegamos a la playa,
-al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los niños y la camera.</p>
-
-<div class="slider_area"><div class="row"><div class="span12" id="slider_d393f683"><div id="carousel_d393f683" class="carousel slide"><div class="carousel-inner"><div class="item active" data-slide-number="1"><img src="http://flujos.org/media/kiai/IMG_0748.JPG" /></div><div class="item" data-slide-number="2"><img src="http://flujos.org/media/kiai/IMG_0800.JPG" /></div><div class="item" data-slide-number="3"><img src="http://flujos.org/media/kiai/IMG_0775.JPG" /></div><div class="item" data-slide-number="4"><img src="http://flujos.org/media/kiai/IMG_0776.JPG" /></div><div class="item" data-slide-number="5"><img src="http://flujos.org/media/kiai/IMG_0763.JPG" /></div><div class="item" data-slide-number="6"><img src="http://flujos.org/media/kiai/IMG_0779.JPG" /></div>
-</div><a class="carousel-control left" href="#carousel_d393f683" data-slide="prev"><i class="icon-caret-left"></i></a><a class="carousel-control right" href="#carousel_d393f683" data-slide="next"><i class="icon-caret-right"></i></a></div></div><div class="row hidden-phone span12" id="slider-thumbs"><ul class="gallery thumbnails">
-<li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-1"rel="gallery-d393f683dccf3075fa00622c30e45576" title="my title 1"><img src="http://flujos.org/media/kiai/IMG_0748.JPG" alt="my title 1" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-2"rel="gallery-d393f683dccf3075fa00622c30e45576" title="my title 2"><img src="http://flujos.org/media/kiai/IMG_0800.JPG" alt="my title 2" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-3"rel="gallery-d393f683dccf3075fa00622c30e45576" title="my title 3"><img src="http://flujos.org/media/kiai/IMG_0775.JPG" alt="my title 3" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-4"rel="gallery-d393f683dccf3075fa00622c30e45576" title="true"><img src="http://flujos.org/media/kiai/IMG_0776.JPG" alt="true" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-5"rel="gallery-d393f683dccf3075fa00622c30e45576" title="true"><img src="http://flujos.org/media/kiai/IMG_0763.JPG" alt="true" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-6"rel="gallery-d393f683dccf3075fa00622c30e45576" title="true"><img src="http://flujos.org/media/kiai/IMG_0779.JPG" alt="true" /></a></li>
-</ul></div></div></div>
-
+al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los niños y la camera.
+&lt;div class=&#8221;slider_area&#8221;&gt;&lt;div class=&#8221;row&#8221;&gt;&lt;div class=&#8221;span12&#8221; id=&#8221;slider_d393f683&#8221;&gt;&lt;div id=&#8221;carousel_d393f683&#8221; class=&#8221;carousel slide&#8221;&gt;&lt;div class=&#8221;carousel-inner&#8221;&gt;&lt;div class=&#8221;item active&#8221; data-slide-number=&#8221;1&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0748.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;2&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0800.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;3&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0775.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;4&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0776.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;5&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0763.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;6&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0779.JPG" />&lt;/div&gt;
+&lt;/div&gt;<a class="carousel-control left" href="#carousel_d393f683" data-slide="prev"><i class="icon-caret-left"></i></a><a class="carousel-control right" href="#carousel_d393f683" data-slide="next"><i class="icon-caret-right"></i></a>&lt;/div&gt;&lt;/div&gt;&lt;div class=&#8221;row hidden-phone span12&#8221; id=&#8221;slider-thumbs&#8221;&gt;&lt;ul class=&#8221;gallery thumbnails&#8221;&gt;
+&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-1”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”my title 1”&gt;<img src="http://flujos.org/media/kiai/IMG_0748.JPG" alt="my title 1" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-2”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”my title 2”&gt;<img src="http://flujos.org/media/kiai/IMG_0800.JPG" alt="my title 2" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-3”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”my title 3”&gt;<img src="http://flujos.org/media/kiai/IMG_0775.JPG" alt="my title 3" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-4”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”true”&gt;<img src="http://flujos.org/media/kiai/IMG_0776.JPG" alt="true" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-5”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”true”&gt;<img src="http://flujos.org/media/kiai/IMG_0763.JPG" alt="true" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-6”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”true”&gt;<img src="http://flujos.org/media/kiai/IMG_0779.JPG" alt="true" />&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
 ]]></content>
   </entry>
   
@@ -188,7 +173,7 @@ al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los
     <id>http://ki-ai.org/blog/2012/12/21/sin-luz-de-luna</id>
     <content type="html"><![CDATA[<p>Sino es apocalipsis mínimamente un eclipse, sino de la tierra, entonces de la corazón. Las letras de Sin Luz de Luna por Romelia Ibarra introduzcan a las de Álvaro Carrillo como interpretado por Blanco y Negro.</p>
 
-<p><audio controls><source src='http://flujos.org/media/Romelia%20Ibarra%20-%20Sin%20luz%20de%20luna.oga'><source src=''></audio></p>
+<audio controls=""><source src="http://flujos.org/media/Romelia%20Ibarra%20-%20Sin%20luz%20de%20luna.oga" /><source src="" /></audio>
 ]]></content>
   </entry>
   
@@ -197,7 +182,7 @@ al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los
     <link href="http://ki-ai.org/blog/2012/12/11/archlinux-para-comunicantes/"/>
     <updated>2012-12-11T13:42:00-06:00</updated>
     <id>http://ki-ai.org/blog/2012/12/11/archlinux-para-comunicantes</id>
-    <content type="html"><![CDATA[<p><img class="pull-left" src="http://flujos.org/media/screen-qterm-audacity.png" width="400" title="Pantallazo Audacity y Quick Terminal" ></p>
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://flujos.org/media/screen-qterm-audacity.png" width="400" title="Pantallazo Audacity y Quick Terminal" /></p>
 
 <p>Sistema ligera en base de <a href="http://archlinux.org">archlinux</a> con aplicaciones de creación multi-media disponible vía bitorrent.</p>
 
@@ -205,72 +190,58 @@ al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los
 
 <p><strong>Mas medios, menos basura</strong>.</p>
 
-<p>Descargas vía <a href="http://linuxtracker.org/download.php?id=4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;f=archcom-2012.12.10-x86_64.iso.torrent&amp;key=0%20Fichero%20.torrent">torrent tradicional</a> o <a href="magnet:?xt=urn:btih:4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;dn=archcom-2012.12.10-x86%5F64.iso&amp;tr=http%3A%2F%2Flinuxtracker.org%3A2710%2Fbcc9d2323826745794be0d57f9e5cf1d%2Fannounce">enlace iman</a>. Detalles al final u <a href="http://linuxtracker.org/index.php?page=torrent-details&amp;id=4853d82ad0291a0f3823cbc8d9f0813c18711815">linuxtracker.org</a>.</p>
+<p>Descargas vía <a href="http://linuxtracker.org/download.php?id=4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;f=archcom-2012.12.10-x86_64.iso.torrent&amp;key=0 Fichero .torrent">torrent tradicional</a> o <a href="magnet:?xt=urn:btih:4853d82ad0291a0f3823cbc8d9f0813c18711815&amp;dn=archcom-2012.12.10-x86%5F64.iso&amp;tr=http%3A%2F%2Flinuxtracker.org%3A2710%2Fbcc9d2323826745794be0d57f9e5cf1d%2Fannounce">enlace iman</a>. Detalles al final u <a href="http://linuxtracker.org/index.php?page=torrent-details&amp;id=4853d82ad0291a0f3823cbc8d9f0813c18711815">linuxtracker.org</a>.</p>
 
 <!-- more -->
+<p>## Configuración de Sistema</p>
 
+<p><img class="right" src="http://flujos.org/media/screen-cinelerra.png" title="Pantallazo Cinelerra" /></p>
 
-<h2>Configuración de Sistema</h2>
-
-<p><img class="right" src="http://flujos.org/media/screen-cinelerra.png" title="Pantallazo Cinelerra" ></p>
-
-<h3>Gráfica</h3>
-
+<h3 id="grfica">Gráfica</h3>
 <ul>
-<li><strong>gimp</strong> (manipulación de imagen)</li>
-<li><strong>inkscape</strong> (dibujo vectorial)</li>
-<li><strong>blender</strong> (modelaje 3D / animación)</li>
+  <li><strong>gimp</strong> (manipulación de imagen)</li>
+  <li><strong>inkscape</strong> (dibujo vectorial)</li>
+  <li><strong>blender</strong> (modelaje 3D / animación)</li>
 </ul>
 
-
-<h3>Video</h3>
-
+<h3 id="video">Video</h3>
 <ul>
-<li><strong>cinelerra</strong> (edición)</li>
-<li><strong>totem</strong> (reproducción)</li>
-<li><strong>devede</strong> (dvd)</li>
+  <li><strong>cinelerra</strong> (edición)</li>
+  <li><strong>totem</strong> (reproducción)</li>
+  <li><strong>devede</strong> (dvd)</li>
 </ul>
 
-
-<h3>Audio</h3>
-
+<h3 id="audio">Audio</h3>
 <ul>
-<li><strong>mixxx</strong> (consola DJ / radio por Internet)</li>
-<li><strong>audacity</strong> (edición)</li>
-<li><strong>ardour</strong> (DAW)</li>
-<li><strong>Qtractor</strong> – (DAW)</li>
-<li><strong>Hydrogen</strong> – (Drum machine / Sequencer)</li>
-<li><strong>Supercolider</strong> (Síntesis / Programación)</li>
+  <li><strong>mixxx</strong> (consola DJ / radio por Internet)</li>
+  <li><strong>audacity</strong> (edición)</li>
+  <li><strong>ardour</strong> (DAW)</li>
+  <li><strong>Qtractor</strong> – (DAW)</li>
+  <li><strong>Hydrogen</strong> – (Drum machine / Sequencer)</li>
+  <li><strong>Supercolider</strong> (Síntesis / Programación)</li>
 </ul>
 
-
-<h3>Oficina</h3>
-
+<h3 id="oficina">Oficina</h3>
 <ul>
-<li><strong>libreoffice</strong></li>
+  <li><strong>libreoffice</strong></li>
 </ul>
 
-
-<h3>Red</h3>
-
+<h3 id="red">Red</h3>
 <ul>
-<li><strong>chromium</strong> (Navigador)</li>
-<li><strong>transmission</strong> (bitorrent)</li>
-<li><strong>claws-mail</strong> (correo)</li>
-<li><strong>tor</strong> (anonimidad)</li>
+  <li><strong>chromium</strong> (Navigador)</li>
+  <li><strong>transmission</strong> (bitorrent)</li>
+  <li><strong>claws-mail</strong> (correo)</li>
+  <li><strong>tor</strong> (anonimidad)</li>
 </ul>
 
-
-<h3>Sistema</h3>
-
+<h3 id="sistema">Sistema</h3>
 <ul>
-<li><strong>archlinux</strong></li>
-<li><strong>slim</strong> session manager</li>
-<li><strong>openbox</strong> wm</li>
-<li><strong>adeskbar</strong> barra de aplicaciones</li>
-<li><strong>tint2</strong> panel</li>
+  <li><strong>archlinux</strong></li>
+  <li><strong>slim</strong> session manager</li>
+  <li><strong>openbox</strong> wm</li>
+  <li><strong>adeskbar</strong> barra de aplicaciones</li>
+  <li><strong>tint2</strong> panel</li>
 </ul>
-
 ]]></content>
   </entry>
   
@@ -279,8 +250,9 @@ al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los
     <link href="http://ki-ai.org/blog/2012/12/06/cinelerra-gamma-y-brillo/"/>
     <updated>2012-12-06T21:47:00-06:00</updated>
     <id>http://ki-ai.org/blog/2012/12/06/cinelerra-gamma-y-brillo</id>
-    <content type="html"><![CDATA[<p><img class="pull-left" src="http://flujos.org/media/cinelerra-gama.png" width="350" title="Cinelerra" >
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://flujos.org/media/cinelerra-gama.png" width="350" title="Cinelerra" />
 Dos descubrimentos del día de hoy. Primero, <a href="https://www.archlinux.org/packages/community/i686/cinelerra-cv/">Cinelerra esta en archlinux</a>. Entonces se puede instalar con un sencillo <code>pacman -Sy cinelerra-cv</code>. Segundo, es fácil ajustar Gama, Brillo y Contraste del imagen del Video.</p>
+
 ]]></content>
   </entry>
   
@@ -291,8 +263,7 @@ Dos descubrimentos del día de hoy. Primero, <a href="https://www.archlinux.org/
     <id>http://ki-ai.org/blog/2012/12/04/guia-de-la-galaxia-episodio-seis</id>
     <content type="html"><![CDATA[<p>Casi completa traducción de la sexta episodio de la radio novela <a href="http://ki-ai.org/blog/categories/hhgg">Guía de la Galaxia para Mochileros</a> y final de la primera temporada. Falta el principio que funja como transicion de episodio cinco.</p>
 
-<h2>Guion Radiofónica</h2>
-
+<h2 id="guion-radiofnica">Guion Radiofónica</h2>
 <dl>
 <dt>NARRARADOR</dt>
 <dd>Y eso es lo que paso con Arturo Dante y Ford Prefect.</dd>
@@ -328,714 +299,711 @@ Dos descubrimentos del día de hoy. Primero, <a href="https://www.archlinux.org/
 
 <dt>ARTURO</dt>
 <dd>Si. Se ve como un mausoleo.</dd>
-</dl>
-
-
 
 
 <!-- more -->
 
+**FORD**
+Tienes razón. Esta lleno de cuerpos hasta donde el ojo alcanza ver. Loco.
 
-<p><strong>FORD</strong>
-Tienes razón. Esta lleno de cuerpos hasta donde el ojo alcanza ver. Loco.</p>
+**ARTURO**
+Que hay de agradable en muchos muertos?
 
-<p><strong>ARTURO</strong>
-Que hay de agradable en muchos muertos?</p>
+**FORD**
+No sé, Vamos a ver. Mira este tiene una tarjetita.
 
-<p><strong>FORD</strong>
-No sé, Vamos a ver. Mira este tiene una tarjetita.</p>
+**ARTURO**
+Que dice?
 
-<p><strong>ARTURO</strong>
-Que dice?</p>
+**FORD**
+Flota de Arcos de Golgafrincham, Nave B, Bodega Siete, Desinfectador de Teléfonos, Segundo Clase, y un numero serial.
 
-<p><strong>FORD</strong>
-Flota de Arcos de Golgafrincham, Nave B, Bodega Siete, Desinfectador de Teléfonos, Segundo Clase, y un numero serial.</p>
+**ARTURO**
+Desinfiectador de Teléfonos? Un Desinfectador de Teléfonos muerto?
 
-<p><strong>ARTURO</strong>
-Desinfiectador de Teléfonos? Un Desinfectador de Teléfonos muerto?</p>
+**FORD**
+Mejor tipo.
 
-<p><strong>FORD</strong>
-Mejor tipo.</p>
+**ARTURO**
+Pero que hace aquí?
 
-<p><strong>ARTURO</strong>
-Pero que hace aquí?</p>
+**FORD**
+No mucho.
 
-<p><strong>FORD</strong>
-No mucho.</p>
+**ARTURO**
+No, pero quiero decir porque &#8230; Santo Dios ella es una estilista muerta.
 
-<p><strong>ARTURO</strong>
-No, pero quiero decir porque &#8230; Santo Dios ella es una estilista muerta.</p>
+**FORD**
+Y este es un ejecutivo en cuentas de mercadotecnia.
 
-<p><strong>FORD</strong>
-Y este es un ejecutivo en cuentas de mercadotecnia.</p>
+**ARTURO**
+Son de verdad ataúdes? son muy fríos.
 
-<p><strong>ARTURO</strong>
-Son de verdad ataúdes? son muy fríos.</p>
+**F/X** MUY DE REPENTE UN ZAP
 
-<p><strong>F/X</strong> MUY DE REPENTE UN ZAP</p>
+**NUMERO DOS**
+(muy de repente, muy fuerte, militar, acento alemán) Muy bien! No muevan!
 
-<p><strong>NUMERO DOS</strong>
-(muy de repente, muy fuerte, militar, acento alemán) Muy bien! No muevan!</p>
+**FORD**
+Hola?
 
-<p><strong>FORD</strong>
-Hola?</p>
+**ARTURO**
+Porque nadie nunca se alegra de vernos.
 
-<p><strong>ARTURO</strong>
-Porque nadie nunca se alegra de vernos.</p>
+**FADE OUT**
 
-<p><strong>FADE OUT</strong></p>
+**F/X**
+FADE UP: PUENTE DE NAVE. SONIO OCASIONAL DE AGUA (EL CAPITAN Y NUMERO UNO AMIGOS VAGOS, AMABLES, INEFECTUAL)
 
-<p><strong>F/X</strong>
-FADE UP: PUENTE DE NAVE. SONIO OCASIONAL DE AGUA (EL CAPITAN Y NUMERO UNO AMIGOS VAGOS, AMABLES, INEFECTUAL)</p>
+**NUMERO UNO**
+Er, capitán?
 
-<p><strong>NUMERO UNO</strong>
-Er, capitán?</p>
+**CAPITAN**
+Si, Numero Uno
 
-<p><strong>CAPITAN</strong>
-Si, Numero Uno</p>
+**NUMERO UNO**
+Apenas tuve un especia de reporte&#8230; um y así &#8230; es de Numero Dos.
 
-<p><strong>NUMERO UNO</strong>
-Apenas tuve un especia de reporte&#8230; um y así &#8230; es de Numero Dos.</p>
+**CAPITAN**
+Oh no.
 
-<p><strong>CAPITAN</strong>
-Oh no.</p>
+**NUMERO UNO**
+Estaba gritando algo de haber encontrado prisioneros.
 
-<p><strong>NUMERO UNO</strong>
-Estaba gritando algo de haber encontrado prisioneros.</p>
+**CAPITAN**
+Que bueno debe de alegrarlo, es lo que siempre ha querido.
 
-<p><strong>CAPITAN</strong>
-Que bueno debe de alegrarlo, es lo que siempre ha querido.</p>
+**F/X** PUERTA ABRE
 
-<p><strong>F/X</strong> PUERTA ABRE</p>
+**NUMERO DOS**
+Capitan señor!
 
-<p><strong>NUMERO DOS</strong>
-Capitan señor!</p>
+**CAPITAN**
+Oh, hola, Numero Dos, teniendo un bonito día?
 
-<p><strong>CAPITAN</strong>
-Oh, hola, Numero Dos, teniendo un bonito día?</p>
+**NUMERO DOS**
+Entrego prisioneros enontrados en congelador siete, señor.
 
-<p><strong>NUMERO DOS</strong>
-Entrego prisioneros enontrados en congelador siete, señor.</p>
+**FORD/ARTURO**
+Er, hola.
 
-<p><strong>FORD/ARTURO</strong>
-Er, hola.</p>
+**CAPITAN**
+Oh hola, disculparme no levanto, apenas entre en el baño. Un Absolute entonces, para todos. Busca en el refri, Numero Uno.
 
-<p><strong>CAPITAN</strong>
-Oh hola, disculparme no levanto, apenas entre en el baño. Un Absolute entonces, para todos. Busca en el refri, Numero Uno.</p>
+**NUMERO UNO**
+Si señor.
 
-<p><strong>NUMERO UNO</strong>
-Si señor.</p>
+**NUERO DOS**
+No quieres interrogar a los prisioneros, señor?
 
-<p><strong>NUERO DOS</strong>
-No quieres interrogar a los prisioneros, señor?</p>
+**CAPITAN**
+Interrogarlos, Numero Dos?
 
-<p><strong>CAPITAN</strong>
-Interrogarlos, Numero Dos?</p>
+**NUMERO DOS**
+Si señor. Torturarlos señor, clavar cerillos baja sus uñas, apagar cigarros en su piel, señor&#8230;
 
-<p><strong>NUMERO DOS</strong>
-Si señor. Torturarlos señor, clavar cerillos baja sus uñas, apagar cigarros en su piel, señor&#8230;</p>
+**CAPITAN**
+Dios Madre porque quisiera hacer tal cosa?
 
-<p><strong>CAPITAN</strong>
-Dios Madre porque quisiera hacer tal cosa?</p>
+**NUMERO DOS**
+Para sacar información de ellos señor.
 
-<p><strong>NUMERO DOS</strong>
-Para sacar información de ellos señor.</p>
+**CAPITAN**
+Oh no no no, creo que pasaron por un gin y tonic, no es así?
 
-<p><strong>CAPITAN</strong>
-Oh no no no, creo que pasaron por un gin y tonic, no es así?</p>
+**NUMERO DOS**
+No les puedo interrogar un poco?
 
-<p><strong>NUMERO DOS</strong>
-No les puedo interrogar un poco?</p>
+**CAPITAN**
+Bueno si es tan importante. Pregúntalos si quieren una bebida.
 
-<p><strong>CAPITAN</strong>
-Bueno si es tan importante. Pregúntalos si quieren una bebida.</p>
+**NUMERO DOS**
+Gracias señor. (Gritando) Sucios puercos &#8230;
 
-<p><strong>NUMERO DOS</strong>
-Gracias señor. (Gritando) Sucios puercos &#8230;</p>
+**CAPITAN**
+Calma Numero Dos .. .
 
-<p><strong>CAPITAN</strong>
-Calma Numero Dos .. .</p>
+**NUMERO DOS**
+Que quieren tomar?!!!!
 
-<p><strong>NUMERO DOS</strong>
-Que quieren tomar?!!!!</p>
+**FORD**
+Gin y tonic suena genial. Arturo?
 
-<p><strong>FORD</strong>
-Gin y tonic suena genial. Arturo?</p>
+**ARTURO**
+Perdón? ah si.
 
-<p><strong>ARTURO</strong>
-Perdón? ah si.</p>
+**NUMERO DOS**
+Con hielo o sin hielo!!!!
 
-<p><strong>NUMERO DOS</strong>
-Con hielo o sin hielo!!!!</p>
+**FORD**
+Oh, con por favor.
 
-<p><strong>FORD</strong>
-Oh, con por favor.</p>
+**NUMERO DOS**
+Limón?!!!!!!
 
-<p><strong>NUMERO DOS</strong>
-Limón?!!!!!!</p>
+**FORD**
+Si por favor, y si tienes algo de botana, no se unas papas fritas o, o ya sé, pata en vinagre&#8230; ?
 
-<p><strong>FORD</strong>
-Si por favor, y si tienes algo de botana, no se unas papas fritas o, o ya sé, pata en vinagre&#8230; ?</p>
+**NUMERO DOS**
+Soy yo quien hace las preguntas!!!!!!!!!!!!!
 
-<p><strong>NUMERO DOS</strong>
-Soy yo quien hace las preguntas!!!!!!!!!!!!!</p>
+**CAPITAN**
+Er, Numero Dos?
 
-<p><strong>CAPITAN</strong>
-Er, Numero Dos?</p>
+**NUMERO DOS**
+Señor!!!!!!!!!!!!!!
 
-<p><strong>NUMERO DOS</strong>
-Señor!!!!!!!!!!!!!!</p>
+**CAPITAN**
+Largate&#8230; no seas malito. Es que intento relajarme aquí en el baño.
 
-<p><strong>CAPITAN</strong>
-Largate&#8230; no seas malito. Es que intento relajarme aquí en el baño.</p>
+**NUMERO DOS**
+Señor, favor de acordarse que usted ya lleva mas que tres años en el baño.
 
-<p><strong>NUMERO DOS</strong>
-Señor, favor de acordarse que usted ya lleva mas que tres años en el baño.</p>
+**CAPITAN**
+Pues si en un trabajo como lo mio es importante relajarse.
 
-<p><strong>CAPITAN</strong>
-Pues si en un trabajo como lo mio es importante relajarse.</p>
+**ARTURO**
+Que demonios ocurre?
 
-<p><strong>ARTURO</strong>
-Que demonios ocurre?</p>
+**FORD**
+Le puede preguntar, de hecho, que exactamente es su trabajo?
 
-<p><strong>FORD</strong>
-Le puede preguntar, de hecho, que exactamente es su trabajo?</p>
+**NUMERO UNO**
+(apenas entrando) Sus bebidas.
 
-<p><strong>NUMERO UNO</strong>
-(apenas entrando) Sus bebidas.</p>
+**FORD**
+Oh, gracias.
 
-<p><strong>FORD</strong>
-Oh, gracias.</p>
+**ARTURO**
+gracias
 
-<p><strong>ARTURO</strong>
-gracias</p>
+**FORD**
+Digo no pude sin notar, mmm, los cuerpos.
 
-<p><strong>FORD</strong>
-Digo no pude sin notar, mmm, los cuerpos.</p>
+**CAPITAN**
+Cuerpos?
 
-<p><strong>CAPITAN</strong>
-Cuerpos?</p>
+**FORD**
+Si &#8230; todos aquellos desinfectadores de teléfonos y ejecutivos de cuentas, vez, en la bodega.
 
-<p><strong>FORD</strong>
-Si &#8230; todos aquellos desinfectadores de teléfonos y ejecutivos de cuentas, vez, en la bodega.</p>
+**CAPITAN**
+Oh no, no están muertos, Dios no, están congelados, los vamos a revivir.
 
-<p><strong>CAPITAN</strong>
-Oh no, no están muertos, Dios no, están congelados, los vamos a revivir.</p>
+**ARTURO**
+Usted en realidad quiere decir que tienes una bodega lleno de estilistas congeladas?
 
-<p><strong>ARTURO</strong>
-Usted en realidad quiere decir que tienes una bodega lleno de estilistas congeladas?</p>
+**CAPITAN**
+Oh si, millones de ellos, estilistas, vendedores de seguros, encargados de personal, ex-productores de Televisa y TV Azteca.
 
-<p><strong>CAPITAN</strong>
-Oh si, millones de ellos, estilistas, vendedores de seguros, encargados de personal, ex-productores de Televisa y TV Azteca.</p>
+**NUMERO DOS**
+Guardias de seguridad.
 
-<p><strong>NUMERO DOS</strong>
-Guardias de seguridad.</p>
+**CAPITAN**
+Asesores de administración. Usted lo pide. Aquí lo tenemos. Vamos a colonizar otro planeta.
 
-<p><strong>CAPITAN</strong>
-Asesores de administración. Usted lo pide. Aquí lo tenemos. Vamos a colonizar otro planeta.</p>
+**ARTURO**
+Que?
 
-<p><strong>ARTURO</strong>
-Que?</p>
+**CAPITAN**
+Emocionante, verdad?
 
-<p><strong>CAPITAN</strong>
-Emocionante, verdad?</p>
+**ARTURO**
+Que&#8230; con esos?
 
-<p><strong>ARTURO</strong>
-Que&#8230; con esos?</p>
+**CAPITAN**
+Oh, no mal entiendes, somos nada mas un barco de la Flota de Arcos, somos Arco B, vez. Disculpe, le puedo pedir un poco mas de agua caliente, gracias. Están en su casa, eh, sirven se otra.
 
-<p><strong>CAPITAN</strong>
-Oh, no mal entiendes, somos nada mas un barco de la Flota de Arcos, somos Arco B, vez. Disculpe, le puedo pedir un poco mas de agua caliente, gracias. Están en su casa, eh, sirven se otra.</p>
+**FORD**
+Gracias
 
-<p><strong>FORD</strong>
-Gracias</p>
+**ARTURO**
+Que es Arco B?
 
-<p><strong>ARTURO</strong>
-Que es Arco B?</p>
+**CAPITAN**
+Mmmm? Oh, bueno lo que pasa es que nuestra planeta estaba condenado.
 
-<p><strong>CAPITAN</strong>
-Mmmm? Oh, bueno lo que pasa es que nuestra planeta estaba condenado.</p>
+**ARTURO**
+Condenado?
 
-<p><strong>ARTURO</strong>
-Condenado?</p>
+**CAPITAN**
+Oh si. Lo que decía todo mundo es que teníamos  empacar el población entero en unos naves espaciales gigantes y colonizar otro planeta.
 
-<p><strong>CAPITAN</strong>
-Oh si. Lo que decía todo mundo es que teníamos  empacar el población entero en unos naves espaciales gigantes y colonizar otro planeta.</p>
+**ARTURO**
+Un planeta menos condenado, sopongo.
 
-<p><strong>ARTURO</strong>
-Un planeta menos condenado, sopongo.</p>
+**CAPITAN**
+Precisamente. Entonces se deicidio construir tres naves, tres Arcos Espaciales&#8230; No les estoy aburriendo verdad?
 
-<p><strong>CAPITAN</strong>
-Precisamente. Entonces se deicidio construir tres naves, tres Arcos Espaciales&#8230; No les estoy aburriendo verdad?</p>
+**FORD**
+No, no, fascinante.
 
-<p><strong>FORD</strong>
-No, no, fascinante.</p>
+**CAPITAN**
+Un cambio muy agradable encontrar con nuevas caras con quien hablar. Lo difícil de un viaje muy larga como esta es que uno acaba hablando mucho consigo mismo, lo que termina en un aburrimiento terrible porque la mitad del tiempo ya sabes lo que se va a contestar.
 
-<p><strong>CAPITAN</strong>
-Un cambio muy agradable encontrar con nuevas caras con quien hablar. Lo difícil de un viaje muy larga como esta es que uno acaba hablando mucho consigo mismo, lo que termina en un aburrimiento terrible porque la mitad del tiempo ya sabes lo que se va a contestar.</p>
+**ARTURO**
+Unicamente la mitad del tiempo?
 
-<p><strong>ARTURO</strong>
-Unicamente la mitad del tiempo?</p>
+**CAPITAN**
+Si, aproximadamente la mitad, diría. En fin, donde esta el jabón? Si, entonces la idea era que dentro del primer nave, nave A, entraría todos los lideres brillantes, los científicos, los grandes artistas, vez, los quien habían alcanzado algo, y dentro del tercer nave, nave C, iría todos lo que hace trabajo real, los quien hacen cosas, y en nave B, nosotros, iría los demás, los intermediarios vez. Y nos enviaron primero.
 
-<p><strong>CAPITAN</strong>
-Si, aproximadamente la mitad, diría. En fin, donde esta el jabón? Si, entonces la idea era que dentro del primer nave, nave A, entraría todos los lideres brillantes, los científicos, los grandes artistas, vez, los quien habían alcanzado algo, y dentro del tercer nave, nave C, iría todos lo que hace trabajo real, los quien hacen cosas, y en nave B, nosotros, iría los demás, los intermediarios vez. Y nos enviaron primero.</p>
+**ARTURO**
+Pero que era el problema de su planeta?
 
-<p><strong>ARTURO</strong>
-Pero que era el problema de su planeta?</p>
+**CAPITAN**
+Oh, estaba condenado, como decía. Aparentemente estaba por estrellarse con el sol. O era la luna que se iba a estrellar con nosotros?
 
-<p><strong>CAPITAN</strong>
-Oh, estaba condenado, como decía. Aparentemente estaba por estrellarse con el sol. O era la luna que se iba a estrellar con nosotros?</p>
+**NUMERO UNO**
+Oh, pensaba que estaba por ser invadido por un enjambre gigante de abejas pirañas de 3 metros de alto.
 
-<p><strong>NUMERO UNO</strong>
-Oh, pensaba que estaba por ser invadido por un enjambre gigante de abejas pirañas de 3 metros de alto.</p>
+**NUMERO DOS**
+No es lo que mi dijeron a mi! Mi superior juro hasta volverse rojo que el planeta entera estaba en peligro eminente de ser comido por un enorme mutante estrella-cabra.
 
-<p><strong>NUMERO DOS</strong>
-No es lo que mi dijeron a mi! Mi superior juro hasta volverse rojo que el planeta entera estaba en peligro eminente de ser comido por un enorme mutante estrella-cabra.</p>
+**FORD**
+(Siguiendo el juego) De verdad &#8230;.
 
-<p><strong>FORD</strong>
-(Siguiendo el juego) De verdad &#8230;.</p>
+**NUMERO DOS**
+Si, y que el unicamente esperaba que su nave estaría preparado en tiempo.
 
-<p><strong>NUMERO DOS</strong>
-Si, y que el unicamente esperaba que su nave estaría preparado en tiempo.</p>
+**ARTURO**
+Pero aseguraron enviar la bola de ustedes antes.
 
-<p><strong>ARTURO</strong>
-Pero aseguraron enviar la bola de ustedes antes.</p>
+**CAPITAN**
+Oh si, todos dijeron, muy amablemente pensaba yo, que era muy importante por moral saber que llegarían a un planeta donde podrían asegurar un buen corte de cabellos y donde los teléfonos están limpios.
 
-<p><strong>CAPITAN</strong>
-Oh si, todos dijeron, muy amablemente pensaba yo, que era muy importante por moral saber que llegarían a un planeta donde podrían asegurar un buen corte de cabellos y donde los teléfonos están limpios.</p>
+**FORD**
+Oh si, puedo ver el importancia que tendría.
 
-<p><strong>FORD</strong>
-Oh si, puedo ver el importancia que tendría.</p>
+**ARTURO**
+Si lo vez?
 
-<p><strong>ARTURO</strong>
-Si lo vez?</p>
+**FORD**
+Shush &#8230; y er, el otro nave les seguía entonces?
 
-<p><strong>FORD</strong>
-Shush &#8230; y er, el otro nave les seguía entonces?</p>
+**CAPITAN**
+Ah, bueno es irónico que lo comentas porque curiosamente no hemos escuchado nada de ellos desde que salimos hace cinco años &#8230; pero deben de estar en algún lugar atrás de nosotros.
 
-<p><strong>CAPITAN</strong>
-Ah, bueno es irónico que lo comentas porque curiosamente no hemos escuchado nada de ellos desde que salimos hace cinco años &#8230; pero deben de estar en algún lugar atrás de nosotros.</p>
+**FORD**
+Menos si fueren comidos por la cabra.
 
-<p><strong>FORD</strong>
-Menos si fueren comidos por la cabra.</p>
+**CAPITAN**
+(empieza de escuchar en su voz tono de una duda) Ah si la cabra&#8230; hmmmm &#8230; es una cosa chistoso, sabes, ahora que cuento la historia a otra persona &#8230; Quiero decir no lo escuchas como raro, Numero Uno?
 
-<p><strong>CAPITAN</strong>
-(empieza de escuchar en su voz tono de una duda) Ah si la cabra&#8230; hmmmm &#8230; es una cosa chistoso, sabes, ahora que cuento la historia a otra persona &#8230; Quiero decir no lo escuchas como raro, Numero Uno?</p>
+**NUMERO UNO**
+Errrrrr &#8230;?
 
-<p><strong>NUMERO UNO</strong>
-Errrrrr &#8230;?</p>
+**CAPITAN**
+Ummmmm &#8230; ?
 
-<p><strong>CAPITAN</strong>
-Ummmmm &#8230; ?</p>
+**FORD**
+Bueno, puedo ver que tienen mucho que van a querer platicar, gracias por las bebidas, sepueden dejarnos en el planeta mas próximo a su conveniencia, claro.
 
-<p><strong>FORD</strong>
-Bueno, puedo ver que tienen mucho que van a querer platicar, gracias por las bebidas, sepueden dejarnos en el planeta mas próximo a su conveniencia, claro.</p>
+**CAPITAN**
+Ah bueno va ser un poco difícil, la verdad, porque nuestra trayectoria cosita esta era pre-calculado antes de salir de Golgafrincham, Creo en parte porque en la realidad no soy muy bueno con números.
 
-<p><strong>CAPITAN</strong>
-Ah bueno va ser un poco difícil, la verdad, porque nuestra trayectoria cosita esta era pre-calculado antes de salir de Golgafrincham, Creo en parte porque en la realidad no soy muy bueno con números.</p>
+**ARTURO/FORD**
+(Impaciente) Cuando van a llegar al planeta que les enviaron a colonizar?
 
-<p><strong>ARTURO/FORD</strong>
-(Impaciente) Cuando van a llegar al planeta que les enviaron a colonizar?</p>
+**CAPITAN**
+Oh, casi llegamos, creo, en cualquier segundo. Probablemente es hora que salgo del baño, de hecho. Oh pero no sé, porque parar justo cuando lo estoy disfrutando.
 
-<p><strong>CAPITAN</strong>
-Oh, casi llegamos, creo, en cualquier segundo. Probablemente es hora que salgo del baño, de hecho. Oh pero no sé, porque parar justo cuando lo estoy disfrutando.</p>
+**ARTURO**
+Entonces en realidad vamos aterrizar en un momento?
 
-<p><strong>ARTURO</strong>
-Entonces en realidad vamos aterrizar en un momento?</p>
+**CAPITAN**
+Bueno no tanto aterrizar &#8230; Hasta donde me acuerdo estamos programado estrellar.
 
-<p><strong>CAPITAN</strong>
-Bueno no tanto aterrizar &#8230; Hasta donde me acuerdo estamos programado estrellar.</p>
+**ARTURO/FORD**
+Estrellar??
 
-<p><strong>ARTURO/FORD</strong>
-Estrellar??</p>
+**CAPITAN**
+Si, es todo parte del plan, creo. Había un buen motivo por ello que ahora no me alcanza la memoria  &#8230;
 
-<p><strong>CAPITAN</strong>
-Si, es todo parte del plan, creo. Había un buen motivo por ello que ahora no me alcanza la memoria  &#8230;</p>
+**FORD**
+Son una bola de frutos inútiles!
 
-<p><strong>FORD</strong>
-Son una bola de frutos inútiles!</p>
+**CAPITAN**
+Ah si, eso era.
 
-<p><strong>CAPITAN</strong>
-Ah si, eso era.</p>
+**F/X** NAVE ESTRELLA. UN BREVE AULLUDIO CAIDA SEGUIDO POR UN EXPLOSION
 
-<p><strong>F/X</strong> NAVE ESTRELLA. UN BREVE AULLUDIO CAIDA SEGUIDO POR UN EXPLOSION</p>
+**GRAMS FONDO NARRARADOR**
 
-<p><strong>GRAMS FONDO NARRARADOR</strong></p>
+**NARRARADOR**
+La guía de la galaxia para mochileros tiene lo siguiente decir con respeto a el planeta e Golgafrincham; es un planeta con una historia antigua y misteriosa, en lo cual las figuras mas misteriosos son sin duda los Gran Poetas Circulares De Arium. Estos Poetas Circulares antiguamente vivían en los remotos pasos serranos donde quedaban en espera de pequeñas bandas de viajeros insospechados, encircular a ellos y aventar piedras.
 
-<p><strong>NARRARADOR</strong>
-La guía de la galaxia para mochileros tiene lo siguiente decir con respeto a el planeta e Golgafrincham; es un planeta con una historia antigua y misteriosa, en lo cual las figuras mas misteriosos son sin duda los Gran Poetas Circulares De Arium. Estos Poetas Circulares antiguamente vivían en los remotos pasos serranos donde quedaban en espera de pequeñas bandas de viajeros insospechados, encircular a ellos y aventar piedras.</p>
+Y cuando los viajeros gritaron diciendo porque no proceden con la composición de unos poemas en lugar de estar molestando a las personas con eso de tirar piedras, de repente retirarían a cantar a los viajeros un excesivamente larga y bella canción en que contaron de como una vez partió de la ciudad de Vasillia un grupo de cinco príncipes sabios con cuatro caballos. El primer parte del canción cuenta como estos cinco príncipes sabios, quien obviamente eran nobles y inteligentes, viajaron en tierras distantes, lucharon contra ogros, persigaban filosofías exóticas, tomaron café con dioses bizarras y rescataban a monstruos bellas de princesas voraces antes de últimamente anunciar que habían alcanzado iluminación y que sus ambulancias, por lo mismo, estaban cumplidos. El segundo y parte mas inaguantablamente larga cuenta de todos sus discusiones sobre cual de ellos regresaría caminando.
 
-<p>Y cuando los viajeros gritaron diciendo porque no proceden con la composición de unos poemas en lugar de estar molestando a las personas con eso de tirar piedras, de repente retirarían a cantar a los viajeros un excesivamente larga y bella canción en que contaron de como una vez partió de la ciudad de Vasillia un grupo de cinco príncipes sabios con cuatro caballos. El primer parte del canción cuenta como estos cinco príncipes sabios, quien obviamente eran nobles y inteligentes, viajaron en tierras distantes, lucharon contra ogros, persigaban filosofías exóticas, tomaron café con dioses bizarras y rescataban a monstruos bellas de princesas voraces antes de últimamente anunciar que habían alcanzado iluminación y que sus ambulancias, por lo mismo, estaban cumplidos. El segundo y parte mas inaguantablamente larga cuenta de todos sus discusiones sobre cual de ellos regresaría caminando.</p>
+Era claramente un descendente de esas poetas excéntricas quien inventó los cuentos espurios del condenación que permitía que las personas de Golgafrincham despedir de un completo  tercer inútil parte de su población. Los otros dos terceras, claro, quedaron en casa y vivieron completas, lujosos y feliz vidas hasta que fueran exterminados muy repentinamente por un virulenta enfermedad contraído de un teléfono sucio.
+Mientras tanto, Arturo Dante, Ford Prefect y un cargo de Archo de intermediarios congelados han estrellados en la amanecer de un pequeño planeta azul verde circulando alrededor de un olvidado sol amarillo en la espiral Oeste y pasado de modo de la Galaxia. Después de un año llaman a un reunión para considera su posición, que no es enteramente bueno.
 
-<p>Era claramente un descendente de esas poetas excéntricas quien inventó los cuentos espurios del condenación que permitía que las personas de Golgafrincham despedir de un completo  tercer inútil parte de su población. Los otros dos terceras, claro, quedaron en casa y vivieron completas, lujosos y feliz vidas hasta que fueran exterminados muy repentinamente por un virulenta enfermedad contraído de un teléfono sucio.
-Mientras tanto, Arturo Dante, Ford Prefect y un cargo de Archo de intermediarios congelados han estrellados en la amanecer de un pequeño planeta azul verde circulando alrededor de un olvidado sol amarillo en la espiral Oeste y pasado de modo de la Galaxia. Después de un año llaman a un reunión para considera su posición, que no es enteramente bueno.</p>
+**F/X** FONDO AMBIENTE DE ESPACIO ABIERTO, UN POCO DE VIENDO, PEDAZOS DE CANTO DE PAJARO, SIMIOS. FADE UP CON F/X DE CONFUSION DE VOCES TODOS HABLANDO JUNTOS
 
-<p><strong>F/X</strong> FONDO AMBIENTE DE ESPACIO ABIERTO, UN POCO DE VIENDO, PEDAZOS DE CANTO DE PAJARO, SIMIOS. FADE UP CON F/X DE CONFUSION DE VOCES TODOS HABLANDO JUNTOS</p>
+**CAPITAN**
+(Mas fuerte que lo demás) Ok, mi gustaría llamar este reunión a algún especia de orden si fuera posible.
 
-<p><strong>CAPITAN</strong>
-(Mas fuerte que lo demás) Ok, mi gustaría llamar este reunión a algún especia de orden si fuera posible.</p>
+**ESTILISTA**
+Le gustaría un corte, señor?
 
-<p><strong>ESTILISTA</strong>
-Le gustaría un corte, señor?</p>
+**CAPITAN**
+Ahora no. Estoy en el baño.
 
-<p><strong>CAPITAN</strong>
-Ahora no. Estoy en el baño.</p>
+**FORD**
+Hey vamos, cállense todos, hay noticias importantes, hemos descubierto algo.
 
-<p><strong>FORD</strong>
-Hey vamos, cállense todos, hay noticias importantes, hemos descubierto algo.</p>
+**ASESOR DE ADMINISTRACION**
+Eso esta agendado?
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Eso esta agendado?</p>
+**FORD**
+Oh no mi llegas con mamadas.
 
-<p><strong>FORD</strong>
-Oh no mi llegas con mamadas.</p>
+**ASESOR DE ADMINISTRACION**
+Bueno, disculpe, pero hablando como un asesor de administración entrenado debo de insistir en la importancia de conservar la estructura del comité.
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Bueno, disculpe, pero hablando como un asesor de administración entrenado debo de insistir en la importancia de conservar la estructura del comité.</p>
+**FORD**
+En una planeta prehistórica &#8230; !?
 
-<p><strong>FORD</strong>
-En una planeta prehistórica &#8230; !?</p>
+**ASESOR DE ADMINISTRACION**
+Dirigiese a la silla de la presidencia!
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Dirigiese a la silla de la presidencia!</p>
+**FORD**
+No hay silla, solo esta piedra
 
-<p><strong>FORD</strong>
-No hay silla, solo esta piedra</p>
+**ASESOR DE ADMINISTRACION**
+Bueno, llámalo una silla.
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Bueno, llámalo una silla.</p>
+**FORD**
+Porque no llamarlo una piedra?
 
-<p><strong>FORD</strong>
-Porque no llamarlo una piedra?</p>
+**ASESOR DE ADMINISTRACION**
+Obviamente no tienes concepto de métodos modernos de negocios.
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Obviamente no tienes concepto de métodos modernos de negocios.</p>
+**FORD**
+Y obviamente no tienes concepto de donde demonios estas!
 
-<p><strong>FORD</strong>
-Y obviamente no tienes concepto de donde demonios estas!</p>
+**CHICA DE MERCADOTECNIA**
+Miran cállense los dos, quiero tablar un moción.
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Miran cállense los dos, quiero tablar un moción.</p>
+**ESTILISTA**
+Pedruscar un moción, seria.
 
-<p><strong>ESTILISTA</strong>
-Pedruscar un moción, seria.</p>
+**CHICA DE MERCADOTECNIA**
+Gracias creo que hice mi punto. Ahora escucha  &#8230;
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Gracias creo que hice mi punto. Ahora escucha  &#8230;</p>
+**ASESOR DE ADMINISTRACION**
+Orden, orden!
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Orden, orden!</p>
+**FORD**
+Santa Maria&#8230;
 
-<p><strong>FORD</strong>
-Santa Maria&#8230;</p>
+**CAPITAN**
+Quiero llamar a orden reunión 573 del comité de colonización del planeta Fintlewoolewix &#8230;
 
-<p><strong>CAPITAN</strong>
-Quiero llamar a orden reunión 573 del comité de colonización del planeta Fintlewoolewix &#8230;</p>
+**FORD**
+Oh eso es fútil. 573 reuniones  y ni siquiera han descubierto a el fuego.
 
-<p><strong>FORD</strong>
-Oh eso es fútil. 573 reuniones  y ni siquiera han descubierto a el fuego.</p>
+**ASESOR DE ADMINISTRACION**
+Si le gustaría echar un vistazo a la carta de la agenda.
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Si le gustaría echar un vistazo a la carta de la agenda.</p>
+**ESTILISTA**
+(Empieza a disfrutar) Piedra de la agenda &#8230;
 
-<p><strong>ESTILISTA</strong>
-(Empieza a disfrutar) Piedra de la agenda &#8230;</p>
+**FORD**
+Regresas a peinar algo de favor?
 
-<p><strong>FORD</strong>
-Regresas a peinar algo de favor?</p>
+**ASESOR DE ADMINISTRACION**
+&#8230; veras que estamos al punto de tener un reporte del sub-comité de desarrollo de fuego por las estilitas hoy..
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-&#8230; veras que estamos al punto de tener un reporte del sub-comité de desarrollo de fuego por las estilitas hoy..</p>
+**ESTILISTA**
+Ese soy yo.
 
-<p><strong>ESTILISTA</strong>
-Ese soy yo.</p>
+**FORD**
+Si, bueno sabes que han hecho, verdad? Los diste un par e palos y los desarrollaron en unas malditas tijeras. Van a extinguir, lo saben?
 
-<p><strong>FORD</strong>
-Si, bueno sabes que han hecho, verdad? Los diste un par e palos y los desarrollaron en unas malditas tijeras. Van a extinguir, lo saben?</p>
+**CHICA DE MERCADOTECNIA**
+Bueno, estas siendo completamente ingenuo. Cuando has estado en mercadotecnia cuanto tiempo que yo sabes que antes que cualquier producto puede ser desarrollado tiene que ser investigado. Tenemos que encontrar que quieren la gente del fuego, como relacionan con ello, el imagen que &#8230;
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Bueno, estas siendo completamente ingenuo. Cuando has estado en mercadotecnia cuanto tiempo que yo sabes que antes que cualquier producto puede ser desarrollado tiene que ser investigado. Tenemos que encontrar que quieren la gente del fuego, como relacionan con ello, el imagen que &#8230;</p>
+**FORD**
+Oh meta lo por el nariz.
 
-<p><strong>FORD</strong>
-Oh meta lo por el nariz.</p>
+**CHICA DE MERCADOTECNIA**
+Lo cual es precisamente el tipo de cosa que queremos saber. La gente quieren fuego que si acomoda nasalmente?
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Lo cual es precisamente el tipo de cosa que queremos saber. La gente quieren fuego que si acomoda nasalmente?</p>
+**CAPITAN**
+Y la rueda, que de esa cosa de la rueda? Suena como un proyecto realmente interesante.
 
-<p><strong>CAPITAN</strong>
-Y la rueda, que de esa cosa de la rueda? Suena como un proyecto realmente interesante.</p>
+**CHICA DE MERCADOTECNIA**
+Ah, bueno nos ha resultado difícil algunos detalles.
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Ah, bueno nos ha resultado difícil algunos detalles.</p>
+**FORD**
+Difícil! Es unicamente la machina mas sencillo en el Universo!
 
-<p><strong>FORD</strong>
-Difícil! Es unicamente la machina mas sencillo en el Universo!</p>
+**CHICA DE MERCADOTECNIA**
+Bueno Don Inteligencia, si eras tan brillante por que no nos dices que color debe de ser.
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Bueno Don Inteligencia, si eras tan brillante por que no nos dices que color debe de ser.</p>
+**FORD**
+Oh, Zarquon el todo poderoso, no ha nadie hecho nada? Si?
 
-<p><strong>FORD</strong>
-Oh, Zarquon el todo poderoso, no ha nadie hecho nada? Si?</p>
+**NUMERO DOS**
+He declarado guerra al continente próxima.
 
-<p><strong>NUMERO DOS</strong>
-He declarado guerra al continente próxima.</p>
+**FORD**
+Declarado guerra! Nadie vive allí!
 
-<p><strong>FORD</strong>
-Declarado guerra! Nadie vive allí!</p>
+**NUMERO DOS**
+Si, pero un día habrá, entonces hemos dejado un tipo ultimátum abierto a posibilidades futuros.
 
-<p><strong>NUMERO DOS</strong>
-Si, pero un día habrá, entonces hemos dejado un tipo ultimátum abierto a posibilidades futuros.</p>
+**FORD**
+Disculpe?
 
-<p><strong>FORD</strong>
-Disculpe?</p>
+**NUMERO DOS**
+Y explotamos unos instalaciones militares.
 
-<p><strong>NUMERO DOS</strong>
-Y explotamos unos instalaciones militares.</p>
+**CAPITAN**
+Instalaciones militares, Numero Dos?
 
-<p><strong>CAPITAN</strong>
-Instalaciones militares, Numero Dos?</p>
+**NUMERO DOS**
+Si señor, bueno, instalaciones militares potenciales. Oh bueno, arboles. Y interrogamos a una gacela.
 
-<p><strong>NUMERO DOS</strong>
-Si señor, bueno, instalaciones militares potenciales. Oh bueno, arboles. Y interrogamos a una gacela.</p>
+(pausa un poco vergonzoso)
 
-<p>(pausa un poco vergonzoso)</p>
+**CHICA DE MERCADOTECNIA**
+Y claro Finlon el productor rescató una camera de los escombros del nave y esta haciendo un documental fascinante sobre los cavernicolas indígenas del región.
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Y claro Finlon el productor rescató una camera de los escombros del nave y esta haciendo un documental fascinante sobre los cavernicolas indígenas del región.</p>
+**FORD**
+Si, y están extinguiendo se, eso lo has notado?
 
-<p><strong>FORD</strong>
-Si, y están extinguiendo se, eso lo has notado?</p>
+**ASESOR DE ADMINISTRACION**
+Si, hay que tomar nota no venderlos mas seguros.
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Si, hay que tomar nota no venderlos mas seguros.</p>
+**FORD**
+Pero no entiendes? Unicamente desde que llegamos han empezados extinguirse.
 
-<p><strong>FORD</strong>
-Pero no entiendes? Unicamente desde que llegamos han empezados extinguirse.</p>
+**CHICA DE MERCADOTECNIA**
+Si y se transmita la idea lucidamente en la película que se esta haciendo.
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Si y se transmita la idea lucidamente en la película que se esta haciendo.</p>
+**CHICA DE MERCADOTECNIA**
+Mi hace que quiere hacer un documental sobre usted, próximamente, capitán&#8230;
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Mi hace que quiere hacer un documental sobre usted, próximamente, capitán&#8230;</p>
+**CAPITAN**
+Oh de veras? que simpático.
 
-<p><strong>CAPITAN</strong>
-Oh de veras? que simpático.</p>
+**CHICA DE MERCADOTECNIA**
+Tiene un perspectivo muy fuerte al respeto a la tema, la carga de responsabilidad, la soledad del líder &#8230;
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Tiene un perspectivo muy fuerte al respeto a la tema, la carga de responsabilidad, la soledad del líder &#8230;</p>
+**CAPITAN**
+Ah, bueno no acentuaría demasiado esta parte, nadie esta solo con un pato de goma. Weeee &#8230;
 
-<p><strong>CAPITAN</strong>
-Ah, bueno no acentuaría demasiado esta parte, nadie esta solo con un pato de goma. Weeee &#8230;</p>
+**ASESOR DE ADMINISTRACION**
+Er, Sir &#8230;  Jefe &#8230;
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Er, Sir &#8230;  Jefe &#8230;</p>
+**F/X** Salpica la agua un poco
 
-<p><strong>F/X</strong> Salpica la agua un poco</p>
+**ASESOR DE ADMINISTRACION**
+Si podemos por un momento avanzar a la tema de política fiscal &#8230;
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Si podemos por un momento avanzar a la tema de política fiscal &#8230;</p>
+**FORD**
+Política fiscal! Como van a tener dinero, si ninguno de ustedes produce algo - no crece en los arboles saben.
 
-<p><strong>FORD</strong>
-Política fiscal! Como van a tener dinero, si ninguno de ustedes produce algo - no crece en los arboles saben.</p>
+**ASESOR DE ADMINISTRACION**
+Si mi permites seguir &#8230; desde que decidimos hace unas semanas adoptar hojas como moneda hemos todos vueltos enormemente ricos &#8230;
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-Si mi permites seguir &#8230; desde que decidimos hace unas semanas adoptar hojas como moneda hemos todos vueltos enormemente ricos &#8230;</p>
+**TODOS** (HABLA GENERAL, SI, MUY BIEN, EXCELENTE, QUE CHINGON)
 
-<p><strong>TODOS</strong> (HABLA GENERAL, SI, MUY BIEN, EXCELENTE, QUE CHINGON)</p>
+**ASESOR DE ADMINISTRACION**
+&#8230; pero hemos encontrado un pequeña problema de inflación por el hecho de alta nivel de disponibilidad de hojas, lo cual significa, me parece, al cambio actual es como tres de los bosques deciduous mayores a un cacahuete. Entonces para arreglar el problema, y efectivamente revaluar la hoja, estamos por quemar los bosques. Creo que es un incentiva razonable, y usted?
 
-<p><strong>ASESOR DE ADMINISTRACION</strong>
-&#8230; pero hemos encontrado un pequeña problema de inflación por el hecho de alta nivel de disponibilidad de hojas, lo cual significa, me parece, al cambio actual es como tres de los bosques deciduous mayores a un cacahuete. Entonces para arreglar el problema, y efectivamente revaluar la hoja, estamos por quemar los bosques. Creo que es un incentiva razonable, y usted?</p>
+**TODOS** (general acuerdo, frases como &#8216;fiscalmente astuto&#8217; &#8216;Económicamente tiene mucha razón&#8217; y &#8216;reducir precio en un solo moción&#8217; y &#8216;Incrementar el valor del la hoja en la bolsa&#8217;)
 
-<p><strong>TODOS</strong> (general acuerdo, frases como &#8216;fiscalmente astuto&#8217; &#8216;Económicamente tiene mucha razón&#8217; y &#8216;reducir precio en un solo moción&#8217; y &#8216;Incrementar el valor del la hoja en la bolsa&#8217;)</p>
+**FORD**
+Son completamente chiflados, son una bola de frutos delirantes.
 
-<p><strong>FORD</strong>
-Son completamente chiflados, son una bola de frutos delirantes.</p>
+**CHICA DE MERCADOTECNIA**
+Quizá es momento preguntar a usted que has estado haciendo todo este tiempo? Usted y el otro intruso han estado desaparecidos por mesas.
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-Quizá es momento preguntar a usted que has estado haciendo todo este tiempo? Usted y el otro intruso han estado desaparecidos por mesas.</p>
+**FORD**
+Si, pues, con todo respeto, hemos estado viajando intentando encontrar algo sobre este planeta.
 
-<p><strong>FORD</strong>
-Si, pues, con todo respeto, hemos estado viajando intentando encontrar algo sobre este planeta.</p>
+**CHICA DE MERCADOTECNIA**
+No suena muy productivo. Yo creía que &#8230;
 
-<p><strong>CHICA DE MERCADOTECNIA</strong>
-No suena muy productivo. Yo creía que &#8230;</p>
+**FORD**
+No, yo tengo noticias para ustedes. No importa un par de riñones fétidos de tlacuache que hace de aquí y adelante, quemar los bosques, lo que sea, no hace ninguna diferencia. Tienen dos millones de años, y es todo. Después de eso, su raza será muerto, desaparecido y que bien por ello. Acuerda lo, dos millones de años.
 
-<p><strong>FORD</strong>
-No, yo tengo noticias para ustedes. No importa un par de riñones fétidos de tlacuache que hace de aquí y adelante, quemar los bosques, lo que sea, no hace ninguna diferencia. Tienen dos millones de años, y es todo. Después de eso, su raza será muerto, desaparecido y que bien por ello. Acuerda lo, dos millones de años.</p>
+**CAPITAN**
+Ah apenas dará tiempo para otro baño. Pasa la esponja alguien &#8230;
 
-<p><strong>CAPITAN</strong>
-Ah apenas dará tiempo para otro baño. Pasa la esponja alguien &#8230;</p>
+**F/X**
+FADE UP MISMO FONDO QUE ULTIMA SCENA. REUNION DIMINUINDO AL FONDO. PRIMER PLANO ALGUNOS CAVERNICULAS HACIENDO ARGGG.
 
-<p><strong>F/X</strong>
-FADE UP MISMO FONDO QUE ULTIMA SCENA. REUNION DIMINUINDO AL FONDO. PRIMER PLANO ALGUNOS CAVERNICULAS HACIENDO ARGGG.</p>
+**ARTURO**
+No, Q le gana 10 puntos vez, y es un palabra triple, entonces &#8230; Perdón ya explicé las reglas .  . . no, no, mira favor de dejar el hueso de mandíbula &#8230; bueno empezamos de nuevo. Intenta concentrar este vez.
 
-<p><strong>ARTURO</strong>
-No, Q le gana 10 puntos vez, y es un palabra triple, entonces &#8230; Perdón ya explicé las reglas .  . . no, no, mira favor de dejar el hueso de mandíbula &#8230; bueno empezamos de nuevo. Intenta concentrar este vez.</p>
+**FORD** (llegando cansado triste)
+Oh que haces, Arturo?
 
-<p><strong>FORD</strong> (llegando cansado triste)
-Oh que haces, Arturo?</p>
+**ARTURO**
+Intentando enseñar los cavernícolas jugar Scabble. Es trabajo duro, único palabra que saben es ARGG pero no saben escribirlo.
 
-<p><strong>ARTURO</strong>
-Intentando enseñar los cavernícolas jugar Scabble. Es trabajo duro, único palabra que saben es ARGG pero no saben escribirlo.</p>
+**FORD**
+Y de favor mi explicas que piensas lograr con eso?
 
-<p><strong>FORD</strong>
-Y de favor mi explicas que piensas lograr con eso?</p>
+**ARTURO**
+Tenemos que incentivarlos evolucionar, Ford. Puedes imaginar como va ser un mundo que desciende de los cretinos allá?
 
-<p><strong>ARTURO</strong>
-Tenemos que incentivarlos evolucionar, Ford. Puedes imaginar como va ser un mundo que desciende de los cretinos allá?</p>
+**FORD**
+No tenemos que imaginar, reconocemolo, ya sabemos como va ser, lo hemos visto, no hay forma de escapar.
 
-<p><strong>FORD</strong>
-No tenemos que imaginar, reconocemolo, ya sabemos como va ser, lo hemos visto, no hay forma de escapar.</p>
+**ARTURO**
+Los decía l que habíamos descubierta?
 
-<p><strong>ARTURO</strong>
-Los decía l que habíamos descubierta?</p>
+**FORD**
+La firma de su autor en el glaciar?  No, para que? Para que nos escucharían. Que les importa que este planeta por causalidad si llama la Tierra.
 
-<p><strong>FORD</strong>
-La firma de su autor en el glaciar?  No, para que? Para que nos escucharían. Que les importa que este planeta por causalidad si llama la Tierra.</p>
+**ARTURO**
+Y que por puro casualidad es mi lugar de origen.
 
-<p><strong>ARTURO</strong>
-Y que por puro casualidad es mi lugar de origen.</p>
+**FORD**
+Si pero no vas a nascer por casi dos millones de años, entonces es probable que te dirán que no es asunto tuyo. Reconozca lo Arturo, aquellos frutos allá son tus ancestros, no estos cavernícolas. Guarda el Scrabble, no va a salvar a la raza humana por que Don ARGG aqui no esta destinado a ser la raza humana. La raza humana actualmente esta sentado alrededor de aquella roca haciendo documentales sobre si mismo.
 
-<p><strong>FORD</strong>
-Si pero no vas a nascer por casi dos millones de años, entonces es probable que te dirán que no es asunto tuyo. Reconozca lo Arturo, aquellos frutos allá son tus ancestros, no estos cavernícolas. Guarda el Scrabble, no va a salvar a la raza humana por que Don ARGG aqui no esta destinado a ser la raza humana. La raza humana actualmente esta sentado alrededor de aquella roca haciendo documentales sobre si mismo.</p>
+**ARTURO**
+Pero debe de haber algo que podemos hacer &#8230;
 
-<p><strong>ARTURO</strong>
-Pero debe de haber algo que podemos hacer &#8230;</p>
+**FORD**
+No, nada, realmente nada, porque todo ya esta hecho. Escucha, hemos ido atrás y hacia adelante en el tiempo y aquí acabamos, dos millones de años atrás de donde empezamos, pero no cambia el futuro, porque lo hemos visto. Ponte listo, no hay nada que puedes hacer para cambiarlo por que ya ocurrió.
 
-<p><strong>FORD</strong>
-No, nada, realmente nada, porque todo ya esta hecho. Escucha, hemos ido atrás y hacia adelante en el tiempo y aquí acabamos, dos millones de años atrás de donde empezamos, pero no cambia el futuro, porque lo hemos visto. Ponte listo, no hay nada que puedes hacer para cambiarlo por que ya ocurrió.</p>
+**ARTURO**
+Y todo porque llegamos aquí con los Golgafrinchams en su Arco B.
 
-<p><strong>ARTURO</strong>
-Y todo porque llegamos aquí con los Golgafrinchams en su Arco B.</p>
+**FORD**
+Si.
 
-<p><strong>FORD</strong>
-Si.</p>
+**CAVERNICOLA**
+Ugh ugh ugh grrrrr ugh.
 
-<p><strong>CAVERNICOLA</strong>
-Ugh ugh ugh grrrrr ugh.</p>
+**ARTURO**
+Pobre cavernícola. Todo ha sido un desperdicio de tiempo para ti, verdad? Has sido sobre-evolucionado por un desinfectador de teléfonos.
 
-<p><strong>ARTURO</strong>
-Pobre cavernícola. Todo ha sido un desperdicio de tiempo para ti, verdad? Has sido sobre-evolucionado por un desinfectador de teléfonos.</p>
+**CAVERNICOLA**
+Ugh ugh ugh ugh greeerrrrrrr.
 
-<p><strong>CAVERNICOLA</strong>
-Ugh ugh ugh ugh greeerrrrrrr.</p>
+**FORD**
+Esta apuntando a la tabla de Scrable.
 
-<p><strong>FORD</strong>
-Esta apuntando a la tabla de Scrable.</p>
+**ARTURO**
+Oh, mas probable ha escrito ´biblioteca´ con ´k´, pobre menso.
 
-<p><strong>ARTURO</strong>
-Oh, mas probable ha escrito ´biblioteca´ con ´k´, pobre menso.</p>
+**FORD**
+No lo hico.
 
-<p><strong>FORD</strong>
-No lo hico.</p>
+**ARTURO**
+Ey, mira, dice cuarenta dos &#8230; El experimento. Algo tendrá que ver con el programa de la computadora para encontrar la Pregunta Ultima.
 
-<p><strong>ARTURO</strong>
-Ey, mira, dice cuarenta dos &#8230; El experimento. Algo tendrá que ver con el programa de la computadora para encontrar la Pregunta Ultima.</p>
+**FORD** Hey, sabes que significa eso verdad?
 
-<p><strong>FORD</strong> Hey, sabes que significa eso verdad?</p>
+**ARTURO**
+Que?
 
-<p><strong>ARTURO</strong>
-Que?</p>
+**FORD**
+Debe de haber fallado&#8230; Si la matriz de computación se gestionó para seguir la evolución de la raza humana desde los cavernicolas, y luego llegamos nosotros y causamos su extinción&#8230;
 
-<p><strong>FORD</strong>
-Debe de haber fallado&#8230; Si la matriz de computación se gestionó para seguir la evolución de la raza humana desde los cavernicolas, y luego llegamos nosotros y causamos su extinción&#8230;</p>
+**ARTURO**
+Y de hecho los reemplazamos
 
-<p><strong>ARTURO</strong>
-Y de hecho los reemplazamos</p>
+**FORD**
+&#8230;entonces toda la esquema esta frito&#8230;
 
-<p><strong>FORD</strong>
-&#8230;entonces toda la esquema esta frito&#8230;</p>
+**ARTURO**
+Entonces lo que Marvin vio en los padrones de mis ondas mentales de hecho era la pregunta equivocada.
 
-<p><strong>ARTURO</strong>
-Entonces lo que Marvin vio en los padrones de mis ondas mentales de hecho era la pregunta equivocada.</p>
+**FORD**
+Si. Bueno podría haber sido correcto, pero mas seguro es la pregunta equivocada.
 
-<p><strong>FORD</strong>
-Si. Bueno podría haber sido correcto, pero mas seguro es la pregunta equivocada.</p>
+**ARTURO**
+Bueno que tal&#8230;mira, si esta impreso en el padrón de mis ondas mentales pero yo no sé como alcanzarlo&#8230;suponemos que al introducir algún elemento aleatorio que puede ser estructurado por el mismo padrón.
 
-<p><strong>ARTURO</strong>
-Bueno que tal&#8230;mira, si esta impreso en el padrón de mis ondas mentales pero yo no sé como alcanzarlo&#8230;suponemos que al introducir algún elemento aleatorio que puede ser estructurado por el mismo padrón.</p>
+**FORD**
+Por ejemplo?
 
-<p><strong>FORD</strong>
-Por ejemplo?</p>
+**ARTURO**
+Sacando letras de la bolsa de Scrabble.
 
-<p><strong>ARTURO</strong>
-Sacando letras de la bolsa de Scrabble.</p>
+**FORD**
+Brillante. Re que te brillante.
 
-<p><strong>FORD</strong>
-Brillante. Re que te brillante.</p>
+**ARTURO**
+Correcto, los primeros cuatro letras&#8230;
 
-<p><strong>ARTURO</strong>
-Correcto, los primeros cuatro letras&#8230;</p>
+**FORD**
+Q.U.E&#8230; Que,
 
-<p><strong>FORD</strong>
-Q.U.E&#8230; Que,</p>
+**ARTURO**
+Otros dos&#8230;
 
-<p><strong>ARTURO</strong>
-Otros dos&#8230;</p>
+**FORD**
+E.S&#8230;. ES. Esta funcionando. Es increíble, realmente esta saliendo. E.L&#8230;.R.E.S.U
 
-<p><strong>FORD</strong>
-E.S&#8230;. ES. Esta funcionando. Es increíble, realmente esta saliendo. E.L&#8230;.R.E.S.U</p>
+**ARTURO**
+Mas aquí&#8230;
 
-<p><strong>ARTURO</strong>
-Mas aquí&#8230;</p>
+**FORD**
+L.T.A.D.O. &#8230;. Sento un extraño sentimiento asombroso&#8230; QUE ES EL RESULTADO DE SEIS&#8230;POR&#8230;POR&#8230;NUEVE? Por nueve. Eso es todo?
 
-<p><strong>FORD</strong>
-L.T.A.D.O. &#8230;. Sento un extraño sentimiento asombroso&#8230; QUE ES EL RESULTADO DE SEIS&#8230;POR&#8230;POR&#8230;NUEVE? Por nueve. Eso es todo?</p>
+**ARTURO**
+Eso es todo. Seis por nueve. Cuarenta Dos. Algo, en algún lado, esta completamente torcido. Yo siempre decía que hay algo fundamentalmente equivocada en el Universo. Entonces que hacemos ahora?
 
-<p><strong>ARTURO</strong>
-Eso es todo. Seis por nueve. Cuarenta Dos. Algo, en algún lado, esta completamente torcido. Yo siempre decía que hay algo fundamentalmente equivocada en el Universo. Entonces que hacemos ahora?</p>
+**FORD**
+Supongo que tenemos que tragar nuestro orgullo y juntarnos con la raza humana.
 
-<p><strong>FORD</strong>
-Supongo que tenemos que tragar nuestro orgullo y juntarnos con la raza humana.</p>
+**ARTURO**
+Si.
 
-<p><strong>ARTURO</strong>
-Si.</p>
+**CAVERNICOLA**
+Yuch!
 
-<p><strong>CAVERNICOLA</strong>
-Yuch!</p>
+**ARTURO**
+Correcto. Yuch!
 
-<p><strong>ARTURO</strong>
-Correcto. Yuch!</p>
+**F/X**
+DESDE AQUI UN LARGO DIMINUICION EN EL DIALOGO, MIENTRAS QUE EL FONDO DE VENTO EVENTUALMENTE SUBE A CUBRIRLO
 
-<p><strong>F/X</strong>
-DESDE AQUI UN LARGO DIMINUICION EN EL DIALOGO, MIENTRAS QUE EL FONDO DE VENTO EVENTUALMENTE SUBE A CUBRIRLO</p>
+**ARTURO**
+Pero es triste eh. Justo en este momento es un planeta bastante bello.
 
-<p><strong>ARTURO</strong>
-Pero es triste eh. Justo en este momento es un planeta bastante bello.</p>
+**FORD**
+Lo es, por cierto lo es. Los verdes primales, los ríos serpentinas desapareciendo en la distancia, los arboles en llamas&#8230;
 
-<p><strong>FORD</strong>
-Lo es, por cierto lo es. Los verdes primales, los ríos serpentinas desapareciendo en la distancia, los arboles en llamas&#8230;</p>
+**ARTURO**
+Y en dos millones de años, bang, será destruido por los Vogons.
 
-<p><strong>ARTURO</strong>
-Y en dos millones de años, bang, será destruido por los Vogons.</p>
+**ARTURO**
+Que vida espera a este planeta joven.
 
-<p><strong>ARTURO</strong>
-Que vida espera a este planeta joven.</p>
+**FORD**
+Bueno, mejor que algunos. Yo una vez leía de un planeta en la séptima dimensión que ocuparon para un juego de billar inter-galactica. Si tiro directamente en una agujera negra, morirán 10 millones de personas.
 
-<p><strong>FORD</strong>
-Bueno, mejor que algunos. Yo una vez leía de un planeta en la séptima dimensión que ocuparon para un juego de billar inter-galactica. Si tiro directamente en una agujera negra, morirán 10 millones de personas.</p>
+**ARTURO**
+Mmm, locura absoluto.
 
-<p><strong>ARTURO</strong>
-Mmm, locura absoluto.</p>
+**FORD**
+Si, y ademas unicamente apuntó treinta puntos.
 
-<p><strong>FORD</strong>
-Si, y ademas unicamente apuntó treinta puntos.</p>
+**ARTURO**
+Y donde lo leíste?
 
-<p><strong>ARTURO</strong>
-Y donde lo leíste?</p>
+**FORD**
+Oh, en un libro.
 
-<p><strong>FORD</strong>
-Oh, en un libro.</p>
+**ARTURO**
+Cual libro haber sido.
 
-<p><strong>ARTURO</strong>
-Cual libro haber sido.</p>
+**FORD**
+La Guía de la Galaxia para Mochileros.
 
-<p><strong>FORD</strong>
-La Guía de la Galaxia para Mochileros.</p>
+**ARTURO**
+Ugg, aquella cosa.
 
-<p><strong>ARTURO</strong>
-Ugg, aquella cosa.</p>
-
-<p><strong>GRAMS</strong> WHAT A WONDERFUL WORLD, LUIS ARMSTRONG</p>
+**GRAMS** WHAT A WONDERFUL WORLD, LUIS ARMSTRONG
+</dd></dd></dl>
 ]]></content>
   </entry>
   
@@ -1044,16 +1012,24 @@ Ugg, aquella cosa.</p>
     <link href="http://ki-ai.org/blog/2012/11/27/supercollider/"/>
     <updated>2012-11-27T21:39:00-06:00</updated>
     <id>http://ki-ai.org/blog/2012/11/27/supercollider</id>
-    <content type="html"><![CDATA[<p><img class="right" src="http://farm6.staticflickr.com/5462/7000684506_50873d6bfe.jpg" width="300">SuperCollider, en window$, viene con un interfaz de control aparentemente hecho en java.  Como nos parece  bastante limitado el interfaz, recomendamos el uso de superCollider via de el plugin <strong>sced</strong> de <a href="http://projects.gnome.org/gedit/">Gedit</a>. Primero <a href="http://projects.gnome.org/gedit/" title="Gedit">instalamos gedit</a>. <a href="http://supercollider.sourceforge.net">Instalamos superCollider</a> ahora con Gedit instalado podemos instalar SuperCollider. Su instalador encuentra a gedit y levanta una ventana como la a la derecha, donde uno tiene que indicar que se instala <strong>Sced</strong>.</p>
+    <content type="html"><![CDATA[<p><img class="right" src="http://farm6.staticflickr.com/5462/7000684506_50873d6bfe.jpg" width="300" />SuperCollider, en window$, viene con un interfaz de control aparentemente hecho en java.  Como nos parece  bastante limitado el interfaz, recomendamos el uso de superCollider via de el plugin <strong>sced</strong> de <a href="http://projects.gnome.org/gedit/">Gedit</a>. Primero <a href="http://projects.gnome.org/gedit/" title="Gedit">instalamos gedit</a>. <a href="http://supercollider.sourceforge.net">Instalamos superCollider</a> ahora con Gedit instalado podemos instalar SuperCollider. Su instalador encuentra a gedit y levanta una ventana como la a la derecha, donde uno tiene que indicar que se instala <strong>Sced</strong>.</p>
 
 <!--more-->
 
-
-<p>Ahora que todo finaliza, se puede abrir gedit (reinicia gedit si ya estaba abierta). Para empezar ocupar superCollider, habilitamos el plugin <strong>Sced</strong> en <em>Editar->Preferencias</em> en el panel de Gedit, y después podemos seleccionar <em>SuperCollider Mode</em> bajo <em>Herramientas</em> para empezar de mandar comandos a superCollider.</p>
+<p>Ahora que todo finaliza, se puede abrir gedit (reinicia gedit si ya estaba abierta). Para empezar ocupar superCollider, habilitamos el plugin <strong>Sced</strong> en <em>Editar-&gt;Preferencias</em> en el panel de Gedit, y después podemos seleccionar <em>SuperCollider Mode</em> bajo <em>Herramientas</em> para empezar de mandar comandos a superCollider.</p>
 
 <p><strong>Ojo</strong>: versión 3.5.x de SuperCollider no tiene paginas de ayuda. Pero al parecer, el instalador de version 4.5.x no detecta la a Gedit. Pero se puede probar instalando primero 3.5.x, para que se instala el plugin de Gedit, y después versión 3.4.x, ya con el plugin de gedit instalado, utilizar un versión con ayuda.</p>
 
-<p><a href="http://sonidiario.tumblr.com/post/22488835468">más de lo mismo</a> | <a href="http://supercollider.sourceforge.net/">SuperCollider</a> | <a href="http://projects.gnome.org/gedit/">Gedit</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="http://sonidiario.tumblr.com/post/22488835468">más de lo mismo</a></td>
+      <td><a href="http://supercollider.sourceforge.net/">SuperCollider</a></td>
+      <td><a href="http://projects.gnome.org/gedit/">Gedit</a></td>
+    </tr>
+  </tbody>
+</table>
+
 ]]></content>
   </entry>
   
@@ -1062,262 +1038,258 @@ Ugg, aquella cosa.</p>
     <link href="http://ki-ai.org/blog/2012/11/25/audio-cat/"/>
     <updated>2012-11-25T19:41:00-06:00</updated>
     <id>http://ki-ai.org/blog/2012/11/25/audio-cat</id>
-    <content type="html"><![CDATA[<p><img class="pull-left" src="http://www.flujos.org/images/ncmpc-hora.png" title="&#34;La hora en la lista&#34;" alt="&#34;La hora en la lista&#34;">
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://www.flujos.org/images/ncmpc-hora.png" title="&#34;La hora en la lista&#34;" alt="&#34;La hora en la lista&#34;" />
 Para aquellos momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria con <strong>cat</strong>: <code>cat hora.ogg minuto.ogg &gt; horayminuto.ogg</code></p>
 
-<p>Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.</p>
-
-<!-- more -->
-
+<p>Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.
+<!-- more --></p>
 
 <p>Se puede utilizarlo en conjunto con un reproductor, por <a href="http://www.flujos.org/blog/Locucion_de_hora-mpdcron/" title="Con MPD">ejemplo con mpd</a>, para <em>automatizar</em> reproducción de la hora actual.</p>
 
-<figure class='code'><figcaption><span>audiocat.pl </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-<span class='line-number'>92</span>
-<span class='line-number'>93</span>
-<span class='line-number'>94</span>
-<span class='line-number'>95</span>
-<span class='line-number'>96</span>
-<span class='line-number'>97</span>
-<span class='line-number'>98</span>
-<span class='line-number'>99</span>
-<span class='line-number'>100</span>
-<span class='line-number'>101</span>
-<span class='line-number'>102</span>
-<span class='line-number'>103</span>
-<span class='line-number'>104</span>
-<span class='line-number'>105</span>
-<span class='line-number'>106</span>
-<span class='line-number'>107</span>
-<span class='line-number'>108</span>
-<span class='line-number'>109</span>
-<span class='line-number'>110</span>
-<span class='line-number'>111</span>
-<span class='line-number'>112</span>
-<span class='line-number'>113</span>
-<span class='line-number'>114</span>
-<span class='line-number'>115</span>
-<span class='line-number'>116</span>
-<span class='line-number'>117</span>
-<span class='line-number'>118</span>
-<span class='line-number'>119</span>
-<span class='line-number'>120</span>
-<span class='line-number'>121</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
-</span><span class='line'><span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
-</span><span class='line'><span class="nb">die</span> <span class="s">&quot;Not Enough arguments\n&quot;</span> <span class="k">if</span> <span class="nv">$#ARGV</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">my</span> <span class="nv">$horalib</span><span class="o">=</span><span class="s">&quot;/usr/share/spxcat/audio&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">my</span> <span class="nv">$fmt</span><span class="o">=</span><span class="s">&quot;ogg&quot;</span><span class="p">;</span> <span class="c1"># &quot;spx&quot; for speex</span>
-</span><span class='line'><span class="k">my</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">get_time</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">my</span> <span class="p">(</span><span class="nv">$outfile</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@ARGV</span><span class="p">;</span> <span class="c1">#get outfile from cmd line</span>
-</span><span class='line'><span class="k">my</span> <span class="nv">$cmdstr</span> <span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">my</span> <span class="nv">$cmdopts</span> <span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">my</span> <span class="nv">$hour_file</span> <span class="o">=</span> <span class="s">&quot;$horalib/HRS$hour.$fmt&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">my</span> <span class="nv">$min_file</span> <span class="o">=</span> <span class="s">&quot;$horalib/MIN$min.$fmt&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">print</span> <span class="s">&quot;[$hour_file:$min_file]\n&quot;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&quot;ogg&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nv">$cmdstr</span> <span class="o">=</span> <span class="s">&quot;ogg&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&quot;spx&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nv">$cmdstr</span> <span class="o">=</span> <span class="s">&quot;speex&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">ne</span> <span class="s">&quot; &quot;</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="o">&amp;</span><span class="n">oggcat</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">#hora en punto</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;/bin/cp&quot;</span><span class="p">,</span> <span class="nv">$hour_file</span><span class="p">,</span> <span class="nv">$outfile</span><span class="p">));</span>
-</span><span class='line'>        <span class="nb">system</span> <span class="p">(</span><span class="s">&quot;$cmd&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd ($?): $!&quot;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">sub </span><span class="nf">oggcat</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$out_size</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>    <span class="o">&amp;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$hour_file</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</span><span class='line'>    <span class="o">&amp;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$min_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">@tmps</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;/tmp/oggout0.wav&quot;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span><span class="p">);</span>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nv">@tmps</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'>       <span class="nv">$out_size</span> <span class="o">+=</span> <span class="o">-</span><span class="n">s</span> <span class="nv">$_</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;cant get out_size: $!\n&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="nb">open</span> <span class="n">IN1</span><span class="p">,</span> <span class="s">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="nb">open</span> <span class="n">IN2</span><span class="p">,</span> <span class="s">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout0.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="nb">open</span> <span class="n">OUT</span><span class="p">,</span> <span class="s">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file $outfile\n&quot;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1"># important info for headers</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$data_size</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">88</span><span class="p">;</span> <span class="c1"># 44 bits * 2 files </span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$fs_8</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">16</span><span class="p">;</span> <span class="c1"># 8 bits * 2 files</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1"># step through header</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$buffer</span><span class="p">;</span>
-</span><span class='line'>    <span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span> <span class="p">;</span>
-</span><span class='line'>    <span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
-</span><span class='line'>    <span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$fs_8</span><span class="p">);</span>
-</span><span class='line'>    <span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">32</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$data_size</span><span class="p">);</span>
-</span><span class='line'>    <span class="c1"># write out the rest</span>
-</span><span class='line'>    <span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="sr">&lt;IN1&gt;</span><span class="p">;</span>
-</span><span class='line'>    <span class="nb">seek</span> <span class="n">IN2</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="sr">&lt;IN2&gt;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="nb">close</span> <span class="n">IN1</span><span class="p">;</span>
-</span><span class='line'>    <span class="nb">close</span> <span class="n">IN2</span><span class="p">;</span>
-</span><span class='line'>    <span class="nb">close</span> <span class="n">OUT</span><span class="p">;</span>
-</span><span class='line'>    <span class="o">&amp;</span><span class="n">ogg_enc</span><span class="p">(</span><span class="nv">$outfile</span><span class="p">);</span>
-</span><span class='line'>    <span class="nb">unlink</span> <span class="nb">glob</span> <span class="s">&quot;/tmp/oggout*&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">sub </span><span class="nf">ogg_dec</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$i</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$out</span> <span class="o">=</span> <span class="s">&quot;/tmp/oggout&quot;</span> <span class="o">.</span> <span class="nv">$i</span> <span class="o">.</span> <span class="s">&quot;.wav&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&#39;ogg&#39;</span><span class="p">){</span><span class="nv">$out</span> <span class="o">=</span> <span class="s">&quot;-o&quot;</span><span class="o">.</span> <span class="nv">$out</span><span class="p">}</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="s">&quot;dec&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="nv">$file</span><span class="p">,</span> <span class="nv">$out</span><span class="p">));</span>
-</span><span class='line'>    <span class="k">print</span> <span class="s">&quot;cmd: $string\n&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="s">&quot;-|&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="nb">die</span> <span class="s">&quot;Cannot fork $!&quot;</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nb">exec</span> <span class="s">&quot;$string&quot;</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd: $!&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="sr">&lt;PIPE&gt;</span><span class="p">){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">sub </span><span class="nf">ogg_enc</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&#39;ogg&#39;</span><span class="p">){</span><span class="nv">$file</span> <span class="o">=</span> <span class="s">&quot;-o&quot;</span><span class="o">.</span> <span class="nv">$file</span><span class="p">}</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="s">&quot;enc&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout.wav&quot;</span><span class="p">,</span> <span class="nv">$file</span><span class="p">));</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="s">&quot;-|&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="nb">die</span> <span class="s">&quot;Cannot fork $!&quot;</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nb">exec</span> <span class="s">&quot;$string&quot;</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd: $!&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="sr">&lt;PIPE&gt;</span><span class="p">){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">sub </span><span class="nf">get_time</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">@timeData</span> <span class="o">=</span> <span class="nb">localtime</span><span class="p">(</span><span class="nb">time</span><span class="p">);</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$min</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-</span><span class='line'>    <span class="k">my</span> <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nv">$hour</span> <span class="ow">eq</span> <span class="s">&quot;0&quot;</span><span class="p">)</span> <span class="p">{</span><span class="nv">$hour</span> <span class="o">=</span> <span class="s">&quot;12&quot;</span><span class="p">};</span>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>       <span class="k">if</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="nv">$_</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span><span class="nv">$_</span> <span class="o">=</span> <span class="s">&quot;0&quot;</span> <span class="o">.</span> <span class="nv">$_</span><span class="p">};</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">eq</span> <span class="s">&quot;00&quot;</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$hour</span> <span class="o">.</span> <span class="s">&quot;_0&quot;</span><span class="p">;</span>
-</span><span class='line'>        <span class="nv">$min</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">return</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>audiocat.pl </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+<span class="line-number">49</span>
+<span class="line-number">50</span>
+<span class="line-number">51</span>
+<span class="line-number">52</span>
+<span class="line-number">53</span>
+<span class="line-number">54</span>
+<span class="line-number">55</span>
+<span class="line-number">56</span>
+<span class="line-number">57</span>
+<span class="line-number">58</span>
+<span class="line-number">59</span>
+<span class="line-number">60</span>
+<span class="line-number">61</span>
+<span class="line-number">62</span>
+<span class="line-number">63</span>
+<span class="line-number">64</span>
+<span class="line-number">65</span>
+<span class="line-number">66</span>
+<span class="line-number">67</span>
+<span class="line-number">68</span>
+<span class="line-number">69</span>
+<span class="line-number">70</span>
+<span class="line-number">71</span>
+<span class="line-number">72</span>
+<span class="line-number">73</span>
+<span class="line-number">74</span>
+<span class="line-number">75</span>
+<span class="line-number">76</span>
+<span class="line-number">77</span>
+<span class="line-number">78</span>
+<span class="line-number">79</span>
+<span class="line-number">80</span>
+<span class="line-number">81</span>
+<span class="line-number">82</span>
+<span class="line-number">83</span>
+<span class="line-number">84</span>
+<span class="line-number">85</span>
+<span class="line-number">86</span>
+<span class="line-number">87</span>
+<span class="line-number">88</span>
+<span class="line-number">89</span>
+<span class="line-number">90</span>
+<span class="line-number">91</span>
+<span class="line-number">92</span>
+<span class="line-number">93</span>
+<span class="line-number">94</span>
+<span class="line-number">95</span>
+<span class="line-number">96</span>
+<span class="line-number">97</span>
+<span class="line-number">98</span>
+<span class="line-number">99</span>
+<span class="line-number">100</span>
+<span class="line-number">101</span>
+<span class="line-number">102</span>
+<span class="line-number">103</span>
+<span class="line-number">104</span>
+<span class="line-number">105</span>
+<span class="line-number">106</span>
+<span class="line-number">107</span>
+<span class="line-number">108</span>
+<span class="line-number">109</span>
+<span class="line-number">110</span>
+<span class="line-number">111</span>
+<span class="line-number">112</span>
+<span class="line-number">113</span>
+<span class="line-number">114</span>
+<span class="line-number">115</span>
+<span class="line-number">116</span>
+<span class="line-number">117</span>
+<span class="line-number">118</span>
+<span class="line-number">119</span>
+<span class="line-number">120</span>
+<span class="line-number">121</span>
+</pre></td><td class="code"><pre><code class="perl"><span class="line"><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+</span><span class="line"><span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+</span><span class="line"><span class="nb">die</span> <span class="s">&quot;Not Enough arguments\n&quot;</span> <span class="k">if</span> <span class="nv">$#ARGV</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">my</span> <span class="nv">$horalib</span><span class="o">=</span><span class="s">&quot;/usr/share/spxcat/audio&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="k">my</span> <span class="nv">$fmt</span><span class="o">=</span><span class="s">&quot;ogg&quot;</span><span class="p">;</span> <span class="c1"># &quot;spx&quot; for speex</span>
+</span><span class="line"><span class="k">my</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">get_time</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">my</span> <span class="p">(</span><span class="nv">$outfile</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@ARGV</span><span class="p">;</span> <span class="c1">#get outfile from cmd line</span>
+</span><span class="line"><span class="k">my</span> <span class="nv">$cmdstr</span> <span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="k">my</span> <span class="nv">$cmdopts</span> <span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="k">my</span> <span class="nv">$hour_file</span> <span class="o">=</span> <span class="s">&quot;$horalib/HRS$hour.$fmt&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="k">my</span> <span class="nv">$min_file</span> <span class="o">=</span> <span class="s">&quot;$horalib/MIN$min.$fmt&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="k">print</span> <span class="s">&quot;[$hour_file:$min_file]\n&quot;</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&quot;ogg&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">    <span class="nv">$cmdstr</span> <span class="o">=</span> <span class="s">&quot;ogg&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line"><span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&quot;spx&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">    <span class="nv">$cmdstr</span> <span class="o">=</span> <span class="s">&quot;speex&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line"><span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">ne</span> <span class="s">&quot; &quot;</span><span class="p">)</span>
+</span><span class="line">    <span class="p">{</span>
+</span><span class="line">        <span class="o">&amp;</span><span class="n">oggcat</span><span class="p">;</span>
+</span><span class="line">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">#hora en punto</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;/bin/cp&quot;</span><span class="p">,</span> <span class="nv">$hour_file</span><span class="p">,</span> <span class="nv">$outfile</span><span class="p">));</span>
+</span><span class="line">        <span class="nb">system</span> <span class="p">(</span><span class="s">&quot;$cmd&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd ($?): $!&quot;</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="k">sub </span><span class="nf">oggcat</span> <span class="p">{</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$out_size</span><span class="p">;</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class="line">    <span class="o">&amp;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$hour_file</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class="line">    <span class="o">&amp;</span><span class="n">ogg_dec</span><span class="p">(</span><span class="nv">$min_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">my</span> <span class="nv">@tmps</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;/tmp/oggout0.wav&quot;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span><span class="p">);</span>
+</span><span class="line">    <span class="k">for</span> <span class="p">(</span><span class="nv">@tmps</span><span class="p">)</span>
+</span><span class="line">    <span class="p">{</span>
+</span><span class="line">
+</span><span class="line">       <span class="nv">$out_size</span> <span class="o">+=</span> <span class="o">-</span><span class="n">s</span> <span class="nv">$_</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;cant get out_size: $!\n&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line">    <span class="nb">open</span> <span class="n">IN1</span><span class="p">,</span> <span class="s">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout1.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="nb">open</span> <span class="n">IN2</span><span class="p">,</span> <span class="s">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout0.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file tmpfile: $!\n&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="nb">open</span> <span class="n">OUT</span><span class="p">,</span> <span class="s">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout.wav&quot;</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&quot;Can&#39;t open file $outfile\n&quot;</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line">    <span class="c1"># important info for headers</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$data_size</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">88</span><span class="p">;</span> <span class="c1"># 44 bits * 2 files</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$fs_8</span> <span class="o">=</span> <span class="nv">$out_size</span> <span class="o">-</span> <span class="mi">16</span><span class="p">;</span> <span class="c1"># 8 bits * 2 files</span>
+</span><span class="line">
+</span><span class="line">    <span class="c1"># step through header</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class="line">    <span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span> <span class="p">;</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class="line">    <span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">4</span><span class="p">;</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$fs_8</span><span class="p">);</span>
+</span><span class="line">    <span class="nb">read</span> <span class="n">IN1</span><span class="p">,</span> <span class="nv">$buffer</span><span class="p">,</span><span class="mi">32</span><span class="p">;</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">OUT</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">OUT</span> <span class="nb">pack</span><span class="p">(</span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="nv">$data_size</span><span class="p">);</span>
+</span><span class="line">    <span class="c1"># write out the rest</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="sr">&lt;IN1&gt;</span><span class="p">;</span>
+</span><span class="line">    <span class="nb">seek</span> <span class="n">IN2</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">OUT</span> <span class="nv">$_</span> <span class="k">while</span> <span class="sr">&lt;IN2&gt;</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line">    <span class="nb">close</span> <span class="n">IN1</span><span class="p">;</span>
+</span><span class="line">    <span class="nb">close</span> <span class="n">IN2</span><span class="p">;</span>
+</span><span class="line">    <span class="nb">close</span> <span class="n">OUT</span><span class="p">;</span>
+</span><span class="line">    <span class="o">&amp;</span><span class="n">ogg_enc</span><span class="p">(</span><span class="nv">$outfile</span><span class="p">);</span>
+</span><span class="line">    <span class="nb">unlink</span> <span class="nb">glob</span> <span class="s">&quot;/tmp/oggout*&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="k">sub </span><span class="nf">ogg_dec</span> <span class="p">{</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$i</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$out</span> <span class="o">=</span> <span class="s">&quot;/tmp/oggout&quot;</span> <span class="o">.</span> <span class="nv">$i</span> <span class="o">.</span> <span class="s">&quot;.wav&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&#39;ogg&#39;</span><span class="p">){</span><span class="nv">$out</span> <span class="o">=</span> <span class="s">&quot;-o&quot;</span><span class="o">.</span> <span class="nv">$out</span><span class="p">}</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="s">&quot;dec&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="nv">$file</span><span class="p">,</span> <span class="nv">$out</span><span class="p">));</span>
+</span><span class="line">    <span class="k">print</span> <span class="s">&quot;cmd: $string\n&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="s">&quot;-|&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="nb">die</span> <span class="s">&quot;Cannot fork $!&quot;</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
+</span><span class="line">    <span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class="line">        <span class="nb">exec</span> <span class="s">&quot;$string&quot;</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd: $!&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class="line">    <span class="k">for</span> <span class="p">(</span><span class="sr">&lt;PIPE&gt;</span><span class="p">){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
+</span><span class="line">    <span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="k">sub </span><span class="nf">ogg_enc</span> <span class="p">{</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span><span class="line">    <span class="k">if</span> <span class="p">(</span><span class="nv">$fmt</span> <span class="ow">eq</span> <span class="s">&#39;ogg&#39;</span><span class="p">){</span><span class="nv">$file</span> <span class="o">=</span> <span class="s">&quot;-o&quot;</span><span class="o">.</span> <span class="nv">$file</span><span class="p">}</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$cmdstr</span><span class="o">.</span> <span class="s">&quot;enc&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$string</span> <span class="o">=</span> <span class="nb">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="s">&quot;/tmp/oggout.wav&quot;</span><span class="p">,</span> <span class="nv">$file</span><span class="p">));</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="nb">open</span> <span class="n">PIPE</span><span class="p">,</span> <span class="s">&quot;-|&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="nb">die</span> <span class="s">&quot;Cannot fork $!&quot;</span> <span class="k">unless</span> <span class="nb">defined</span> <span class="nv">$pid</span><span class="p">;</span>
+</span><span class="line">    <span class="k">unless</span> <span class="p">(</span> <span class="nv">$pid</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class="line">        <span class="nb">exec</span> <span class="s">&quot;$string&quot;</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Cannot open pipe to $cmd: $!&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class="line">    <span class="k">for</span> <span class="p">(</span><span class="sr">&lt;PIPE&gt;</span><span class="p">){</span><span class="nb">push</span><span class="p">(</span><span class="nv">@pipe</span><span class="p">,</span><span class="nv">$_</span><span class="p">);</span> <span class="p">}</span>
+</span><span class="line">    <span class="k">return</span> <span class="nv">@pipe</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="k">sub </span><span class="nf">get_time</span>
+</span><span class="line"><span class="p">{</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">@timeData</span> <span class="o">=</span> <span class="nb">localtime</span><span class="p">(</span><span class="nb">time</span><span class="p">);</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$min</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$timeData</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</span><span class="line">    <span class="k">if</span><span class="p">(</span><span class="nv">$hour</span> <span class="ow">eq</span> <span class="s">&quot;0&quot;</span><span class="p">)</span> <span class="p">{</span><span class="nv">$hour</span> <span class="o">=</span> <span class="s">&quot;12&quot;</span><span class="p">};</span>
+</span><span class="line">    <span class="k">for</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">       <span class="k">if</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="nv">$_</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span><span class="nv">$_</span> <span class="o">=</span> <span class="s">&quot;0&quot;</span> <span class="o">.</span> <span class="nv">$_</span><span class="p">};</span>
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line">    <span class="k">if</span> <span class="p">(</span><span class="nv">$min</span> <span class="ow">eq</span> <span class="s">&quot;00&quot;</span><span class="p">)</span>
+</span><span class="line">    <span class="p">{</span>
+</span><span class="line">        <span class="nv">$hour</span> <span class="o">=</span> <span class="nv">$hour</span> <span class="o">.</span> <span class="s">&quot;_0&quot;</span><span class="p">;</span>
+</span><span class="line">        <span class="nv">$min</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line">    <span class="k">return</span> <span class="p">(</span><span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">);</span>
+</span><span class="line"><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 ]]></content>
   </entry>
@@ -1327,36 +1299,30 @@ Para aquellos momentos cuando es necesario generar un audio en base de dos otros
     <link href="http://ki-ai.org/blog/2012/11/13/plugin-audio-ikiwiki/"/>
     <updated>2012-11-13T13:59:00-06:00</updated>
     <id>http://ki-ai.org/blog/2012/11/13/plugin-audio-ikiwiki</id>
-    <content type="html"><![CDATA[<p><img class="right" src="http://flujos.org/media/360player.png" title="Foto de Ejemplo" >
+    <content type="html"><![CDATA[<p><img class="right" src="http://flujos.org/media/360player.png" title="Foto de Ejemplo" />
 Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encuentra en <a href="https://github.com/kyv/ikiwiki">nuestra bifurcación de ikiwiki</a>. El <em>plugin</em> vive en <a href="https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm">la carpeta Ikiwiki/Plugin</a>. Pero depende también de <a href="https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki" title="360° Player">un <em>underlay</em> en que hemos copiado el 360° player</a> desde el proyecto <a href="http://www.schillmania.com/projects/soundmanager2/" title="SoundManager2">soundmanager2</a>.</p>
 
 <p>Para ver el <em>plugin</em> en acción visita <a href="http://flujos.org">flujos.org</a>.</p>
 
 <p>Unos ejemplos de sintaxis:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio http://radio.flujos.org:8000/rockola.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;La Rockola&quot;</span><span class="o">]]</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="o">[[</span>!audio http://radio.flujos.org:8000/rockola.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;La Rockola&quot;</span><span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>o para un fichero hospedado en la sistema de ficheros:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!audio /ruta/a/audio.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;Mi audio&quot;</span><span class="o">]]</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="o">[[</span>!audio /ruta/a/audio.oga <span class="nv">text</span><span class="o">=</span><span class="s2">&quot;Mi audio&quot;</span><span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>Aparte tenemos una plantilla para hacer un listado automático de audios <em>inline</em>. Hay un <a href="http://yaxhil.flujos.org/audio/biz_band/" title="Biz Band">ejemplo de su funcionamiento en la pagina de radio yaxhil</a> y la utilizamos conjuntamente con el <a href="http://ikiwiki.info/plugins/inline/" title="Inline Plugin">plugin <em>inline</em> de ikiwiki</a>:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[[</span>!inline  <span class="nv">template</span><span class="o">=</span><span class="s2">&quot;inlineaudio&quot;</span> <span class="nv">pages</span><span class="o">=</span><span class="s2">&quot;audio/biz_band/* and !*/Discussion&quot;</span> <span class="nv">show</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="o">]]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="o">[[</span>!inline  <span class="nv">template</span><span class="o">=</span><span class="s2">&quot;inlineaudio&quot;</span> <span class="nv">pages</span><span class="o">=</span><span class="s2">&quot;audio/biz_band/* and !*/Discussion&quot;</span> <span class="nv">show</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <!-- more -->
-
 
 <p>Para su instalación copia estos ficheros de nuestro repo a sus equivalentes carpetas en su instalación de ikiwiki. O, alternativamente, a su código fuente de ikiwiki y recompila.</p>
 ]]></content>
@@ -1367,7 +1333,7 @@ Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encue
     <link href="http://ki-ai.org/blog/2012/11/08/radio-jatarishun/"/>
     <updated>2012-11-08T15:21:00-06:00</updated>
     <id>http://ki-ai.org/blog/2012/11/08/radio-jatarishun</id>
-    <content type="html"><![CDATA[<p><img class="pull-left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" ></p>
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" /></p>
 
 <p>En Julio de 2004 tuvo lugar en la ciudad de Quito, Ecuador el primer Foro Social de Las Américas. Aparte de ello, y como moscas a la carne, una seria de otras foros brotaron a su alrededor, como era la Foro Indígena, Foro de Diversidad Sexual, en fin. Algunos de las moscas atrevieron montar una cabina de radio en un salón de escuela que transmitía por Internet mientras el Foro Social. Se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a> (<em>levantamiento</em> en Quechua ). Una de las moscas, a volver a su casa, rescató lo que se pudo de lo que se grabó, lo mezclaba con un poco de la música que ambientaba a Quito por aquellas fechas, y el resultado era un disco que también se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a>. Para no largar mucho el cuento, aquella mosca perdió el disco, y el lugar donde estaba hospedado en el Internet también desaprecio, pero otra mosca, o mas bien tenia que haber sido una ratóncita, que siempre guardaba todo de por si un día hacia falta, ahí la tenia cerrado en una caja.</p>
 
@@ -1375,98 +1341,59 @@ Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encue
 
 <!-- more -->
 
-
-<h2>Escucha</h2>
+<h2 id="escucha">Escucha</h2>
 
 <p><strong>Ojo</strong>: tarda un poco para cargar los audio, los que se ponen blancitos el control de volumen ya se puede escuchar. <strong>Ojo2</strong>: estan en formato ogg-vorbis, deben de reproducirse en firefox o chromimun sin problemas.</p>
 
-<h4>01 Democracia</h4>
+<h4 id="democracia">01 Democracia</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/01_Democracia.oga" /></audio>
 
-<p><audio controls><source src='http://flujos.org/media/jatarishun/01_Democracia.oga'></audio></p>
+<h4 id="bienvenidos">02 Bienvenidos</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/02_Bienvenidos.oga" /></audio>
 
-<h4>02 Bienvenidos</h4>
+<h4 id="referndum-del-gas">03 Referéndum del Gas</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/03_Referéndum_del_Gas.oga" /></audio>
 
-<p><audio controls><source src='http://flujos.org/media/jatarishun/02_Bienvenidos.oga'></audio></p>
+<h4 id="educacin-neoliberal">04 Educación Neoliberal</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/04_Educación_Neoliberal.oga" /><source src="" /></audio>
 
-<h4>03 Referéndum del Gas</h4>
+<h4 id="y-que-del-foro">05 Y Que del Foro</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/05_Y_Que_del_Foro.oga" /><source src="" /></audio>
 
-<p><audio controls><source src='http://flujos.org/media/jatarishun/03_Referéndum_del_Gas.oga'></audio></p>
-
-<h4>04 Educación Neoliberal</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/04_Educación_Neoliberal.oga'><source src=''></audio></p>
-
-<h4>05 Y Que del Foro</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/05_Y_Que_del_Foro.oga'><source src=''></audio></p>
-
-<h4>06 Estudiantes de las América</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/06_Estudiantes_de_las_Américas.oga'><source src=''></audio></p>
-
-<h4>07 Ciencia y Tecnología</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/07_Ciencia_y_Tecnología.oga'></audio></p>
-
-<h4>08 Modelo Económico</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/08_Modelo_Económico.oga'><source src=''></audio></p>
-
-<h4>09 Unidad Americana</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/09_Unidad_Americana.oga'><source src=''></audio></p>
-
-<h4>10 Centro de Medios</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/10_Centro_de_Medios.oga'><source src=''></audio></p>
-
-<h4>11 Plan Patriota</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/11_Plan_Patriota.oga'><source src=''></audio></p>
-
-<h4>12 Plan Colombia</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/12_Plan_Colombia.oga'><source src=''></audio></p>
-
-<h4>13 Hoja de Coca</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/13_Hoja_de_Coca.oga'><source src=''></audio></p>
-
-<h4>14 Movimiento de Mujeres</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/14_Movimiento_de_Mujeres.oga'></audio></p>
-
-<h4>15 Género y Participación</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/15_Género_y_Participación.oga'><source src=''></audio></p>
-
-<h4>16 Chile</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/16_Chile.oga'></audio></p>
-
-<h4>17 Bendición</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/17_Bendición.oga'><source src=''></audio></p>
-
-<h4>18 LGBT</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/18_LGBT.oga'><source src=''></audio></p>
-
-<h4>19 Cumbia Quechua</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/19_Cumbia_Quechua.oga'><source src=''></audio></p>
-
-<h4>20 Radio Jatarishun</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/20_Radio_Jatarishun.oga'><source src=''></audio></p>
-
-<h4>21 No Tengas Mas Temor</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/21_No_Tengas_Mas_Temor.oga'><source src=''></audio></p>
-
-<h4>22 Así Es América</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/22_Así_Es_América.oga'><source src=''></audio></p>
+<h4 id="estudiantes-de-las-amrica">06 Estudiantes de las América</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/06_Estudiantes_de_las_Américas.oga" /><source src="" /></audio>
+<p>#### 07 Ciencia y Tecnología
+<audio controls=""><source src="http://flujos.org/media/jatarishun/07_Ciencia_y_Tecnología.oga" /></audio>
+#### 08 Modelo Económico
+<audio controls=""><source src="http://flujos.org/media/jatarishun/08_Modelo_Económico.oga" /><source src="" /></audio>
+#### 09 Unidad Americana
+<audio controls=""><source src="http://flujos.org/media/jatarishun/09_Unidad_Americana.oga" /><source src="" /></audio>
+#### 10 Centro de Medios
+<audio controls=""><source src="http://flujos.org/media/jatarishun/10_Centro_de_Medios.oga" /><source src="" /></audio>
+#### 11 Plan Patriota
+<audio controls=""><source src="http://flujos.org/media/jatarishun/11_Plan_Patriota.oga" /><source src="" /></audio>
+#### 12 Plan Colombia
+<audio controls=""><source src="http://flujos.org/media/jatarishun/12_Plan_Colombia.oga" /><source src="" /></audio>
+#### 13 Hoja de Coca
+<audio controls=""><source src="http://flujos.org/media/jatarishun/13_Hoja_de_Coca.oga" /><source src="" /></audio>
+#### 14 Movimiento de Mujeres
+<audio controls=""><source src="http://flujos.org/media/jatarishun/14_Movimiento_de_Mujeres.oga" /></audio>
+#### 15 Género y Participación
+<audio controls=""><source src="http://flujos.org/media/jatarishun/15_Género_y_Participación.oga" /><source src="" /></audio>
+#### 16 Chile
+<audio controls=""><source src="http://flujos.org/media/jatarishun/16_Chile.oga" /></audio>
+#### 17 Bendición
+<audio controls=""><source src="http://flujos.org/media/jatarishun/17_Bendición.oga" /><source src="" /></audio>
+#### 18 LGBT
+<audio controls=""><source src="http://flujos.org/media/jatarishun/18_LGBT.oga" /><source src="" /></audio>
+#### 19 Cumbia Quechua
+<audio controls=""><source src="http://flujos.org/media/jatarishun/19_Cumbia_Quechua.oga" /><source src="" /></audio>
+#### 20 Radio Jatarishun
+<audio controls=""><source src="http://flujos.org/media/jatarishun/20_Radio_Jatarishun.oga" /><source src="" /></audio>
+#### 21 No Tengas Mas Temor
+<audio controls=""><source src="http://flujos.org/media/jatarishun/21_No_Tengas_Mas_Temor.oga" /><source src="" /></audio>
+#### 22 Así Es América
+<audio controls=""><source src="http://flujos.org/media/jatarishun/22_Así_Es_América.oga" /><source src="" /></audio></p>
 
 <p><strong>pd</strong>, La fecha en la portada del disco, en lugar de decir <em>26-30 de august</em> debe de ser <em>26-30 de julio</em>. Digamos que es doble error histórico, tanto temporal como lingüística.</p>
 ]]></content>
@@ -1479,14 +1406,13 @@ Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encue
     <id>http://ki-ai.org/blog/2012/11/07/archlinux-en-macbook</id>
     <content type="html"><![CDATA[<p>Anotamos aquí lo que aprendimos al instalar <a href="https://www.archlinux.org" title="Archlinux">archlinux</a> en un <strong>macbook</strong>. Aun que en realidad no es cosa de otro mundo, la documentación es un poco ambiguo y muchas de las recomendaciones que se encuentran en el Internet resuelvan la problema de alguna manera. Pero para resolver el problema de la mejor manera posible, tuvimos que tejer la tapete de parches cortados de varias fuentes.</p>
 
-<p><img class="right" src="http://www.rodsbooks.com/refind/refind.png" width="600" title="Menú de Arranque" ></p>
+<p><img class="right" src="http://www.rodsbooks.com/refind/refind.png" width="600" title="Menú de Arranque" /></p>
 
 <p>Para quienes no quieren leer hasta en final, terminamos con un <em>dualboot</em> <strong>osx</strong> y <a href="https://www.archlinux.org" title="Archlinux">archlinux</a>, y, gracias a <a href="http://www.rodsbooks.com/refind/" title="rEFInd">rEFInd</a>, arrancamos a linux sin necesidad ni de emulación del <em><a href="http://es.wikipedia.org/wiki/BIOS" title="BIOS">BIOS</a></em> ni de <em><a href="http://es.wikipedia.org/wiki/Grub">GRUB</a></em>.</p>
 
 <!-- more -->
 
-
-<h2>¿Problema?</h2>
+<h2 id="problema">¿Problema?</h2>
 
 <p>En realidad el macbook no es tan distinto de cualquier PC, es un Procesador <em>intel dual core</em>. Ya no estamos en los remansos oscuros de los días cuando necesitábamos un version especial de linux y la sistema de aplicaciones que la orbitan. Lo que queda de diferencia al nivel de la sistema es el reemplazo en los mac del <em><a href="http://es.wikipedia.org/wiki/BIOS" title="BIOS">BIOS</a></em> con una cosa que si llama <em><a href="http://es.wikipedia.org/wiki/EFI">EFI</a></em>.</p>
 
@@ -1496,66 +1422,61 @@ Hace poco tiempo hicimos un <em>plugin</em> de audio para ikiwiki. Esto se encue
 
 <p>Presentamos los pasos que siguimos.</p>
 
-<h2>Solución</h2>
+<h2 id="solucin">Solución</h2>
 
 <p>El primer paso es seguir el proceso descrito en el <a href="https://wiki.archlinux.org/index.php/Official_Arch_Linux_Install_Guide" title="Guía de Instalación de archlinux">wiki de arch</a>.</p>
 
-<p>Al llegar al <a href="https://wiki.archlinux.org/index.php/Installation_Guide_(Espa%C3%B1ol)#Particiones" title="Particiones">paso de los particiones</a> es necesario <em>no</em> utilizar los herramientas tradicionales (fdisk, cfdisk, etc) los cuales utilizan el tablas de partición <em><a href="http://es.wikipedia.org/wiki/MBR">MBR</a> (Master Boot Record)</em> . En su lugar utilizamos los herramientas de <strong>GPT fdisk</strong> (gdisk, cgdisk, etc), que trabajan con la tabla de particiones <em><a href="http://es.wikipedia.org/wiki/Tabla_de_particiones_GUID">GPT</a></em> (tambien conocido como <em><a href="http://es.wikipedia.org/wiki/GUID">Globally Unique Identifier (GUID</a>)</em>. <em><a href="http://es.wikipedia.org/wiki/Tabla_de_particiones_GUID">GPT</a></em> tiene varias venajes, por ejemplo un máximo de 129 particiones en comparación de los 4 de <em><a href="http://es.wikipedia.org/wiki/MBR">MBR</a></em>, su principal limitación es que los sistemas operativas antiguas no tiene soporte para ello. Aparte del elección de <em><a href="http://es.wikipedia.org/wiki/Tabla_de_particiones_GUID">GPT</a></em>, haz los particiones según se acostumbra hacerlo. Pero toma nota de donde viva el <em><a href="http://es.wikipedia.org/wiki/EFI">EFI</a></em> (en el macbook a la mano esta en <strong>/dev/sda1</strong>). Puede ser de utilidad <a href="https://wiki.archlinux.org/index.php/Macbook#EFI_2" title="EFI y cgdisk">la pagina del wiki de arch sobre macbook</a>.</p>
+<p>Al llegar al <a href="https://wiki.archlinux.org/index.php/Installation_Guide_(Espa%C3%B1ol\)#Particiones" title="Particiones">paso de los particiones</a> es necesario <em>no</em> utilizar los herramientas tradicionales (fdisk, cfdisk, etc) los cuales utilizan el tablas de partición <em><a href="http://es.wikipedia.org/wiki/MBR">MBR</a> (Master Boot Record)</em> . En su lugar utilizamos los herramientas de <strong>GPT fdisk</strong> (gdisk, cgdisk, etc), que trabajan con la tabla de particiones <em><a href="http://es.wikipedia.org/wiki/Tabla_de_particiones_GUID">GPT</a></em> (tambien conocido como <em><a href="http://es.wikipedia.org/wiki/GUID">Globally Unique Identifier (GUID</a>)</em>. <em><a href="http://es.wikipedia.org/wiki/Tabla_de_particiones_GUID">GPT</a></em> tiene varias venajes, por ejemplo un máximo de 129 particiones en comparación de los 4 de <em><a href="http://es.wikipedia.org/wiki/MBR">MBR</a></em>, su principal limitación es que los sistemas operativas antiguas no tiene soporte para ello. Aparte del elección de <em><a href="http://es.wikipedia.org/wiki/Tabla_de_particiones_GUID">GPT</a></em>, haz los particiones según se acostumbra hacerlo. Pero toma nota de donde viva el <em><a href="http://es.wikipedia.org/wiki/EFI">EFI</a></em> (en el macbook a la mano esta en <strong>/dev/sda1</strong>). Puede ser de utilidad <a href="https://wiki.archlinux.org/index.php/Macbook#EFI_2" title="EFI y cgdisk">la pagina del wiki de arch sobre macbook</a>.</p>
 
-<p><span class='pullquote-right' data-pullquote='para arrancar linux en el macbook no necesitamos de grub.'>
-Llegando al final, en el seccion <a href="https://wiki.archlinux.org/index.php/Installation_Guide_(Espa%C3%B1ol)#Instalaci.C3.B3n_del_gestor_de_arranque">Instalación del gestor de arranque</a> veamos que hay un paquete que grub hecho especialmente para utilizar <a href="http://es.wikipedia.org/wiki/EFI">EFI</a>. Pero en realidad para arrancar linux en el macbook no necesitamos de grub. Así que se puede saltar este paso y <a href="https://bbs.archlinux.org/viewtopic.php?pid=1151686#p1151686" title="Arrancar directamente con rEFInd">en su lugar vamos a copiar rEFInd al partición de EFI</a>.
+<p><span class="pullquote-right" data-pullquote="para arrancar linux en el macbook no necesitamos de grub.">
+Llegando al final, en el seccion <a href="https://wiki.archlinux.org/index.php/Installation_Guide_(Espa%C3%B1ol\)#Instalaci.C3.B3n_del_gestor_de_arranque">Instalación del gestor de arranque</a> veamos que hay un paquete que grub hecho especialmente para utilizar <a href="http://es.wikipedia.org/wiki/EFI">EFI</a>. Pero en realidad para arrancar linux en el macbook no necesitamos de grub. Así que se puede saltar este paso y <a href="https://bbs.archlinux.org/viewtopic.php?pid=1151686#p1151686" title="Arrancar directamente con rEFInd">en su lugar vamos a copiar rEFInd al partición de EFI</a>.
 </span></p>
 
 <p>Primer <a href="http://www.rodsbooks.com/refind/getting.html" title="Descargar rEFInd">obtenga rEFInd</a> y descomprimir en <em>zip</em>. Luego montar el <em><a href="http://es.wikipedia.org/wiki/EFI">EFI</a></em> del mac en algun lugar. Como a este punto en el instalación de archlinux tenemos el <em>raiz</em> de la sistema montado en <strong>/mnt</strong> y <strong>/boot</strong> montado en <strong>/mnt/boot</strong> vamos a montar el <em><a href="http://es.wikipedia.org/wiki/EFI">EFI</a></em> bajo <strong>/mnt/boot/efi</strong></p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># mkdir /mnt/boot/efi
-</span><span class='line'># mount LABEL=EFI /mnt/boot/efi</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line"># mkdir /mnt/boot/efi
+</span><span class="line"># mount LABEL=EFI /mnt/boot/efi</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>Ahora debe de existir la carpeta <em><a href="http://es.wikipedia.org/wiki/EFI">EFI</a></em> bajo <strong>/mnt/boot/efi</strong> y profundizando un nivel mas veremos la carpeta <em>APPLE</em> (<strong>/mnt/boot/efi/EFI/APPLE</strong>). Para que el macbook detecta de forma automática nuestra linux, vamos a crear la carpeta <strong>EFI/BOOT</strong> y dentro de ello vamos a copiar rEFInd.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># mkdir /mnt/boot/efi/EFI/BOOT
-</span><span class='line'># cd /ruta/a/refind-bin-${numero_de_version}
-</span><span class='line'># cp -r refind/* /mnt/boot/efi/EFI/BOOT/
-</span><span class='line'># cd /mnt/boot/efi/EFI/BOOT/
-</span><span class='line'># mv refind.conf-sample refind.conf
-</span><span class='line'># mv refind_x64.efi BOOTX64.efi</span></code></pre></td></tr></table></div></figure>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class=""><span class="line"># mkdir /mnt/boot/efi/EFI/BOOT
+</span><span class="line"># cd /ruta/a/refind-bin-${numero_de_version}
+</span><span class="line"># cp -r refind/* /mnt/boot/efi/EFI/BOOT/
+</span><span class="line"># cd /mnt/boot/efi/EFI/BOOT/
+</span><span class="line"># mv refind.conf-sample refind.conf
+</span><span class="line"># mv refind_x64.efi BOOTX64.efi</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-
-<p>Abrimos refind.conf y quitamos el gato (<em>#</em>) del opción &#8221;<em>scan_all_linux_kernels</em>&#8221;. Y al final podemos limpiar la carpeta <em>BOOT</em>. Si nuestra mac es 64 bit podemos borrar los ficheros con <em>ia32</em> en el nombre.</p>
+<p>Abrimos refind.conf y quitamos el gato (<em>#</em>) del opción “<em>scan_all_linux_kernels</em>”. Y al final podemos limpiar la carpeta <em>BOOT</em>. Si nuestra mac es 64 bit podemos borrar los ficheros con <em>ia32</em> en el nombre.</p>
 
 <p>Finalmente creamos el fichero <strong>/boot/refind_linux.conf</strong> con los variables de arranque, por ejemplo:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># echo '"Default" "root=UUID=54b939d6-b59d-4dcb-8311-4b612d2c26dd ro"' > /boot/refind_linux.conf</span></code></pre></td></tr></table></div></figure>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line"># echo '"Default" "root=UUID=54b939d6-b59d-4dcb-8311-4b612d2c26dd ro"' &gt; /boot/refind_linux.conf</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-
-<p>Ahora se puede volver al instalación oficial de archlinux, empezando con la <a href="https://wiki.archlinux.org/index.php/Installation_Guide_(Espa%C3%B1ol)#Configuraci.C3.B3n_del_sistema" title="Volver a Instalación de Arch">configuración del sitema</a> y seguir lo hasta el final.</p>
+<p>Ahora se puede volver al instalación oficial de archlinux, empezando con la <a href="https://wiki.archlinux.org/index.php/Installation_Guide_(Espa%C3%B1ol\)#Configuraci.C3.B3n_del_sistema" title="Volver a Instalación de Arch">configuración del sitema</a> y seguir lo hasta el final.</p>
 
 <p>Al momento de reiniciar la sistema, se arrancaría en el os de mac. Y, tomando los ejemplos de los indicaciones de instalación de <a href="http://www.rodsbooks.com/refind/" title="rEFInd">rEFInd</a>, primer montamos el <em>EFI</em> y después lo <em>bendecimos</em>.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo mkdir /efi
-</span><span class='line'>$ sudo mount -t msdos /dev/disk0s1 /efi
-</span><span class='line'>$ sudo bless --mount /efi --setBoot --file /efi/EFI/BOOT/refind_x64.efi</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">$ sudo mkdir /efi
+</span><span class="line">$ sudo mount -t msdos /dev/disk0s1 /efi
+</span><span class="line">$ sudo bless --mount /efi --setBoot --file /efi/EFI/BOOT/refind_x64.efi</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>Ahora reiniciamos de nuevo, y debemos ver un pantalla donde elegimos entre la manzanita o el pinguinito. A veces hay que reiniciar un par de veces para que agarra.</p>
 
-<p>Despues de la <a href="https://wiki.archlinux.org/index.php/Installation_Guide_(Espa%C3%B1ol)" title="Instalación de Arch">Guía de instalación</a>, sigue los pasos de la <a href="https://wiki.archlinux.org/index.php/Beginners%27_Guide/Extra_(Espa%C3%B1ol)" title="Guía de Pricipiantes">Guía de principiantes</a>. Pero como esos son como toques finales, no debe de importarse si se haga antes o después del <em>bendición</em> del rEFInd. Al momento de llegar al la configuración de <strong>X</strong>, utiliza los <em>drivers</em> propietarios de <em>nvidia</em> para no sufrir un lento rendimiento gráfica.</p>
+<p>Despues de la <a href="https://wiki.archlinux.org/index.php/Installation_Guide_(Espa%C3%B1ol\)" title="Instalación de Arch">Guía de instalación</a>, sigue los pasos de la <a href="https://wiki.archlinux.org/index.php/Beginners%27_Guide/Extra_(Espa%C3%B1ol\)" title="Guía de Pricipiantes">Guía de principiantes</a>. Pero como esos son como toques finales, no debe de importarse si se haga antes o después del <em>bendición</em> del rEFInd. Al momento de llegar al la configuración de <strong>X</strong>, utiliza los <em>drivers</em> propietarios de <em>nvidia</em> para no sufrir un lento rendimiento gráfica.</p>
 
-<h5>Algunas referencias Mas</h5>
-
+<h5 id="algunas-referencias-mas">Algunas referencias Mas</h5>
 <p><a href="http://plopez.nfshost.com/2011_macbook_air_pure_efi_dual-boot">macbook pro pure efi +grub</a> | <a href="https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#Create_an_UEFI_System_Partition_in_Linux">pagina de wiki de arch sobre UEFI</a> | <a href="https://wiki.archlinux.org/index.php/UEFI_Bootloaders#Using_rEFInd">install refind con pacman</a> | <a href="http://www.rodsbooks.com/efi-bootloaders/refind.html">sobre rEFInd</a> | <a href="https://discussions.apple.com/thread/2746152?start=0&amp;tstart=0">de la pagina de apple</a></p>
 ]]></content>
   </entry>
@@ -1567,88 +1488,85 @@ Llegando al final, en el seccion <a href="https://wiki.archlinux.org/index.php/I
     <id>http://ki-ai.org/blog/2012/11/01/copiar-lista-a-dispositivo</id>
     <content type="html"><![CDATA[<p>Si tienes una lista de reproducción de formato sencillo .m3u, este <em>script</em> copia los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el <em>script</em> los convertirá a <strong>mp3</strong>. Obviamente prefería tener un teléfono que reproduciera <strong>ogg-vorbis</strong>, pero la triste verdad es que no tengo. <strong>Ojo</strong>: <em>para que funciona la conversión de formatos es necesario que mplayer y lame estan instalados</em>.</p>
 
-<h3>Si ejecute así</h3>
+<h3 id="si-ejecute-as">Si ejecute así</h3>
 
-<figure class='code'><figcaption><span>como  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cpm3u.pl /ruta/a/lista.m3u /ruta/a/destinto/
-</span></code></pre></td></tr></table></div></figure>
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>como  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nv">$ </span>cpm3u.pl /ruta/a/lista.m3u /ruta/a/destinto/
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
+<h3 id="codigo">Codigo</h3>
 
-<h3>Codigo</h3>
-
-<figure class='code'><figcaption><span>cpm3u.pl  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="c1">#!/usr/bin/perl</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># Copyright 2012, kev@flujos.org</span>
-</span><span class='line'><span class="c1"># Licensed under the GPL Version 2 license.</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">use</span> <span class="nn">File::</span><span class="n">Copy</span><span class="p">;</span>
-</span><span class='line'><span class="k">use</span> <span class="nn">File::</span><span class="n">Basename</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">my</span> <span class="nv">$PLS</span><span class="o">=</span><span class="s">&quot;$ARGV[0]&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">my</span> <span class="nv">$DEST</span><span class="o">=</span><span class="s">&quot;$ARGV[1]&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">my</span> <span class="nv">$tmp</span><span class="o">=</span><span class="s">&#39;/tmp/out.wav&#39;</span><span class="p">;</span>
-</span><span class='line'><span class="k">my</span> <span class="nv">@exts</span><span class="o">=</span><span class="sx">qw(.ogg .oga .wma .m4a)</span><span class="p">;</span>
-</span><span class='line'><span class="nb">open</span><span class="p">(</span><span class="nv">$p</span><span class="p">,</span> <span class="nv">$PLS</span><span class="p">);</span>
-</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="sr">&lt;$p&gt;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nb">chomp</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">my</span> <span class="nv">$orig</span> <span class="o">=</span> <span class="nv">$ENV</span><span class="p">{</span><span class="n">HOME</span><span class="p">}</span><span class="o">.</span> <span class="s">&quot;/&quot;</span><span class="o">.</span> <span class="nv">$_</span><span class="p">;</span>
-</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nv">$orig</span> <span class="o">=~</span><span class="sr"> /.mp3$/i</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>              <span class="n">copy</span><span class="p">(</span><span class="s">&quot;$orig&quot;</span><span class="p">,</span> <span class="s">&quot;$DEST&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Copy Failed $!&quot;</span><span class="p">;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>      <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>              <span class="nv">$out_file</span><span class="o">=</span><span class="nv">$DEST</span><span class="o">.</span> <span class="n">basename</span><span class="p">(</span><span class="nv">$_</span><span class="p">,</span> <span class="nv">@exts</span><span class="p">)</span> <span class="o">.</span> <span class="s">&#39;.mp3&#39;</span><span class="p">;</span>
-</span><span class='line'>              <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/mplayer&#39;</span><span class="p">,</span> <span class="s">&#39;-ao&#39;</span><span class="p">,</span> <span class="s">&quot;pcm:file=$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$orig&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>       <span class="c1"># Use lame to make an mp3</span>
-</span><span class='line'>       <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/lame&#39;</span><span class="p">,</span> <span class="s">&quot;$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$out_file&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>       <span class="k">if</span> <span class="p">(</span><span class="nb">unlink</span><span class="p">(</span><span class="nv">$tmp</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>            <span class="k">print</span> <span class="s">&quot;$tmp deleted successfully.\n&quot;</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>            <span class="k">print</span> <span class="s">&quot;$tmp was not deleted.\n&quot;</span><span class="p">;</span>
-</span><span class='line'>       <span class="p">}</span>
-</span><span class='line'>   <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>cpm3u.pl  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+</pre></td><td class="code"><pre><code class="perl"><span class="line"><span class="c1">#!/usr/bin/perl</span>
+</span><span class="line">
+</span><span class="line"><span class="c1"># Copyright 2012, kev@flujos.org</span>
+</span><span class="line"><span class="c1"># Licensed under the GPL Version 2 license.</span>
+</span><span class="line">
+</span><span class="line"><span class="k">use</span> <span class="nn">File::</span><span class="n">Copy</span><span class="p">;</span>
+</span><span class="line"><span class="k">use</span> <span class="nn">File::</span><span class="n">Basename</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">my</span> <span class="nv">$PLS</span><span class="o">=</span><span class="s">&quot;$ARGV[0]&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="k">my</span> <span class="nv">$DEST</span><span class="o">=</span><span class="s">&quot;$ARGV[1]&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="k">my</span> <span class="nv">$tmp</span><span class="o">=</span><span class="s">&#39;/tmp/out.wav&#39;</span><span class="p">;</span>
+</span><span class="line"><span class="k">my</span> <span class="nv">@exts</span><span class="o">=</span><span class="sx">qw(.ogg .oga .wma .m4a)</span><span class="p">;</span>
+</span><span class="line"><span class="nb">open</span><span class="p">(</span><span class="nv">$p</span><span class="p">,</span> <span class="nv">$PLS</span><span class="p">);</span>
+</span><span class="line"><span class="k">for</span> <span class="p">(</span><span class="sr">&lt;$p&gt;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">    <span class="nb">chomp</span><span class="p">;</span>
+</span><span class="line">    <span class="k">my</span> <span class="nv">$orig</span> <span class="o">=</span> <span class="nv">$ENV</span><span class="p">{</span><span class="n">HOME</span><span class="p">}</span><span class="o">.</span> <span class="s">&quot;/&quot;</span><span class="o">.</span> <span class="nv">$_</span><span class="p">;</span>
+</span><span class="line">    <span class="k">if</span> <span class="p">(</span><span class="nv">$orig</span> <span class="o">=~</span><span class="sr"> /.mp3$/i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">            <span class="n">copy</span><span class="p">(</span><span class="s">&quot;$orig&quot;</span><span class="p">,</span> <span class="s">&quot;$DEST&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&quot;Copy Failed $!&quot;</span><span class="p">;</span>
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line">    <span class="k">else</span> <span class="p">{</span>
+</span><span class="line">            <span class="nv">$out_file</span><span class="o">=</span><span class="nv">$DEST</span><span class="o">.</span> <span class="n">basename</span><span class="p">(</span><span class="nv">$_</span><span class="p">,</span> <span class="nv">@exts</span><span class="p">)</span> <span class="o">.</span> <span class="s">&#39;.mp3&#39;</span><span class="p">;</span>
+</span><span class="line">            <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/mplayer&#39;</span><span class="p">,</span> <span class="s">&#39;-ao&#39;</span><span class="p">,</span> <span class="s">&quot;pcm:file=$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$orig&quot;</span><span class="p">);</span>
+</span><span class="line">
+</span><span class="line">       <span class="c1"># Use lame to make an mp3</span>
+</span><span class="line">       <span class="nb">system</span><span class="p">(</span><span class="s">&#39;/usr/bin/lame&#39;</span><span class="p">,</span> <span class="s">&quot;$tmp&quot;</span><span class="p">,</span> <span class="s">&quot;$out_file&quot;</span><span class="p">);</span>
+</span><span class="line">
+</span><span class="line">       <span class="k">if</span> <span class="p">(</span><span class="nb">unlink</span><span class="p">(</span><span class="nv">$tmp</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">            <span class="k">print</span> <span class="s">&quot;$tmp deleted successfully.\n&quot;</span><span class="p">;</span>
+</span><span class="line">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class="line">            <span class="k">print</span> <span class="s">&quot;$tmp was not deleted.\n&quot;</span><span class="p">;</span>
+</span><span class="line">       <span class="p">}</span>
+</span><span class="line">   <span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 ]]></content>
   </entry>
@@ -1660,18 +1578,18 @@ Llegando al final, en el seccion <a href="https://wiki.archlinux.org/index.php/I
     <id>http://ki-ai.org/blog/2012/10/31/vortice-de-perspectivo-absoluto</id>
     <content type="html"><![CDATA[<p>Hemos <a href="http://ki-ai.org/blog/categories/traduccion" title="Traducciones">traducido</a> un pasaje del segunda temporada del a Radio Novela de Douglas Adams, <a href="http://ki-ai.org/blog/categories/hhgg/" title="Guía de la Galaxia Para Mochileros">La Guía de la Galaxia para Mochileros</a>, que trata el tema del Vórtice de Perspectivo Absoluto. Por que? Obviamente para el beneficio de la humanidad :) O al menos unos risas, que, al fin de cuentas, resulta ser lo mismo.</p>
 
-<p><img class="pull-left" src="http://www.flujos.org/media/You_Are_Here.png" width="500" title="Usted Esta Aquí" ></p>
+<p><img class="pull-left" src="http://www.flujos.org/media/You_Are_Here.png" width="500" title="Usted Esta Aquí" /></p>
 
-<h2>Vórtice de perspectivo Absoluto</h2>
+<h2 id="vrtice-de-perspectivo-absoluto">Vórtice de perspectivo Absoluto</h2>
 
 <p><strong>NARRARADOR</strong>
 El Universo, como ya ha sido observado, es un lugar muy grande, un hecho mejor ignorado en el interés de una vida contenta. Muchos con gusto cambiarían a un lugar mas pequeño de su proprio diseño, y es precisamente lo que hace la mayoría.</p>
 
-<p>Por ejemplo, en una esquina del Brazo Galáctica Este esta el gran planeta bosquera Oglaroon, cuyo población &#8217;<em>inteligente</em>&#8217; vive permanentemente en un relativamente pequeño y sobre poblado árbol de cacahuete. En dicho árbol nacen, viven, aman, graban artículos minúsculos en la corteza sobre el significado de la vida, la futilidad de la muerte y la importancia de contraconceptivos, luchan muy pocos guerras y eventualmente mueran colgado al parte baja de algunas de las ramas periféricas menos accesibles.</p>
+<p>Por ejemplo, en una esquina del Brazo Galáctica Este esta el gran planeta bosquera Oglaroon, cuyo población ‘<em>inteligente</em>’ vive permanentemente en un relativamente pequeño y sobre poblado árbol de cacahuete. En dicho árbol nacen, viven, aman, graban artículos minúsculos en la corteza sobre el significado de la vida, la futilidad de la muerte y la importancia de contraconceptivos, luchan muy pocos guerras y eventualmente mueran colgado al parte baja de algunas de las ramas periféricas menos accesibles.</p>
 
 <p>De hecho los únicos Oglaroonianos que salen del árbol son los que son aventados por el crimen abyecto de preguntarse  si algún otro árbol seria capaz de soportar vida, o en realidad cualquier otra cosa que no sea ilusion resultado de comer demasiadas cacahuetes.</p>
 
-<p>Exótico que tal comportamiento puede aparecer, no existe niguna forma de vida en la galaxia que no es, de alguna manera, culpable de lo mismo, y es por eso que El Vórtice de Perspectivo Absoluto es tan horrendo que indudablemente es. Por, una vez adentro de la Vórtice recibirás una vistazo instantáneo del tamaño del totalidad del infinidad de Creación junto con un pequeño etiqueta de forma de flechita que señala &#8217;<strong>Usted Esta Aquí</strong>&#8217;.</p>
+<p>Exótico que tal comportamiento puede aparecer, no existe niguna forma de vida en la galaxia que no es, de alguna manera, culpable de lo mismo, y es por eso que El Vórtice de Perspectivo Absoluto es tan horrendo que indudablemente es. Por, una vez adentro de la Vórtice recibirás una vistazo instantáneo del tamaño del totalidad del infinidad de Creación junto con un pequeño etiqueta de forma de flechita que señala ‘<strong>Usted Esta Aquí</strong>’.</p>
 
 <p><strong>F/X</strong>
 FONDO. VIENTO TRISTE (QUISA EFECTO DE VIENTO PERO ALENTADO) GARGRAVARR TARAREANDO UNA VALSA TRISTE. CASI INSTANTANEAMENTE LA ESCENTA EMPIEZA HAY UN TERIBLE GRITO DE AGONIA EN LA DISTANCIA, TAPADO Y DISTORCINADO, PERO SUFFICIENTEMENTE PARA DAR MIEDO. ZAPHOD CAMINANDO.</p>
@@ -1688,7 +1606,6 @@ Oiga suena muy mal. No hay fiesta ahorita donde podemos estar por un rato, lo pl
 Por todo que yo sepa mas seguro es que estoy en una. Mi cuerpo digo. Va a muchas fiestas sin mi. Dice que estorbo. Jaja</p>
 
 <!-- more -->
-
 
 <p><strong>ZAPHOD</strong>
 Veo porque tu cuerpo no quiere entrar aquí. Esta triste el lugar. Parece que le cayo una bomba.</p>
@@ -1760,7 +1677,7 @@ El Vórtice deriva su imagen el totalidad del Universo  a treves del pricipio de
 
 <p>Trin Tragula, por así si llamaba, era un soñador, un pensador especulativo, o, como siempre comentaba su esposa, un imbécil.</p>
 
-<p>Y ella siempre lo molestaba sobre lo tiempo ridículamente extenso que gastaaba mirando en el espacio, meditando sobre la mecánica de brochas, o haciendo análisis espectrográfica de pedazos de tamal de chapil. &#8216;Ten algún sentido de proporción,&#8217; lo diría 38 veces al día.</p>
+<p>Y ella siempre lo molestaba sobre lo tiempo ridículamente extenso que gastaaba mirando en el espacio, meditando sobre la mecánica de brochas, o haciendo análisis espectrográfica de pedazos de tamal de chapil. ‘Ten algún sentido de proporción,’ lo diría 38 veces al día.</p>
 
 <p>Entonces fabricó el Vórtice de Perspectivo Absoluto nada mas para que vea. Y en un lado enchufó la totalidad de la realidad como extrapolado de un tamal de chapil, y en el otro lado enchufó a su esposa, para que cuando si encendió a la maquina ella viera en un instante la totalidad infinito de creación y ella en comparación a ello.</p>
 
@@ -1770,7 +1687,7 @@ El Vórtice deriva su imagen el totalidad del Universo  a treves del pricipio de
 Hola.</p>
 
 <p><strong>GARGRAVARR</strong>
-(asombrado) Beeblerox, Estas &#8230;?</p>
+(asombrado) Beeblerox, Estas …?</p>
 
 <p><strong>ZAPHOD</strong>
 Un bebida por favor?</p>
@@ -1800,6 +1717,7 @@ Y que experimentaste?</p>
 Mi dijo básicamente lo que yo mismo vengo diciendo. Soy un chingón. No te dije? Soy Zaphod Beeblebrox.</p>
 
 <p><strong>GRAMS</strong> JOUREY OF THE SOURCERER</p>
+
 ]]></content>
   </entry>
   

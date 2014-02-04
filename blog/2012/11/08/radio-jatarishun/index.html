@@ -43,6 +43,25 @@
   <script src="/javascripts/libs/jquery.js"></script>
   <script src="/javascripts/libs/modernizr-2.0.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]><script type="text/javascript" src="/javascripts/excanvas.js"></script><![endif]-->
+  <script src="/javascripts/jquery.tagcanvas.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#tag-canvas').tagcanvas({
+     textColour : '#ffff99',
+     outlineThickness : 1,
+     zoom : 1.0,
+     textHeight: 17,
+     weightMode: "both",
+     reverse: true,
+     depth: 1.0,
+   }, 'tags')) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
   <link href="/atom.xml" rel="alternate" title="ki-ai.org" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -81,10 +100,7 @@
   </script>
 
 
-  <script type="text/javascript" src="http://x.translateth.is/translate-this.js"></script>
-  <script type="text/javascript">
-    TranslateThis();
-  </script>
+
 </head>
 
 <body   >
@@ -145,7 +161,7 @@
   </header>
 
 
-<div class="entry-content"><p><img class="pull-left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" ></p>
+<div class="entry-content"><p><img class="pull-left" src="http://ecuador.indymedia.org/images/2004/08/6562.jpg" title="Menú Portada Radio Jatarishun" /></p>
 
 <p>En Julio de 2004 tuvo lugar en la ciudad de Quito, Ecuador el primer Foro Social de Las Américas. Aparte de ello, y como moscas a la carne, una seria de otras foros brotaron a su alrededor, como era la Foro Indígena, Foro de Diversidad Sexual, en fin. Algunos de las moscas atrevieron montar una cabina de radio en un salón de escuela que transmitía por Internet mientras el Foro Social. Se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a> (<em>levantamiento</em> en Quechua ). Una de las moscas, a volver a su casa, rescató lo que se pudo de lo que se grabó, lo mezclaba con un poco de la música que ambientaba a Quito por aquellas fechas, y el resultado era un disco que también se llamaba <a href="http://ecuador.indymedia.org/es/2004/08/6563.shtml" title="Radio Jatarishun">Radio Jatarishun</a>. Para no largar mucho el cuento, aquella mosca perdió el disco, y el lugar donde estaba hospedado en el Internet también desaprecio, pero otra mosca, o mas bien tenia que haber sido una ratóncita, que siempre guardaba todo de por si un día hacia falta, ahí la tenia cerrado en una caja.</p>
 
@@ -153,98 +169,59 @@
 
 <!-- more -->
 
-
-<h2>Escucha</h2>
+<h2 id="escucha">Escucha</h2>
 
 <p><strong>Ojo</strong>: tarda un poco para cargar los audio, los que se ponen blancitos el control de volumen ya se puede escuchar. <strong>Ojo2</strong>: estan en formato ogg-vorbis, deben de reproducirse en firefox o chromimun sin problemas.</p>
 
-<h4>01 Democracia</h4>
+<h4 id="democracia">01 Democracia</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/01_Democracia.oga" /></audio>
 
-<p><audio controls><source src='http://flujos.org/media/jatarishun/01_Democracia.oga'></audio></p>
+<h4 id="bienvenidos">02 Bienvenidos</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/02_Bienvenidos.oga" /></audio>
 
-<h4>02 Bienvenidos</h4>
+<h4 id="referndum-del-gas">03 Referéndum del Gas</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/03_Referéndum_del_Gas.oga" /></audio>
 
-<p><audio controls><source src='http://flujos.org/media/jatarishun/02_Bienvenidos.oga'></audio></p>
+<h4 id="educacin-neoliberal">04 Educación Neoliberal</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/04_Educación_Neoliberal.oga" /><source src="" /></audio>
 
-<h4>03 Referéndum del Gas</h4>
+<h4 id="y-que-del-foro">05 Y Que del Foro</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/05_Y_Que_del_Foro.oga" /><source src="" /></audio>
 
-<p><audio controls><source src='http://flujos.org/media/jatarishun/03_Referéndum_del_Gas.oga'></audio></p>
-
-<h4>04 Educación Neoliberal</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/04_Educación_Neoliberal.oga'><source src=''></audio></p>
-
-<h4>05 Y Que del Foro</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/05_Y_Que_del_Foro.oga'><source src=''></audio></p>
-
-<h4>06 Estudiantes de las América</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/06_Estudiantes_de_las_Américas.oga'><source src=''></audio></p>
-
-<h4>07 Ciencia y Tecnología</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/07_Ciencia_y_Tecnología.oga'></audio></p>
-
-<h4>08 Modelo Económico</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/08_Modelo_Económico.oga'><source src=''></audio></p>
-
-<h4>09 Unidad Americana</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/09_Unidad_Americana.oga'><source src=''></audio></p>
-
-<h4>10 Centro de Medios</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/10_Centro_de_Medios.oga'><source src=''></audio></p>
-
-<h4>11 Plan Patriota</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/11_Plan_Patriota.oga'><source src=''></audio></p>
-
-<h4>12 Plan Colombia</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/12_Plan_Colombia.oga'><source src=''></audio></p>
-
-<h4>13 Hoja de Coca</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/13_Hoja_de_Coca.oga'><source src=''></audio></p>
-
-<h4>14 Movimiento de Mujeres</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/14_Movimiento_de_Mujeres.oga'></audio></p>
-
-<h4>15 Género y Participación</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/15_Género_y_Participación.oga'><source src=''></audio></p>
-
-<h4>16 Chile</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/16_Chile.oga'></audio></p>
-
-<h4>17 Bendición</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/17_Bendición.oga'><source src=''></audio></p>
-
-<h4>18 LGBT</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/18_LGBT.oga'><source src=''></audio></p>
-
-<h4>19 Cumbia Quechua</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/19_Cumbia_Quechua.oga'><source src=''></audio></p>
-
-<h4>20 Radio Jatarishun</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/20_Radio_Jatarishun.oga'><source src=''></audio></p>
-
-<h4>21 No Tengas Mas Temor</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/21_No_Tengas_Mas_Temor.oga'><source src=''></audio></p>
-
-<h4>22 Así Es América</h4>
-
-<p><audio controls><source src='http://flujos.org/media/jatarishun/22_Así_Es_América.oga'><source src=''></audio></p>
+<h4 id="estudiantes-de-las-amrica">06 Estudiantes de las América</h4>
+<audio controls=""><source src="http://flujos.org/media/jatarishun/06_Estudiantes_de_las_Américas.oga" /><source src="" /></audio>
+<p>#### 07 Ciencia y Tecnología
+<audio controls=""><source src="http://flujos.org/media/jatarishun/07_Ciencia_y_Tecnología.oga" /></audio>
+#### 08 Modelo Económico
+<audio controls=""><source src="http://flujos.org/media/jatarishun/08_Modelo_Económico.oga" /><source src="" /></audio>
+#### 09 Unidad Americana
+<audio controls=""><source src="http://flujos.org/media/jatarishun/09_Unidad_Americana.oga" /><source src="" /></audio>
+#### 10 Centro de Medios
+<audio controls=""><source src="http://flujos.org/media/jatarishun/10_Centro_de_Medios.oga" /><source src="" /></audio>
+#### 11 Plan Patriota
+<audio controls=""><source src="http://flujos.org/media/jatarishun/11_Plan_Patriota.oga" /><source src="" /></audio>
+#### 12 Plan Colombia
+<audio controls=""><source src="http://flujos.org/media/jatarishun/12_Plan_Colombia.oga" /><source src="" /></audio>
+#### 13 Hoja de Coca
+<audio controls=""><source src="http://flujos.org/media/jatarishun/13_Hoja_de_Coca.oga" /><source src="" /></audio>
+#### 14 Movimiento de Mujeres
+<audio controls=""><source src="http://flujos.org/media/jatarishun/14_Movimiento_de_Mujeres.oga" /></audio>
+#### 15 Género y Participación
+<audio controls=""><source src="http://flujos.org/media/jatarishun/15_Género_y_Participación.oga" /><source src="" /></audio>
+#### 16 Chile
+<audio controls=""><source src="http://flujos.org/media/jatarishun/16_Chile.oga" /></audio>
+#### 17 Bendición
+<audio controls=""><source src="http://flujos.org/media/jatarishun/17_Bendición.oga" /><source src="" /></audio>
+#### 18 LGBT
+<audio controls=""><source src="http://flujos.org/media/jatarishun/18_LGBT.oga" /><source src="" /></audio>
+#### 19 Cumbia Quechua
+<audio controls=""><source src="http://flujos.org/media/jatarishun/19_Cumbia_Quechua.oga" /><source src="" /></audio>
+#### 20 Radio Jatarishun
+<audio controls=""><source src="http://flujos.org/media/jatarishun/20_Radio_Jatarishun.oga" /><source src="" /></audio>
+#### 21 No Tengas Mas Temor
+<audio controls=""><source src="http://flujos.org/media/jatarishun/21_No_Tengas_Mas_Temor.oga" /><source src="" /></audio>
+#### 22 Así Es América
+<audio controls=""><source src="http://flujos.org/media/jatarishun/22_Así_Es_América.oga" /><source src="" /></audio></p>
 
 <p><strong>pd</strong>, La fecha en la portada del disco, en lugar de decir <em>26-30 de august</em> debe de ser <em>26-30 de julio</em>. Digamos que es doble error histórico, tanto temporal como lingüística.</p>
 </div>
@@ -270,6 +247,15 @@
 <span class="categories">
   
     <a class='category' href='/blog/categories/audio/'>audio</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    <a class='tag' href='/tags/audio/'>audio</a>, <a class='tag' href='/tags/radio/'>radio</a>
   
 </span>
 
@@ -348,6 +334,60 @@
   <abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr>
 </h4>
 <a href="http://ki-ai.org/blog/2012/11/08/radio-jatarishun/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://ki-ai.org/blog/2012/11/08/radio-jatarishun/" alt="post-qrcode"></a>
+</section>
+<section>
+  <div id='tag-canvas-container'>
+  <canvas width="300" height="300" id="tag-canvas">
+    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+  </canvas>
+  </div>
+
+<div id="tags">
+  <ul>
+    <li><a style="font-size: 116%" href="/tags/arch/">arch</a></li>
+<li><a style="font-size: 162%" href="/tags/audio/">audio</a></li>
+<li><a style="font-size: 99%" href="/tags/automatizacion/">automatización</a></li>
+<li><a style="font-size: 70%" href="/tags/bootstrap/">bootstrap</a></li>
+<li><a style="font-size: 70%" href="/tags/cine/">cine</a></li>
+<li><a style="font-size: 70%" href="/tags/cinelerra/">cinelerra</a></li>
+<li><a style="font-size: 70%" href="/tags/compresor/">compresor</a></li>
+<li><a style="font-size: 70%" href="/tags/corralero/">corralero</a></li>
+<li><a style="font-size: 99%" href="/tags/costa/">costa</a></li>
+<li><a style="font-size: 70%" href="/tags/df/">df</a></li>
+<li><a style="font-size: 70%" href="/tags/eq/">eq</a></li>
+<li><a style="font-size: 70%" href="/tags/faro/">faro</a></li>
+<li><a style="font-size: 99%" href="/tags/fiesta/">fiesta</a></li>
+<li><a style="font-size: 99%" href="/tags/flujos/">flujos</a></li>
+<li><a style="font-size: 128%" href="/tags/guion/">guion</a></li>
+<li><a style="font-size: 170%" href="/tags/hacks/">hacks</a></li>
+<li><a style="font-size: 128%" href="/tags/hhgg/">hhgg</a></li>
+<li><a style="font-size: 128%" href="/tags/imagen/">imagen</a></li>
+<li><a style="font-size: 70%" href="/tags/ladspa/">ladspa</a></li>
+<li><a style="font-size: 116%" href="/tags/letras/">letras</a></li>
+<li><a style="font-size: 99%" href="/tags/linux/">linux</a></li>
+<li><a style="font-size: 70%" href="/tags/live/">live</a></li>
+<li><a style="font-size: 70%" href="/tags/luna/">luna</a></li>
+<li><a style="font-size: 70%" href="/tags/mac/">mac</a></li>
+<li><a style="font-size: 70%" href="/tags/maldonado/">maldonado</a></li>
+<li><a style="font-size: 99%" href="/tags/mpd/">mpd</a></li>
+<li><a style="font-size: 70%" href="/tags/nortena/">norteña</a></li>
+<li><a style="font-size: 70%" href="/tags/octopress/">octopress</a></li>
+<li><a style="font-size: 116%" href="/tags/perl/">perl</a></li>
+<li><a style="font-size: 70%" href="/tags/pescado/">pescado</a></li>
+<li><a style="font-size: 99%" href="/tags/playa/">playa</a></li>
+<li><a style="font-size: 70%" href="/tags/pueblo/">pueblo</a></li>
+<li><a style="font-size: 70%" href="/tags/pulseaudio/">pulseaudio</a></li>
+<li><a style="font-size: 128%" href="/tags/radio/">radio</a></li>
+<li><a style="font-size: 70%" href="/tags/ruby/">ruby</a></li>
+<li><a style="font-size: 99%" href="/tags/sc3/">sc3</a></li>
+<li><a style="font-size: 70%" href="/tags/tigres/">tigres</a></li>
+<li><a style="font-size: 128%" href="/tags/traduccion/">traduccion</a></li>
+<li><a style="font-size: 99%" href="/tags/video/">video</a></li>
+<li><a style="font-size: 99%" href="/tags/web/">web</a></li>
+<li><a style="font-size: 70%" href="/tags/xochis/">xochis</a></li>
+
+  </ul>
+  </div>
 </section>
 
   

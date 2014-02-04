@@ -43,6 +43,25 @@
   <script src="/javascripts/libs/jquery.js"></script>
   <script src="/javascripts/libs/modernizr-2.0.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]><script type="text/javascript" src="/javascripts/excanvas.js"></script><![endif]-->
+  <script src="/javascripts/jquery.tagcanvas.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#tag-canvas').tagcanvas({
+     textColour : '#ffff99',
+     outlineThickness : 1,
+     zoom : 1.0,
+     textHeight: 17,
+     weightMode: "both",
+     reverse: true,
+     depth: 1.0,
+   }, 'tags')) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
   <link href="/atom.xml" rel="alternate" title="ki-ai.org" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -81,10 +100,7 @@
   </script>
 
 
-  <script type="text/javascript" src="http://x.translateth.is/translate-this.js"></script>
-  <script type="text/javascript">
-    TranslateThis();
-  </script>
+
 </head>
 
 <body   >
@@ -146,13 +162,11 @@
 
 
 <div class="entry-content"><p>Algunos imagenes que pudimos capturar en Corralero, pueblo playera de la cercania a pinotepa. Aun que no llegamos a la playa,
-al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los niños y la camera.</p>
-
-<div class="slider_area"><div class="row"><div class="span12" id="slider_d393f683"><div id="carousel_d393f683" class="carousel slide"><div class="carousel-inner"><div class="item active" data-slide-number="1"><img src="http://flujos.org/media/kiai/IMG_0748.JPG" /></div><div class="item" data-slide-number="2"><img src="http://flujos.org/media/kiai/IMG_0800.JPG" /></div><div class="item" data-slide-number="3"><img src="http://flujos.org/media/kiai/IMG_0775.JPG" /></div><div class="item" data-slide-number="4"><img src="http://flujos.org/media/kiai/IMG_0776.JPG" /></div><div class="item" data-slide-number="5"><img src="http://flujos.org/media/kiai/IMG_0763.JPG" /></div><div class="item" data-slide-number="6"><img src="http://flujos.org/media/kiai/IMG_0779.JPG" /></div>
-</div><a class="carousel-control left" href="#carousel_d393f683" data-slide="prev"><i class="icon-caret-left"></i></a><a class="carousel-control right" href="#carousel_d393f683" data-slide="next"><i class="icon-caret-right"></i></a></div></div><div class="row hidden-phone span12" id="slider-thumbs"><ul class="gallery thumbnails">
-<li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-1"rel="gallery-d393f683dccf3075fa00622c30e45576" title="my title 1"><img src="http://flujos.org/media/kiai/IMG_0748.JPG" alt="my title 1" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-2"rel="gallery-d393f683dccf3075fa00622c30e45576" title="my title 2"><img src="http://flujos.org/media/kiai/IMG_0800.JPG" alt="my title 2" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-3"rel="gallery-d393f683dccf3075fa00622c30e45576" title="my title 3"><img src="http://flujos.org/media/kiai/IMG_0775.JPG" alt="my title 3" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-4"rel="gallery-d393f683dccf3075fa00622c30e45576" title="true"><img src="http://flujos.org/media/kiai/IMG_0776.JPG" alt="true" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-5"rel="gallery-d393f683dccf3075fa00622c30e45576" title="true"><img src="http://flujos.org/media/kiai/IMG_0763.JPG" alt="true" /></a></li><li class="span2"><a class="thumbnail" id="carousel-selector-d393f683-6"rel="gallery-d393f683dccf3075fa00622c30e45576" title="true"><img src="http://flujos.org/media/kiai/IMG_0779.JPG" alt="true" /></a></li>
-</ul></div></div></div>
-
+al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los niños y la camera.
+&lt;div class=&#8221;slider_area&#8221;&gt;&lt;div class=&#8221;row&#8221;&gt;&lt;div class=&#8221;span12&#8221; id=&#8221;slider_d393f683&#8221;&gt;&lt;div id=&#8221;carousel_d393f683&#8221; class=&#8221;carousel slide&#8221;&gt;&lt;div class=&#8221;carousel-inner&#8221;&gt;&lt;div class=&#8221;item active&#8221; data-slide-number=&#8221;1&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0748.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;2&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0800.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;3&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0775.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;4&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0776.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;5&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0763.JPG" />&lt;/div&gt;&lt;div class=&#8221;item&#8221; data-slide-number=&#8221;6&#8221;&gt;<img src="http://flujos.org/media/kiai/IMG_0779.JPG" />&lt;/div&gt;
+&lt;/div&gt;<a class="carousel-control left" href="#carousel_d393f683" data-slide="prev"><i class="icon-caret-left"></i></a><a class="carousel-control right" href="#carousel_d393f683" data-slide="next"><i class="icon-caret-right"></i></a>&lt;/div&gt;&lt;/div&gt;&lt;div class=&#8221;row hidden-phone span12&#8221; id=&#8221;slider-thumbs&#8221;&gt;&lt;ul class=&#8221;gallery thumbnails&#8221;&gt;
+&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-1”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”my title 1”&gt;<img src="http://flujos.org/media/kiai/IMG_0748.JPG" alt="my title 1" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-2”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”my title 2”&gt;<img src="http://flujos.org/media/kiai/IMG_0800.JPG" alt="my title 2" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-3”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”my title 3”&gt;<img src="http://flujos.org/media/kiai/IMG_0775.JPG" alt="my title 3" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-4”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”true”&gt;<img src="http://flujos.org/media/kiai/IMG_0776.JPG" alt="true" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-5”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”true”&gt;<img src="http://flujos.org/media/kiai/IMG_0763.JPG" alt="true" />&lt;/a&gt;&lt;/li&gt;&lt;li class=&#8221;span2&#8221;&gt;&lt;a class=”thumbnail” id=”carousel-selector-d393f683-6”rel=”gallery-d393f683dccf3075fa00622c30e45576” title=”true”&gt;<img src="http://flujos.org/media/kiai/IMG_0779.JPG" alt="true" />&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
 </div>
 
 
@@ -176,6 +190,15 @@ al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los
 <span class="categories">
   
     <a class='category' href='/blog/categories/imagen/'>imagen</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    <a class='tag' href='/tags/corralero/'>corralero</a>, <a class='tag' href='/tags/costa/'>costa</a>, <a class='tag' href='/tags/imagen/'>imagen</a>, <a class='tag' href='/tags/playa/'>playa</a>
   
 </span>
 
@@ -254,6 +277,60 @@ al menos disfrutamos de un rico pecado al mojo de ajo. Y jugamos un rato con los
   <abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr>
 </h4>
 <a href="http://ki-ai.org/blog/2013/05/21/rostros-de-corralero/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://ki-ai.org/blog/2013/05/21/rostros-de-corralero/" alt="post-qrcode"></a>
+</section>
+<section>
+  <div id='tag-canvas-container'>
+  <canvas width="300" height="300" id="tag-canvas">
+    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+  </canvas>
+  </div>
+
+<div id="tags">
+  <ul>
+    <li><a style="font-size: 116%" href="/tags/arch/">arch</a></li>
+<li><a style="font-size: 162%" href="/tags/audio/">audio</a></li>
+<li><a style="font-size: 99%" href="/tags/automatizacion/">automatización</a></li>
+<li><a style="font-size: 70%" href="/tags/bootstrap/">bootstrap</a></li>
+<li><a style="font-size: 70%" href="/tags/cine/">cine</a></li>
+<li><a style="font-size: 70%" href="/tags/cinelerra/">cinelerra</a></li>
+<li><a style="font-size: 70%" href="/tags/compresor/">compresor</a></li>
+<li><a style="font-size: 70%" href="/tags/corralero/">corralero</a></li>
+<li><a style="font-size: 99%" href="/tags/costa/">costa</a></li>
+<li><a style="font-size: 70%" href="/tags/df/">df</a></li>
+<li><a style="font-size: 70%" href="/tags/eq/">eq</a></li>
+<li><a style="font-size: 70%" href="/tags/faro/">faro</a></li>
+<li><a style="font-size: 99%" href="/tags/fiesta/">fiesta</a></li>
+<li><a style="font-size: 99%" href="/tags/flujos/">flujos</a></li>
+<li><a style="font-size: 128%" href="/tags/guion/">guion</a></li>
+<li><a style="font-size: 170%" href="/tags/hacks/">hacks</a></li>
+<li><a style="font-size: 128%" href="/tags/hhgg/">hhgg</a></li>
+<li><a style="font-size: 128%" href="/tags/imagen/">imagen</a></li>
+<li><a style="font-size: 70%" href="/tags/ladspa/">ladspa</a></li>
+<li><a style="font-size: 116%" href="/tags/letras/">letras</a></li>
+<li><a style="font-size: 99%" href="/tags/linux/">linux</a></li>
+<li><a style="font-size: 70%" href="/tags/live/">live</a></li>
+<li><a style="font-size: 70%" href="/tags/luna/">luna</a></li>
+<li><a style="font-size: 70%" href="/tags/mac/">mac</a></li>
+<li><a style="font-size: 70%" href="/tags/maldonado/">maldonado</a></li>
+<li><a style="font-size: 99%" href="/tags/mpd/">mpd</a></li>
+<li><a style="font-size: 70%" href="/tags/nortena/">norteña</a></li>
+<li><a style="font-size: 70%" href="/tags/octopress/">octopress</a></li>
+<li><a style="font-size: 116%" href="/tags/perl/">perl</a></li>
+<li><a style="font-size: 70%" href="/tags/pescado/">pescado</a></li>
+<li><a style="font-size: 99%" href="/tags/playa/">playa</a></li>
+<li><a style="font-size: 70%" href="/tags/pueblo/">pueblo</a></li>
+<li><a style="font-size: 70%" href="/tags/pulseaudio/">pulseaudio</a></li>
+<li><a style="font-size: 128%" href="/tags/radio/">radio</a></li>
+<li><a style="font-size: 70%" href="/tags/ruby/">ruby</a></li>
+<li><a style="font-size: 99%" href="/tags/sc3/">sc3</a></li>
+<li><a style="font-size: 70%" href="/tags/tigres/">tigres</a></li>
+<li><a style="font-size: 128%" href="/tags/traduccion/">traduccion</a></li>
+<li><a style="font-size: 99%" href="/tags/video/">video</a></li>
+<li><a style="font-size: 99%" href="/tags/web/">web</a></li>
+<li><a style="font-size: 70%" href="/tags/xochis/">xochis</a></li>
+
+  </ul>
+  </div>
 </section>
 
   

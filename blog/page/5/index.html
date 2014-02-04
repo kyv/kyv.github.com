@@ -43,6 +43,25 @@
   <script src="/javascripts/libs/jquery.js"></script>
   <script src="/javascripts/libs/modernizr-2.0.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]><script type="text/javascript" src="/javascripts/excanvas.js"></script><![endif]-->
+  <script src="/javascripts/jquery.tagcanvas.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#tag-canvas').tagcanvas({
+     textColour : '#ffff99',
+     outlineThickness : 1,
+     zoom : 1.0,
+     textHeight: 17,
+     weightMode: "both",
+     reverse: true,
+     depth: 1.0,
+   }, 'tags')) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
   <link href="/atom.xml" rel="alternate" title="ki-ai.org" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -81,10 +100,7 @@
   </script>
 
 
-  <script type="text/javascript" src="http://x.translateth.is/translate-this.js"></script>
-  <script type="text/javascript">
-    TranslateThis();
-  </script>
+
 </head>
 
 <body   >
@@ -152,9 +168,9 @@
 
   <div class="entry-content"><p>Para la presentación de la <a href="http://rockola.flujos.org" title="Rockolateka Radiofónica">La Rockolateka Radiofónica Virtualizada</a> en <a href="http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest/" title="Fotos Flujos Fest">Flujos Fest</a> 2012 traducimos a la introducción de la segundo episodio de la <a href="/blog/categories/hhgg/" title="Guía de la Galaxia Para Mochileros">Guía de la Galaxia para Mochileros</a> por Douglass Adams. Por fallas organizativas no la dimos lectura, pero lo dejamos aquí para lo que sirve.</p>
 
-<p><img class="right" src="http://www.flujos.org/fv/images/00-navegacion_cango_en_playa.png" width="400" title="Monito Travieso Siente Nostalgia por Sus Orígenes" ></p>
+<p><img class="right" src="http://www.flujos.org/fv/images/00-navegacion_cango_en_playa.png" width="400" title="Monito Travieso Siente Nostalgia por Sus Orígenes" /></p>
 
-<h2>Guion</h2>
+<h2 id="guion">Guion</h2>
 
 <p><strong>F/X</strong> FONDO DE NARRARRADOR</p>
 
@@ -166,6 +182,7 @@ Profundamente lejos en los remansos inexplorados del brazo espiral Oeste y pasad
 <p>Entonces la problema continuaba; y muchos personas eran muy bajos, y la mayoría eran miserables, inclusive los con relojes digitales. Muchos estaban cada vez mas inclinados pensar que habían equivocados en primer lugar bajarse de los arboles. Y algunos dijeron que hasta los arboles era un error, y que nadie debería haber salido del los océanos.</p>
 
 <p>Hasta un día, casi dos mil años después de que un hombre había sido clavado en un árbol por decir que podríamos ser amables uno con el otro, una chica sentada sola en un comedor en la desviación a Talea de repente dio cuenta: que era lo que siempre había salido mal, y por fin supo como el mundo podría ser convertido en un lugar bueno y alegre. Esta ves estaba cierto, funcionaria, y no habrá que clavar nadie a nada. Desafortunadamente, antes que podría llegar a una cabina telefónica o un sitio con Internet para decirlo a alguien, inesperadamente el planeta tierra fue demolido para hacer espacio para un nuevo libramiento hyperespacial. Y entonces la idea si perdió para siempre.</p>
+
 </div>
   
   
@@ -190,7 +207,7 @@ Profundamente lejos en los remansos inexplorados del brazo espiral Oeste y pasad
 
   <div class="entry-content"><p>Damos a conocer a un fragmento del Guía de la Galaxia Para Mochileros, Edición Pirateada. Esto fragmento fue escrito por nosotros pero basamos en el concepto y personajes desarrollados por Douglass Adams para radio BBC en las setentas. Ademas del fragmento estamos trabajando en la traducción del seria original al español. Aun que no están terminados, esperemos que alguien encuentra algún diversión en ello. Eso por que últimamente no hemos tenidos tiempo de trabajar en ello, y mucho menos fondos para producir lo.</p>
 
-<h2>Guía de la Galaxia para Mochileros, Edición Pirateada</h2>
+<h2 id="gua-de-la-galaxia-para-mochileros-edicin-pirateada">Guía de la Galaxia para Mochileros, Edición Pirateada</h2>
 
 <p><strong>F/X</strong>
 Estación espacial, después si abre una ventana o una puerta. música de fondo (rockola).</p>
@@ -199,7 +216,7 @@ Estación espacial, después si abre una ventana o una puerta. música de fondo 
 (yawn..) Buen día Arturo.</p>
 
 <p><strong>ARTURO DANTE</strong>
-Buen&#8230; (dudando) es día?</p>
+Buen… (dudando) es día?</p>
 
 <p><strong>FORD PREFECT</strong>
 No se. Café?</p>
@@ -241,7 +258,7 @@ Aaa.</p>
 
   <div class="entry-content"><p>Fotos para comemorar la gala flujos fest, cosecha de la palabra y otros antojos. Hubo musica, proyeccion, chupe, baile, amor. ¿Que mas quieres?</p>
 
-<p><img src="http://flujos.org/media/Cosecha_palabra%20176.png" title="fusion" ></p>
+<p><img src="http://flujos.org/media/Cosecha_palabra%20176.png" title="fusion" /></p>
 
 </div>
   
@@ -271,7 +288,7 @@ Aaa.</p>
 
   <div class="entry-content"><p>Los Rincones Del Sur, invitados de honor de <a href="http://www.flujos.org/blog/Flujos_Fest_2012/" title="Flujos Fest 2012">Flujos Fest 2012</a> miran hacia el horizonte. Agradecemos su presencia y a todos que asistieron. Pronto subiremos mas fotos para que si ponen invidiosos los que perdieron a la fiesta.</p>
 
-<p> <img class="right" src="http://flujos.org/media/flujosfestrinconesdelaur.png" title="Los Rincones Del Sur" ></p>
+<p><img class="right" src="http://flujos.org/media/flujosfestrinconesdelaur.png" title="Los Rincones Del Sur" /></p>
 
 <p>Escucha la musica de los Rincones del Sur en <a href="http://rockola.flujos.org" title="Rockolateka Radiofónica">La Rockolateka Radiofónica Virtualizada</a> y queda que ver que mas hay para escuchar en ella.</p>
 </div>
@@ -302,50 +319,44 @@ Aaa.</p>
 
 <p>Primero sintetizamos un ruido de fondo y la pasamos por un Resonant Low Pass Filter (RLPF).</p>
 
-<figure class='code'><figcaption><span>ruido  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">lfn</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">LFNoise2</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10000</span>)<span class="nf">,</span><span class="m">440</span><span class="nf">,</span><span class="m">0.1</span>)<span class="nf">*</span><span class="m">0.03</span>}
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>ruido  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="smalltalk"><span class="line"><span class="err">~</span><span class="nv">lfn</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">LFNoise2</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10000</span>)<span class="nf">,</span><span class="m">440</span><span class="nf">,</span><span class="m">0.1</span>)<span class="nf">*</span><span class="m">0.03</span>}
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>En seguida sintetizamos un especia de ritmo atreves de un seria de ruidos de igual manera filtros por un RLPF.</p>
 
-<figure class='code'><figcaption><span>tracktor  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tractor</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">BrownNoise</span><span class="p">.</span><span class="nv">ar</span><span class="nf">*</span><span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">10</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">*</span><span class="nc">WhiteNoise</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10</span>))}<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>tracktor  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="smalltalk"><span class="line"><span class="err">~</span><span class="nv">tractor</span><span class="nf">=</span>{<span class="nc">RLPF</span><span class="p">.</span><span class="nv">ar</span>(<span class="nc">BrownNoise</span><span class="p">.</span><span class="nv">ar</span><span class="nf">*</span><span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">10</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">*</span><span class="nc">WhiteNoise</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">10</span>))}<span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>Luego sintetizamos un bombo.</p>
 
-<figure class='code'><figcaption><span>bombo  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">kick</span><span class="nf">=</span>{<span class="nc">Ringz</span><span class="p">.</span><span class="nv">ar</span>( <span class="nc">Impulse</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">2</span>)<span class="nf">,</span> <span class="m">60</span><span class="nf">,</span> <span class="m">0.5</span> )<span class="nf">*</span><span class="m">0.3</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>bombo  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="smalltalk"><span class="line"><span class="err">~</span><span class="nv">kick</span><span class="nf">=</span>{<span class="nc">Ringz</span><span class="p">.</span><span class="nv">ar</span>( <span class="nc">Impulse</span><span class="p">.</span><span class="nv">ar</span>(<span class="m">2</span>)<span class="nf">,</span> <span class="m">60</span><span class="nf">,</span> <span class="m">0.5</span> )<span class="nf">*</span><span class="m">0.3</span> }<span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>Un acorde hecho de tres tonos elejido de forma aleatorio.</p>
 
-<figure class='code'><figcaption><span>acorde  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">tono</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono0</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">tono1</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>acorde  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="smalltalk"><span class="line"><span class="err">~</span><span class="nv">tono</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
+</span><span class="line"><span class="nf">~</span><span class="nv">tono0</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
+</span><span class="line"><span class="nf">~</span><span class="nv">tono1</span><span class="nf">=</span>{<span class="nc">SinOsc</span><span class="p">.</span><span class="nv">ar</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">choose</span><span class="p">.</span><span class="nv">midiratio</span><span class="nf">*</span><span class="m">400</span>)<span class="nf">*</span><span class="m">1</span><span class="nf">/</span><span class="m">5</span> }<span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>Y finalmente dos melodias reproducidas en sequencia aleatorio.</p>
 
-<figure class='code'><figcaption><span>melodia  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='smalltalk'><span class='line'><span class="err">~</span><span class="nv">demand</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
-</span><span class='line'><span class="nf">~</span><span class="nv">dmel0</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">reverse</span><span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>melodia  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="smalltalk"><span class="line"><span class="err">~</span><span class="nv">demand</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
+</span><span class="line"><span class="nf">~</span><span class="nv">dmel0</span><span class="nf">=</span>{<span class="nc">Demand</span><span class="p">.</span><span class="nv">kr</span>(<span class="nc">Impulse</span><span class="p">.</span><span class="nv">kr</span>(<span class="m">1</span>)<span class="nf">,</span><span class="m">0</span><span class="nf">,</span><span class="nc">Dseq</span>([<span class="m">0</span><span class="nf">,</span><span class="m">2</span><span class="nf">,</span><span class="m">3</span><span class="nf">,</span><span class="m">4</span><span class="nf">,</span><span class="m">5</span><span class="nf">,</span><span class="m">6</span><span class="nf">,</span><span class="m">7</span><span class="nf">,</span><span class="m">8</span><span class="nf">,</span><span class="m">9</span><span class="nf">,</span><span class="m">10</span><span class="nf">,</span><span class="m">11</span><span class="nf">,</span><span class="m">12</span>]<span class="p">.</span><span class="nv">reverse</span><span class="p">.</span><span class="nv">scramble</span><span class="nf">,</span><span class="nv">inf</span>))}<span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 </div>
   
@@ -400,6 +411,60 @@ Aaa.</p>
   <abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr>
 </h4>
 <a href="http://ki-ai.org/blog/page/5/index.html"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://ki-ai.org/blog/page/5/index.html" alt="post-qrcode"></a>
+</section>
+<section>
+  <div id='tag-canvas-container'>
+  <canvas width="300" height="300" id="tag-canvas">
+    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+  </canvas>
+  </div>
+
+<div id="tags">
+  <ul>
+    <li><a style="font-size: 116%" href="/tags/arch/">arch</a></li>
+<li><a style="font-size: 162%" href="/tags/audio/">audio</a></li>
+<li><a style="font-size: 99%" href="/tags/automatizacion/">automatización</a></li>
+<li><a style="font-size: 70%" href="/tags/bootstrap/">bootstrap</a></li>
+<li><a style="font-size: 70%" href="/tags/cine/">cine</a></li>
+<li><a style="font-size: 70%" href="/tags/cinelerra/">cinelerra</a></li>
+<li><a style="font-size: 70%" href="/tags/compresor/">compresor</a></li>
+<li><a style="font-size: 70%" href="/tags/corralero/">corralero</a></li>
+<li><a style="font-size: 99%" href="/tags/costa/">costa</a></li>
+<li><a style="font-size: 70%" href="/tags/df/">df</a></li>
+<li><a style="font-size: 70%" href="/tags/eq/">eq</a></li>
+<li><a style="font-size: 70%" href="/tags/faro/">faro</a></li>
+<li><a style="font-size: 99%" href="/tags/fiesta/">fiesta</a></li>
+<li><a style="font-size: 99%" href="/tags/flujos/">flujos</a></li>
+<li><a style="font-size: 128%" href="/tags/guion/">guion</a></li>
+<li><a style="font-size: 170%" href="/tags/hacks/">hacks</a></li>
+<li><a style="font-size: 128%" href="/tags/hhgg/">hhgg</a></li>
+<li><a style="font-size: 128%" href="/tags/imagen/">imagen</a></li>
+<li><a style="font-size: 70%" href="/tags/ladspa/">ladspa</a></li>
+<li><a style="font-size: 116%" href="/tags/letras/">letras</a></li>
+<li><a style="font-size: 99%" href="/tags/linux/">linux</a></li>
+<li><a style="font-size: 70%" href="/tags/live/">live</a></li>
+<li><a style="font-size: 70%" href="/tags/luna/">luna</a></li>
+<li><a style="font-size: 70%" href="/tags/mac/">mac</a></li>
+<li><a style="font-size: 70%" href="/tags/maldonado/">maldonado</a></li>
+<li><a style="font-size: 99%" href="/tags/mpd/">mpd</a></li>
+<li><a style="font-size: 70%" href="/tags/nortena/">norteña</a></li>
+<li><a style="font-size: 70%" href="/tags/octopress/">octopress</a></li>
+<li><a style="font-size: 116%" href="/tags/perl/">perl</a></li>
+<li><a style="font-size: 70%" href="/tags/pescado/">pescado</a></li>
+<li><a style="font-size: 99%" href="/tags/playa/">playa</a></li>
+<li><a style="font-size: 70%" href="/tags/pueblo/">pueblo</a></li>
+<li><a style="font-size: 70%" href="/tags/pulseaudio/">pulseaudio</a></li>
+<li><a style="font-size: 128%" href="/tags/radio/">radio</a></li>
+<li><a style="font-size: 70%" href="/tags/ruby/">ruby</a></li>
+<li><a style="font-size: 99%" href="/tags/sc3/">sc3</a></li>
+<li><a style="font-size: 70%" href="/tags/tigres/">tigres</a></li>
+<li><a style="font-size: 128%" href="/tags/traduccion/">traduccion</a></li>
+<li><a style="font-size: 99%" href="/tags/video/">video</a></li>
+<li><a style="font-size: 99%" href="/tags/web/">web</a></li>
+<li><a style="font-size: 70%" href="/tags/xochis/">xochis</a></li>
+
+  </ul>
+  </div>
 </section>
 
   

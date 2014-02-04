@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: xochis | ki-ai.org]]></title>
+  <link href="http://ki-ai.org/tags/xochis/atom.xml" rel="self"/>
+  <link href="http://ki-ai.org/"/>
+  <updated>2014-02-03T19:38:20-06:00</updated>
+  <id>http://ki-ai.org/</id>
+  <author>
+    <name><![CDATA[ki-ai.org]]></name>
+    <email><![CDATA[contact@ki-ai.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tarde Lluvioso]]></title>
+    <link href="http://ki-ai.org/blog/2013/07/02/tarde-lluvioso/"/>
+    <updated>2013-07-02T00:28:00-05:00</updated>
+    <id>http://ki-ai.org/blog/2013/07/02/tarde-lluvioso</id>
+    <content type="html"><![CDATA[<p><video width='480' height='270' preload='none' controls poster=' http://flujos.org/media/kiai/kiai480x270.png'><source src='http://flujos.org/media/kiai/xochis.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
+]]></content>
+  </entry>
+  
+</feed>

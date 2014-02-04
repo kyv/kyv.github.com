@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: norteña | ki-ai.org]]></title>
+  <link href="http://ki-ai.org/tags/nortena/atom.xml" rel="self"/>
+  <link href="http://ki-ai.org/"/>
+  <updated>2014-02-03T19:38:20-06:00</updated>
+  <id>http://ki-ai.org/</id>
+  <author>
+    <name><![CDATA[ki-ai.org]]></name>
+    <email><![CDATA[contact@ki-ai.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Distrito Efe]]></title>
+    <link href="http://ki-ai.org/blog/2014/01/07/distrito-efe/"/>
+    <updated>2014-01-07T22:24:00-06:00</updated>
+    <id>http://ki-ai.org/blog/2014/01/07/distrito-efe</id>
+    <content type="html"><![CDATA[<p>Con dedicación a los amigos en df. Amenizado por los Tigres del Norte con su exito <em>Rock del Corazon</em>. Estreñando un nuevo special mix por el celebre DJ el Dr. no-invitado.</p>
+
+<p><video width='640' height='360' preload='none' controls poster=' http://flujos.org/media/kiai/distrito-portada.png'><source src='http://flujos.org/media/kiai/distrito.webm' type='video/webm; codecs="vp8.0, vorbis"'/></video></p>
+]]></content>
+  </entry>
+  
+</feed>
