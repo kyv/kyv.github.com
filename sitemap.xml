@@ -6,7 +6,7 @@
     </url>
     <url>
         <loc>http://ki-ai.org/blog/2012/10/26/ciertas-letras/</loc>
-        <lastmod>2014-02-03T19:24:35-06:00</lastmod>
+        <lastmod>2014-02-03T19:41:22-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/blog/2012/10/28/ambient-atonalidad/</loc>
@@ -26,15 +26,19 @@
     </url>
     <url>
         <loc>http://ki-ai.org/blog/2012/10/30/intro-fit-the-second/</loc>
-        <lastmod>2014-02-03T19:21:58-06:00</lastmod>
+        <lastmod>2014-02-03T19:42:08-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/blog/2012/10/31/vortice-de-perspectivo-absoluto/</loc>
-        <lastmod>2014-02-03T19:21:19-06:00</lastmod>
+        <lastmod>2014-02-03T19:42:34-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/blog/2012/11/01/copiar-lista-a-dispositivo/</loc>
         <lastmod>2014-02-03T19:20:34-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ki-ai.org/blog/2012/11/05/historia-de-una-imagen/</loc>
+        <lastmod>2014-02-03T15:05:44-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/blog/2012/11/07/archlinux-en-macbook/</loc>
@@ -58,7 +62,7 @@
     </url>
     <url>
         <loc>http://ki-ai.org/blog/2012/12/04/guia-de-la-galaxia-episodio-seis/</loc>
-        <lastmod>2014-02-03T19:16:48-06:00</lastmod>
+        <lastmod>2014-02-03T19:43:11-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/blog/2012/12/06/cinelerra-gamma-y-brillo/</loc>
@@ -99,6 +103,10 @@
         <lastmod>2014-02-03T15:05:44-06:00</lastmod>
     </url>
     <url>
+        <loc>http://ki-ai.org/blog/2013/06/19/compare-lengths-of-wav-files/</loc>
+        <lastmod>2014-02-03T15:05:44-06:00</lastmod>
+    </url>
+    <url>
         <loc>http://ki-ai.org/blog/2013/07/02/tarde-lluvioso/</loc>
         <lastmod>2014-02-03T18:36:11-06:00</lastmod>
     </url>
@@ -111,8 +119,12 @@
         <lastmod>2014-02-03T18:35:26-06:00</lastmod>
     </url>
     <url>
+        <loc>http://ki-ai.org/blog/2014/01/10/realtime-internet-audio-link/</loc>
+        <lastmod>2014-02-03T15:05:44-06:00</lastmod>
+    </url>
+    <url>
         <loc>http://ki-ai.org/letras/</loc>
-        <lastmod>2014-02-03T19:24:35-06:00</lastmod>
+        <lastmod>2014-02-03T19:43:11-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/web/</loc>
@@ -136,7 +148,7 @@
     </url>
     <url>
         <loc>http://ki-ai.org/</loc>
-        <lastmod>2014-02-03T19:24:35-06:00</lastmod>
+        <lastmod>2014-02-03T19:43:11-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/archives/tags.html</loc>
@@ -152,11 +164,11 @@
     </url>
     <url>
         <loc>http://ki-ai.org/blog/</loc>
-        <lastmod>2014-02-03T19:24:35-06:00</lastmod>
+        <lastmod>2014-02-03T19:43:11-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/blog/archives/</loc>
-        <lastmod>2014-02-03T19:24:35-06:00</lastmod>
+        <lastmod>2014-02-03T19:43:11-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/servicios/</loc>
