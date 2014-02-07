@@ -4,7 +4,7 @@
   <title><![CDATA[Category: eventos | ki-ai.org]]></title>
   <link href="http://ki-ai.org/blog/categories/eventos/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2014-02-03T19:50:38-06:00</updated>
+  <updated>2014-02-07T17:34:00-06:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -18,7 +18,7 @@
     <link href="http://ki-ai.org/blog/2012/10/26/hackmitin-2012/"/>
     <updated>2012-10-26T16:03:00-05:00</updated>
     <id>http://ki-ai.org/blog/2012/10/26/hackmitin-2012</id>
-    <content type="html"><![CDATA[<p>{% img pull-left http://hackmitin.espora.org/im%C3%A1genes/hackmitin2012_web.png “hackmitin 2012” %}</p>
+    <content type="html"><![CDATA[<p><img class="pull-left" src="http://hackmitin.espora.org/im%C3%A1genes/hackmitin2012_web.png" title="“hackmitin 2012”" ></p>
 
 <p>Inaguramos nuestro blog con una invitacion al Hackmitin 2012. Váyanse preparando. Es el 9, 10 y 11 de Noviembre en el espacio comunitario ADA ubicado en la Ciudad de Puebla, México.</p>
 

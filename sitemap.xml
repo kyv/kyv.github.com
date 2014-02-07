@@ -37,10 +37,6 @@
         <lastmod>2014-02-03T19:20:34-06:00</lastmod>
     </url>
     <url>
-        <loc>http://ki-ai.org/blog/2012/11/05/historia-de-una-imagen/</loc>
-        <lastmod>2014-02-03T15:05:44-06:00</lastmod>
-    </url>
-    <url>
         <loc>http://ki-ai.org/blog/2012/11/07/archlinux-en-macbook/</loc>
         <lastmod>2014-02-03T19:20:01-06:00</lastmod>
     </url>
@@ -103,10 +99,6 @@
         <lastmod>2014-02-03T15:05:44-06:00</lastmod>
     </url>
     <url>
-        <loc>http://ki-ai.org/blog/2013/06/19/compare-lengths-of-wav-files/</loc>
-        <lastmod>2014-02-03T15:05:44-06:00</lastmod>
-    </url>
-    <url>
         <loc>http://ki-ai.org/blog/2013/07/02/tarde-lluvioso/</loc>
         <lastmod>2014-02-03T18:36:11-06:00</lastmod>
     </url>
@@ -116,15 +108,11 @@
     </url>
     <url>
         <loc>http://ki-ai.org/blog/2014/01/07/distrito-efe/</loc>
-        <lastmod>2014-02-03T18:35:26-06:00</lastmod>
-    </url>
-    <url>
-        <loc>http://ki-ai.org/blog/2014/01/10/realtime-internet-audio-link/</loc>
-        <lastmod>2014-02-03T15:05:44-06:00</lastmod>
+        <lastmod>2014-02-07T17:31:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/letras/</loc>
-        <lastmod>2014-02-03T19:43:11-06:00</lastmod>
+        <lastmod>2014-02-07T17:31:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/web/</loc>
@@ -133,6 +121,10 @@
     <url>
         <loc>http://ki-ai.org/web/amaya.html</loc>
         <lastmod>2014-02-03T16:00:51-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ki-ai.org/test.html</loc>
+        <lastmod>2014-02-07T17:27:07-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/talleres/</loc>
@@ -148,7 +140,7 @@
     </url>
     <url>
         <loc>http://ki-ai.org/</loc>
-        <lastmod>2014-02-03T19:43:11-06:00</lastmod>
+        <lastmod>2014-02-07T17:31:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/archives/tags.html</loc>
@@ -164,11 +156,11 @@
     </url>
     <url>
         <loc>http://ki-ai.org/blog/</loc>
-        <lastmod>2014-02-03T19:43:11-06:00</lastmod>
+        <lastmod>2014-02-07T17:31:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/blog/archives/</loc>
-        <lastmod>2014-02-03T19:43:11-06:00</lastmod>
+        <lastmod>2014-02-07T17:31:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://ki-ai.org/servicios/</loc>
