@@ -1,0 +1,103 @@
+---
+layout: page
+title: Amaya
+date: 2014-02-03 11:33
+comments: true
+sharing: true
+footer: true
+tags: [html, css, web, amaya, design]
+group: web
+---
+
+### [Creación de una página web sencilla con el editor Amaya](http://vimeo.com/4734991)
+
+Navegar con Amaya es como navegar con otros navegadores Web. Por ejemplo, la barra de botones de Amaya incluye botones stop, atrás, adelante, actualizar, home, guardar e imprimir. Pero hay una diferencia importante: para abrir un enlace debes hacer doble clic sobre él. Consulta Activar un enlace para obtener más información.
+A diferencia de otros navegadores, Amaya proporciona herramientas para la edición de páginas web. para obtener más información sobre la edición, consulta:
+ manual: [es](http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/Manual.html.es)
+
+#### [Interfaz de usuario](http://www.mclibre.org/consultar/amaya/amaya/amaya_interfaz.html)
+
+Al ejecutar Amaya por primera vez, el aspecto es éste:
+
+<iframe src="http://www.mclibre.org/consultar/amaya/amaya/amaya_interfaz.html#Interfaz" width="100%" height="400">
+  ![](http://www.mclibre.org/consultar/amaya/img/configuracion/interface_1.png)
+
+El interfaz de Amaya es el habitual de las aplicaciones gráficas, combinando elementos típicos de los navegadores con los de los editores:
+
+*   barra de título
+*   barra de menús
+*   barra de navegación
+*   barras de edición
+*   ventana de herramientas
+*   ventana de trabajo
+*   barra de estado
+</iframe>
+
+[opinion](http://www.joelonsoftware.com/articles/fog0000000018.html)
+
+### [Limitaciones](http://www.mclibre.org/consultar/amaya/amaya/amaya_problemas.html)
+
+En esta página se comentan algunos problemas de la edición de páginas web con Amaya. Hay que tener en cuenta que Amaya no aplica correctamente bastantes propiedades de las hojas de estilo, así que es necesario comprobar en Firefox que estamos obtenido el resultado esperado.
+
+Faltan por poner bastantes cosas
+
+*   Hojas de estilo alternativas
+*   Alineación vertical: vertical-align
+*   Espaciado de letras y palabras: letter-spacing y word-spacing
+*   Decoración: text-decoration
+*   Mayúsculas / minúsculas: text-transform
+*   Sombreado: text-shadow
+*   Colores de sistema
+*   Espacios en blanco: white-space
+*   Pseudo-clases y pseudo elementos
+*   Fondos
+*   Tamaño
+
+### [Edición de texto en Amaya](http://www.mclibre.org/consultar/amaya/amaya/amaya_edicion.html)
+
+<iframe src="http://www.mclibre.org/consultar/amaya/amaya/amaya_edicion.html" width="100%" height="400">
+Para indicar a Amaya que se quiere trabajar con una etiqueta (para convertirla en otra, para definir un atributo, para borrar la etiqueta y su contenido, etc.) es necesario seleccionar la etiqueta. Para seleccionar una etiqueta hay que situar primero el cusor en el elemento que se quiere seleccionar (o hacer clic en él si se trata de una imagen), a continuación se puede hacer clic en el nombre de la etiqueta que se muestra en la barra de estado, o pulsar F2 hasta seleccionar la etiqueta deseada. Al seleccionar una etiqueta, Amaya resalta el contenido de la etiqueta mostrando el fondo de color azul. Volviendo a hacer clic en algún lugar de la página desaparece la selección de la etiqueta y reaparece el cursor.
+  ![](http://www.mclibre.org/consultar/amaya/img/edicion/amaya_edicion_seleccion_2.png)
+</iframe>
+
+[http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/editing_iso-latin-1_characters/about_white_space_handling.html.es](http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/editing_iso-latin-1_characters/about_white_space_handling.html.es)
+
+
+#### [Insertar imágenes en Amaya](http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/ImageMaps.html.es)
+
+Para insertar una imagen, elige el comando de menú Xhtml > Imagen, haz clic en el botón Gráficos Botón Gráficos, o utiliza el atajo de teclado (Control-t en Windows, Control-i en Unix). La caja de diálogo que se abre te permite escribir el nombre del archivo y su texto aternativo (ALT) de la imagen que quieres insertar.
+
+Para suministrar una descripción larga de una imagen que represente una información compleja, debes hacerlo en un archivo distinto y enlazarlo proporcionando el URI en el atributo longdesc. Este comando se encuentra también en el menú Atributos.
+
+Para que te sea más fácil encontrar una imagen, puedes elegir el tipo de archivo para que la caja de siálogo de selección de archivo muestre únicamente los archivos del tipo indicado.
+[http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/ImageMaps.html.es](http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/ImageMaps.html.es)</span>
+
+#### [Para crear una nueva tabla en Amaya](http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/Tables.html.es#page_body)
+
+1.  Sitúa el cursor en la posición del documento en la que quieres crear la tabla.
+    Haz clic en el botón Tabla, o elige el comando de menú Xhtml > Tabla. Se abrirá una caja de diálogo.
+2.  Escribe el número inicial de filas y columnas de la nueva tabla, y especifica el grosor del borde.
+3.  Haz clic en el botón Confirmar. Amaya crea una representación gráfica de la tabla.
+4.  El cursor se sitúa automáticamente en el espacio situado sobre la tabla que está reservado para la leyenda de la tabla. Puedes borrar este espacio si no necesitas una leyenda.
+5.  Las celdas de la nueva tabla están vacías. Para insertar contenido en ellas, haz clic en el interior de la celda e inserta texto, imágenes, etc. Utiliza las flechas de desplazamiento para moverte de una celda a otra.
+
+#### [Crear vinculo un enlace en Amaya](http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/Links.html.es#page_body)
+
+Para crear un enlace a un destino o a un elemento destino situado en el mismo documento:
+
+1.  Selecciona el texto del enlace que estás creando.
+2.  Haz clic en el botón Enlace. El cursor cambiará de tener forma de flecha a tener forma de mano.
+3.  Haz clic en el icono destino para crear el enlace.
+
+[http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/Links.html.es](http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/Links.html.es)
+
+####
+
+HTML es un lenguaje de marcado cuyo propósito principal consiste en estructurar los contenidos de los documentos y páginas web. Sin embargo, HTML también incluye elementos para crear aplicaciones web. El estándar HTML/XHTML permite crear formularios para que los usuarios interactúen con las aplicaciones web.
+
+[http://www.mclibre.org/consultar/amaya/amaya/amaya_edicion.html#Formulario](http://www.mclibre.org/consultar/amaya/amaya/amaya_edicion.html#Formulario)</span>
+
+#### [CSS en Amaya](http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/StyleSheets.html.es)
+
+#### Más
+[http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/StyleSheets.html.es](http://stuff.mit.edu/afs/sipb/project/amaya/src/Amaya/doc/html/StyleSheets.html.es)
