@@ -138,3 +138,31 @@ a.noprint.pull-right i:hover
   margin-right: auto;
   margin-left: auto;
 }
+:target {
+   border: 1px yellow dashed;
+   padding: 5px;
+}
+
+// tags
+#tags {display: none}
+
+// toc
+// http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/
+#markdown-toc
+{
+  padding: 1em;
+}
+#markdown-toc a{
+  font-weight: normal;
+  font-size: 80%;
+}
+ul#markdown-toc {
+  list-style: none;
+  float: right;
+  @include box-shadow;
+  background-color: white;
+}
+
+.blog-index #markdown-toc {
+  display: none;
+}
