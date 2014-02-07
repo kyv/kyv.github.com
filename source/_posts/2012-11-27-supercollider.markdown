@@ -4,8 +4,9 @@ title: "supercollider, gedit, window$"
 date: 2012-11-27 21:39
 comments: true
 categories: supercollider
+tags: [sc3, hacks]
 ---
-{% img right http://farm6.staticflickr.com/5462/7000684506_50873d6bfe.jpg 300px %}SuperCollider, en window$, viene con un interfaz de control aparentemente hecho en java.  Como nos parece	 bastante limitado el interfaz, recomendamos el uso de superCollider via de el plugin **sced** de [Gedit](http://projects.gnome.org/gedit/). Primero [instalamos gedit](http://projects.gnome.org/gedit/ "Gedit"). [Instalamos superCollider](http://supercollider.sourceforge.net) ahora con Gedit instalado podemos instalar SuperCollider. Su instalador encuentra a gedit y levanta una ventana como la a la derecha, donde uno tiene que indicar que se instala **Sced**. 
+{% img right http://farm6.staticflickr.com/5462/7000684506_50873d6bfe.jpg 300px %}SuperCollider, en window$, viene con un interfaz de control aparentemente hecho en java.  Como nos parece  bastante limitado el interfaz, recomendamos el uso de superCollider via de el plugin **sced** de [Gedit](http://projects.gnome.org/gedit/). Primero [instalamos gedit](http://projects.gnome.org/gedit/ "Gedit"). [Instalamos superCollider](http://supercollider.sourceforge.net) ahora con Gedit instalado podemos instalar SuperCollider. Su instalador encuentra a gedit y levanta una ventana como la a la derecha, donde uno tiene que indicar que se instala **Sced**.
 
 <!--more-->
 

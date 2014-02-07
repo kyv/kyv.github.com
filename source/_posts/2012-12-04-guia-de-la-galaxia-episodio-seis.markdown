@@ -56,7 +56,7 @@ Tienes razón. Esta lleno de cuerpos hasta donde el ojo alcanza ver. Loco.
 Que hay de agradable en muchos muertos?
 
 **FORD**
-No sé, Vamos a ver. Mira este tiene una tarjetita. 
+No sé, Vamos a ver. Mira este tiene una tarjetita.
 
 **ARTURO**
 Que dice?
@@ -77,10 +77,10 @@ Pero que hace aquí?
 No mucho.
 
 **ARTURO**
-No, pero quiero decir porque ... Santo Dios ella es una estilista muerta. 
+No, pero quiero decir porque ... Santo Dios ella es una estilista muerta.
 
 **FORD**
-Y este es un ejecutivo en cuentas de mercadotecnia. 
+Y este es un ejecutivo en cuentas de mercadotecnia.
 
 **ARTURO**
 Son de verdad ataúdes? son muy fríos.
@@ -108,13 +108,13 @@ Er, capitán?
 Si, Numero Uno
 
 **NUMERO UNO**
-Apenas tuve un especia de reporte... um y así ... es de Numero Dos. 
+Apenas tuve un especia de reporte... um y así ... es de Numero Dos.
 
 **CAPITAN**
-Oh no. 
+Oh no.
 
 **NUMERO UNO**
-Estaba gritando algo de haber encontrado prisioneros. 
+Estaba gritando algo de haber encontrado prisioneros.
 
 **CAPITAN**
 Que bueno debe de alegrarlo, es lo que siempre ha querido.
@@ -128,16 +128,16 @@ Capitan señor!
 Oh, hola, Numero Dos, teniendo un bonito día?
 
 **NUMERO DOS**
-Entrego prisioneros enontrados en congelador siete, señor. 
+Entrego prisioneros enontrados en congelador siete, señor.
 
 **FORD/ARTURO**
-Er, hola. 
+Er, hola.
 
 **CAPITAN**
 Oh hola, disculparme no levanto, apenas entre en el baño. Un Absolute entonces, para todos. Busca en el refri, Numero Uno.
 
 **NUMERO UNO**
-Si señor. 
+Si señor.
 
 **NUERO DOS**
 No quieres interrogar a los prisioneros, señor?
@@ -152,7 +152,7 @@ Si señor. Torturarlos señor, clavar cerillos baja sus uñas, apagar cigarros e
 Dios Madre porque quisiera hacer tal cosa?
 
 **NUMERO DOS**
-Para sacar información de ellos señor. 
+Para sacar información de ellos señor.
 
 **CAPITAN**
 Oh no no no, creo que pasaron por un gin y tonic, no es así?
@@ -176,7 +176,7 @@ Que quieren tomar?!!!!
 Gin y tonic suena genial. Arturo?
 
 **ARTURO**
-Perdón? ah si. 
+Perdón? ah si.
 
 **NUMERO DOS**
 Con hielo o sin hielo!!!!
@@ -230,7 +230,7 @@ Digo no pude sin notar, mmm, los cuerpos.
 Cuerpos?
 
 **FORD**
-Si ... todos aquellos desinfectadores de teléfonos y ejecutivos de cuentas, vez, en la bodega. 
+Si ... todos aquellos desinfectadores de teléfonos y ejecutivos de cuentas, vez, en la bodega.
 
 **CAPITAN**
 Oh no, no están muertos, Dios no, están congelados, los vamos a revivir.
@@ -239,7 +239,7 @@ Oh no, no están muertos, Dios no, están congelados, los vamos a revivir.
 Usted en realidad quiere decir que tienes una bodega lleno de estilistas congeladas?
 
 **CAPITAN**
-Oh si, millones de ellos, estilistas, vendedores de seguros, encargados de personal, ex-productores de Televisa y TV Azteca. 
+Oh si, millones de ellos, estilistas, vendedores de seguros, encargados de personal, ex-productores de Televisa y TV Azteca.
 
 **NUMERO DOS**
 Guardias de seguridad.
@@ -308,7 +308,7 @@ No es lo que mi dijeron a mi! Mi superior juro hasta volverse rojo que el planet
 (Siguiendo el juego) De verdad ....
 
 **NUMERO DOS**
-Si, y que el unicamente esperaba que su nave estaría preparado en tiempo. 
+Si, y que el unicamente esperaba que su nave estaría preparado en tiempo.
 
 **ARTURO**
 Pero aseguraron enviar la bola de ustedes antes.
@@ -457,7 +457,7 @@ Si le gustaría echar un vistazo a la carta de la agenda.
 Regresas a peinar algo de favor?
 
 **ASESOR DE ADMINISTRACION**
-. . . veras que estamos al punto de tener un reporte del sub-comité de desarrollo de fuego por las estilitas hoy.. 
+. . . veras que estamos al punto de tener un reporte del sub-comité de desarrollo de fuego por las estilitas hoy..
 
 **ESTILISTA**
 Ese soy yo.
@@ -522,7 +522,7 @@ Si, y están extinguiendo se, eso lo has notado?
 Si, hay que tomar nota no venderlos mas seguros.
 
 **FORD**
-Pero no entiendes? Unicamente desde que llegamos han empezados extinguirse. 
+Pero no entiendes? Unicamente desde que llegamos han empezados extinguirse.
 
 **CHICA DE MERCADOTECNIA**
 Si y se transmita la idea lucidamente en la película que se esta haciendo.
@@ -531,13 +531,13 @@ Si y se transmita la idea lucidamente en la película que se esta haciendo.
 Mi hace que quiere hacer un documental sobre usted, próximamente, capitán. . .
 
 **CAPITAN**
-Oh de veras? que simpático. 
+Oh de veras? que simpático.
 
 **CHICA DE MERCADOTECNIA**
 Tiene un perspectivo muy fuerte al respeto a la tema, la carga de responsabilidad, la soledad del líder . . .
 
 **CAPITAN**
-Ah, bueno no acentuaría demasiado esta parte, nadie esta solo con un pato de goma. Weeee . . . 
+Ah, bueno no acentuaría demasiado esta parte, nadie esta solo con un pato de goma. Weeee . . .
 
 **ASESOR DE ADMINISTRACION**
 Er, Sir . . .  Jefe . . .
@@ -548,10 +548,10 @@ Er, Sir . . .  Jefe . . .
 Si podemos por un momento avanzar a la tema de política fiscal . . .
 
 **FORD**
-Política fiscal! Como van a tener dinero, si ninguno de ustedes produce algo - no crece en los arboles saben. 
+Política fiscal! Como van a tener dinero, si ninguno de ustedes produce algo - no crece en los arboles saben.
 
 **ASESOR DE ADMINISTRACION**
-Si mi permites seguir . . . desde que decidimos hace unas semanas adoptar hojas como moneda hemos todos vueltos enormemente ricos . . . 
+Si mi permites seguir . . . desde que decidimos hace unas semanas adoptar hojas como moneda hemos todos vueltos enormemente ricos . . .
 
 **TODOS** (HABLA GENERAL, SI, MUY BIEN, EXCELENTE, QUE CHINGON)
 
@@ -561,7 +561,7 @@ Si mi permites seguir . . . desde que decidimos hace unas semanas adoptar hojas 
 **TODOS** (general acuerdo, frases como 'fiscalmente astuto' 'Económicamente tiene mucha razón' y 'reducir precio en un solo moción' y 'Incrementar el valor del la hoja en la bolsa')
 
 **FORD**
-Son completamente chiflados, son una bola de frutos delirantes. 
+Son completamente chiflados, son una bola de frutos delirantes.
 
 **CHICA DE MERCADOTECNIA**
 Quizá es momento preguntar a usted que has estado haciendo todo este tiempo? Usted y el otro intruso han estado desaparecidos por mesas.
@@ -573,7 +573,7 @@ Si, pues, con todo respeto, hemos estado viajando intentando encontrar algo sobr
 No suena muy productivo. Yo creía que ...
 
 **FORD**
-No, yo tengo noticias para ustedes. No importa un par de riñones fétidos de tlacuache que hace de aquí y adelante, quemar los bosques, lo que sea, no hace ninguna diferencia. Tienen dos millones de años, y es todo. Después de eso, su raza será muerto, desaparecido y que bien por ello. Acuerda lo, dos millones de años. 
+No, yo tengo noticias para ustedes. No importa un par de riñones fétidos de tlacuache que hace de aquí y adelante, quemar los bosques, lo que sea, no hace ninguna diferencia. Tienen dos millones de años, y es todo. Después de eso, su raza será muerto, desaparecido y que bien por ello. Acuerda lo, dos millones de años.
 
 **CAPITAN**
 Ah apenas dará tiempo para otro baño. Pasa la esponja alguien . . .
@@ -582,7 +582,7 @@ Ah apenas dará tiempo para otro baño. Pasa la esponja alguien . . .
 FADE UP MISMO FONDO QUE ULTIMA SCENA. REUNION DIMINUINDO AL FONDO. PRIMER PLANO ALGUNOS CAVERNICULAS HACIENDO ARGGG.
 
 **ARTURO**
-No, Q le gana 10 puntos vez, y es un palabra triple, entonces . . . Perdón ya explicé las reglas .  . . no, no, mira favor de dejar el hueso de mandíbula ... bueno empezamos de nuevo. Intenta concentrar este vez. 
+No, Q le gana 10 puntos vez, y es un palabra triple, entonces . . . Perdón ya explicé las reglas .  . . no, no, mira favor de dejar el hueso de mandíbula ... bueno empezamos de nuevo. Intenta concentrar este vez.
 
 **FORD** (llegando cansado triste)
 Oh que haces, Arturo?
@@ -615,10 +615,10 @@ Si pero no vas a nascer por casi dos millones de años, entonces es probable que
 Pero debe de haber algo que podemos hacer ...
 
 **FORD**
-No, nada, realmente nada, porque todo ya esta hecho. Escucha, hemos ido atrás y hacia adelante en el tiempo y aquí acabamos, dos millones de años atrás de donde empezamos, pero no cambia el futuro, porque lo hemos visto. Ponte listo, no hay nada que puedes hacer para cambiarlo por que ya ocurrió. 
+No, nada, realmente nada, porque todo ya esta hecho. Escucha, hemos ido atrás y hacia adelante en el tiempo y aquí acabamos, dos millones de años atrás de donde empezamos, pero no cambia el futuro, porque lo hemos visto. Ponte listo, no hay nada que puedes hacer para cambiarlo por que ya ocurrió.
 
 **ARTURO**
-Y todo porque llegamos aquí con los Golgafrinchams en su Arco B. 
+Y todo porque llegamos aquí con los Golgafrinchams en su Arco B.
 
 **FORD**
 Si.
@@ -639,7 +639,7 @@ Esta apuntando a la tabla de Scrable.
 Oh, mas probable ha escrito ´biblioteca´ con ´k´, pobre menso.
 
 **FORD**
-No lo hico. 
+No lo hico.
 
 **ARTURO**
 Ey, mira, dice cuarenta dos ... El experimento. Algo tendrá que ver con el programa de la computadora para encontrar la Pregunta Ultima.
@@ -743,7 +743,7 @@ Oh, en un libro.
 Cual libro haber sido.
 
 **FORD**
-La Guía de la Galaxia para Mochileros. 
+La Guía de la Galaxia para Mochileros.
 
 **ARTURO**
 Ugg, aquella cosa.

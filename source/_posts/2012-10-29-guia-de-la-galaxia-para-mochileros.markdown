@@ -30,12 +30,12 @@ Hay Café?
 No creo.
 
 **ARTURO DANTE**
-Aaa. 
+Aaa.
 
 <!-- more -->
 
 **NARRARADOR**
-Muy difícilmente Arturo Dante encontrará una tasa de café a flota en el espacio en un capsulo el tamaño de un Bocho. Pero como si antojaba después de un millón de años de sueño criogenético. 
+Muy difícilmente Arturo Dante encontrará una tasa de café a flota en el espacio en un capsulo el tamaño de un Bocho. Pero como si antojaba después de un millón de años de sueño criogenético.
 
 Después de un casi infinidad de tiempo en búsqueda del ultima pregunta a la vida, el universo y todo, a lo cual la respuesta es 42, al final viajaron al principio del tiempo donde encontraron un tal Dios quien decidió no compartir el misterio del universo, de por algún criatura no fuera hacer uso irresponsable de ello,  y escribió un algoritmo para cifrar el “significado de la vida”. Era un algoritmo tan enredado que la computadora mas inteligente del universo llevaría hasta el fin del tiempo para calcular lo, y, siendo que era el principio del tiempo, y la computador mas inteligente el universo aun no había sido inventado, Dios tomó lo que estaba a la mano y, con un diapasón, sintonizó los cerebros del simio-descendiente Arturo Dante y su Amigo, Ford Prefect, de un pequeño planeta en la vecindad de Beatljuce, y utilizó su largo sueño REM criogenético como calculadora. Un método teóricamente mas rápido que la del computadora mas inteligente del universo, pero, como veremos, dado a un tipo de error que los simio-descendientes clasifican como “humano”.
 
@@ -58,7 +58,7 @@ Como quedó?
 Uuu. No quedó. La alarma sonó, pero no si hizo nada. Ah si, mi parece que pusiste la alarma pero no diste el orden para si genera la llave.
 
 **ARTURO DANTE**
-Aaa. Debe de haber sido el ultimo gallo antes de subir a la capsula criogenético. 
+Aaa. Debe de haber sido el ultimo gallo antes de subir a la capsula criogenético.
 
 **FORD PREFECT**
 Debe de haber sido. Pero ahora tenemos que esperar ahora otro millón de años.
@@ -70,7 +70,7 @@ Dios
 No Arturo. Tuuuuu. Tu y tus viajes. No debes de fumar.
 
 **ARTURO**
-Pero si eres tu quien siempre trae. 
+Pero si eres tu quien siempre trae.
 
 **FORD**
 No mi escuchas Arturo. No debes de fumar, TU.
@@ -79,7 +79,7 @@ No mi escuchas Arturo. No debes de fumar, TU.
 Si voy a tener que esperar otro millón de años voy a necesitar un toque. Como vamos mejor vamos hasta el fin del tiempo.
 
 **FORD**
-No es mala la idea e. De esta forma podemos aprovechar la contra corriente, y agarramos una olla que nos lleva de regreso al principio para poder entregar la llave. 
+No es mala la idea e. De esta forma podemos aprovechar la contra corriente, y agarramos una olla que nos lleva de regreso al principio para poder entregar la llave.
 
 **ARTURO**
 Ah si no había pensado en eso.
@@ -91,10 +91,10 @@ No. Ni mucho menos Dios. Admito que es ingenio, sintonizar nuestros cerebros con
 inhalación
 
 **ARTURO**
-Saca. 
+Saca.
 
 **FORD**
-Sube a la rockola. 
+Sube a la rockola.
 
 **ARTURO**
 Oye
@@ -109,7 +109,7 @@ Nada
 Que?
 
 **ARTURO**
-Solo que alla en la distancia, parece ser la tierra. 
+Solo que alla en la distancia, parece ser la tierra.
 
 **FORD**
 ES el planeta tierra. Sientes nostalgia?
@@ -139,7 +139,7 @@ Según La Enciclopedia Galáctica, edición extendido para incluir hasta los det
 
 Esta borrachera era especialmente impresionante por que era la primera vez en la memoria, no que el equipo local había ganado el torneo de su proprio fiesta, por que no lo ocurrió, sino porque infortunadamente cada vez que Honorio, quien todos opinaron que traía el mejor juego del equipo sino del torneo, acercaba a el momento de meter la pelota lo tiraba en cualquier dirección menos la de la canasta, por fin este noche la metió. Y ademas ocurrieron una serie de otros incidentes extraordinarias.
 
-**F/X** FONDO DE AUDENCIA. CANCHA DE BASKET. PELOTA REBOTANDO. AIRE ABIERTA. CHIFLA DEL ARBITRO. 
+**F/X** FONDO DE AUDENCIA. CANCHA DE BASKET. PELOTA REBOTANDO. AIRE ABIERTA. CHIFLA DEL ARBITRO.
 
 **LOCUTOR**
 Tiempo.
@@ -183,7 +183,7 @@ En el cielo. Que es?
 **HONORIO**
 Una estrella fugaz?
 
-**F/X** 
+**F/X**
 CHIFLADO DEL ARBITRO. BOOS DEL AUDIENCIA. EMPIENZAN A JUGAR. SONIDO DE VARIOS JUGADOS LA MAYORIA ACOMPAÑADOS POR BOOS.
 
 **LOCUTOR**
@@ -198,13 +198,13 @@ Mira.
 No es estrella fugaz.
 
 **FAN NUMERO DOS**
-No se que sea. 
+No se que sea.
 
 **ANUNCIADOR**
 Pase a numero 8. Pasa a numero 12. Lo tiene Honorio.
 
 **FAN NUMERO UNO**
-No se que es. 
+No se que es.
 
 **FAN NUMEROS UNO/DOS** (juntos)
 Pero parece que si va a meter 3 puntos.
@@ -219,19 +219,19 @@ Hooray!!!
 Que era.
 
 **HONORIO**
-No sé. Quien es aquella allá? 
+No sé. Quien es aquella allá?
 
 **COMPAÑERO DE EQUIPO UNO**
 Como pedazos de barro. Pero casi desintegrado. Supongo por la colisión. No sé quien será. No la había visto.
 
 **HONORIO**
-Y mira una nota. 
+Y mira una nota.
 
 **COMPAÑERO DE EQUIPO UNO**
 Que dice?
 
 **HONORIO**
-«Te espero en Millyways, el comedor al Final del universo. 
+«Te espero en Millyways, el comedor al Final del universo.
 Favor de Traer chingre»
 
 **COMPAÑERO DE EQUIPO DOS**
@@ -244,7 +244,7 @@ Ummmm.
 Quien sabe.
 
 **HONORIO**
-Ummmm. Quien sabe, ahorita vengo. 
+Ummmm. Quien sabe, ahorita vengo.
 
 **HONORIO**
 Amiga (fuerte y luego menos fuerte en que si acerca). Amiga
@@ -291,21 +291,21 @@ Ay honorio por fin metiste uno. No has visto a mi prima
 Tu prima?
 
 **COMPAÑERO DE EQUIPO UNO**
-Analleli. 
+Analleli.
 
 **HORORIO**
 Analleli? Analleli... ummm... desapareció.
 
 **NARRARADOR**
 
-Acerca de la tema de desaparências inducidos por alcohol, la Guía de la Galaxia para mochileros conseja en su contra. Es todo bien y parece muy fácil pero la problema es volverse a aparecer después, sobre todo en el caso que te toca ley seca en el limbo o donde sea que decides pasar el tiempo de tu desaparencia. Ademas, explica, no todos las bebidas alcohólicas inducen desaparencia, al menos no desaparencia instantánea, aun que la mayoría tiene los propriedades necesarias para que uno si pierde en el bosque, en el monte, una cantina o inclusive en el patio de su proprio casa. 
+Acerca de la tema de desaparências inducidos por alcohol, la Guía de la Galaxia para mochileros conseja en su contra. Es todo bien y parece muy fácil pero la problema es volverse a aparecer después, sobre todo en el caso que te toca ley seca en el limbo o donde sea que decides pasar el tiempo de tu desaparencia. Ademas, explica, no todos las bebidas alcohólicas inducen desaparencia, al menos no desaparencia instantánea, aun que la mayoría tiene los propriedades necesarias para que uno si pierde en el bosque, en el monte, una cantina o inclusive en el patio de su proprio casa.
 
 Honorio por su parte sufrió otro tipo de de desaparencia permanente en lo cual no pudo tratar con el ocurrido, y si inundo hasta el fondo de un litro de chingre y luego dos y luego los que seguían de ahí en adelante. Quedaba en las calles espantando a los demás con extraños cuentos, gritando como un cavernicolo y luego repetía frases poco inteligibles sobre si existía algo mas allá del cielo. Hasta que finalmente un día la gente decía: si el universo es tan pinche grande por que no la vayas a explorar, y lo enceraron en una olla de barro, y fijaron otro que apuntaba de abajo, lo metieron en la de arriba y lo taparon. Lo dieron un un litro de chingre para el viaje y otros tres ocuparon como combustible junto con una copa de concentrado de ocote, lo encendieron y lloraron con alegría cuando vieron desaparecer el cohete como un punto negro atrás de los nubes.
 
 **F/X** CAPUSLO DE FORD Y ARTURO. ROCKOLA. SEGUIDO POR UN CHOQUE. SEGUIDO POR ALARMA DE CHOQUE. ALARMA SIGUE COMO FONDO
 
 **FORD**
-(voz con sueño) Ahora que. 
+(voz con sueño) Ahora que.
 
 **ARTURO**
 (tambien con sueño) Yawn. Es la alarma de cifracion?
@@ -341,10 +341,10 @@ Dos ollas de barro fijado juntos para hacer como una coete.
 Un coete? Como puede ser un coete de ollas de varo a flota en el espacio. Esto es locura.
 
 **FORD**
-Arturo, como pode ser un bochito a flota en el espacio, eso también es locura. Si no estuvieramos de acuerdo con la locura no podemos haber llegado hasta aquí. 
+Arturo, como pode ser un bochito a flota en el espacio, eso también es locura. Si no estuvieramos de acuerdo con la locura no podemos haber llegado hasta aquí.
 
 **ARTURO**
-Cierto. Abre la cajuela. 
+Cierto. Abre la cajuela.
 
 **FORD**
 Vamos a ver que trae este coete.
@@ -439,7 +439,7 @@ Debe de ser. Vamos a ver que tal pone.
 Pero podría ser venenoso o contaminado o algo.
 
 **FORD**
-Oooooo ouch, esta potente. Quieres probar. 
+Oooooo ouch, esta potente. Quieres probar.
 
 **ARTURO**
 Ahh otro día.

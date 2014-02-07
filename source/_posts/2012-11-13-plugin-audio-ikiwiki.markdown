@@ -25,4 +25,4 @@ Aparte tenemos una plantilla para hacer un listado automático de audios *inline
 {% endcodeblock %}
 <!-- more -->
 
-Para su instalación copia estos ficheros de nuestro repo a sus equivalentes carpetas en su instalación de ikiwiki. O, alternativamente, a su código fuente de ikiwiki y recompila. 
+Para su instalación copia estos ficheros de nuestro repo a sus equivalentes carpetas en su instalación de ikiwiki. O, alternativamente, a su código fuente de ikiwiki y recompila.

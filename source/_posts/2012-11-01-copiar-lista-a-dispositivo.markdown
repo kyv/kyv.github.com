@@ -30,14 +30,14 @@ my $tmp='/tmp/out.wav';
 my @exts=qw(.ogg .oga .wma .m4a);
 open($p, $PLS);
 for (<$p>) {
-	chomp;
-	my $orig = $ENV{HOME}. "/". $_;
-   	if ($orig =~ /.mp3$/i) {
-       		copy("$orig", "$DEST") or die "Copy Failed $!"; 
-   	}
-   	else {
-       		$out_file=$DEST. basename($_, @exts) . '.mp3';
-       		system('/usr/bin/mplayer', '-ao', "pcm:file=$tmp", "$orig");
+    chomp;
+    my $orig = $ENV{HOME}. "/". $_;
+    if ($orig =~ /.mp3$/i) {
+            copy("$orig", "$DEST") or die "Copy Failed $!";
+    }
+    else {
+            $out_file=$DEST. basename($_, @exts) . '.mp3';
+            system('/usr/bin/mplayer', '-ao', "pcm:file=$tmp", "$orig");
 
        # Use lame to make an mp3
        system('/usr/bin/lame', "$tmp", "$out_file");

@@ -7,7 +7,7 @@ categories: imagen
 tags: [imagen, faro, maldonado, playa, pescado, costa]
 ---
 Punto Maldonado, alias el faro, a poco distancia de Cuaji queda para los celebraciones de dia de los maestros
-(aun que sea unos dias tarde). O, en realida, para cualcuier proposito. Como por ejemplo una buena reta de fut 
+(aun que sea unos dias tarde). O, en realida, para cualcuier proposito. Como por ejemplo una buena reta de fut
 o un pescado fresca acompañado por salsa de molcajete y tortilla echo de mano.
 
 {% gallery %}

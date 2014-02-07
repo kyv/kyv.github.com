@@ -4,12 +4,13 @@ title: "audio cat"
 date: 2012-11-25 19:41
 comments: true
 categories: audio perl hacks mpd automatización
+tags: [audio, perl, hacks, mpd, automatización, radio]
 ---
 
 {% img pull-left http://www.flujos.org/images/ncmpc-hora.png "La hora en la lista" %}
 Para aquellos momentos cuando es necesario generar un audio en base de dos otros. Claro lo mas fácil seria con **cat**: ```cat hora.ogg minuto.ogg > horayminuto.ogg```
 
-Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio. 
+Pero, por el cuestión de las cabeceras, algunas reproductores de audio no reproducen el resultado final. Por eso escribimos un script que concatena dos audios, utilizando las cabeceras de la primera y corrija la cabecera que refiere al duración del audio.
 <!-- more -->
 
 Se puede utilizarlo en conjunto con un reproductor, por [ejemplo con mpd](http://www.flujos.org/blog/Locucion_de_hora-mpdcron/ "Con MPD"), para *automatizar* reproducción de la hora actual.
@@ -17,8 +18,8 @@ Se puede utilizarlo en conjunto con un reproductor, por [ejemplo con mpd](http:/
 
 {% codeblock audiocat.pl %}
 
-use strict; 
-use warnings; 
+use strict;
+use warnings;
 die "Not Enough arguments\n" if $#ARGV+1 < 1;
 
 my $horalib="/usr/share/spxcat/audio";
@@ -28,46 +29,46 @@ my ($hour, $min) = &get_time;
 my ($outfile) = @ARGV; #get outfile from cmd line
 my $cmdstr ="";
 my $cmdopts ="";
-my $hour_file = "$horalib/HRS$hour.$fmt"; 
-my $min_file = "$horalib/MIN$min.$fmt"; 
+my $hour_file = "$horalib/HRS$hour.$fmt";
+my $min_file = "$horalib/MIN$min.$fmt";
 print "[$hour_file:$min_file]\n";
 
 if ($fmt eq "ogg") {
     $cmdstr = "ogg";
-} 
+}
 if ($fmt eq "spx") {
     $cmdstr = "speex";
-} 
+}
 if ($min ne " ")
     {
         &oggcat;
     } else { #hora en punto
-        
-	my $cmd = join(" ", ("/bin/cp", $hour_file, $outfile));
+
+    my $cmd = join(" ", ("/bin/cp", $hour_file, $outfile));
         system ("$cmd") == 0 or die "Cannot open pipe to $cmd ($?): $!";
 
     }
 
 sub oggcat {
-    my $out_size; 
+    my $out_size;
     my $count = 0;
-    &ogg_dec($hour_file, 1); 
-    &ogg_dec($min_file, 0); 
-    
+    &ogg_dec($hour_file, 1);
+    &ogg_dec($min_file, 0);
+
     my @tmps = ("/tmp/oggout0.wav", "/tmp/oggout1.wav");
-    for (@tmps) 
+    for (@tmps)
     {
-    
+
        $out_size += -s $_ || die "cant get out_size: $!\n";
     }
     open IN1, '<', "/tmp/oggout1.wav" || die "Can't open file tmpfile: $!\n";
     open IN2, '<', "/tmp/oggout0.wav" || die "Can't open file tmpfile: $!\n";
     open OUT, '>', "/tmp/oggout.wav" || die "Can't open file $outfile\n";
-    
+
     # important info for headers
-    my $data_size = $out_size - 88; # 44 bits * 2 files 
+    my $data_size = $out_size - 88; # 44 bits * 2 files
     my $fs_8 = $out_size - 16; # 8 bits * 2 files
-    
+
     # step through header
     my $buffer;
     read IN1, $buffer,4 ;
@@ -81,7 +82,7 @@ sub oggcat {
     print OUT $_ while <IN1>;
     seek IN2, 44, 0;
     print OUT $_ while <IN2>;
-    
+
     close IN1;
     close IN2;
     close OUT;
@@ -93,7 +94,7 @@ sub ogg_dec {
     my $file = shift;
     my $i = shift;
     my $out = "/tmp/oggout" . $i . ".wav";
-    if ($fmt eq 'ogg'){$out = "-o". $out} 
+    if ($fmt eq 'ogg'){$out = "-o". $out}
     my $cmd = $cmdstr. "dec";
     my $string = join(" ", ($cmd, $file, $out));
     print "cmd: $string\n";
@@ -109,7 +110,7 @@ sub ogg_dec {
 
 sub ogg_enc {
     my $file = shift;
-    if ($fmt eq 'ogg'){$file = "-o". $file} 
+    if ($fmt eq 'ogg'){$file = "-o". $file}
     my $cmd = $cmdstr. "enc";
     my $string = join(" ", ($cmd, "/tmp/oggout.wav", $file));
     my $pid = open PIPE, "-|";
@@ -131,7 +132,7 @@ sub get_time
     for ($hour, $min) {
        if(length($_) == 1){$_ = "0" . $_};
     }
-    if ($min eq "00") 
+    if ($min eq "00")
     {
         $hour = $hour . "_0";
         $min = " ";

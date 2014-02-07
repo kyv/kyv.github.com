@@ -35,7 +35,7 @@ Para acceder a los audios, *Read on*.
 
 #### 06 Estudiantes de las América
 {% audio http://flujos.org/media/jatarishun/06_Estudiantes_de_las_Américas.oga  %}
-#### 07 Ciencia y Tecnología 
+#### 07 Ciencia y Tecnología
 {% audio http://flujos.org/media/jatarishun/07_Ciencia_y_Tecnología.oga %}
 #### 08 Modelo Económico
 {% audio http://flujos.org/media/jatarishun/08_Modelo_Económico.oga  %}
