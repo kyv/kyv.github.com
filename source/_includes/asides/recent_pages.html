@@ -1,0 +1,16 @@
+{% if page.group %}
+<section class="recent">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">Relacionado</li>
+    {% for p in site.pages %}
+    {% if p.group %}
+      {% unless p.url == page.url %}
+        <li class="post">
+          <a href="{{ root_url }}{{ p.url }}">{{ p.title }}</a>
+        </li>
+      {% endunless %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
