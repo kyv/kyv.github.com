@@ -3,7 +3,8 @@ layout: post
 title: "Distrito Efe"
 date: 2014-01-07 22:24
 comments: true
-categories: norteña df audio video
+categories: audio video
+tags: [norteña, df, audio, video, tigres]
 ---
 Con dedicación a los amigos en df. Amenizado por los Tigres del Norte con su exito *Rock del Corazon*. Estreñando un nuevo special mix por el celebre DJ el Dr. no-invitado.
 

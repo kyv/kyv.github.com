@@ -4,6 +4,7 @@ title: "Introducción Guía de la Galaxia Episodio Dos"
 date: 2012-10-30 11:36
 comments: true
 categories: traduccion guion hhgg
+tags: [traducción, guion, hhgg]
 ---
 
 Para la presentación de la [La Rockolateka Radiofónica Virtualizada](http://rockola.flujos.org "Rockolateka Radiofónica") en [Flujos Fest](http://kyv.github.com/blog/2012/10/29/fotos-flujos-fest/ "Fotos Flujos Fest") 2012 traducimos a la introducción de la segundo episodio de la [Guía de la Galaxia para Mochileros](/blog/categories/hhgg/ "Guía de la Galaxia Para Mochileros") por Douglass Adams. Por fallas organizativas no la dimos lectura, pero lo dejamos aquí para lo que sirve.

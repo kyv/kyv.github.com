@@ -4,6 +4,7 @@ title: "Compresor de Sonido para Pulseaudio"
 date: 2013-06-12 10:19
 comments: true
 categories: audio hacks
+tags: [audio, hacks, ladspa, compresor, pulseaudio, eq]
 ---
 Del [wikipedia](https://es.wikipedia.org/wiki/Compresor_%28sonido%29), *En el campo del sonido profesional, un compresor es un procesador electrónico de sonido destinado a reducir el margen dinámico de la señal sin que se note demasiado su presencia. Esta tarea, se realiza reduciendo la ganancia del sistema, cuando la señal supera un determinado umbral.*
 

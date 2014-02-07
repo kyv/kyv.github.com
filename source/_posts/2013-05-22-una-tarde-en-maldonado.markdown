@@ -4,6 +4,7 @@ title: "Punto Maldonado y la Plaza de Cuaji"
 date: 2013-05-24 00:52
 comments: true
 categories: imagen
+tags: [imagen, faro, maldonado, playa, pescado, costa]
 ---
 Punto Maldonado, alias el faro, a poco distancia de Cuaji queda para los celebraciones de dia de los maestros
 (aun que sea unos dias tarde). O, en realida, para cualcuier proposito. Como por ejemplo una buena reta de fut 

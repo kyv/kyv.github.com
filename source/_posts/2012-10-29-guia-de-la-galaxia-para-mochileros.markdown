@@ -4,6 +4,7 @@ title: Guía de la Galaxia para Mochileros, Edición Pirateada
 date: 2012-10-29 21:24
 comments: true
 categories: letras radio guion hhgg
+tags: [letras, radio, guion, hhgg]
 ---
 
 Damos a conocer a un fragmento del Guía de la Galaxia Para Mochileros, Edición Pirateada. Esto fragmento fue escrito por nosotros pero basamos en el concepto y personajes desarrollados por Douglass Adams para radio BBC en las setentas. Ademas del fragmento estamos trabajando en la traducción del seria original al español. Aun que no están terminados, esperemos que alguien encuentra algún diversión en ello. Eso por que últimamente no hemos tenidos tiempo de trabajar en ello, y mucho menos fondos para producir lo.

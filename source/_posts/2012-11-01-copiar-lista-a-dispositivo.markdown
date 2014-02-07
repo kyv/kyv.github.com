@@ -4,6 +4,7 @@ title: "Copiar .m3u a dispositivo"
 date: 2012-11-01 12:35
 comments: true
 categories: hacks perl
+tags: [hacks, perl, audio]
 ---
 Si tienes una lista de reproducción de formato sencillo .m3u, este *script* copia los contenidos de la lista a una carpeta. Mi ha sido útil, por ejemplo, para copiar mis rolas preferidas a mi celular antes de salir a la calle. Si en la lista tienes varias formatos, el *script* los convertirá a **mp3**. Obviamente prefería tener un teléfono que reproduciera **ogg-vorbis**, pero la triste verdad es que no tengo. **Ojo**: *para que funciona la conversión de formatos es necesario que mplayer y lame estan instalados*.
 

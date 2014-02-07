@@ -4,6 +4,7 @@ title: "Rostros de Corralero"
 date: 2013-05-21 00:52
 comments: true
 categories: imagen
+tags: [imagen, playa, corralero, costa]
 ---
 
 Algunos imagenes que pudimos capturar en Corralero, pueblo playera de la cercania a pinotepa. Aun que no llegamos a la playa,

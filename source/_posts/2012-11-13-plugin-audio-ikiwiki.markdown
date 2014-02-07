@@ -4,6 +4,7 @@ title: "Plugin Audio Ikiwiki"
 date: 2012-11-13 13:59
 comments: true
 categories: hacks perl audio
+tags: [web, hacks, perl, audio]
 ---
 {% img right http://flujos.org/media/360player.png Foto de Ejemplo %}
 Hace poco tiempo hicimos un *plugin* de audio para ikiwiki. Esto se encuentra en [nuestra bifurcación de ikiwiki](https://github.com/kyv/ikiwiki). El *plugin* vive en [la carpeta Ikiwiki/Plugin](https://github.com/kyv/ikiwiki/blob/master/IkiWiki/Plugin/audio.pm). Pero depende también de [un *underlay* en que hemos copiado el 360° player](https://github.com/kyv/ikiwiki/tree/master/underlays/360-player/ikiwiki "360° Player") desde el proyecto [soundmanager2](http://www.schillmania.com/projects/soundmanager2/ "SoundManager2").

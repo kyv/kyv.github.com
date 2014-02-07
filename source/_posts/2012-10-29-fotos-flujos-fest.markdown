@@ -4,6 +4,7 @@ title: "Fotos Flujos Fest"
 date: 2012-10-29 12:51
 comments: true
 categories: flujos imagen
+tags: [flujos, imagen, fiesta]
 ---
 
 Fotos para comemorar la gala flujos fest, cosecha de la palabra y otros antojos. Hubo musica, proyeccion, chupe, baile, amor. ¿Que mas quieres?

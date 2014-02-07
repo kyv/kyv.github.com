@@ -4,6 +4,7 @@ title: "Sin Luz de Luna"
 date: 2012-12-21 16:41
 comments: true
 categories: audio letras
+tags: [audio, letras, luna]
 ---
 
 Sino es apocalipsis mínimamente un eclipse, sino de la tierra, entonces de la corazón. Las letras de Sin Luz de Luna por Romelia Ibarra introduzcan a las de Álvaro Carrillo como interpretado por Blanco y Negro.

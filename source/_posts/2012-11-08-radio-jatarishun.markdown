@@ -4,6 +4,7 @@ title: "Radio Jatarishun"
 date: 2012-11-08 15:21
 comments: true
 categories: audio
+tags: [audio, radio]
 ---
 {% img pull-left http://ecuador.indymedia.org/images/2004/08/6562.jpg Menú Portada Radio Jatarishun %}
 

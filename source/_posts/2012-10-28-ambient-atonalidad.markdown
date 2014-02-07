@@ -4,6 +4,7 @@ title: "Ambient_Atonalidad"
 date: 2012-10-28 11:58
 comments: true
 categories: hacks supercollider
+tags: [hacks, audio, sc3]
 ---
 
 Presentamos el codigo de nuestra participacion en el concerto de musica electronica que dio conclusion al taller [Música por computadora con código, primer parte del serie Laboratorio de arte y nuevos medios, impartido en CASA de los artes San Augustin Etla](http://casanagustin.org.mx/actividades-en-curso/888-laboratorio-de-arte-y-nuevos-medios.html "Laboratorio de arte y nuevos medios").

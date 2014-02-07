@@ -4,6 +4,7 @@ title: "Guía de la Galaxia Episodio Seis"
 date: 2012-12-04 18:17
 comments: true
 categories: guion hhgg traduccion
+tags: [guion, hhgg, traducción]
 ---
 
 Casi completa traducción de la sexta episodio de la radio novela [Guía de la Galaxia para Mochileros](/blog/categories/hhgg) y final de la primera temporada. Falta el principio que funja como transicion de episodio cinco.
