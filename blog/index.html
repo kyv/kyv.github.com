@@ -184,6 +184,32 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/04/25/fernando-patino-jazz-trio/">Fernando Patiño Jazz Trio</a></h1>
+    
+    
+      <p class="meta">
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>En vivo desde el capital del estado de Oaxaca.
+Descarga el video por <a href="http://assets.ki-ai.org.s3.amazonaws.com/media/jazz/FPJazzTrioToon.mp4.torrent">torrent</a>.</p>
+
+<video width="640" height="360" preload="none" controls="" poster=" http://assets.ki-ai.org.s3.amazonaws.com/media/jazz/FPJazzTrioToon.png"><source src="http://assets.ki-ai.org.s3.amazonaws.com/media/jazz/FPJazzTrioToon.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" /></video>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article class="well">
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/01/07/distrito-efe/">Distrito Efe</a></h1>
     
     
@@ -276,44 +302,6 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
 
     </article>
   
-  
-    <article class="well">
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/06/12/compresor-de-sonido-para-pulseaudio/">Compresor De Sonido Para Pulseaudio</a></h1>
-    
-    
-      <p class="meta">
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Del <a href="https://es.wikipedia.org/wiki/Compresor_%28sonido%29">wikipedia</a>, <em>En el campo del sonido profesional, un compresor es un procesador electrónico de sonido destinado a reducir el margen dinámico de la señal sin que se note demasiado su presencia. Esta tarea, se realiza reduciendo la ganancia del sistema, cuando la señal supera un determinado umbral.</em></p>
-
-<p><a href="http://es.wikipedia.org/wiki/PulseAudio">Pulseaudio</a> es la capa de audio a lo cual conecta los varios applicaciones que reproducen sonido en la mayoria de los *nix contemporaneos. Porque permite el uso de los procesadores y filtros <a href="http://www.ladspa.org/">ladspa</a>, con un pequeño configución podemos aplicar cualcuiera de ellos. Uno de los usos más utiles podria ser el compresor de rango dinamico, para mantener toda la musica y video que reproducimos a un amplitud constante. Hemos de agregar estas lineas al configuracion de pulseaudio, en nuestro caso <strong>~/.pulse/default.pa</strong></p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>sc4 plugin para pulseaudio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">load-module module-ladspa-sink <span class="nv">sink_name</span><span class="o">=</span>compressor <span class="nv">master</span><span class="o">=</span>alsa_output.pci-0000_00_1e.2.analog-stereo <span class="nv">plugin</span><span class="o">=</span>sc4_1882 <span class="nv">label</span><span class="o">=</span>sc4 <span class="nv">control</span><span class="o">=</span>1,1.5,401,-30,20,5,12
-</span><span class="line"><span class="nb">set</span>-default-sink compressor
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>El primer linea carga el sc4, un compresor estereo ladspa. <strong>Control=</strong> son los parámetros del efecto. Detalles al respecto se encuetra en <a href="http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.91">la documentación del plugin</a>.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/06/12/compresor-de-sonido-para-pulseaudio/">Sigue leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/2/">&larr; Older</a></li>
@@ -329,6 +317,10 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
     <li class="nav-header">Entradas Recientes</li>
     
       <li class="post">
+        <a href="/blog/2014/04/25/fernando-patino-jazz-trio/">Fernando Patiño Jazz Trio</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/07/distrito-efe/">Distrito Efe</a>
       </li>
     
@@ -342,10 +334,6 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
     
       <li class="post">
         <a href="/blog/2013/06/13/editor-de-guion-trelby/">Editor de guion Trelby</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/12/compresor-de-sonido-para-pulseaudio/">Compresor de Sonido para Pulseaudio</a>
       </li>
     
   </ul>
@@ -386,6 +374,7 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
 <li><a style="font-size: 170%" href="/tags/hacks/">hacks</a></li>
 <li><a style="font-size: 128%" href="/tags/hhgg/">hhgg</a></li>
 <li><a style="font-size: 128%" href="/tags/imagen/">imagen</a></li>
+<li><a style="font-size: 70%" href="/tags/jazz/">jazz</a></li>
 <li><a style="font-size: 70%" href="/tags/ladspa/">ladspa</a></li>
 <li><a style="font-size: 116%" href="/tags/letras/">letras</a></li>
 <li><a style="font-size: 99%" href="/tags/linux/">linux</a></li>
@@ -395,6 +384,7 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
 <li><a style="font-size: 70%" href="/tags/maldonado/">maldonado</a></li>
 <li><a style="font-size: 99%" href="/tags/mpd/">mpd</a></li>
 <li><a style="font-size: 70%" href="/tags/nortena/">norteña</a></li>
+<li><a style="font-size: 70%" href="/tags/oaxaca/">oaxaca</a></li>
 <li><a style="font-size: 70%" href="/tags/octopress/">octopress</a></li>
 <li><a style="font-size: 116%" href="/tags/perl/">perl</a></li>
 <li><a style="font-size: 70%" href="/tags/pescado/">pescado</a></li>
@@ -406,7 +396,7 @@ Pere Soto, Emanuel Carrera, Ornel Jimenez.</p>
 <li><a style="font-size: 99%" href="/tags/sc3/">sc3</a></li>
 <li><a style="font-size: 70%" href="/tags/tigres/">tigres</a></li>
 <li><a style="font-size: 128%" href="/tags/traduccion/">traducción</a></li>
-<li><a style="font-size: 99%" href="/tags/video/">video</a></li>
+<li><a style="font-size: 116%" href="/tags/video/">video</a></li>
 <li><a style="font-size: 99%" href="/tags/web/">web</a></li>
 <li><a style="font-size: 70%" href="/tags/xochis/">xochis</a></li>
 
