@@ -4,7 +4,7 @@
   <title><![CDATA[ki-ai.org]]></title>
   <link href="http://ki-ai.org/atom.xml" rel="self"/>
   <link href="http://ki-ai.org/"/>
-  <updated>2014-04-26T13:37:50-05:00</updated>
+  <updated>2014-04-26T16:46:47-05:00</updated>
   <id>http://ki-ai.org/</id>
   <author>
     <name><![CDATA[ki-ai.org]]></name>
@@ -18,8 +18,7 @@
     <link href="http://ki-ai.org/blog/2014/04/25/fernando-patino-jazz-trio/"/>
     <updated>2014-04-25T13:58:00-05:00</updated>
     <id>http://ki-ai.org/blog/2014/04/25/fernando-patino-jazz-trio</id>
-    <content type="html"><![CDATA[<p>En vivo desde el capital del estado de Oaxaca.
-Descarga el video por <a href="http://assets.ki-ai.org.s3.amazonaws.com/media/jazz/FPJazzTrioToon.mp4.torrent">torrent</a>.</p>
+    <content type="html"><![CDATA[<p>En vivo desde el capital del estado de Oaxaca con Christian Pérez y Alonso López Valdés. Descarga el video por <a href="http://assets.ki-ai.org.s3.amazonaws.com/media/jazz/FPJazzTrioToon.mp4.torrent">torrent</a>.</p>
 
 <video width="640" height="360" preload="none" controls="" poster=" http://assets.ki-ai.org.s3.amazonaws.com/media/jazz/FPJazzTrioToon.png"><source src="http://assets.ki-ai.org.s3.amazonaws.com/media/jazz/FPJazzTrioToon.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" /></video>
 ]]></content>
